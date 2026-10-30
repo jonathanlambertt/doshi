@@ -1,0 +1,5 @@
+# pnpm 11 reads settings from this file rather than from package.json.
+# unrs-resolver (pulled in by eslint-config-expo) needs its postinstall script to
+# fetch the platform-native resolver binary.
+allowBuilds:
+  unrs-resolver: true
