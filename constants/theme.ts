@@ -40,6 +40,7 @@ const light = {
   textMuted: zinc[500],
   border: zinc[200],
   borderStrong: zinc[300],
+  decor: zinc[200], // decorative glyphs, barely above the background
   ...brand,
 } as const;
 
@@ -50,6 +51,7 @@ const dark = {
   textMuted: zinc[400],
   border: zinc[800],
   borderStrong: zinc[700],
+  decor: zinc[900],
   ...brand,
 } as const;
 
@@ -86,6 +88,8 @@ export const fontSize = {
   lg: 20,
   xl: 28,
   display: 52,
+  watermark: 120,
+  watermarkLg: 200,
 } as const;
 
 export type FontSize = keyof typeof fontSize;
