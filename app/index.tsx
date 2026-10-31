@@ -3,7 +3,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 import {
   fontSize,
-  fontWeight,
+  fontFamily,
   letterSpacing,
   maxContentWidth,
   radius,
@@ -77,12 +77,12 @@ const styles = StyleSheet.create({
   },
   wordmark: {
     fontSize: fontSize.display,
-    fontWeight: fontWeight.bold,
+    fontFamily: fontFamily.bold,
     letterSpacing: letterSpacing.tight,
   },
   tagline: {
     fontSize: fontSize.md,
-    fontWeight: fontWeight.regular,
+    fontFamily: fontFamily.regular,
     textAlign: 'center',
   },
   actions: {
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
   },
   buttonLabel: {
     fontSize: fontSize.md,
-    fontWeight: fontWeight.semibold,
+    fontFamily: fontFamily.semibold,
     letterSpacing: letterSpacing.wide,
   },
 });

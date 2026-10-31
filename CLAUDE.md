@@ -35,7 +35,7 @@ There is no test runner configured yet. Run `pnpm typecheck` and `pnpm lint` bef
 ## Styling and theming
 
 - No styling libraries (no NativeWind/Tailwind/styled-components). Use `StyleSheet.create` only.
-- `constants/theme.ts` is the single source of truth for every design value (colors, spacing, radius, font size/weight, letter spacing, `maxContentWidth`). Never hardcode colors, spacing, or type sizes in screens/components.
+- `constants/theme.ts` is the single source of truth for every design value (colors, spacing, radius, font family/size, letter spacing, `maxContentWidth`). Never hardcode colors, spacing, or type sizes in screens/components.
 - Colors are resolved per-render via `useTheme()` (`hooks/use-theme.ts`, OS color scheme → `colors.light`/`colors.dark`) and applied inline alongside static `StyleSheet` styles: `style={[styles.x, { color: theme.text }]}`.
 - Palette: Tailwind Zinc neutrals + a single Rose brand accent in `brand` (rebranding = editing those three values).
 - Semantic feedback colors (review grades like *Again*, destructive actions) are **intentionally undefined** — Rose is too close to "error" red. Don't reuse the brand accent for these; the semantic palette needs a deliberate decision first.

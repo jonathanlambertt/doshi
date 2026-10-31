@@ -90,14 +90,19 @@ export const fontSize = {
 
 export type FontSize = keyof typeof fontSize;
 
-export const fontWeight = {
-  regular: '400',
-  medium: '500',
-  semibold: '600',
-  bold: '700',
-} as const satisfies Record<string, TextStyle['fontWeight']>;
+/**
+ * Figtree, one family per weight (static font files). Pick a weight by family
+ * name — never combine these with `fontWeight`, which makes Android fall back
+ * to the system font. Every family listed here must be loaded in the root layout.
+ */
+export const fontFamily = {
+  regular: 'Figtree_400Regular',
+  medium: 'Figtree_500Medium',
+  semibold: 'Figtree_600SemiBold',
+  bold: 'Figtree_700Bold',
+} as const satisfies Record<string, TextStyle['fontFamily']>;
 
-export type FontWeight = keyof typeof fontWeight;
+export type FontFamily = keyof typeof fontFamily;
 
 /** Tracking values that pair with the sizes above. */
 export const letterSpacing = {
