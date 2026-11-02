@@ -1,22 +1,24 @@
-import { Pressable, StyleSheet, Text, View } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { router } from "expo-router";
+import { Pressable, StyleSheet, Text, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
-import { KanaBackdrop } from '@/components/kana-backdrop';
+import { KanaBackdrop } from "@/components/kana-backdrop";
 import {
-  fontSize,
   fontFamily,
+  fontSize,
   letterSpacing,
   maxContentWidth,
   radius,
   spacing,
-} from '@/constants/theme';
-import { useTheme } from '@/hooks/use-theme';
+} from "@/constants/theme";
+import { useTheme } from "@/hooks/use-theme";
 
 export default function LandingScreen() {
   const { theme } = useTheme();
 
-  // Intentionally empty — this skeleton has no navigation or auth yet.
-  const handleGetStarted = () => {};
+  // Goes straight to the test home tabs; there is no onboarding or auth yet.
+  const handleGetStarted = () => router.push("/home");
+  // Intentionally empty — sign-in flow is undecided.
   const handleSignIn = () => {};
 
   return (
@@ -27,7 +29,7 @@ export default function LandingScreen() {
           <View style={styles.header}>
             <Text style={[styles.wordmark, { color: theme.text }]}>Doshi</Text>
             <Text style={[styles.tagline, { color: theme.textMuted }]}>
-              Learn Japanese vocabulary at a steady pace.
+              Simple Japanese vocabulary learning.
             </Text>
           </View>
 
@@ -37,9 +39,14 @@ export default function LandingScreen() {
               onPress={handleGetStarted}
               style={({ pressed }) => [
                 styles.button,
-                { backgroundColor: pressed ? theme.accentPressed : theme.accent },
-              ]}>
-              <Text style={[styles.buttonLabel, { color: theme.onAccent }]}>Get Started</Text>
+                {
+                  backgroundColor: pressed ? theme.accentPressed : theme.accent,
+                },
+              ]}
+            >
+              <Text style={[styles.buttonLabel, { color: theme.onAccent }]}>
+                Get started
+              </Text>
             </Pressable>
 
             <Pressable
@@ -50,10 +57,13 @@ export default function LandingScreen() {
                 styles.buttonSecondary,
                 {
                   borderColor: theme.borderStrong,
-                  backgroundColor: pressed ? theme.surface : 'transparent',
+                  backgroundColor: pressed ? theme.surface : "transparent",
                 },
-              ]}>
-              <Text style={[styles.buttonLabel, { color: theme.text }]}>Sign In</Text>
+              ]}
+            >
+              <Text style={[styles.buttonLabel, { color: theme.text }]}>
+                Sign in
+              </Text>
             </Pressable>
           </View>
         </View>
@@ -68,15 +78,15 @@ const styles = StyleSheet.create({
   },
   content: {
     flex: 1,
-    alignSelf: 'center',
-    justifyContent: 'center',
-    width: '100%',
+    alignSelf: "center",
+    justifyContent: "center",
+    width: "100%",
     maxWidth: maxContentWidth,
     paddingHorizontal: spacing.xl,
-    gap: spacing['3xl'],
+    gap: spacing["3xl"],
   },
   header: {
-    alignItems: 'center',
+    alignItems: "center",
     gap: spacing.md,
   },
   wordmark: {
@@ -87,14 +97,14 @@ const styles = StyleSheet.create({
   tagline: {
     fontSize: fontSize.md,
     fontFamily: fontFamily.regular,
-    textAlign: 'center',
+    textAlign: "center",
   },
   actions: {
     gap: spacing.md,
   },
   button: {
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
     paddingVertical: spacing.lg,
     paddingHorizontal: spacing.xl,
     borderRadius: radius.lg,

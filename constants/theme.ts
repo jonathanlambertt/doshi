@@ -38,6 +38,7 @@ const light = {
   surface: '#ffffff',
   text: zinc[900],
   textMuted: zinc[500],
+  textSubtle: zinc[400], // one step softer than textMuted, e.g. inactive tabs
   border: zinc[200],
   borderStrong: zinc[300],
   decor: zinc[200], // decorative glyphs, barely above the background
@@ -49,6 +50,7 @@ const dark = {
   surface: zinc[900],
   text: zinc[50],
   textMuted: zinc[400],
+  textSubtle: zinc[500],
   border: zinc[800],
   borderStrong: zinc[700],
   decor: zinc[900],
@@ -83,6 +85,7 @@ export const radius = {
 export type Radius = keyof typeof radius;
 
 export const fontSize = {
+  xs: 12,
   sm: 14,
   md: 16,
   lg: 20,
@@ -117,3 +120,10 @@ export const letterSpacing = {
 
 /** Maximum content width so the layout stays readable on tablets and web. */
 export const maxContentWidth = 420;
+
+/** Lucide icon sizes. */
+export const iconSize = {
+  md: 20,
+  lg: 24,
+  xl: 40,
+} as const;

@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-Doshi is a mobile-first Japanese vocabulary app (a beginner-friendly Anki alternative) built on Expo SDK 58 + Expo Router + strict TypeScript. It is currently a **skeleton**: one landing screen, no SRS logic, data, database, auth, or backend. See README.md for the roadmap (Kaishi 1.5k dataset → FSRS engine → review UI → minimal settings → sync) and open decisions (FSRS library vs. port, expo-sqlite local-first vs. backend, auth provider). Don't treat undecided items as settled.
+Doshi is a Japanese vocabulary app for **iOS and Android** (a beginner-friendly Anki alternative) built on Expo SDK 58 + Expo Router + strict TypeScript. It is currently a **skeleton**: one landing screen, no SRS logic, data, database, auth, or backend. See README.md for the roadmap (Kaishi 1.5k dataset → FSRS engine → review UI → minimal settings → sync) and open decisions (FSRS library vs. port, expo-sqlite local-first vs. backend, auth provider). Don't treat undecided items as settled.
 
 ## Commands
 
@@ -14,16 +14,20 @@ The package manager is **pnpm** (Node >= 22.13, see `.nvmrc`). Prefer `pnpm exec
 
 ```bash
 pnpm install
-pnpm start                      # Expo dev server (i / a / w to pick a target)
-pnpm ios | pnpm android | pnpm web
+pnpm start                      # Expo dev server (i / a to pick a target)
+pnpm ios | pnpm android
 pnpm typecheck                  # tsc --noEmit
 pnpm lint                       # expo lint (eslint-config-expo flat config)
 pnpm exec expo install <pkg>    # ALWAYS use this to add deps (SDK-compatible versions)
-pnpm exec expo-doctor
+pnpm dlx expo-doctor            # not a local dependency, so exec won't find it
 pnpm exec expo install --fix
 ```
 
 There is no test runner configured yet. Run `pnpm typecheck` and `pnpm lint` before declaring a task done.
+
+## Platforms
+
+The app targets **iOS and Android only**. Web is not a target: don't use web builds to verify or screenshot UI work (web has no notch, status bar, or safe-area insets, so layout bugs slip through), and don't spend effort on web-specific behavior. Check UI changes in the iOS Simulator or Android emulator. The Expo template's web scaffolding has been removed; don't add `react-native-web`/`react-dom` or a `web` config back unless web becomes a goal.
 
 ## Repo-specific notes
 

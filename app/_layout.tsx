@@ -46,7 +46,12 @@ export default function RootLayout() {
             headerShown: false,
             contentStyle: { backgroundColor: theme.background },
           }}
-        />
+        >
+          <Stack.Screen
+            name="lesson"
+            options={{ presentation: 'fullScreenModal' }}
+          />
+        </Stack>
         <StatusBar style="auto" />
       </SafeAreaProvider>
     </GestureHandlerRootView>

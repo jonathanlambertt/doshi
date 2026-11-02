@@ -4,7 +4,7 @@ Learn Japanese vocabulary at a steady pace.
 
 ## Overview
 
-Doshi is a mobile-first Japanese vocabulary app — a cleaner, friendlier alternative to
+Doshi is a Japanese vocabulary app for iOS and Android — a cleaner, friendlier alternative to
 Anki aimed at beginners. Anki is powerful but its defaults, terminology, and settings
 surface assume you already know how spaced repetition works. Doshi's bet is the
 opposite: steady-pace learning should be what you get out of the box, for everyone,
@@ -20,7 +20,7 @@ yet; this README documents the plan.
 - Ship a scientifically-grounded review schedule as the default, not as an option.
 - Keep the review loop fast enough to do on a phone, in a queue, one-handed.
 - Be honest and legible about what every setting does to your learning.
-- Stay mobile-first and cross-platform (iOS first, Android and web from the same code).
+- Native on iOS and Android from one codebase. Web is not a target.
 
 ## Design principles
 
@@ -93,7 +93,7 @@ middle of a session.
 **On styling:** there is no NativeWind, Tailwind, styled-components, or other styling
 library. Every design value — colors, spacing, radii, type sizes and weights — lives in
 `constants/theme.ts` and is consumed through plain `StyleSheet.create` objects. This
-keeps rendering consistent and predictable across dev, release, and web builds, with no
+keeps rendering consistent and predictable across dev and release builds, with no
 extra build step or runtime style engine to go wrong.
 
 The palette is **Tailwind Zinc** for neutrals with a **Tailwind Rose** brand accent
@@ -109,7 +109,7 @@ doshi/
 │   ├── _layout.tsx         # Root layout: Stack, safe-area + gesture providers, status bar
 │   └── index.tsx           # Landing screen (the only screen so far)
 ├── assets/
-│   └── images/             # App icon, splash icon, favicon, Android adaptive icon
+│   └── images/             # App icon, splash icon, Android adaptive icon
 ├── constants/
 │   └── theme.ts            # The single source of truth for all design tokens
 ├── hooks/
@@ -157,13 +157,12 @@ pnpm install          # install dependencies
 pnpm start            # start the Expo dev server
 ```
 
-Then pick a target, either from the dev server's interactive menu (`i` / `a` / `w`) or
+Then pick a target, either from the dev server's interactive menu (`i` / `a`) or
 directly:
 
 ```bash
 pnpm ios              # open in the iOS Simulator
 pnpm android          # open on an Android device/emulator
-pnpm web              # open in a browser
 ```
 
 Useful checks:
