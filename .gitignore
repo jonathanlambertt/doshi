@@ -41,3 +41,6 @@ example
 # generated native folders
 /ios
 /android
+
+# Extracted from the unlicensed Kaishi 1.5k deck — keep out of git (see README licensing notes)
+/data/source/

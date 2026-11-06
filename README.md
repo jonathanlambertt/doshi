@@ -10,9 +10,9 @@ surface assume you already know how spaced repetition works. Doshi's bet is the
 opposite: steady-pace learning should be what you get out of the box, for everyone,
 with no configuration.
 
-This repository is currently a **skeleton** — a correctly-configured Expo project with
-a single landing screen. None of the learning features described below are implemented
-yet; this README documents the plan.
+The core learning loop works — lessons, FSRS reviews and local progress — on
+development data. Accounts, sync, a settings screen and shippable vocabulary content
+are not built yet (see Status).
 
 ## Goals
 
@@ -36,8 +36,8 @@ yet; this README documents the plan.
 
 ### Vocabulary data
 
-Content is planned to come from the Anki **Kaishi 1.5k** deck, a widely-used starter
-deck for Japanese learners, extracted into a structured dataset with fields for:
+The word list is planned to start from the Anki **Kaishi 1.5k** deck, a widely-used
+starter deck for Japanese learners, built into a structured dataset with fields for:
 
 | Field | Example |
 | --- | --- |
@@ -48,11 +48,51 @@ deck for Japanese learners, extracted into a structured dataset with fields for:
 | Example sentence | 新しい本を買った。 |
 | Audio | word and/or sentence audio |
 
-> **TO CONFIRM — licensing and attribution.** The Kaishi 1.5k deck's license terms,
-> redistribution rights, and attribution requirements have **not** been verified. They
-> must be checked and credited before the dataset is bundled into any build that is
-> distributed. Do not assume a permissive license. The same applies to any audio the
-> deck ships, which may have separate rights from the text (see Open questions).
+> **Licensing — Kaishi 1.5k has no license.** Checked November 2026 against
+> [donkuri/Kaishi](https://github.com/donkuri/Kaishi) (release v2.4.3): there is no
+> LICENSE file and no license on the repository, so all rights are reserved by default.
+> Its README also says the data was "mostly taken from Core2k, Core10k, Tango N4 and
+> Tango N5" and that "the sentences themselves come from various Core decks" — sources
+> that are not openly licensed either. Its audio comes from those decks and the AJT
+> Japanese add-on, and its pictures from Irasutoya (which has its own usage terms).
+>
+> What this means (not legal advice):
+>
+> - **Do not ship** Kaishi's meanings, example sentences, sentence translations, audio
+>   or pictures in any distributed build.
+> - **Word + reading** (e.g. 新しい / あたらしい) is low risk — single words and their
+>   readings are facts. The **selection and order** of the list is a gray area
+>   (compilations can be protected in some jurisdictions); get legal advice before
+>   shipping Kaishi's exact list and order.
+> - Candidate openly licensed sources for everything else: **JMdict** (EDRDG, CC BY-SA
+>   4.0) for meanings and parts of speech, **Tatoeba** (mostly CC BY 2.0 FR) for example
+>   sentences, and text-to-speech or commissioned recordings for audio. Each needs its
+>   attribution added in the app. Not decided yet.
+>
+> `scripts/extract-kaishi-words.py` extracts **only** the word and reading, in deck
+> order, from a local copy of the deck into `data/source/kaishi-words.json`.
+> `scripts/match-jmdict-meanings.py` then looks up an English meaning and part of speech
+> for each word in JMdict (via [jmdict-simplified](https://github.com/scriptin/jmdict-simplified))
+> into `data/source/kaishi-meanings.json`. The automatic match takes the first applicable
+> dictionary sense, which is sometimes not the intended one (e.g. いる → "to be needed"),
+> so it needs a hand review before real use; `OVERRIDES` in the script holds corrections,
+> and the script lists ambiguous matches to check. `data/source/` is gitignored and is for
+> local development only.
+>
+> **Example sentences are switched off for now**: the app shows none. When they come
+> back, `scripts/match-tatoeba-examples.py` can pick one sentence and translation per
+> word from [Tatoeba](https://tatoeba.org) (CC BY 2.0 FR) into
+> `data/source/kaishi-examples.json`. It only accepts short, family-friendly sentences
+> that spell the word as the app shows it. A hand review of every pick is saved in
+> `data/source/kaishi-example-picks.json` (word → Tatoeba sentence, or none); back it up
+> if you need to keep it.
+>
+> To study the full deck (meanings, sentences, notes, pitch accent, audio and pictures)
+> while you work, run `python3 -I scripts/kaishi-browser.py <path/to/Kaishi.apkg>`. It
+> serves a searchable page on `127.0.0.1` only, reads the deck straight from the .apkg,
+> and writes nothing. It shows Doshi's JMdict meaning next to Kaishi's when
+> `kaishi-meanings.json` is present. It's for reference: don't copy what it shows into
+> the app or the repo.
 
 ### Scheduling (SRS)
 
@@ -174,9 +214,9 @@ npx expo-doctor       # diagnose dependency and config issues
 npx expo install --fix  # realign package versions with the SDK
 ```
 
-Everything currently runs in **Expo Go** — no custom native code has been added, so no
-development build is needed yet. That changes as soon as a native dependency (for
-example `expo-sqlite`) lands.
+Everything currently runs in **Expo Go**, including local storage: `expo-sqlite` and
+`expo-crypto` are both bundled in Expo Go. A development build is only needed once a
+native module that Expo Go doesn't include is added.
 
 > Running Expo's CLI through `npx` prints
 > `npm warn Unknown project config "node-linker"`. It is harmless — npm doesn't
@@ -188,26 +228,26 @@ example `expo-sqlite`) lands.
 | Phase | Milestone | Status |
 | --- | --- | --- |
 | 0 | **Skeleton** — Expo + Router + TypeScript project, theme tokens, landing screen | ✅ Done |
-| 1 | **Data pipeline + card model** — extract Kaishi 1.5k into a structured dataset, define the card/note schema and local storage | Not started |
-| 2 | **FSRS review engine** — scheduling, grading, beginner-tuned defaults | Not started |
-| 3 | **Review UI** — the fast mobile review loop | Not started |
+| 1 | **Data pipeline + card model** — structured word dataset, card schema, local storage | 🟡 Storage and card model done; content not shippable yet (licensing) |
+| 2 | **FSRS review engine** — scheduling, grading, beginner-tuned defaults | ✅ Done (ts-fsrs, FSRS-6) |
+| 3 | **Review UI** — the fast mobile review loop | ✅ First version (lessons, quick check, reviews) |
 | 4 | **Simple settings screen** — the three high-impact parameters, explained in plain language | Not started |
 | 5 | **Accounts + sync** — multi-device progress | Not started |
 
 ## Open questions and caveats
 
-- **Kaishi licensing and attribution** — unverified. Must be confirmed, and attribution
-  added, before distributing any build containing the deck's content.
-- **Audio source and rights** — whether the deck's audio can be redistributed, and
-  whether to bundle audio files or generate/stream them, is undecided. Bundling affects
-  app size significantly.
-- **FSRS: library vs. port** — whether to depend on an existing FSRS implementation or
-  port the algorithm. A dependency is faster and tracks upstream changes; a port avoids
-  a dependency on a fast-moving library and keeps the scheduler fully inspectable. Not
-  decided.
-- **Storage** — local-first with `expo-sqlite` versus a backend as the source of truth.
-  Local-first gives offline reviews and instant grading, but makes conflict resolution
-  on sync harder. Leaning local-first, not decided.
+- **Content sources** — Kaishi 1.5k has no license (see Vocabulary data). Open: whether
+  to ship Kaishi's word list and order (needs legal advice), and where meanings and
+  example sentences come from (JMdict and Tatoeba are the candidates).
+- **Audio** — Kaishi's audio can't be used. Open: text-to-speech, commissioned
+  recordings, or no audio at first; and whether to bundle it or download on demand.
+  Bundling affects app size significantly.
+- **FSRS** — *decided:* the `ts-fsrs` library, wrapped in `lib/srs/scheduler.ts` so it
+  can be swapped. Pinned to the FSRS-6 model (whole-day scheduling), 0.9 desired
+  retention, no short-term learning steps.
+- **Storage** — *decided:* local-first with `expo-sqlite`. The append-only review log is
+  the record of truth, so a future sync can merge devices by combining logs and
+  replaying them.
 - **Auth provider** — TBD, and only relevant from phase 5.
 - **Feedback colors** — the Rose brand accent is close to a conventional "error" red.
   Review grades (especially *Again*) and destructive actions need their own semantic
@@ -217,6 +257,8 @@ example `expo-sqlite`) lands.
 
 ## Status
 
-**Early — skeleton stage.** The project builds and runs cleanly on iOS with a single
-landing screen. There is no SRS logic, no vocabulary data, no database, no auth, and no
-backend yet.
+**Early — first working loop.** On iOS: lessons of 5 new words (10 a day) with a quick
+check, FSRS-scheduled reviews, and progress saved on the device. Development builds have
+tools on Home to move time forward and reset progress. Not built yet: accounts and sync,
+the settings screen, audio, and shippable vocabulary content (the development word list
+comes from the unlicensed Kaishi deck and stays local).

@@ -10,17 +10,26 @@ import {
   radius,
   spacing,
 } from "@/constants/theme";
-import { getRomaji, getWord } from "@/data/sample-words";
+import { getDictionaryWord } from "@/data/dictionary-words";
+import { useProgress } from "@/hooks/use-progress";
+import { useShowsRomaji } from "@/hooks/use-reading-level";
 import { useTheme } from "@/hooks/use-theme";
+import type { StoredCard } from "@/lib/db";
+import { now } from "@/lib/progress";
+import { isDue } from "@/lib/srs/day";
+import { formatTimeUntil } from "@/utils/format";
 
 /**
- * Test word detail screen, opened from a Dictionary row. Shows the word large
- * with its reading and romaji, then its meaning and one example sentence.
+ * Word detail, opened from a Dictionary row: the word large with its reading
+ * (and romaji for learners still on kana), its meaning, and where it stands in
+ * the user's reviews.
  */
 export default function WordDetailScreen() {
   const { theme } = useTheme();
   const { id } = useLocalSearchParams<{ id: string }>();
-  const word = getWord(id);
+  const word = getDictionaryWord(id);
+  const romaji = useShowsRomaji();
+  const stored = useProgress().cards.get(id);
 
   return (
     <SafeAreaView
@@ -46,14 +55,19 @@ export default function WordDetailScreen() {
                 lang="ja"
                 style={[styles.expression, { color: theme.text }]}
               >
-                {word.expression}
+                {word.word}
               </Text>
-              <Text lang="ja" style={[styles.reading, { color: theme.text }]}>
-                {word.reading}
-              </Text>
-              <Text style={[styles.romaji, { color: theme.textSubtle }]}>
-                {getRomaji(word)}
-              </Text>
+              {/* Kana-only words (あなた) would repeat themselves. */}
+              {word.reading !== word.word ? (
+                <Text lang="ja" style={[styles.reading, { color: theme.text }]}>
+                  {word.reading}
+                </Text>
+              ) : null}
+              {romaji ? (
+                <Text style={[styles.romaji, { color: theme.textSubtle }]}>
+                  {word.romaji}
+                </Text>
+              ) : null}
             </View>
 
             <View
@@ -66,43 +80,21 @@ export default function WordDetailScreen() {
                 Meaning
               </Text>
               <Text style={[styles.meaning, { color: theme.text }]}>
-                {word.meaning}
+                {word.meaning ?? "No meaning available"}
               </Text>
-              <View style={[styles.pill, { borderColor: theme.borderStrong }]}>
-                <Text style={[styles.pillLabel, { color: theme.textMuted }]}>
-                  {word.partOfSpeech}
-                </Text>
-              </View>
-            </View>
-
-            <View
-              style={[
-                styles.card,
-                { backgroundColor: theme.surface, borderColor: theme.border },
-              ]}
-            >
-              <Text style={[styles.label, { color: theme.textMuted }]}>
-                Example
-              </Text>
-              <Text
-                lang="ja"
-                style={[styles.exampleJapanese, { color: theme.text }]}
-              >
-                {word.example.japanese}
-              </Text>
-              <Text
-                lang="ja"
-                style={[styles.exampleReading, { color: theme.textMuted }]}
-              >
-                {word.example.reading}
-              </Text>
-              <Text style={[styles.exampleEnglish, { color: theme.textMuted }]}>
-                {word.example.english}
-              </Text>
+              {word.partOfSpeech ? (
+                <View
+                  style={[styles.pill, { borderColor: theme.borderStrong }]}
+                >
+                  <Text style={[styles.pillLabel, { color: theme.textMuted }]}>
+                    {word.partOfSpeech}
+                  </Text>
+                </View>
+              ) : null}
             </View>
 
             <Text style={[styles.status, { color: theme.textSubtle }]}>
-              Learned in your first lesson
+              {reviewStatus(stored)}
             </Text>
           </View>
         </ScrollView>
@@ -115,6 +107,13 @@ export default function WordDetailScreen() {
       )}
     </SafeAreaView>
   );
+}
+
+function reviewStatus(stored: StoredCard | undefined) {
+  if (!stored) return "Not learned yet";
+  const current = now();
+  if (isDue(stored.card.dueAt, current)) return "Due for review today";
+  return `Next review ${formatTimeUntil(stored.card.dueAt, current)}`;
 }
 
 const styles = StyleSheet.create({
@@ -175,16 +174,6 @@ const styles = StyleSheet.create({
   pillLabel: {
     fontSize: fontSize.xs,
     fontFamily: fontFamily.medium,
-  },
-  exampleJapanese: {
-    fontSize: fontSize.lg,
-  },
-  exampleReading: {
-    fontSize: fontSize.sm,
-  },
-  exampleEnglish: {
-    fontSize: fontSize.md,
-    fontFamily: fontFamily.regular,
   },
   status: {
     fontSize: fontSize.sm,

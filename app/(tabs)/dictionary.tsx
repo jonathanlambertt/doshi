@@ -1,8 +1,9 @@
 import { router } from "expo-router";
-import { ChevronRight, Search, X } from "lucide-react-native";
+import { BookBookmark, ChevronRight, Search, X } from "lucide-react-native";
 import { useState } from "react";
 import {
   FlatList,
+  Platform,
   Pressable,
   StyleSheet,
   Text,
@@ -12,6 +13,7 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 import { toHiragana } from "wanakana";
 
+import { EmptyState } from "@/components/empty-state";
 import {
   fontFamily,
   fontSize,
@@ -20,38 +22,67 @@ import {
   radius,
   spacing,
 } from "@/constants/theme";
-import { getRomaji, SAMPLE_WORDS, type Word } from "@/data/sample-words";
+import {
+  DICTIONARY_WORDS,
+  type DictionaryWord,
+} from "@/data/dictionary-words";
 import { useTheme } from "@/hooks/use-theme";
+import { useProgress } from "@/hooks/use-progress";
+import { learnedWords } from "@/lib/today";
+import { plural } from "@/utils/format";
+
+
+// Without the JMdict meanings file, Kaishi words have no English to search.
+const HAS_MEANINGS = DICTIONARY_WORDS.some((word) => word.meaning);
+const SEARCH_PLACEHOLDER = HAS_MEANINGS
+  ? "Search in Japanese or English"
+  : "Search in Japanese or romaji";
 
 /**
- * Matches the word, its reading, or its English meaning. Readings also match
- * romaji two ways: against the reading's romaji, so partial input like "nek"
- * finds ねこ, and via the query converted to hiragana, so other spellings
- * ("si" for し) and katakana input (ネコ) work too.
+ * Matches the word, its reading, or its English meaning when it has one.
+ * Readings also match romaji two ways: against the reading's romaji, so
+ * partial input like "nek" finds ねこ, and via the query converted to
+ * hiragana, so other spellings ("si" for し) and katakana input (ネコ) work
+ * too. Comparing against the reading in hiragana lets hiragana or romaji
+ * input find katakana words as well.
  */
-function matches(word: Word, query: string, kanaQuery: string) {
+function matches(word: DictionaryWord, query: string, kanaQuery: string) {
   return (
-    word.expression.includes(query) ||
+    word.word.includes(query) ||
     word.reading.includes(query) ||
-    word.reading.includes(kanaQuery) ||
-    getRomaji(word).includes(query) ||
-    word.meaning.toLowerCase().includes(query)
+    word.readingHiragana.includes(kanaQuery) ||
+    word.romaji.includes(query) ||
+    (word.meaning?.toLowerCase().includes(query) ?? false)
   );
 }
 
 /**
- * Test dictionary screen: the words a user has learned so far, with a search
- * that filters as you type. Tapping a row opens the word's detail screen.
+ * Dictionary: the words the user has learned so far, in list order, with a
+ * search that filters as you type. In development the list is
+ * the locally extracted Kaishi words (with JMdict meanings when present);
+ * otherwise the sample words, whose rows open the word detail screen.
  */
 export default function DictionaryScreen() {
-  const { theme } = useTheme();
+  const { scheme, theme } = useTheme();
+  const progress = useProgress();
   const [query, setQuery] = useState("");
 
+  const learned = learnedWords(progress);
   const normalizedQuery = query.trim().toLowerCase();
   const kanaQuery = toHiragana(normalizedQuery);
   const results = normalizedQuery
-    ? SAMPLE_WORDS.filter((word) => matches(word, normalizedQuery, kanaQuery))
-    : SAMPLE_WORDS;
+    ? learned.filter((word) => matches(word, normalizedQuery, kanaQuery))
+    : learned;
+
+  if (learned.length === 0) {
+    return (
+      <EmptyState
+        icon={BookBookmark}
+        title="No words yet"
+        description="Words you learn in lessons will appear here."
+      />
+    );
+  }
 
   return (
     <SafeAreaView
@@ -62,7 +93,7 @@ export default function DictionaryScreen() {
         <View style={styles.header}>
           <Text style={[styles.title, { color: theme.text }]}>Dictionary</Text>
           <Text style={[styles.subtitle, { color: theme.textMuted }]}>
-            {SAMPLE_WORDS.length} words learned
+            {plural(learned.length, "word", "words")} learned
           </Text>
         </View>
 
@@ -74,11 +105,18 @@ export default function DictionaryScreen() {
         >
           <Search color={theme.textSubtle} size={iconSize.md} />
           <TextInput
-            accessibilityLabel="Search your words"
+            accessibilityLabel="Search words"
             autoCapitalize="none"
             autoCorrect={false}
+            // Match the app's light/dark mode: the iOS keyboard and the
+            // cursor otherwise keep the system defaults. iOS tints the cursor
+            // with selectionColor; Android uses cursorColor and would paint
+            // selectionColor solid over selected text, so it's iOS-only.
+            keyboardAppearance={scheme}
+            cursorColor={theme.text}
+            selectionColor={Platform.OS === "ios" ? theme.text : undefined}
             onChangeText={setQuery}
-            placeholder="Search in Japanese or English"
+            placeholder={SEARCH_PLACEHOLDER}
             placeholderTextColor={theme.textSubtle}
             returnKeyType="search"
             value={query}
@@ -105,7 +143,11 @@ export default function DictionaryScreen() {
             contentContainerStyle={styles.listContent}
             renderItem={({ item, index }) => (
               <Pressable
-                accessibilityLabel={`${item.expression}, ${item.reading}, ${item.meaning}`}
+                accessibilityLabel={[
+                  item.word,
+                  item.reading,
+                  item.meaning ?? item.romaji,
+                ].join(", ")}
                 accessibilityRole="button"
                 onPress={() =>
                   router.push({
@@ -128,23 +170,26 @@ export default function DictionaryScreen() {
                     lang="ja"
                     style={[styles.expression, { color: theme.text }]}
                   >
-                    {item.expression}
+                    {item.word}
                   </Text>
-                  <Text
-                    lang="ja"
-                    style={[styles.reading, { color: theme.textMuted }]}
-                  >
-                    {item.reading}
-                  </Text>
+                  {/* Kana-only words (あなた) would repeat themselves. */}
+                  {item.reading !== item.word ? (
+                    <Text
+                      lang="ja"
+                      style={[styles.reading, { color: theme.textMuted }]}
+                    >
+                      {item.reading}
+                    </Text>
+                  ) : null}
                 </View>
                 <View style={styles.rowEnglish}>
                   <Text style={[styles.meaning, { color: theme.text }]}>
-                    {item.meaning}
+                    {item.meaning ?? item.romaji}
                   </Text>
                   <Text
                     style={[styles.partOfSpeech, { color: theme.textSubtle }]}
                   >
-                    {item.partOfSpeech}
+                    {item.partOfSpeech ?? `#${item.position}`}
                   </Text>
                 </View>
                 <ChevronRight color={theme.textSubtle} size={iconSize.md} />
