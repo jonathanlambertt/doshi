@@ -81,6 +81,8 @@ OVERRIDES: dict[tuple[str, str], tuple[str, int | None]] = {
     ("くらい", "くらい"): ("1154340", None),  # 位 "approximately", not 暗い "dark"
     ("いっぱい", "いっぱい"): ("1165670", 2),  # 一杯 "full", not 一敗 "one defeat"
     ("いくら", "いくら"): ("1219980", None),  # 幾ら "how much", not イクラ "salmon roe"
+    # Kana あまり is the adverb "(not) very"; 余り (#346) keeps "remainder".
+    ("あまり", "あまり"): ("1584930", 1),
 }
 
 # Some list entries give alternative readings separated by "・" (何: なに・なん).
