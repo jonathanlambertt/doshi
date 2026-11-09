@@ -11,7 +11,7 @@ opposite: steady-pace learning should be what you get out of the box, for everyo
 with no configuration.
 
 The core learning loop works — lessons, FSRS reviews and local progress — on
-development data. Accounts, sync, a settings screen and shippable vocabulary content
+development data. Accounts, sync, scheduling settings and shippable vocabulary content
 are not built yet (see Status).
 
 ## Goals
@@ -102,7 +102,7 @@ modern, research-backed replacement for the SM-2 family of algorithms. The plan:
 - Ship defaults tuned for Japanese beginners — a sensible desired retention, a modest
   new-cards-per-day rate, and a daily review cap that keeps the workload steady instead
   of spiky. Everyone gets a good pace with zero setup.
-- Later, add a **minimal** settings screen exposing only the highest-impact parameters:
+- Later, add **minimal** scheduling settings exposing only the highest-impact parameters:
   - **Desired retention** — how often you want to recall a card correctly. Higher means
     more reviews per day; lower means fewer reviews but more forgetting.
   - **New cards/day** — how fast you take on new vocabulary. Raising it today raises
@@ -231,7 +231,7 @@ native module that Expo Go doesn't include is added.
 | 1 | **Data pipeline + card model** — structured word dataset, card schema, local storage | 🟡 Storage and card model done; content not shippable yet (licensing) |
 | 2 | **FSRS review engine** — scheduling, grading, beginner-tuned defaults | ✅ Done (ts-fsrs, FSRS-6) |
 | 3 | **Review UI** — the fast mobile review loop | ✅ First version (lessons, quick check, reviews) |
-| 4 | **Simple settings screen** — the three high-impact parameters, explained in plain language | Not started |
+| 4 | **Simple scheduling settings** — the three high-impact parameters, explained in plain language | Not started |
 | 5 | **Accounts + sync** — multi-device progress | Not started |
 
 ## Open questions and caveats
@@ -258,7 +258,8 @@ native module that Expo Go doesn't include is added.
 ## Status
 
 **Early — first working loop.** On iOS: lessons of 5 new words (10 a day) with a quick
-check, FSRS-scheduled reviews, and progress saved on the device. Development builds have
-tools on Home to move time forward and reset progress. Not built yet: accounts and sync,
-the settings screen, audio, and shippable vocabulary content (the development word list
-comes from the unlicensed Kaishi deck and stays local).
+check, FSRS-scheduled reviews, and progress saved on the device. A Settings tab covers
+hiragana reading level and romaji. Development builds have tools on Home to move time
+forward and reset progress. Not built yet: accounts and sync, scheduling settings, audio,
+and shippable vocabulary content (the development word list comes from the unlicensed
+Kaishi deck and stays local).

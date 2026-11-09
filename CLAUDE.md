@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-Doshi is a Japanese vocabulary app for **iOS and Android** (a beginner-friendly Anki alternative) built on Expo SDK 58 + Expo Router + strict TypeScript. It has a working learning loop — lessons (new words + quick check), FSRS reviews, and local progress in SQLite — but no accounts, sync, settings screen, or shippable content yet. See README.md for the roadmap and open decisions (content sources, audio, auth provider, feedback colors). Don't treat undecided items as settled.
+Doshi is a Japanese vocabulary app for **iOS and Android** (a beginner-friendly Anki alternative) built on Expo SDK 58 + Expo Router + strict TypeScript. It has a working learning loop — lessons (new words + quick check), FSRS reviews, and local progress in SQLite — plus a Settings tab (hiragana reading level, romaji, placeholder Account rows), but no accounts, sync, or shippable content yet. See README.md for the roadmap and open decisions (content sources, audio, auth provider, feedback colors). Don't treat undecided items as settled.
 
 Architecture of the loop:
 - `lib/srs/` — the only code that touches `ts-fsrs` (`scheduler.ts`), plus the 4 am day boundary (`day.ts`) and today's summary (`summary.ts`). Pure, unit-tested in `lib/srs/__tests__/`. FSRS is pinned to **FSRS-6** (whole days; ts-fsrs 6 defaults to FSRS-7, which schedules a failed word seconds later without learning steps). Never change the version without migrating stored cards.
