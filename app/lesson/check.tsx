@@ -1,6 +1,6 @@
-import { router, useFocusEffect } from "expo-router";
+import { router, useNavigation } from "expo-router";
 import { Undo2 } from "lucide-react-native";
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { StyleSheet, Text } from "react-native";
 
 import { GradeButtons } from "@/components/grade-buttons";
@@ -50,6 +50,7 @@ function shuffle<T>(items: readonly T[]): T[] {
 export default function QuickCheckScreen() {
   const { theme } = useTheme();
   const romaji = useShowsRomaji();
+  const navigation = useNavigation();
   // Shuffled so recall doesn't lean on the order the words were taught in.
   const [queue, setQueue] = useState<readonly Item[]>(() =>
     shuffle(getLessonWords()).map((word) => ({ word, practice: false })),
@@ -101,13 +102,18 @@ export default function QuickCheckScreen() {
   }, [steps]);
 
   // Returning from Lesson complete (its Undo, or a back gesture) undoes the
-  // step that finished the check.
-  useFocusEffect(
-    useCallback(() => {
-      if (!completed.current) return;
-      completed.current = false;
-      handleUndo();
-    }, [handleUndo]),
+  // step that finished the check. This listens for the focus event itself, not
+  // useFocusEffect: that re-runs whenever its callback changes while the screen
+  // counts as focused, and router.push only navigates after the next render —
+  // so the last grade's re-render would undo that grade straight away.
+  useEffect(
+    () =>
+      navigation.addListener("focus", () => {
+        if (!completed.current) return;
+        completed.current = false;
+        handleUndo();
+      }),
+    [navigation, handleUndo],
   );
 
   if (!item) {

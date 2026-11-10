@@ -1,4 +1,4 @@
-import { router } from "expo-router";
+import { router, useCanGoBack } from "expo-router";
 import { Undo2 } from "lucide-react-native";
 import { StyleSheet, Text, View } from "react-native";
 
@@ -18,6 +18,9 @@ import { formatTimeUntil, plural } from "@/utils/format";
 export default function LessonCompleteScreen() {
   const { theme } = useTheme();
   const progress = useProgress();
+  // The hook, not router.canGoBack(): that reads navigation focus, which is
+  // stale during render.
+  const canGoBack = useCanGoBack();
 
   const learned = getLessonWords()
     .map((word) => progress.cards.get(word.id))
@@ -34,7 +37,7 @@ export default function LessonCompleteScreen() {
       trailingAction={
         // The quick check is pushed underneath; nothing to go back to only if
         // this screen was opened directly (e.g. a deep link).
-        router.canGoBack()
+        canGoBack
           ? {
               icon: Undo2,
               label: "Undo last answer",
