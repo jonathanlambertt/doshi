@@ -18,10 +18,12 @@ import { DESIRED_RETENTION } from "@/constants/lesson";
  * - No short-term learning steps: a word failed in a lesson's quick check gets
  *   one practice retry in the same session (handled by the app), then FSRS
  *   brings it back the next day.
+ *
+ * Desired retention isn't pinned: it's a user setting, passed to
+ * `createScheduler`.
  */
 export const SCHEDULER_SETTINGS = {
   version: "FSRS-6",
-  desiredRetention: DESIRED_RETENTION,
   enableShortTerm: false,
   learningSteps: [],
   relearningSteps: [],
@@ -33,12 +35,21 @@ export type Grade = "again" | "good";
 const RATINGS = { again: Rating.Again, good: Rating.Good } as const;
 
 /**
- * Creates the scheduler. Async because ts-fsrs loads the model on demand.
+ * Creates a scheduler. Async because ts-fsrs loads the model on demand.
+ * `desiredRetention` is the chance of remembering a word when it comes due;
+ * it only changes the intervals FSRS picks, not what it learns about a word.
  * `fuzz` spreads intervals slightly so words learned together don't all come
  * due on the same day; tests turn it off for exact intervals.
  */
-export async function createScheduler({ fuzz = true } = {}) {
-  return DefaultScheduler({ ...SCHEDULER_SETTINGS, enableFuzz: fuzz });
+export async function createScheduler({
+  desiredRetention = DESIRED_RETENTION,
+  fuzz = true,
+}: { desiredRetention?: number; fuzz?: boolean } = {}) {
+  return DefaultScheduler({
+    ...SCHEDULER_SETTINGS,
+    desiredRetention,
+    enableFuzz: fuzz,
+  });
 }
 
 export type Scheduler = Awaited<ReturnType<typeof createScheduler>>;

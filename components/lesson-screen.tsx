@@ -1,5 +1,5 @@
 import { router } from "expo-router";
-import { ArrowLeft, X } from "lucide-react-native";
+import { ArrowLeft, type LucideIcon, X } from "lucide-react-native";
 import type { ReactNode } from "react";
 import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -28,6 +28,8 @@ type LessonScreenProps = {
   closeLabel?: string;
   /** "Word 3 of 5" by default; reviews pass their own noun. */
   progressNoun?: string;
+  /** An icon button at the right end of the top bar (e.g. Undo). */
+  trailingAction?: { icon: LucideIcon; label: string; onPress: () => void };
   children: ReactNode;
 };
 
@@ -42,6 +44,7 @@ export function LessonScreen({
   footer,
   closeLabel = "Close lesson",
   progressNoun = "Word",
+  trailingAction,
   children,
 }: LessonScreenProps) {
   const { theme } = useTheme();
@@ -56,6 +59,7 @@ export function LessonScreen({
   const handleLeading =
     leading === "close" ? () => router.dismissTo("/home") : () => router.back();
   const LeadingIcon = leading === "close" ? X : ArrowLeft;
+  const TrailingIcon = trailingAction?.icon;
 
   return (
     <View
@@ -109,6 +113,22 @@ export function LessonScreen({
             </Text>
           </View>
         ) : null}
+
+        {trailingAction && TrailingIcon ? (
+          <Pressable
+            accessibilityRole="button"
+            accessibilityLabel={trailingAction.label}
+            hitSlop={spacing.sm}
+            onPress={trailingAction.onPress}
+            style={({ pressed }) => [
+              styles.iconButton,
+              styles.trailingButton,
+              pressed && { backgroundColor: theme.surface },
+            ]}
+          >
+            <TrailingIcon color={theme.textMuted} size={iconSize.lg} />
+          </Pressable>
+        ) : null}
       </View>
 
       <ScrollView contentContainerStyle={styles.scrollContent}>
@@ -156,6 +176,10 @@ const styles = StyleSheet.create({
   iconButton: {
     padding: spacing.sm,
     borderRadius: radius.full,
+  },
+  // Pushed to the right edge even when there's no progress bar.
+  trailingButton: {
+    marginLeft: "auto",
   },
   progress: {
     flex: 1,

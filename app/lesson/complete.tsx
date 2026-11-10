@@ -1,4 +1,5 @@
 import { router } from "expo-router";
+import { Undo2 } from "lucide-react-native";
 import { StyleSheet, Text, View } from "react-native";
 
 import { LessonScreen } from "@/components/lesson-screen";
@@ -11,7 +12,8 @@ import { formatTimeUntil, plural } from "@/utils/format";
 
 /**
  * End of a lesson: how many words were learned and when they come back.
- * Done returns Home, closing the whole lesson.
+ * Done returns Home, closing the whole lesson. Undo goes back to the quick
+ * check, which takes back its last answer (see `check.tsx`).
  */
 export default function LessonCompleteScreen() {
   const { theme } = useTheme();
@@ -29,6 +31,17 @@ export default function LessonCompleteScreen() {
   return (
     <LessonScreen
       leading="close"
+      trailingAction={
+        // The quick check is pushed underneath; nothing to go back to only if
+        // this screen was opened directly (e.g. a deep link).
+        router.canGoBack()
+          ? {
+              icon: Undo2,
+              label: "Undo last answer",
+              onPress: () => router.back(),
+            }
+          : undefined
+      }
       action={{ label: "Done", onPress: () => router.dismissTo("/home") }}
     >
       <View style={styles.header}>

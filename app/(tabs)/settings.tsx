@@ -1,9 +1,10 @@
 import Constants from "expo-constants";
 import { router } from "expo-router";
-import { Check, LogOut, Mail, Trash } from "lucide-react-native";
+import { ChevronRight, LogOut, Mail, Trash } from "lucide-react-native";
 import { ScrollView, StyleSheet, Switch, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
+import { type Choice, ChoiceSection } from "@/components/choice-section";
 import { ListRow, ListSection } from "@/components/list-row";
 import {
   fontFamily,
@@ -12,25 +13,21 @@ import {
   maxContentWidth,
   spacing,
 } from "@/constants/theme";
+import { useProgress } from "@/hooks/use-progress";
 import {
   type ReadingLevel,
   setReadingLevel,
   setRomaji,
-  useReadingLevel,
   useShowsRomaji,
 } from "@/hooks/use-reading-level";
 import { useTheme } from "@/hooks/use-theme";
-
-type Option = {
-  level: ReadingLevel;
-  label: string;
-};
+import { plural } from "@/utils/format";
 
 // Same answers as the kana question in the first lesson.
-const READING_OPTIONS: readonly Option[] = [
-  { level: "fluent", label: "I can read hiragana" },
-  { level: "some", label: "I can read a little" },
-  { level: "none", label: "I can't read it yet" },
+const READING_CHOICES: readonly Choice<ReadingLevel>[] = [
+  { value: "fluent", label: "I can read hiragana" },
+  { value: "some", label: "I can read a little" },
+  { value: "none", label: "I can't read it yet" },
 ];
 
 // Placeholder — there is no auth yet, so no real signed-in user.
@@ -51,12 +48,14 @@ const handleSignOut = () => {
 const handleDeleteAccount = () => {};
 
 /**
- * Settings tab: how well the user reads kana, whether romaji is shown
- * (independent of reading level), the Account section, and the app version.
+ * Settings tab: a link to Study pace (the scheduling settings, which most
+ * people never need to change), how well the user reads kana, whether romaji
+ * is shown (independent of reading level), the Account section, and the app
+ * version.
  */
 export default function SettingsScreen() {
   const { theme } = useTheme();
-  const readingLevel = useReadingLevel();
+  const { readingLevel, newWordsPerDay } = useProgress();
   const romaji = useShowsRomaji();
   const version = Constants.expoConfig?.version;
 
@@ -69,27 +68,25 @@ export default function SettingsScreen() {
         <View style={styles.content}>
           <Text style={[styles.title, { color: theme.text }]}>Settings</Text>
 
-          <ListSection title="Hiragana">
-            {READING_OPTIONS.map(({ level, label }, index) => {
-              const selected = readingLevel === level;
-              return (
-                <ListRow
-                  key={level}
-                  label={label}
-                  accessibilityRole="radio"
-                  selected={selected}
-                  onPress={() => setReadingLevel(level)}
-                  trailing={
-                    selected ? (
-                      <Check color={theme.text} size={iconSize.md} />
-                    ) : null
-                  }
-                  first={index === 0}
-                  last={index === READING_OPTIONS.length - 1}
-                />
-              );
-            })}
+          <ListSection footnote="New words a day, daily review limit and recall target.">
+            <ListRow
+              label="Study pace"
+              value={`${plural(newWordsPerDay, "word", "words")} a day`}
+              onPress={() => router.push("/study-pace")}
+              trailing={
+                <ChevronRight color={theme.textSubtle} size={iconSize.md} />
+              }
+              first
+              last
+            />
           </ListSection>
+
+          <ChoiceSection
+            title="Hiragana"
+            choices={READING_CHOICES}
+            selected={readingLevel}
+            onSelect={setReadingLevel}
+          />
 
           <ListSection
             title="Romaji"

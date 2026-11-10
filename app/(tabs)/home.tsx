@@ -18,7 +18,6 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import {
   LESSON_ESTIMATED_MINUTES,
   LESSON_WORD_COUNT,
-  NEW_WORDS_PER_DAY,
   REVIEW_ESTIMATED_SECONDS,
 } from "@/constants/lesson";
 import {
@@ -67,6 +66,7 @@ const DAY_MS = 24 * 60 * 60 * 1000;
 export default function HomeScreen() {
   const { theme } = useTheme();
   const today = useToday();
+  const { newWordsPerDay } = useProgress();
 
   const isFirstLesson = today.wordsLearned === 0;
   const learnedEverything = hasLearnedEverything(today);
@@ -77,6 +77,15 @@ export default function HomeScreen() {
     1,
     Math.round((today.reviewsDue * REVIEW_ESTIMATED_SECONDS) / 60),
   );
+  const learnedToday = `You've learned ${plural(today.newWordsToday, "new word", "new words")} today`;
+  // Once today's reviews are done: why more are waiting (the daily limit), or
+  // when the next one comes due.
+  const nextReviewNote =
+    today.reviewsHeldBack > 0
+      ? `You've reached today's review limit. ${plural(today.reviewsHeldBack, "word waits", "words wait")} until tomorrow.`
+      : today.nextReviewAt
+        ? `Your next review is ${formatTimeUntil(today.nextReviewAt, now())}.`
+        : undefined;
 
   const handleStartLesson = () => router.push("/lesson");
   const handleStartReviews = () => router.push("/review");
@@ -145,7 +154,7 @@ export default function HomeScreen() {
                   detail={
                     hasReviews
                       ? "Best done after your reviews"
-                      : `About ${LESSON_ESTIMATED_MINUTES} min · ${today.newWordsLeftToday} of ${NEW_WORDS_PER_DAY} new words left today`
+                      : `About ${LESSON_ESTIMATED_MINUTES} min · ${today.newWordsLeftToday} of ${newWordsPerDay} new words left today`
                   }
                   action={{
                     label: "Start lesson",
@@ -164,13 +173,9 @@ export default function HomeScreen() {
                   title={
                     learnedEverything
                       ? "You've met every word"
-                      : `You've learned today's ${NEW_WORDS_PER_DAY} new words`
+                      : learnedToday
                   }
-                  detail={
-                    today.nextReviewAt
-                      ? `Your next review is ${formatTimeUntil(today.nextReviewAt, now())}.`
-                      : undefined
-                  }
+                  detail={nextReviewNote}
                 />
               ) : null}
 
@@ -178,14 +183,13 @@ export default function HomeScreen() {
                 <Text style={[styles.note, { color: theme.textMuted }]}>
                   {learnedEverything
                     ? "You've met every word in the list. Reviews keep them fresh."
-                    : `You've learned today's ${NEW_WORDS_PER_DAY} new words. More tomorrow.`}
+                    : `${learnedToday}. More tomorrow.`}
                 </Text>
               ) : null}
 
-              {!hasReviews && hasLesson && today.nextReviewAt ? (
+              {!hasReviews && hasLesson && nextReviewNote ? (
                 <Text style={[styles.note, { color: theme.textMuted }]}>
-                  Your next review is{" "}
-                  {formatTimeUntil(today.nextReviewAt, now())}.
+                  {nextReviewNote}
                 </Text>
               ) : null}
             </>

@@ -10,7 +10,7 @@ import {
   gradeWord,
   type Scheduler,
 } from "@/lib/srs/scheduler";
-import { summarizeToday } from "@/lib/srs/summary";
+import { type CardTiming, summarizeToday } from "@/lib/srs/summary";
 
 // Dates are local time, matching how the app decides what "today" is.
 const at = (day: number, hour: number, minute = 0) =>
@@ -78,6 +78,20 @@ describe("scheduler", () => {
     expect(card.cardId).toBe("word-42");
   });
 
+  it("schedules sooner for a higher desired retention, without changing memory", async () => {
+    const strict = await createScheduler({ desiredRetention: 0.95, fuzz: false });
+    const relaxed = await createScheduler({ desiredRetention: 0.85, fuzz: false });
+    const first = gradeWord(scheduler, "w1", null, "good", at(3, 10));
+    const reviewed = (s: Scheduler) =>
+      gradeWord(s, "w1", first, "good", first.dueAt);
+
+    const interval = (s: Scheduler) => daysBetween(first.dueAt, reviewed(s).dueAt);
+    expect(interval(strict)).toBeLessThan(interval(scheduler));
+    expect(interval(relaxed)).toBeGreaterThan(interval(scheduler));
+    // Stability is what FSRS learned about the word; retention doesn't touch it.
+    expect(reviewed(strict).stability).toBeCloseTo(reviewed(scheduler).stability);
+  });
+
   it("round-trips a card through JSON storage", () => {
     const card = gradeWord(scheduler, "w1", null, "good", at(3, 10));
     const restored = cardFromJson(cardToJson(card));
@@ -118,12 +132,32 @@ describe("day boundary (4 am rollover)", () => {
 describe("summarizeToday", () => {
   const now = at(10, 12);
 
+  /** A started word; last graded in its lesson unless `lastReviewAt` is given. */
+  const card = (introducedAt: Date, dueAt: Date, lastReviewAt = introducedAt) => ({
+    introducedAt,
+    dueAt,
+    lastReviewAt,
+  });
+
+  const summarize = (
+    cards: CardTiming[],
+    options: Partial<Parameters<typeof summarizeToday>[0]> = {},
+  ) =>
+    summarizeToday({
+      cards,
+      totalWords: 1500,
+      newWordsPerDay: 10,
+      dailyReviewLimit: null,
+      now,
+      ...options,
+    });
+
   it("summarizes a brand-new user", () => {
-    expect(
-      summarizeToday({ cards: [], totalWords: 1500, newWordsPerDay: 10, now }),
-    ).toEqual({
+    expect(summarize([])).toEqual({
       wordsLearned: 0,
       reviewsDue: 0,
+      reviewsHeldBack: 0,
+      newWordsToday: 0,
       newWordsLeftToday: 10,
       wordsRemaining: 1500,
       nextReviewAt: null,
@@ -131,48 +165,100 @@ describe("summarizeToday", () => {
   });
 
   it("counts due reviews and today's new words", () => {
-    const summary = summarizeToday({
-      cards: [
-        { introducedAt: at(5, 9), dueAt: at(10, 9) }, // due
-        { introducedAt: at(5, 9), dueAt: at(10, 20) }, // due later today
-        { introducedAt: at(10, 9), dueAt: at(13, 9) }, // learned today
-        { introducedAt: at(10, 2), dueAt: at(13, 2) }, // 2 am: yesterday
-      ],
-      totalWords: 1500,
-      newWordsPerDay: 10,
-      now,
-    });
+    const summary = summarize([
+      card(at(5, 9), at(10, 9)), // due
+      card(at(5, 9), at(10, 20)), // due later today
+      card(at(10, 9), at(13, 9)), // learned today
+      card(at(10, 2), at(13, 2)), // 2 am: yesterday
+    ]);
 
     expect(summary.wordsLearned).toBe(4);
     expect(summary.reviewsDue).toBe(2);
+    expect(summary.newWordsToday).toBe(1);
     expect(summary.newWordsLeftToday).toBe(9);
     expect(summary.nextReviewAt).toBeNull();
   });
 
   it("reports the next review when nothing is due", () => {
-    const summary = summarizeToday({
-      cards: [
-        { introducedAt: at(10, 9), dueAt: at(13, 9) },
-        { introducedAt: at(10, 9), dueAt: at(11, 9) },
-      ],
-      totalWords: 1500,
-      newWordsPerDay: 10,
-      now,
-    });
+    const summary = summarize([
+      card(at(10, 9), at(13, 9)),
+      card(at(10, 9), at(11, 9)),
+    ]);
 
     expect(summary.reviewsDue).toBe(0);
     expect(summary.nextReviewAt).toEqual(at(11, 9));
   });
 
   it("never offers more new words than are left in the list", () => {
-    const summary = summarizeToday({
-      cards: [{ introducedAt: at(1, 9), dueAt: at(30, 9) }],
-      totalWords: 4,
-      newWordsPerDay: 10,
-      now,
-    });
+    const summary = summarize([card(at(1, 9), at(30, 9))], { totalWords: 4 });
 
     expect(summary.wordsRemaining).toBe(3);
     expect(summary.newWordsLeftToday).toBe(3);
+  });
+
+  it("offers no new words once today's count reaches a lowered limit", () => {
+    const learnedToday = Array.from({ length: 10 }, () =>
+      card(at(10, 9), at(13, 9)),
+    );
+    const summary = summarize(learnedToday, { newWordsPerDay: 5 });
+
+    expect(summary.newWordsToday).toBe(10);
+    expect(summary.newWordsLeftToday).toBe(0);
+  });
+
+  describe("daily review limit", () => {
+    const dueWords = (count: number) =>
+      Array.from({ length: count }, () => card(at(5, 9), at(10, 9)));
+    const reviewedToday = (count: number) =>
+      Array.from({ length: count }, () =>
+        card(at(5, 9), at(14, 9), at(10, 8)),
+      );
+
+    it("holds back due words over the limit until tomorrow", () => {
+      const summary = summarize(dueWords(8), { dailyReviewLimit: 5 });
+
+      expect(summary.reviewsDue).toBe(5);
+      expect(summary.reviewsHeldBack).toBe(3);
+      expect(summary.nextReviewAt).toBeNull();
+    });
+
+    it("counts today's reviews against the limit", () => {
+      const summary = summarize([...reviewedToday(3), ...dueWords(4)], {
+        dailyReviewLimit: 5,
+      });
+
+      expect(summary.reviewsDue).toBe(2);
+      expect(summary.reviewsHeldBack).toBe(2);
+    });
+
+    it("doesn't count words learned in today's lessons as reviews", () => {
+      const learnedToday = Array.from({ length: 10 }, () =>
+        card(at(10, 9), at(13, 9)),
+      );
+      const summary = summarize([...learnedToday, ...dueWords(4)], {
+        dailyReviewLimit: 5,
+      });
+
+      expect(summary.reviewsDue).toBe(4);
+      expect(summary.reviewsHeldBack).toBe(0);
+    });
+
+    it("points to tomorrow's rollover once the limit is reached", () => {
+      const summary = summarize(
+        [...reviewedToday(5), ...dueWords(2), card(at(5, 9), at(12, 9))],
+        { dailyReviewLimit: 5 },
+      );
+
+      expect(summary.reviewsDue).toBe(0);
+      expect(summary.reviewsHeldBack).toBe(2);
+      expect(summary.nextReviewAt).toEqual(at(11, 4));
+    });
+
+    it("has no limit when set to null", () => {
+      const summary = summarize([...reviewedToday(300), ...dueWords(300)]);
+
+      expect(summary.reviewsDue).toBe(300);
+      expect(summary.reviewsHeldBack).toBe(0);
+    });
   });
 });

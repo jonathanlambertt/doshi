@@ -11,8 +11,8 @@ opposite: steady-pace learning should be what you get out of the box, for everyo
 with no configuration.
 
 The core learning loop works — lessons, FSRS reviews and local progress — on
-development data. Accounts, sync, scheduling settings and shippable vocabulary content
-are not built yet (see Status).
+development data, with simple scheduling settings. Accounts, sync and shippable
+vocabulary content are not built yet (see Status).
 
 ## Goals
 
@@ -96,21 +96,24 @@ starter deck for Japanese learners, built into a structured dataset with fields 
 
 ### Scheduling (SRS)
 
-The scheduling engine is planned to be **FSRS** (Free Spaced Repetition Scheduler), a
-modern, research-backed replacement for the SM-2 family of algorithms. The plan:
+The scheduling engine is **FSRS** (Free Spaced Repetition Scheduler), a modern,
+research-backed replacement for the SM-2 family of algorithms:
 
-- Ship defaults tuned for Japanese beginners — a sensible desired retention, a modest
-  new-cards-per-day rate, and a daily review cap that keeps the workload steady instead
-  of spiky. Everyone gets a good pace with zero setup.
-- Later, add **minimal** scheduling settings exposing only the highest-impact parameters:
-  - **Desired retention** — how often you want to recall a card correctly. Higher means
-    more reviews per day; lower means fewer reviews but more forgetting.
-  - **New cards/day** — how fast you take on new vocabulary. Raising it today raises
-    your review load for weeks afterwards.
-  - **Daily review cap** — the ceiling on how long a session can get. A cap keeps days
-    predictable but pushes overdue cards further back.
+- Defaults are tuned for Japanese beginners — 90% desired retention, 10 new words a
+  day, and a daily limit of 100 reviews that keeps the workload steady instead of
+  spiky. Everyone gets a good pace with zero setup.
+- A **Study pace** screen, one tap in from Settings, offers **minimal** scheduling
+  settings — a few preset choices for each of the highest-impact parameters:
+  - **Recall target** (desired retention: 85, 90 or 95%) — how often you want to recall
+    a word correctly. Higher means more reviews per day; lower means fewer reviews but
+    more forgetting. Applies from each word's next review.
+  - **New words a day** (5, 10, 15 or 20, in whole lessons) — how fast you take on new
+    vocabulary. Raising it today raises your review load for weeks afterwards.
+  - **Daily review limit** (50, 100, 200 or none) — the ceiling on how long a day's
+    reviews can get. A limit keeps days predictable but pushes overdue words further
+    back; the most overdue are reviewed first.
 
-  Each gets a plain-language note on what it does and its tradeoff. Raw FSRS weights
+  Each has a plain-language note on what it does and its tradeoff. Raw FSRS weights
   are not exposed.
 
 ### Interface
@@ -231,7 +234,7 @@ native module that Expo Go doesn't include is added.
 | 1 | **Data pipeline + card model** — structured word dataset, card schema, local storage | 🟡 Storage and card model done; content not shippable yet (licensing) |
 | 2 | **FSRS review engine** — scheduling, grading, beginner-tuned defaults | ✅ Done (ts-fsrs, FSRS-6) |
 | 3 | **Review UI** — the fast mobile review loop | ✅ First version (lessons, quick check, reviews) |
-| 4 | **Simple scheduling settings** — the three high-impact parameters, explained in plain language | Not started |
+| 4 | **Simple scheduling settings** — the three high-impact parameters, explained in plain language | ✅ Done (Study pace, in Settings) |
 | 5 | **Accounts + sync** — multi-device progress | Not started |
 
 ## Open questions and caveats
@@ -257,9 +260,9 @@ native module that Expo Go doesn't include is added.
 
 ## Status
 
-**Early — first working loop.** On iOS: lessons of 5 new words (10 a day) with a quick
-check, FSRS-scheduled reviews, and progress saved on the device. A Settings tab covers
-hiragana reading level and romaji. Development builds have tools on Home to move time
-forward and reset progress. Not built yet: accounts and sync, scheduling settings, audio,
-and shippable vocabulary content (the development word list comes from the unlicensed
-Kaishi deck and stays local).
+**Early — first working loop.** On iOS: lessons of 5 new words (10 a day by default)
+with a quick check, FSRS-scheduled reviews, and progress saved on the device. A Settings
+tab covers study pace (new words, review limit, recall target), hiragana reading level
+and romaji. Development builds have tools on Home to move time forward and reset
+progress. Not built yet: accounts and sync, audio, and shippable vocabulary content (the
+development word list comes from the unlicensed Kaishi deck and stays local).

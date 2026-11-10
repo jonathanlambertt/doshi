@@ -62,19 +62,22 @@ export function ListRow({
 }
 
 type ListSectionProps = {
-  title: string;
+  /** Omit for a group that needs no heading, e.g. a single navigation row. */
+  title?: string;
   /** Small print under the card. */
   footnote?: string;
   children: ReactNode;
 };
 
-/** A titled group of `ListRow`s. */
+/** A group of `ListRow`s, usually titled. */
 export function ListSection({ title, footnote, children }: ListSectionProps) {
   const { theme } = useTheme();
 
   return (
     <View style={styles.section}>
-      <Text style={[styles.sectionTitle, { color: theme.textMuted }]}>{title}</Text>
+      {title ? (
+        <Text style={[styles.sectionTitle, { color: theme.textMuted }]}>{title}</Text>
+      ) : null}
       <View>{children}</View>
       {footnote ? (
         <Text style={[styles.footnote, { color: theme.textMuted }]}>{footnote}</Text>

@@ -1,5 +1,6 @@
-import { router } from "expo-router";
-import { useState } from "react";
+import { router, useFocusEffect } from "expo-router";
+import { Undo2 } from "lucide-react-native";
+import { useCallback, useRef, useState } from "react";
 import { StyleSheet, Text } from "react-native";
 
 import { GradeButtons } from "@/components/grade-buttons";
@@ -11,13 +12,21 @@ import type { DictionaryWord } from "@/data/dictionary-words";
 import { useShowsRomaji } from "@/hooks/use-reading-level";
 import { useTheme } from "@/hooks/use-theme";
 import { getLessonWords } from "@/lib/lesson-session";
-import { recordGrade } from "@/lib/progress";
+import { type GradeRecord, recordGrade, undoGrade } from "@/lib/progress";
 import type { Grade } from "@/lib/srs/scheduler";
 
 type Item = {
   word: DictionaryWord;
   /** A practice round for a word graded Again; not sent to FSRS. */
   practice: boolean;
+};
+
+/** Where the check was before a step, and the grade that step made, if any. */
+type Step = {
+  queue: readonly Item[];
+  index: number;
+  /** Null for a practice round, which isn't graded. */
+  record: GradeRecord | null;
 };
 
 function shuffle<T>(items: readonly T[]): T[] {
@@ -34,22 +43,33 @@ function shuffle<T>(items: readonly T[]): T[] {
  * grade starts the word in FSRS and is saved immediately. A word graded Again
  * comes back once more at the end as practice — not graded, since FSRS has
  * already scheduled it for tomorrow.
+ *
+ * Undo steps back one word at a time, taking its grade back, so a mis-tap can
+ * be fixed. Going back from Lesson complete undoes the last step the same way.
  */
 export default function QuickCheckScreen() {
   const { theme } = useTheme();
   const romaji = useShowsRomaji();
   // Shuffled so recall doesn't lean on the order the words were taught in.
-  const [queue, setQueue] = useState<Item[]>(() =>
+  const [queue, setQueue] = useState<readonly Item[]>(() =>
     shuffle(getLessonWords()).map((word) => ({ word, practice: false })),
   );
   const [index, setIndex] = useState(0);
   const [revealed, setRevealed] = useState(false);
+  const [steps, setSteps] = useState<readonly Step[]>([]);
+  // Set when the last step opens Lesson complete; this screen stays underneath.
+  const completed = useRef(false);
 
   const item = queue[index];
 
-  const advance = (nextQueue: Item[]) => {
+  const advance = (nextQueue: readonly Item[], record: GradeRecord | null) => {
+    if (completed.current) return;
+    setSteps((current) => [...current, { queue, index, record }]);
     if (index + 1 >= nextQueue.length) {
-      router.replace("/lesson/complete");
+      // Pushed rather than replaced, so going back returns here. The last word
+      // stays on screen underneath, which is where undo lands.
+      completed.current = true;
+      router.push("/lesson/complete");
       return;
     }
     setQueue(nextQueue);
@@ -58,13 +78,37 @@ export default function QuickCheckScreen() {
   };
 
   const handleGrade = (grade: Grade) => {
-    recordGrade(item.word.id, grade, "lesson");
+    // A second tap can land after the last step has opened Lesson complete.
+    if (completed.current) return;
+    const record = recordGrade(item.word.id, grade, "lesson");
     advance(
       grade === "again"
         ? [...queue, { word: item.word, practice: true }]
         : queue,
+      record,
     );
   };
+
+  // Back to the previous word with its answer showing, ready to regrade.
+  const handleUndo = useCallback(() => {
+    const last = steps[steps.length - 1];
+    if (!last) return;
+    if (last.record) undoGrade(last.record);
+    setSteps(steps.slice(0, -1));
+    setQueue(last.queue);
+    setIndex(last.index);
+    setRevealed(true);
+  }, [steps]);
+
+  // Returning from Lesson complete (its Undo, or a back gesture) undoes the
+  // step that finished the check.
+  useFocusEffect(
+    useCallback(() => {
+      if (!completed.current) return;
+      completed.current = false;
+      handleUndo();
+    }, [handleUndo]),
+  );
 
   if (!item) {
     return (
@@ -79,7 +123,7 @@ export default function QuickCheckScreen() {
   const footer = !revealed ? (
     <PrimaryButton label="Show answer" onPress={() => setRevealed(true)} />
   ) : item.practice ? (
-    <PrimaryButton label="Continue" onPress={() => advance(queue)} />
+    <PrimaryButton label="Continue" onPress={() => advance(queue, null)} />
   ) : (
     <GradeButtons onGrade={handleGrade} />
   );
@@ -88,6 +132,11 @@ export default function QuickCheckScreen() {
     <LessonScreen
       leading="close"
       progress={{ current: index + 1, total: queue.length }}
+      trailingAction={
+        steps.length > 0
+          ? { icon: Undo2, label: "Undo last answer", onPress: handleUndo }
+          : undefined
+      }
       footer={footer}
     >
       <Text style={[styles.eyebrow, { color: theme.textMuted }]}>

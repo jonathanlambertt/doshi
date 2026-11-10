@@ -1,4 +1,5 @@
 import { router } from "expo-router";
+import { Undo2 } from "lucide-react-native";
 import { useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
 
@@ -14,37 +15,68 @@ import {
 } from "@/constants/theme";
 import { useShowsRomaji } from "@/hooks/use-reading-level";
 import { useTheme } from "@/hooks/use-theme";
-import { getProgress, recordGrade } from "@/lib/progress";
+import { useToday } from "@/hooks/use-today";
+import {
+  getProgress,
+  type GradeRecord,
+  recordGrade,
+  undoGrade,
+} from "@/lib/progress";
 import type { Grade } from "@/lib/srs/scheduler";
 import { dueWords } from "@/lib/today";
 import { plural } from "@/utils/format";
 
+type Graded = { grade: Grade; record: GradeRecord };
+
 /**
- * A review session: every word due today, most overdue first. Each grade is
- * sent to FSRS and saved immediately, so closing midway keeps what was done.
+ * A review session: the words due today, most overdue first, up to the daily
+ * review limit. Each grade is sent to FSRS and saved immediately, so closing
+ * midway keeps what was done. Undo steps back one word at a time, taking its
+ * grade back, so a mis-tap can be fixed.
  */
 export default function ReviewScreen() {
   const { theme } = useTheme();
   const romaji = useShowsRomaji();
+  const { reviewsHeldBack } = useToday();
+  const limitNote =
+    reviewsHeldBack > 0
+      ? `You've reached today's review limit. ${plural(reviewsHeldBack, "word waits", "words wait")} until tomorrow.`
+      : null;
   // Fixed when the session starts, so grading doesn't reshuffle the queue.
   const [queue] = useState(() => dueWords(getProgress()));
-  const [index, setIndex] = useState(0);
+  // One entry per word graded this session, in order; the next word to show
+  // is the one after the last graded.
+  const [graded, setGraded] = useState<readonly Graded[]>([]);
   const [revealed, setRevealed] = useState(false);
-  const [remembered, setRemembered] = useState(0);
 
+  const index = graded.length;
   const word = queue[index];
   const finished = index >= queue.length;
+  const remembered = graded.filter(({ grade }) => grade === "good").length;
 
   const handleGrade = (grade: Grade) => {
     // A second tap can land on the grade buttons after the last word was
     // graded but before the finished screen replaces them; ignore it rather
     // than grading a word past the end of the queue.
     if (!word) return;
-    recordGrade(word.id, grade, "review");
-    if (grade === "good") setRemembered((count) => count + 1);
-    setIndex((current) => current + 1);
+    const record = recordGrade(word.id, grade, "review");
+    setGraded((current) => [...current, { grade, record }]);
     setRevealed(false);
   };
+
+  // Back to the last graded word with its answer showing, ready to regrade.
+  const handleUndo = () => {
+    const last = graded[graded.length - 1];
+    if (!last) return;
+    undoGrade(last.record);
+    setGraded(graded.slice(0, -1));
+    setRevealed(true);
+  };
+
+  const undoAction =
+    graded.length > 0
+      ? { icon: Undo2, label: "Undo last answer", onPress: handleUndo }
+      : undefined;
 
   const close = () => router.dismissTo("/home");
 
@@ -59,7 +91,7 @@ export default function ReviewScreen() {
           Nothing to review
         </Text>
         <Text style={[styles.body, { color: theme.textMuted }]}>
-          No words are due right now.
+          {limitNote ?? "No words are due right now."}
         </Text>
       </LessonScreen>
     );
@@ -70,6 +102,7 @@ export default function ReviewScreen() {
       <LessonScreen
         leading="close"
         closeLabel="Close reviews"
+        trailingAction={undoAction}
         action={{ label: "Done", onPress: close }}
       >
         <View style={styles.header}>
@@ -86,6 +119,11 @@ export default function ReviewScreen() {
             The ones you missed come back tomorrow.
           </Text>
         ) : null}
+        {limitNote ? (
+          <Text style={[styles.body, { color: theme.textMuted }]}>
+            {limitNote}
+          </Text>
+        ) : null}
       </LessonScreen>
     );
   }
@@ -96,6 +134,7 @@ export default function ReviewScreen() {
       closeLabel="Close reviews"
       progressNoun="Review"
       progress={{ current: index + 1, total: queue.length }}
+      trailingAction={undoAction}
       footer={
         revealed ? (
           <GradeButtons onGrade={handleGrade} />

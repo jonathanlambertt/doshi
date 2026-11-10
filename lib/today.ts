@@ -1,4 +1,3 @@
-import { NEW_WORDS_PER_DAY } from "@/constants/lesson";
 import { DICTIONARY_WORDS, type DictionaryWord } from "@/data/dictionary-words";
 import type { StoredCard } from "@/lib/db";
 import { now, type ProgressState } from "@/lib/progress";
@@ -24,9 +23,11 @@ export function computeToday(progress: ProgressState): TodaySummary {
     cards: cardsInList(progress).map((stored) => ({
       dueAt: stored.card.dueAt,
       introducedAt: stored.introducedAt,
+      lastReviewAt: stored.card.lastReviewAt,
     })),
     totalWords: DICTIONARY_WORDS.length,
-    newWordsPerDay: NEW_WORDS_PER_DAY,
+    newWordsPerDay: progress.newWordsPerDay,
+    dailyReviewLimit: progress.dailyReviewLimit,
     now: now(),
   });
 }
@@ -47,11 +48,15 @@ export function nextNewWords(
   );
 }
 
-/** Words due for review today, most overdue first. */
+/**
+ * Words to review today, most overdue first, up to what's left of the daily
+ * review limit. Words over the limit wait until tomorrow.
+ */
 export function dueWords(progress: ProgressState): DictionaryWord[] {
   const current = now();
   return cardsInList(progress)
     .filter((stored) => isDue(stored.card.dueAt, current))
     .sort((a, b) => a.card.dueAt.getTime() - b.card.dueAt.getTime())
+    .slice(0, computeToday(progress).reviewsDue)
     .map((stored) => WORDS_BY_ID.get(stored.wordId) as DictionaryWord);
 }

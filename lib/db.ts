@@ -5,7 +5,11 @@
  * - `review_log`: one row per grade, append-only. It's the record of truth:
  *   replaying a word's log through FSRS rebuilds its card, which is what will
  *   make syncing between devices conflict-free later. Ids are UUIDs made on the
- *   device so two devices can never collide; times are UTC milliseconds.
+ *   device so two devices can never collide; times are UTC milliseconds. Each
+ *   row keeps the desired retention it was graded with, since that setting
+ *   can change and decides the interval. The one exception to append-only is
+ *   undo: taking back a word's latest grade deletes its row. Once sync exists,
+ *   an undone grade that has already synced will need a tombstone instead.
  * - `settings`: small key/value preferences.
  */
 import * as SQLite from "expo-sqlite";
@@ -49,6 +53,11 @@ const MIGRATIONS: readonly string[] = [
     key TEXT PRIMARY KEY NOT NULL,
     value TEXT NOT NULL
   );
+  `,
+  // Desired retention became a setting; every earlier grade used 0.9.
+  `
+  ALTER TABLE review_log
+    ADD COLUMN desired_retention REAL NOT NULL DEFAULT 0.9;
   `,
 ];
 
@@ -106,12 +115,14 @@ export async function saveGrade(
     kind,
     grade,
     reviewedAt,
+    desiredRetention,
   }: {
     stored: StoredCard;
     logId: string;
     kind: ReviewKind;
     grade: Grade;
     reviewedAt: Date;
+    desiredRetention: number;
   },
 ) {
   const cardJson = cardToJson(stored.card);
@@ -129,16 +140,45 @@ export async function saveGrade(
     );
     await db.runAsync(
       `INSERT INTO review_log
-         (id, word_id, kind, grade, reviewed_at, fsrs_version, fsrs_card_after)
-       VALUES (?, ?, ?, ?, ?, ?, ?);`,
+         (id, word_id, kind, grade, reviewed_at, fsrs_version,
+          desired_retention, fsrs_card_after)
+       VALUES (?, ?, ?, ?, ?, ?, ?, ?);`,
       logId,
       stored.wordId,
       kind,
       grade,
       reviewedAt.getTime(),
       SCHEDULER_SETTINGS.version,
+      desiredRetention,
       cardJson,
     );
+  });
+}
+
+/**
+ * Undoes a word's latest grade: deletes its review-log entry and puts the
+ * word's card back as it was — or removes the card if that grade started it.
+ */
+export async function deleteGrade(
+  db: Database,
+  {
+    wordId,
+    logId,
+    previous,
+  }: { wordId: string; logId: string; previous: StoredCard | null },
+) {
+  await db.withTransactionAsync(async () => {
+    await db.runAsync("DELETE FROM review_log WHERE id = ?;", logId);
+    if (previous) {
+      await db.runAsync(
+        "UPDATE cards SET due_at = ?, fsrs_card = ? WHERE word_id = ?;",
+        previous.card.dueAt.getTime(),
+        cardToJson(previous.card),
+        wordId,
+      );
+    } else {
+      await db.runAsync("DELETE FROM cards WHERE word_id = ?;", wordId);
+    }
   });
 }
 
