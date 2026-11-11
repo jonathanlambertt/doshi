@@ -1,4 +1,4 @@
-import { Check } from "lucide-react-native";
+import { Check, type LucideIcon } from "lucide-react-native";
 import { StyleSheet, View } from "react-native";
 
 import { ListRow, ListSection } from "@/components/list-row";
@@ -8,6 +8,8 @@ import { useTheme } from "@/hooks/use-theme";
 export type Choice<T> = {
   value: T;
   label: string;
+  /** Leading icon; give every choice in a section one, or none. */
+  icon?: LucideIcon;
   /** Muted text at the trailing edge, e.g. what the choice costs. */
   detail?: string;
 };
@@ -33,11 +35,12 @@ export function ChoiceSection<T extends string | number | null>({
 
   return (
     <ListSection title={title} footnote={footnote}>
-      {choices.map(({ value, label, detail }, index) => {
+      {choices.map(({ value, label, icon, detail }, index) => {
         const isSelected = value === selected;
         return (
           <ListRow
             key={String(value)}
+            icon={icon}
             label={label}
             value={detail}
             accessibilityRole="radio"

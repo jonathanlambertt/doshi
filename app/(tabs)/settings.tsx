@@ -1,6 +1,20 @@
 import Constants from "expo-constants";
 import { router } from "expo-router";
-import { ChevronRight, LogOut, Mail, Trash } from "lucide-react-native";
+import {
+  Book,
+  BookCheck,
+  BookOpen,
+  ChevronRight,
+  Gauge,
+  Info,
+  Languages,
+  LogOut,
+  Mail,
+  Moon,
+  Smartphone,
+  Sun,
+  Trash,
+} from "lucide-react-native";
 import { ScrollView, StyleSheet, Switch, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -26,15 +40,15 @@ import { plural } from "@/utils/format";
 
 // Same answers as the kana question in the first lesson.
 const READING_CHOICES: readonly Choice<ReadingLevel>[] = [
-  { value: "fluent", label: "I can read hiragana" },
-  { value: "some", label: "I can read a little" },
-  { value: "none", label: "I can't read it yet" },
+  { value: "fluent", label: "I can read hiragana", icon: BookCheck },
+  { value: "some", label: "I can read a little", icon: BookOpen },
+  { value: "none", label: "I can't read it yet", icon: Book },
 ];
 
 const APPEARANCE_CHOICES: readonly Choice<AppearancePreference>[] = [
-  { value: "system", label: "Match device" },
-  { value: "light", label: "Light" },
-  { value: "dark", label: "Dark" },
+  { value: "system", label: "Match device", icon: Smartphone },
+  { value: "light", label: "Light", icon: Sun },
+  { value: "dark", label: "Dark", icon: Moon },
 ];
 
 // Placeholder — there is no auth yet, so no real signed-in user.
@@ -77,6 +91,7 @@ export default function SettingsScreen() {
 
           <ListSection footnote="New words a day, daily review limit and recall target.">
             <ListRow
+              icon={Gauge}
               label="Study pace"
               value={`${plural(newWordsPerDay, "word", "words")} a day`}
               onPress={() => router.push("/study-pace")}
@@ -100,6 +115,7 @@ export default function SettingsScreen() {
             footnote="Latin letters under each word (neko for ねこ). Keep them on as long as they help, whatever your reading level."
           >
             <ListRow
+              icon={Languages}
               label="Show romaji"
               accessibilityRole="switch"
               selected={romaji}
@@ -139,6 +155,7 @@ export default function SettingsScreen() {
 
           <ListSection>
             <ListRow
+              icon={Info}
               label="Credits"
               onPress={() => router.push("/credits")}
               trailing={
