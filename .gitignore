@@ -47,3 +47,6 @@ __pycache__/
 
 # Anki decks and their media — only the generated data/words.json is committed
 *.apkg
+
+# Local scratch data, not part of the app
+/data/source/
