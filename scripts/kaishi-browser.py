@@ -3,15 +3,12 @@ Browse and search the full Kaishi 1.5k deck in a local web page.
 
 For studying the deck while building Doshi, not part of the app. It reads a
 local copy of the .apkg into memory and serves it on 127.0.0.1 only. Nothing
-is written to disk or to the repo. The deck has no license (see the licensing
-notes in README.md), so keep it that way: never copy what it shows into the
-app, the repo or a build.
+is written to disk or to the repo. It shows the deck's pictures and audio,
+which Doshi never ships; what the app does ship comes only through
+scripts/extract-kaishi-words.py (see "Vocabulary data" in README.md).
 
 Usage:
     python3 -I scripts/kaishi-browser.py <path/to/Kaishi.apkg> [--port 8642] [--no-open]
-
-If data/source/kaishi-meanings.json exists, each card also shows the JMdict
-meaning Doshi uses for that word, for comparison.
 
 Requires Python 3.14+ (for compression.zstd, used to read modern .apkg files).
 """
@@ -33,7 +30,6 @@ from urllib.parse import unquote, urlparse
 NOTETYPE_NAME = "Kaishi 1.5k"
 FIELD_SEPARATOR = "\x1f"
 ZSTD_MAGIC = b"\x28\xb5\x2f\xfd"
-MEANINGS = Path(__file__).resolve().parent.parent / "data/source/kaishi-meanings.json"
 
 
 # --- Reading the deck -------------------------------------------------------
@@ -136,15 +132,6 @@ def read_media_index(archive: zipfile.ZipFile) -> dict[str, str]:
     return index
 
 
-def read_meanings() -> dict[str, str]:
-    if not MEANINGS.exists():
-        return {}
-    return {
-        entry["guid"]: entry["meaning"]
-        for entry in json.loads(MEANINGS.read_text(encoding="utf-8"))
-    }
-
-
 # --- Serving ----------------------------------------------------------------
 
 
@@ -152,10 +139,7 @@ class Deck:
     def __init__(self, apkg: Path):
         self.archive = zipfile.ZipFile(apkg)
         self.media = read_media_index(self.archive)
-        meanings = read_meanings()
         notes = read_notes(self.archive)
-        for note in notes:
-            note["doshiMeaning"] = meanings.get(note["guid"])
         self.notes_json = json.dumps(notes, ensure_ascii=False).encode("utf-8")
         self.count = len(notes)
         self.lock = threading.Lock()
@@ -296,7 +280,6 @@ PAGE = r"""<!doctype html>
     font: inherit; font-size: 13px; color: var(--accent); background: var(--accent-soft);
     border: 0; border-radius: 999px; padding: 4px 12px; cursor: pointer; margin-right: 6px;
   }
-  .compare { border-left: 3px solid var(--border); padding-left: 10px; }
   .more { display: block; margin: 16px auto; }
   footer { max-width: 960px; margin: 0 auto; padding: 16px 16px 40px; color: var(--subtle); font-size: 12px; }
   footer a { color: inherit; }
@@ -326,7 +309,7 @@ PAGE = r"""<!doctype html>
 <footer>
   Local study copy of <a href="https://github.com/donkuri/Kaishi" target="_blank" rel="noreferrer">Kaishi 1.5k</a>
   by donkuri (sentences from the Core and Tango decks, pictures from Irasutoya).
-  The deck has no license: don't copy its meanings, sentences, audio or pictures into Doshi.
+  Doshi never ships the deck's pictures or audio.
 </footer>
 <script>
 const PAGE_SIZE = 150;
@@ -482,7 +465,6 @@ function detail(note) {
     el("div", { className: "big", lang: "ja" }, furigana(f["Word Furigana"] || f["Word"])),
     audio,
     el("h3", {}, "Meaning"), el("div", {}, sanitize(f["Word Meaning"] || "")),
-    note.doshiMeaning ? el("div", { className: "muted compare" }, `Doshi (JMdict): ${note.doshiMeaning}`) : null,
     el("h3", {}, "Sentence"),
     el("div", { className: "sentence", lang: "ja" }, furigana(f["Sentence Furigana"] || f["Sentence"] || "")),
     el("div", { className: "muted" }, sanitize(f["Sentence Meaning"] || "")),

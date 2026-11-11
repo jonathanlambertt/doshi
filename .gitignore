@@ -42,5 +42,8 @@ example
 /ios
 /android
 
-# Extracted from the unlicensed Kaishi 1.5k deck — keep out of git (see README licensing notes)
-/data/source/
+# Python bytecode
+__pycache__/
+
+# Anki decks and their media — only the generated data/words.json is committed
+*.apkg

@@ -10,9 +10,9 @@ surface assume you already know how spaced repetition works. Doshi's bet is the
 opposite: steady-pace learning should be what you get out of the box, for everyone,
 with no configuration.
 
-The core learning loop works — lessons, FSRS reviews and local progress — on
-development data, with simple scheduling settings. Accounts, sync and shippable
-vocabulary content are not built yet (see Status).
+The core learning loop works — lessons, FSRS reviews and local progress — on the full
+Kaishi 1.5k word list, with simple scheduling settings. Accounts and sync are not built
+yet (see Status).
 
 ## Goals
 
@@ -36,63 +36,51 @@ vocabulary content are not built yet (see Status).
 
 ### Vocabulary data
 
-The word list is planned to start from the Anki **Kaishi 1.5k** deck, a widely-used
-starter deck for Japanese learners, built into a structured dataset with fields for:
+The word list is the Anki **Kaishi 1.5k** deck
+([donkuri/Kaishi](https://github.com/donkuri/Kaishi), v2.4.3), a widely used starter
+deck for Japanese learners: 1,500 words, learned in deck order. Each word ships with:
 
 | Field | Example |
 | --- | --- |
-| Expression | 新しい |
+| Word | 新しい |
 | Reading | あたらしい |
 | Meaning | new |
-| Part of speech | i-adjective |
-| Example sentence | 新しい本を買った。 |
-| Audio | word and/or sentence audio |
+| Example sentence | 新しい本を買った。, with furigana, the word marked, and its English translation |
+| Pitch accent | アタラシイ, LHHLL (stored; not shown in the app yet) |
+| Notes | the deck's usage notes, where it has them |
 
-> **Licensing — Kaishi 1.5k has no license.** Checked November 2026 against
-> [donkuri/Kaishi](https://github.com/donkuri/Kaishi) (release v2.4.3): there is no
-> LICENSE file and no license on the repository, so all rights are reserved by default.
-> Its README also says the data was "mostly taken from Core2k, Core10k, Tango N4 and
-> Tango N5" and that "the sentences themselves come from various Core decks" — sources
-> that are not openly licensed either. Its audio comes from those decks and the AJT
-> Japanese add-on, and its pictures from Irasutoya (which has its own usage terms).
+There is no part of speech: the deck doesn't have one.
+
+> **Licensing — decided (November 2026).** Kaishi 1.5k has no license: there is no
+> LICENSE file on the repository, and its README says its sentences and translations
+> come from the Core and Tango decks, which aren't openly licensed either. Knowing that,
+> the project owner decided to ship each word's word, reading, meaning, example sentence
+> with its translation, notes and pitch accent. **Kaishi's pictures and audio never
+> ship** and are never read by the build. JMdict and Tatoeba are no longer used.
+> Kaishi 1.5k by donkuri is credited on the Credits screen in Settings.
 >
-> What this means (not legal advice):
->
-> - **Do not ship** Kaishi's meanings, example sentences, sentence translations, audio
->   or pictures in any distributed build.
-> - **Word + reading** (e.g. 新しい / あたらしい) is low risk — single words and their
->   readings are facts. The **selection and order** of the list is a gray area
->   (compilations can be protected in some jurisdictions); get legal advice before
->   shipping Kaishi's exact list and order.
-> - Candidate openly licensed sources for everything else: **JMdict** (EDRDG, CC BY-SA
->   4.0) for meanings and parts of speech, **Tatoeba** (mostly CC BY 2.0 FR) for example
->   sentences, and text-to-speech or commissioned recordings for audio. Each needs its
->   attribution added in the app. Not decided yet.
->
-> `scripts/extract-kaishi-words.py` extracts **only** the word and reading, in deck
-> order, from a local copy of the deck into `data/source/kaishi-words.json`.
-> `scripts/match-jmdict-meanings.py` then looks up an English meaning and part of speech
-> for each word in JMdict (via [jmdict-simplified](https://github.com/scriptin/jmdict-simplified))
-> into `data/source/kaishi-meanings.json`. The automatic match takes the first applicable
-> dictionary sense, which is sometimes not the intended one (e.g. いる → "to be needed"),
-> so it needs a hand review before real use; `OVERRIDES` in the script holds corrections,
-> and the script lists ambiguous matches to check. `data/source/` is gitignored and is for
-> local development only.
->
-> **Example sentences are switched off for now**: the app shows none. When they come
-> back, `scripts/match-tatoeba-examples.py` can pick one sentence and translation per
-> word from [Tatoeba](https://tatoeba.org) (CC BY 2.0 FR) into
-> `data/source/kaishi-examples.json`. It only accepts short, family-friendly sentences
-> that spell the word as the app shows it. A hand review of every pick is saved in
-> `data/source/kaishi-example-picks.json` (word → Tatoeba sentence, or none); back it up
-> if you need to keep it.
->
-> To study the full deck (meanings, sentences, notes, pitch accent, audio and pictures)
-> while you work, run `python3 -I scripts/kaishi-browser.py <path/to/Kaishi.apkg>`. It
-> serves a searchable page on `127.0.0.1` only, reads the deck straight from the .apkg,
-> and writes nothing. It shows Doshi's JMdict meaning next to Kaishi's when
-> `kaishi-meanings.json` is present. It's for reference: don't copy what it shows into
-> the app or the repo.
+> Example sentences appear **only on the Dictionary's word page** (`app/word/[id].tsx`).
+> Lessons and reviews don't show them.
+
+`data/words.json` is generated — don't edit it by hand. To regenerate it from a local
+copy of the deck (Python 3.14+; the .apkg and its media are never committed):
+
+```bash
+python3 -I scripts/extract-kaishi-words.py ~/Documents/Kaishi.1.5k.v2.4.3.apkg
+```
+
+The script opens the deck read-only and never reads the Picture, Word Audio or Sentence
+Audio fields. It turns every field into plain text or structured data (no HTML,
+`[sound:]` tags or Anki furigana), keeps each note's guid as the word id so stored
+progress stays attached, and stops with an error if a word has no meaning, an id
+appears twice, or markup is left over. Running it again on the same deck writes an
+identical file. It prints the word count, any words without a sentence or pitch accent,
+and differences inside the deck worth a look (such as a sentence whose furigana version
+differs from its plain version; the furigana version is used).
+
+To study the full deck (including its audio and pictures) while you work, run
+`python3 -I scripts/kaishi-browser.py <path/to/Kaishi.apkg>`. It serves a searchable page
+on `127.0.0.1` only, reads the deck straight from the .apkg, and writes nothing.
 
 ### Scheduling (SRS)
 
@@ -140,8 +128,8 @@ keeps rendering consistent and predictable across dev and release builds, with n
 extra build step or runtime style engine to go wrong.
 
 The palette is **Tailwind Zinc** for neutrals with a **Tailwind Rose** brand accent
-(`#e11d48`, pressed `#be123c`). Light and dark palettes are selected from the OS
-appearance via `useColorScheme`. The accent is defined in exactly one place, so
+(`#e11d48`, pressed `#be123c`). Light and dark palettes follow the OS appearance via
+`useColorScheme`, unless the Appearance setting overrides it. The accent is defined in exactly one place, so
 rebranding means editing three hex values.
 
 ## Project structure
@@ -231,7 +219,7 @@ native module that Expo Go doesn't include is added.
 | Phase | Milestone | Status |
 | --- | --- | --- |
 | 0 | **Skeleton** — Expo + Router + TypeScript project, theme tokens, landing screen | ✅ Done |
-| 1 | **Data pipeline + card model** — structured word dataset, card schema, local storage | 🟡 Storage and card model done; content not shippable yet (licensing) |
+| 1 | **Data pipeline + card model** — structured word dataset, card schema, local storage | ✅ Done (Kaishi 1.5k, `data/words.json`) |
 | 2 | **FSRS review engine** — scheduling, grading, beginner-tuned defaults | ✅ Done (ts-fsrs, FSRS-6) |
 | 3 | **Review UI** — the fast mobile review loop | ✅ First version (lessons, quick check, reviews) |
 | 4 | **Simple scheduling settings** — the three high-impact parameters, explained in plain language | ✅ Done (Study pace, in Settings) |
@@ -239,10 +227,10 @@ native module that Expo Go doesn't include is added.
 
 ## Open questions and caveats
 
-- **Content sources** — Kaishi 1.5k has no license (see Vocabulary data). Open: whether
-  to ship Kaishi's word list and order (needs legal advice), and where meanings and
-  example sentences come from (JMdict and Tatoeba are the candidates).
-- **Audio** — Kaishi's audio can't be used. Open: text-to-speech, commissioned
+- **Content sources** — *decided:* Kaishi 1.5k's words, readings, meanings, example
+  sentences, notes and pitch accent (see Vocabulary data).
+- **Pitch accent display** — stored with each word; how and where to show it is open.
+- **Audio** — Kaishi's audio is never used. Open: text-to-speech, commissioned
   recordings, or no audio at first; and whether to bundle it or download on demand.
   Bundling affects app size significantly.
 - **FSRS** — *decided:* the `ts-fsrs` library, wrapped in `lib/srs/scheduler.ts` so it
@@ -262,7 +250,8 @@ native module that Expo Go doesn't include is added.
 
 **Early — first working loop.** On iOS: lessons of 5 new words (10 a day by default)
 with a quick check, FSRS-scheduled reviews, and progress saved on the device. A Settings
-tab covers study pace (new words, review limit, recall target), hiragana reading level
-and romaji. Development builds have tools on Home to move time forward and reset
-progress. Not built yet: accounts and sync, audio, and shippable vocabulary content (the
-development word list comes from the unlicensed Kaishi deck and stays local).
+tab covers study pace (new words, review limit, recall target), hiragana reading level,
+romaji, light or dark mode, and credits. The Dictionary lists learned words; each word's
+page shows its meaning and an example sentence. Development builds have tools on Home to
+move time forward and reset progress. Not built yet: accounts and sync, audio, and a
+pitch accent display.

@@ -22,24 +22,14 @@ import {
   radius,
   spacing,
 } from "@/constants/theme";
-import {
-  DICTIONARY_WORDS,
-  type DictionaryWord,
-} from "@/data/dictionary-words";
+import type { DictionaryWord } from "@/data/dictionary-words";
 import { useTheme } from "@/hooks/use-theme";
 import { useProgress } from "@/hooks/use-progress";
 import { learnedWords } from "@/lib/today";
 import { plural } from "@/utils/format";
 
-
-// Without the JMdict meanings file, Kaishi words have no English to search.
-const HAS_MEANINGS = DICTIONARY_WORDS.some((word) => word.meaning);
-const SEARCH_PLACEHOLDER = HAS_MEANINGS
-  ? "Search in Japanese or English"
-  : "Search in Japanese or romaji";
-
 /**
- * Matches the word, its reading, or its English meaning when it has one.
+ * Matches the word, its reading, or its English meaning.
  * Readings also match romaji two ways: against the reading's romaji, so
  * partial input like "nek" finds ねこ, and via the query converted to
  * hiragana, so other spellings ("si" for し) and katakana input (ネコ) work
@@ -52,15 +42,13 @@ function matches(word: DictionaryWord, query: string, kanaQuery: string) {
     word.reading.includes(query) ||
     word.readingHiragana.includes(kanaQuery) ||
     word.romaji.includes(query) ||
-    (word.meaning?.toLowerCase().includes(query) ?? false)
+    word.meaning.toLowerCase().includes(query)
   );
 }
 
 /**
  * Dictionary: the words the user has learned so far, in list order, with a
- * search that filters as you type. In development the list is
- * the locally extracted Kaishi words (with JMdict meanings when present);
- * otherwise the sample words, whose rows open the word detail screen.
+ * search that filters as you type. Each row opens the word's page.
  */
 export default function DictionaryScreen() {
   const { scheme, theme } = useTheme();
@@ -116,7 +104,7 @@ export default function DictionaryScreen() {
             cursorColor={theme.text}
             selectionColor={Platform.OS === "ios" ? theme.text : undefined}
             onChangeText={setQuery}
-            placeholder={SEARCH_PLACEHOLDER}
+            placeholder="Search in Japanese or English"
             placeholderTextColor={theme.textSubtle}
             returnKeyType="search"
             value={query}
@@ -146,7 +134,7 @@ export default function DictionaryScreen() {
                 accessibilityLabel={[
                   item.word,
                   item.reading,
-                  item.meaning ?? item.romaji,
+                  item.meaning,
                 ].join(", ")}
                 accessibilityRole="button"
                 onPress={() =>
@@ -165,32 +153,37 @@ export default function DictionaryScreen() {
                   index === results.length - 1 && styles.rowLast,
                 ]}
               >
-                <View style={styles.rowJapanese}>
-                  <Text
-                    lang="ja"
-                    style={[styles.expression, { color: theme.text }]}
-                  >
-                    {item.word}
-                  </Text>
-                  {/* Kana-only words (あなた) would repeat themselves. */}
-                  {item.reading !== item.word ? (
+                {/* Two lines in every row (every word has a meaning), so
+                    rows are the same height with or without a reading. */}
+                <View style={styles.rowText}>
+                  <View style={styles.rowJapanese}>
                     <Text
                       lang="ja"
-                      style={[styles.reading, { color: theme.textMuted }]}
+                      style={[styles.expression, { color: theme.text }]}
                     >
-                      {item.reading}
+                      {item.word}
                     </Text>
-                  ) : null}
-                </View>
-                <View style={styles.rowEnglish}>
-                  <Text style={[styles.meaning, { color: theme.text }]}>
-                    {item.meaning ?? item.romaji}
-                  </Text>
+                    {/* Kana-only words (あなた) would repeat themselves. */}
+                    {item.reading !== item.word ? (
+                      <Text
+                        lang="ja"
+                        style={[styles.reading, { color: theme.textMuted }]}
+                      >
+                        {item.reading}
+                      </Text>
+                    ) : null}
+                  </View>
+                  {/* One line; the full meaning is on the word page. */}
                   <Text
-                    style={[styles.partOfSpeech, { color: theme.textSubtle }]}
+                    numberOfLines={1}
+                    style={[styles.meaning, { color: theme.text }]}
                   >
-                    {item.partOfSpeech ?? `#${item.position}`}
+                    {item.meaning}
                   </Text>
+                  {/* The word's position in the list, hidden for now.
+                  <Text style={[styles.position, { color: theme.textSubtle }]}>
+                    #{item.position}
+                  </Text> */}
                 </View>
                 <ChevronRight color={theme.textSubtle} size={iconSize.md} />
               </Pressable>
@@ -269,9 +262,14 @@ const styles = StyleSheet.create({
     borderBottomLeftRadius: radius.lg,
     borderBottomRightRadius: radius.lg,
   },
-  rowJapanese: {
+  rowText: {
     flex: 1,
     gap: spacing.xs,
+  },
+  rowJapanese: {
+    flexDirection: "row",
+    alignItems: "baseline",
+    gap: spacing.sm,
   },
   // Japanese text sets no fontFamily: Figtree has no Japanese glyphs.
   expression: {
@@ -280,15 +278,11 @@ const styles = StyleSheet.create({
   reading: {
     fontSize: fontSize.sm,
   },
-  rowEnglish: {
-    alignItems: "flex-end",
-    gap: spacing.xs,
-  },
   meaning: {
     fontSize: fontSize.md,
     fontFamily: fontFamily.medium,
   },
-  partOfSpeech: {
+  position: {
     fontSize: fontSize.xs,
     fontFamily: fontFamily.regular,
   },

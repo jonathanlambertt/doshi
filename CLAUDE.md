@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-Doshi is a Japanese vocabulary app for **iOS and Android** (a beginner-friendly Anki alternative) built on Expo SDK 58 + Expo Router + strict TypeScript. It has a working learning loop — lessons (new words + quick check), FSRS reviews, and local progress in SQLite — plus a Settings tab (a Study pace screen with scheduling presets, hiragana reading level, romaji, placeholder Account rows), but no accounts, sync, or shippable content yet. See README.md for the roadmap and open decisions (content sources, audio, auth provider, feedback colors). Don't treat undecided items as settled.
+Doshi is a Japanese vocabulary app for **iOS and Android** (a beginner-friendly Anki alternative) built on Expo SDK 58 + Expo Router + strict TypeScript. It has a working learning loop — lessons (new words + quick check), FSRS reviews, and local progress in SQLite — plus a Dictionary of learned words (each word's page shows an example sentence) and a Settings tab (a Study pace screen with scheduling presets, hiragana reading level, romaji, appearance, Credits, placeholder Account rows), but no accounts or sync yet. The word list is Kaishi 1.5k (`data/words.json`, see Content licensing). See README.md for the roadmap and open decisions (audio, pitch accent display, auth provider, feedback colors). Don't treat undecided items as settled.
 
 Architecture of the loop:
 - `lib/srs/` — the only code that touches `ts-fsrs` (`scheduler.ts`), plus the 4 am day boundary (`day.ts`) and today's summary (`summary.ts`, which also applies the daily review limit). Pure, unit-tested in `lib/srs/__tests__/`. FSRS is pinned to **FSRS-6** (whole days; ts-fsrs 6 defaults to FSRS-7, which schedules a failed word seconds later without learning steps). Never change the version without migrating stored cards.
@@ -55,10 +55,13 @@ The app targets **iOS and Android only**. Web is not a target: don't use web bui
 
 ## Content licensing
 
-Kaishi 1.5k has **no license** (checked Nov 2026, v2.4.3 — see README "Vocabulary data" for the findings), and its sentences and translations come from the Core and Tango decks.
+Kaishi 1.5k has **no license** (checked Nov 2026, v2.4.3), and its sentences and translations come from the Core and Tango decks. The project owner has decided, knowing this, to ship Kaishi content — this is settled; see README "Vocabulary data".
 
-- Never ship Kaishi's meanings, example sentences, translations, audio or pictures in a distributable build, and never commit them to the repo.
-- Only the word + reading may be extracted, via `scripts/extract-kaishi-words.py`, into `data/source/` — gitignored and for local development only. English meanings for that list come from JMdict (CC BY-SA 4.0, attribution required if ever shipped) via `scripts/match-jmdict-meanings.py`, also into `data/source/`. App code may read it only in development (`__DEV__`) and must keep working when the file is absent (a fresh clone or an EAS build won't have it).
-- `scripts/kaishi-browser.py` shows the full deck in a local, loopback-only page for study. It reads the .apkg directly and must stay read-only and write nothing; never copy its content into the app, repo or a build.
-- Example sentences are off in the app for now (none shown).
-- Shipping Kaishi's exact word list/order is undecided and needs legal advice. Meanings/sentences are planned from openly licensed sources (JMdict, Tatoeba) — also undecided.
+- What ships, per word: word, reading, meaning, example sentence with its English translation, notes, and pitch accent. There is no part of speech (the deck has none).
+- Kaishi's **pictures and audio never ship**. Never read the Picture, Word Audio or Sentence Audio fields in the build, and never commit the .apkg or any of its media.
+- JMdict and Tatoeba are not used. Don't reintroduce them.
+- Example sentences appear **only** on the Dictionary's word page (`app/word/[id].tsx`, via `components/example-sentence.tsx`). Lessons, the quick check and reviews don't show them.
+- `data/words.json` is generated and committed; don't edit it by hand. Regenerate it with `python3 -I scripts/extract-kaishi-words.py ~/Documents/Kaishi.1.5k.v2.4.3.apkg`. The output must stay free of HTML, `[sound:]` tags and Anki furigana syntax, and rerunning on the same deck must give an identical file. Word ids are the notes' guids — keep them, or stored progress detaches from its words.
+- `data/dictionary-words.ts` imports `data/words.json` directly and is the only place app code reads it.
+- Kaishi 1.5k by donkuri is credited on the Credits screen (`app/credits.tsx`).
+- `scripts/kaishi-browser.py` shows the full deck (including pictures and audio) in a local, loopback-only page for study. It reads the .apkg directly and must stay read-only and write nothing.

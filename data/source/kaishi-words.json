@@ -1,0 +1,9002 @@
+[
+  {
+    "position": 1,
+    "guid": "ue*r{>Er!]",
+    "word": "私",
+    "reading": "わたし"
+  },
+  {
+    "position": 2,
+    "guid": "N*bTdF#y|q",
+    "word": "あなた",
+    "reading": "あなた"
+  },
+  {
+    "position": 3,
+    "guid": "l^^i5RVwq@",
+    "word": "さん",
+    "reading": "さん"
+  },
+  {
+    "position": 4,
+    "guid": "EJQrRKG_l(",
+    "word": "彼",
+    "reading": "かれ"
+  },
+  {
+    "position": 5,
+    "guid": "J2=BL5C>P9",
+    "word": "好き",
+    "reading": "すき"
+  },
+  {
+    "position": 6,
+    "guid": "K~xVS.9}%C",
+    "word": "人",
+    "reading": "ひと"
+  },
+  {
+    "position": 7,
+    "guid": "E&m=0;hjj-",
+    "word": "いい",
+    "reading": "いい"
+  },
+  {
+    "position": 8,
+    "guid": "C=.1`G!}BW",
+    "word": "人",
+    "reading": "じん"
+  },
+  {
+    "position": 9,
+    "guid": "BjMgplFn)5",
+    "word": "日本語",
+    "reading": "にほんご"
+  },
+  {
+    "position": 10,
+    "guid": "vFr#[Bnt$p",
+    "word": "勉強",
+    "reading": "べんきょう"
+  },
+  {
+    "position": 11,
+    "guid": "bV_yk0SX_=",
+    "word": "本",
+    "reading": "ほん"
+  },
+  {
+    "position": 12,
+    "guid": "zZk>YZc2I[",
+    "word": "これ",
+    "reading": "これ"
+  },
+  {
+    "position": 13,
+    "guid": "C@7_ePJ~)F",
+    "word": "何",
+    "reading": "なに・なん"
+  },
+  {
+    "position": 14,
+    "guid": "J/s_tW[i$u",
+    "word": "それ",
+    "reading": "それ"
+  },
+  {
+    "position": 15,
+    "guid": "F4axo~+{?5",
+    "word": "あれ",
+    "reading": "あれ"
+  },
+  {
+    "position": 16,
+    "guid": "J!F|q?*7Gx",
+    "word": "どれ",
+    "reading": "どれ"
+  },
+  {
+    "position": 17,
+    "guid": "eqi(tWOan8",
+    "word": "毎日",
+    "reading": "まいにち"
+  },
+  {
+    "position": 18,
+    "guid": "C%++],/lQ9",
+    "word": "兄",
+    "reading": "あに"
+  },
+  {
+    "position": 19,
+    "guid": "p@lWpT]Cr[",
+    "word": "いる",
+    "reading": "いる"
+  },
+  {
+    "position": 20,
+    "guid": "Pl7O52HkO3",
+    "word": "ある",
+    "reading": "ある"
+  },
+  {
+    "position": 21,
+    "guid": "lt~b=q&8zJ",
+    "word": "あまり",
+    "reading": "あまり"
+  },
+  {
+    "position": 22,
+    "guid": "Qjv*%gxsE{",
+    "word": "今",
+    "reading": "いま"
+  },
+  {
+    "position": 23,
+    "guid": "QkWY;ySQjF",
+    "word": "時間",
+    "reading": "じかん"
+  },
+  {
+    "position": 24,
+    "guid": "t@^SDA}L0%",
+    "word": "無い",
+    "reading": "ない"
+  },
+  {
+    "position": 25,
+    "guid": "DyV}[wCS=A",
+    "word": "この",
+    "reading": "この"
+  },
+  {
+    "position": 26,
+    "guid": "t=>5NIlH5J",
+    "word": "その",
+    "reading": "その"
+  },
+  {
+    "position": 27,
+    "guid": "GeS%q@g|N",
+    "word": "あの",
+    "reading": "あの"
+  },
+  {
+    "position": 28,
+    "guid": "jrPf<ARf:d",
+    "word": "どの",
+    "reading": "どの"
+  },
+  {
+    "position": 29,
+    "guid": "fXsqPXhSP(",
+    "word": "見る",
+    "reading": "みる"
+  },
+  {
+    "position": 30,
+    "guid": "doQSx#_f#u",
+    "word": "全然",
+    "reading": "ぜんぜん"
+  },
+  {
+    "position": 31,
+    "guid": "G<ll=O6+df",
+    "word": "面白い",
+    "reading": "おもしろい"
+  },
+  {
+    "position": 32,
+    "guid": "j^V<HCxc[G",
+    "word": "する",
+    "reading": "する"
+  },
+  {
+    "position": 33,
+    "guid": "mfuJjTwDI4",
+    "word": "なる",
+    "reading": "なる"
+  },
+  {
+    "position": 34,
+    "guid": "H{4;e,l7Pc",
+    "word": "先生",
+    "reading": "せんせい"
+  },
+  {
+    "position": 35,
+    "guid": "D:KI3V{p48",
+    "word": "ください",
+    "reading": "ください"
+  },
+  {
+    "position": 36,
+    "guid": "ppYT,aaa9#",
+    "word": "名前",
+    "reading": "なまえ"
+  },
+  {
+    "position": 37,
+    "guid": "f&(tDTL>90",
+    "word": "教える",
+    "reading": "おしえる"
+  },
+  {
+    "position": 38,
+    "guid": "jtHL[aaNHN",
+    "word": "ここ",
+    "reading": "ここ"
+  },
+  {
+    "position": 39,
+    "guid": "FE.Hq`{mdR",
+    "word": "そこ",
+    "reading": "そこ"
+  },
+  {
+    "position": 40,
+    "guid": "Ppqd&+pIa3",
+    "word": "あそこ",
+    "reading": "あそこ"
+  },
+  {
+    "position": 41,
+    "guid": "QEpjUA4U)Y",
+    "word": "どこ",
+    "reading": "どこ"
+  },
+  {
+    "position": 42,
+    "guid": "A-R7Jro*+>",
+    "word": "置く",
+    "reading": "おく"
+  },
+  {
+    "position": 43,
+    "guid": "L>FJEf[tsz",
+    "word": "家",
+    "reading": "いえ"
+  },
+  {
+    "position": 44,
+    "guid": "D/6?w0V?4`",
+    "word": "帰る",
+    "reading": "かえる"
+  },
+  {
+    "position": 45,
+    "guid": "K4]+3Ar1a3",
+    "word": "話",
+    "reading": "はなし"
+  },
+  {
+    "position": 46,
+    "guid": "u+]g/3;ZlH",
+    "word": "知る",
+    "reading": "しる"
+  },
+  {
+    "position": 47,
+    "guid": "kD){c?imQq",
+    "word": "彼女",
+    "reading": "かのじょ"
+  },
+  {
+    "position": 48,
+    "guid": "co94A,*H>6",
+    "word": "ちゃん",
+    "reading": "ちゃん"
+  },
+  {
+    "position": 49,
+    "guid": "scNB25sDl&",
+    "word": "はい",
+    "reading": "はい"
+  },
+  {
+    "position": 50,
+    "guid": "c/T!2r-5BM",
+    "word": "いいえ",
+    "reading": "いいえ"
+  },
+  {
+    "position": 51,
+    "guid": "vKY%B:h@cQ",
+    "word": "日本",
+    "reading": "にほん"
+  },
+  {
+    "position": 52,
+    "guid": "rl?V}~3?MC",
+    "word": "学校",
+    "reading": "がっこう"
+  },
+  {
+    "position": 53,
+    "guid": "f?pXJV(gju",
+    "word": "行く",
+    "reading": "いく"
+  },
+  {
+    "position": 54,
+    "guid": "Lvo|RkKOen",
+    "word": "明日",
+    "reading": "あした"
+  },
+  {
+    "position": 55,
+    "guid": "y|bOVbGbo!",
+    "word": "来る",
+    "reading": "くる"
+  },
+  {
+    "position": 56,
+    "guid": "p(T[aZB$L-",
+    "word": "また",
+    "reading": "また"
+  },
+  {
+    "position": 57,
+    "guid": "IeYtLxJCO(",
+    "word": "いつ",
+    "reading": "いつ"
+  },
+  {
+    "position": 58,
+    "guid": "p)DJ8=TN`r",
+    "word": "思う",
+    "reading": "おもう"
+  },
+  {
+    "position": 59,
+    "guid": "lHC&=^><V6",
+    "word": "こう",
+    "reading": "こう"
+  },
+  {
+    "position": 60,
+    "guid": "z+Hcc*x]C8",
+    "word": "そう",
+    "reading": "そう"
+  },
+  {
+    "position": 61,
+    "guid": "oM)!J3weJ9",
+    "word": "どう",
+    "reading": "どう"
+  },
+  {
+    "position": 62,
+    "guid": "Hf.yk=a@|[",
+    "word": "会う",
+    "reading": "あう"
+  },
+  {
+    "position": 63,
+    "guid": "nEhh@iWcgp",
+    "word": "次",
+    "reading": "つぎ"
+  },
+  {
+    "position": 64,
+    "guid": "x}X-]>k:|D",
+    "word": "方",
+    "reading": "ほう"
+  },
+  {
+    "position": 65,
+    "guid": "yY23yzBrqC",
+    "word": "方",
+    "reading": "かた"
+  },
+  {
+    "position": 66,
+    "guid": "Os6v<j/MCi",
+    "word": "聞く",
+    "reading": "きく"
+  },
+  {
+    "position": 67,
+    "guid": "w/2[ScflZ;",
+    "word": "聞く",
+    "reading": "きく"
+  },
+  {
+    "position": 68,
+    "guid": "s!Oo^b>tB)",
+    "word": "お願いします",
+    "reading": "おねがいします"
+  },
+  {
+    "position": 69,
+    "guid": "ty8Q!8GiQ{",
+    "word": "分かる",
+    "reading": "わかる"
+  },
+  {
+    "position": 70,
+    "guid": "rz|m42N6,u",
+    "word": "よく",
+    "reading": "よく"
+  },
+  {
+    "position": 71,
+    "guid": "F0)9`$Wnid",
+    "word": "よく",
+    "reading": "よく"
+  },
+  {
+    "position": 72,
+    "guid": "P^@Mconh!T",
+    "word": "考える",
+    "reading": "かんがえる"
+  },
+  {
+    "position": 73,
+    "guid": "e2ReL9|miO",
+    "word": "ありがとうございます",
+    "reading": "ありがとうございます"
+  },
+  {
+    "position": 74,
+    "guid": "mOV{f0xY?{",
+    "word": "話す",
+    "reading": "はなす"
+  },
+  {
+    "position": 75,
+    "guid": "eai{cMJ9zx",
+    "word": "もっと",
+    "reading": "もっと"
+  },
+  {
+    "position": 76,
+    "guid": "zMawS)gwZ5",
+    "word": "ゆっくり",
+    "reading": "ゆっくり"
+  },
+  {
+    "position": 77,
+    "guid": "Nz~5N8!YVc",
+    "word": "言う",
+    "reading": "いう"
+  },
+  {
+    "position": 78,
+    "guid": "Lm-v&h]L6H",
+    "word": "友達",
+    "reading": "ともだち"
+  },
+  {
+    "position": 79,
+    "guid": "cJ,<%6gB?v",
+    "word": "待つ",
+    "reading": "まつ"
+  },
+  {
+    "position": 80,
+    "guid": "l$n?/{AW8",
+    "word": "昨日",
+    "reading": "きのう"
+  },
+  {
+    "position": 81,
+    "guid": "M!{fG>[^hR",
+    "word": "町",
+    "reading": "まち"
+  },
+  {
+    "position": 82,
+    "guid": "zIR:}rINgV",
+    "word": "高い",
+    "reading": "たかい"
+  },
+  {
+    "position": 83,
+    "guid": "ih1[%y]3VY",
+    "word": "高い",
+    "reading": "たかい"
+  },
+  {
+    "position": 84,
+    "guid": "n6mzqgl:Q5",
+    "word": "一番",
+    "reading": "いちばん"
+  },
+  {
+    "position": 85,
+    "guid": "A;@E%U<->#",
+    "word": "ちょっと",
+    "reading": "ちょっと"
+  },
+  {
+    "position": 86,
+    "guid": "v(kT(1S+Ll",
+    "word": "もう",
+    "reading": "もう"
+  },
+  {
+    "position": 87,
+    "guid": "EJ4aIFJw;x",
+    "word": "もう",
+    "reading": "もう"
+  },
+  {
+    "position": 88,
+    "guid": "CFE+SXBoRq",
+    "word": "父",
+    "reading": "ちち"
+  },
+  {
+    "position": 89,
+    "guid": "kSJ%$1/bDG",
+    "word": "大好き",
+    "reading": "だいすき"
+  },
+  {
+    "position": 90,
+    "guid": "kO-;$n4@mw",
+    "word": "母",
+    "reading": "はは"
+  },
+  {
+    "position": 91,
+    "guid": "AMb*PU=[tE",
+    "word": "あげる",
+    "reading": "あげる"
+  },
+  {
+    "position": 92,
+    "guid": "C{<~gY(&Xu",
+    "word": "くれる",
+    "reading": "くれる"
+  },
+  {
+    "position": 93,
+    "guid": "nMo3~-Si(K",
+    "word": "もらう",
+    "reading": "もらう"
+  },
+  {
+    "position": 94,
+    "guid": "GBxRDP(Se&",
+    "word": "物",
+    "reading": "もの"
+  },
+  {
+    "position": 95,
+    "guid": "ej0W!$DvAC",
+    "word": "君",
+    "reading": "きみ"
+  },
+  {
+    "position": 96,
+    "guid": "EWp(&;WFrs",
+    "word": "中",
+    "reading": "なか"
+  },
+  {
+    "position": 97,
+    "guid": "F-J];i-Q)o",
+    "word": "出来る",
+    "reading": "できる"
+  },
+  {
+    "position": 98,
+    "guid": "x<R5V9Y*C&",
+    "word": "本当",
+    "reading": "ほんとう"
+  },
+  {
+    "position": 99,
+    "guid": ".VuW0Y%H0",
+    "word": "立つ",
+    "reading": "たつ"
+  },
+  {
+    "position": 100,
+    "guid": "q:RwlenglD",
+    "word": "前",
+    "reading": "まえ"
+  },
+  {
+    "position": 101,
+    "guid": "hLEq7w]1aL",
+    "word": "入る",
+    "reading": "はいる"
+  },
+  {
+    "position": 102,
+    "guid": "nWAZX]BrLx",
+    "word": "家族",
+    "reading": "かぞく"
+  },
+  {
+    "position": 103,
+    "guid": "OIU$A:jJ]D",
+    "word": "住む",
+    "reading": "すむ"
+  },
+  {
+    "position": 104,
+    "guid": "qe-tjHL7gK",
+    "word": "大きな",
+    "reading": "おおきな"
+  },
+  {
+    "position": 105,
+    "guid": "Jw7r8_F1L;",
+    "word": "大きい",
+    "reading": "おおきい"
+  },
+  {
+    "position": 106,
+    "guid": "t6~N.&Pd{R",
+    "word": "声",
+    "reading": "こえ"
+  },
+  {
+    "position": 107,
+    "guid": "qb;>#<CfW+",
+    "word": "目",
+    "reading": "め"
+  },
+  {
+    "position": 108,
+    "guid": "t^=IgjV=S~",
+    "word": "手",
+    "reading": "て"
+  },
+  {
+    "position": 109,
+    "guid": "g#cxp(1qG5",
+    "word": "上げる",
+    "reading": "あげる"
+  },
+  {
+    "position": 110,
+    "guid": "F5;cQBQf[a",
+    "word": "嫌い",
+    "reading": "きらい"
+  },
+  {
+    "position": 111,
+    "guid": "eg#IUTQRb)",
+    "word": "おじいさん",
+    "reading": "おじいさん"
+  },
+  {
+    "position": 112,
+    "guid": "nyL~R-/%hs",
+    "word": "おばあさん",
+    "reading": "おばあさん"
+  },
+  {
+    "position": 113,
+    "guid": "b0.Cl}gdV(",
+    "word": "元気",
+    "reading": "げんき"
+  },
+  {
+    "position": 114,
+    "guid": "d1.72ef6)E",
+    "word": "いつも",
+    "reading": "いつも"
+  },
+  {
+    "position": 115,
+    "guid": "Cuq5Z7jR/E",
+    "word": "持つ",
+    "reading": "もつ"
+  },
+  {
+    "position": 116,
+    "guid": "tN&<8kW]pn",
+    "word": "みんな",
+    "reading": "みんな"
+  },
+  {
+    "position": 117,
+    "guid": "KBCeX.--Jj",
+    "word": "使う",
+    "reading": "つかう"
+  },
+  {
+    "position": 118,
+    "guid": "mO3)[DOgu;",
+    "word": "大丈夫",
+    "reading": "だいじょうぶ"
+  },
+  {
+    "position": 119,
+    "guid": ").9Md|7@G",
+    "word": "始める",
+    "reading": "はじめる"
+  },
+  {
+    "position": 120,
+    "guid": "FG2dGa>iJ^",
+    "word": "今日",
+    "reading": "きょう"
+  },
+  {
+    "position": 121,
+    "guid": "s3O&Y6]Djp",
+    "word": "部屋",
+    "reading": "へや"
+  },
+  {
+    "position": 122,
+    "guid": "j7><r5#$&Q",
+    "word": "悪い",
+    "reading": "わるい"
+  },
+  {
+    "position": 123,
+    "guid": "tc$B[*TvRL",
+    "word": "まあ",
+    "reading": "まあ"
+  },
+  {
+    "position": 124,
+    "guid": "Ez{;@X(b?9",
+    "word": "食べる",
+    "reading": "たべる"
+  },
+  {
+    "position": 125,
+    "guid": "crFxP1+-4>",
+    "word": "沢山",
+    "reading": "たくさん"
+  },
+  {
+    "position": 126,
+    "guid": "ss=ATVlkxH",
+    "word": "場所",
+    "reading": "ばしょ"
+  },
+  {
+    "position": 127,
+    "guid": "DBM:?2v+=1",
+    "word": "呼ぶ",
+    "reading": "よぶ"
+  },
+  {
+    "position": 128,
+    "guid": "yspfj#m*40",
+    "word": "動く",
+    "reading": "うごく"
+  },
+  {
+    "position": 129,
+    "guid": "ca0imt!O7I",
+    "word": "気持ち",
+    "reading": "きもち"
+  },
+  {
+    "position": 130,
+    "guid": "h)X7$_VYv-",
+    "word": "誰",
+    "reading": "だれ"
+  },
+  {
+    "position": 131,
+    "guid": "h_a_l#6lEE",
+    "word": "子",
+    "reading": "こ"
+  },
+  {
+    "position": 132,
+    "guid": "cd?B72R=.s",
+    "word": "どんな",
+    "reading": "どんな"
+  },
+  {
+    "position": 133,
+    "guid": "lCY]h<i*]h",
+    "word": "意味",
+    "reading": "いみ"
+  },
+  {
+    "position": 134,
+    "guid": "GZ$]uL=&1q",
+    "word": "言葉",
+    "reading": "ことば"
+  },
+  {
+    "position": 135,
+    "guid": "n*s,s>[Ox(",
+    "word": "心配",
+    "reading": "しんぱい"
+  },
+  {
+    "position": 136,
+    "guid": "*b`X=X*Ro",
+    "word": "様子",
+    "reading": "ようす"
+  },
+  {
+    "position": 137,
+    "guid": "i/,EQ(bsJZ",
+    "word": "信じる",
+    "reading": "しんじる"
+  },
+  {
+    "position": 138,
+    "guid": "u^(RC_x;7i",
+    "word": "自分",
+    "reading": "じぶん"
+  },
+  {
+    "position": 139,
+    "guid": "w<v:U9Oc08",
+    "word": "調べる",
+    "reading": "しらべる"
+  },
+  {
+    "position": 140,
+    "guid": "NQX[zj9QVV",
+    "word": "事",
+    "reading": "こと"
+  },
+  {
+    "position": 141,
+    "guid": "N)e{:{#0Ed",
+    "word": "同じ",
+    "reading": "おなじ"
+  },
+  {
+    "position": 142,
+    "guid": "hY<?5rlVjl",
+    "word": "申し訳ない",
+    "reading": "もうしわけない"
+  },
+  {
+    "position": 143,
+    "guid": "w-^MD/HZJC",
+    "word": "もちろん",
+    "reading": "もちろん"
+  },
+  {
+    "position": 144,
+    "guid": "Rbu@j?#=(Q",
+    "word": "とても",
+    "reading": "とても"
+  },
+  {
+    "position": 145,
+    "guid": "KuUDMRZ7H|",
+    "word": "楽しい",
+    "reading": "たのしい"
+  },
+  {
+    "position": 146,
+    "guid": "k6QFi.%;`Q",
+    "word": "失礼します",
+    "reading": "しつれいします"
+  },
+  {
+    "position": 147,
+    "guid": "PZdoSA6Y[2",
+    "word": "手伝う",
+    "reading": "てつだう"
+  },
+  {
+    "position": 148,
+    "guid": "K:I&Z6i.#(",
+    "word": "忙しい",
+    "reading": "いそがしい"
+  },
+  {
+    "position": 149,
+    "guid": "py[ilhE)PJ",
+    "word": "仕事",
+    "reading": "しごと"
+  },
+  {
+    "position": 150,
+    "guid": "B?v!s`wQDE",
+    "word": "続ける",
+    "reading": "つづける"
+  },
+  {
+    "position": 151,
+    "guid": "zUa8j[g18{",
+    "word": "見せる",
+    "reading": "みせる"
+  },
+  {
+    "position": 152,
+    "guid": "CB~@<Cha9c",
+    "word": "うち",
+    "reading": "うち"
+  },
+  {
+    "position": 153,
+    "guid": "ukrUDfg!s<",
+    "word": "約束",
+    "reading": "やくそく"
+  },
+  {
+    "position": 154,
+    "guid": "f)wrf&E2NH",
+    "word": "忘れる",
+    "reading": "わすれる"
+  },
+  {
+    "position": 155,
+    "guid": "QiH!I5rYY5",
+    "word": "守る",
+    "reading": "まもる"
+  },
+  {
+    "position": 156,
+    "guid": "c{c?pU:q.J",
+    "word": "変える",
+    "reading": "かえる"
+  },
+  {
+    "position": 157,
+    "guid": "ePo((RVJN6",
+    "word": "さっき",
+    "reading": "さっき"
+  },
+  {
+    "position": 158,
+    "guid": "Ky4*U?]<>2",
+    "word": "今度",
+    "reading": "こんど"
+  },
+  {
+    "position": 159,
+    "guid": "jZCCt@<Xk(",
+    "word": "これから",
+    "reading": "これから"
+  },
+  {
+    "position": 160,
+    "guid": "r)o!,n6h0n",
+    "word": "止める",
+    "reading": "とめる"
+  },
+  {
+    "position": 161,
+    "guid": "H~qT:UGzvH",
+    "word": "止める",
+    "reading": "やめる"
+  },
+  {
+    "position": 162,
+    "guid": "r9Kk|e_;,*",
+    "word": "頼む",
+    "reading": "たのむ"
+  },
+  {
+    "position": 163,
+    "guid": "LNg.j6Z8UW",
+    "word": "許す",
+    "reading": "ゆるす"
+  },
+  {
+    "position": 164,
+    "guid": "rIgg$&46ox",
+    "word": "嬉しい",
+    "reading": "うれしい"
+  },
+  {
+    "position": 165,
+    "guid": "D)<{ZCYBbn",
+    "word": "頑張る",
+    "reading": "がんばる"
+  },
+  {
+    "position": 166,
+    "guid": "I[6DYG*%he",
+    "word": "なるほど",
+    "reading": "なるほど"
+  },
+  {
+    "position": 167,
+    "guid": "gRSy5y/Zs&",
+    "word": "つまり",
+    "reading": "つまり"
+  },
+  {
+    "position": 168,
+    "guid": "Gos%s3|)G8",
+    "word": "国",
+    "reading": "くに"
+  },
+  {
+    "position": 169,
+    "guid": "i{{LkxB7|X",
+    "word": "優しい",
+    "reading": "やさしい"
+  },
+  {
+    "position": 170,
+    "guid": "nQrMaLwA>6",
+    "word": "嫌",
+    "reading": "いや"
+  },
+  {
+    "position": 171,
+    "guid": "q60BI_QlUb",
+    "word": "そんなに",
+    "reading": "そんなに"
+  },
+  {
+    "position": 172,
+    "guid": "uuSxA?%cTA",
+    "word": "今回",
+    "reading": "こんかい"
+  },
+  {
+    "position": 173,
+    "guid": "B}Bw|AZZ*A",
+    "word": "夜",
+    "reading": "よる"
+  },
+  {
+    "position": 174,
+    "guid": "PuxvtXKWm`",
+    "word": "買う",
+    "reading": "かう"
+  },
+  {
+    "position": 175,
+    "guid": "GOJ=l5hUpb",
+    "word": "今まで",
+    "reading": "いままで"
+  },
+  {
+    "position": 176,
+    "guid": "ei|8oTf!us",
+    "word": "奴",
+    "reading": "やつ"
+  },
+  {
+    "position": 177,
+    "guid": "QQzhf8GGMB",
+    "word": "あいつ",
+    "reading": "あいつ"
+  },
+  {
+    "position": 178,
+    "guid": "t@Q-~`TL1R",
+    "word": "もし",
+    "reading": "もし"
+  },
+  {
+    "position": 179,
+    "guid": "EHUTRyod!j",
+    "word": "理解",
+    "reading": "りかい"
+  },
+  {
+    "position": 180,
+    "guid": "QXL}Bc]R/6",
+    "word": "夢",
+    "reading": "ゆめ"
+  },
+  {
+    "position": 181,
+    "guid": "oW,+wfynuo",
+    "word": "俺",
+    "reading": "おれ"
+  },
+  {
+    "position": 182,
+    "guid": "l8H|r]-(;",
+    "word": "難しい",
+    "reading": "むずかしい"
+  },
+  {
+    "position": 183,
+    "guid": "i~*%MMXds@",
+    "word": "今度",
+    "reading": "こんど"
+  },
+  {
+    "position": 184,
+    "guid": "oAz>@#!l&9",
+    "word": "おかしい",
+    "reading": "おかしい"
+  },
+  {
+    "position": 185,
+    "guid": "C22cZ?~#1q",
+    "word": "男の子",
+    "reading": "おとこのこ"
+  },
+  {
+    "position": 186,
+    "guid": "f(_Yo1sL@G",
+    "word": "女の子",
+    "reading": "おんなのこ"
+  },
+  {
+    "position": 187,
+    "guid": "enkxDOad0",
+    "word": "寝る",
+    "reading": "ねる"
+  },
+  {
+    "position": 188,
+    "guid": "A|O.c])_Uz",
+    "word": "伝える",
+    "reading": "つたえる"
+  },
+  {
+    "position": 189,
+    "guid": "zi8:ciU?:i",
+    "word": "小さい",
+    "reading": "ちいさい"
+  },
+  {
+    "position": 190,
+    "guid": "pY}1cBUE46",
+    "word": "選ぶ",
+    "reading": "えらぶ"
+  },
+  {
+    "position": 191,
+    "guid": "Cm;V+KAQ{*",
+    "word": "座る",
+    "reading": "すわる"
+  },
+  {
+    "position": 192,
+    "guid": "t2.|86v>qC",
+    "word": "簡単",
+    "reading": "かんたん"
+  },
+  {
+    "position": 193,
+    "guid": "K3C.hvLCB#",
+    "word": "お願い",
+    "reading": "おねがい"
+  },
+  {
+    "position": 194,
+    "guid": "Qyk}..*)ld",
+    "word": "進む",
+    "reading": "すすむ"
+  },
+  {
+    "position": 195,
+    "guid": "A`BM@OMtOz",
+    "word": "全く",
+    "reading": "まったく"
+  },
+  {
+    "position": 196,
+    "guid": "w[WBn!+=2[",
+    "word": "なぜ",
+    "reading": "なぜ"
+  },
+  {
+    "position": 197,
+    "guid": "jy&^n9hD1^",
+    "word": "僕",
+    "reading": "ぼく"
+  },
+  {
+    "position": 198,
+    "guid": "DOCrbr<nRX",
+    "word": "水",
+    "reading": "みず"
+  },
+  {
+    "position": 199,
+    "guid": "p>Kej8!h!|",
+    "word": "飲む",
+    "reading": "のむ"
+  },
+  {
+    "position": 200,
+    "guid": "FSwI1$G~X!",
+    "word": "暇",
+    "reading": "ひま"
+  },
+  {
+    "position": 201,
+    "guid": "Fk3)?C>-P[",
+    "word": "時",
+    "reading": "とき"
+  },
+  {
+    "position": 202,
+    "guid": "q[1dO2FZ)a",
+    "word": "時",
+    "reading": "じ"
+  },
+  {
+    "position": 203,
+    "guid": "r#xP),#j(-",
+    "word": "一",
+    "reading": "いち"
+  },
+  {
+    "position": 204,
+    "guid": "H~9{Xt+C3>",
+    "word": "二",
+    "reading": "に"
+  },
+  {
+    "position": 205,
+    "guid": "h^T]fMx+,!",
+    "word": "三",
+    "reading": "さん"
+  },
+  {
+    "position": 206,
+    "guid": "qZ5UVK1fx~",
+    "word": "四",
+    "reading": "よん・し"
+  },
+  {
+    "position": 207,
+    "guid": "Etn+Nd<p{a",
+    "word": "五",
+    "reading": "ご"
+  },
+  {
+    "position": 208,
+    "guid": "v6QmXt+|C1",
+    "word": "六",
+    "reading": "ろく"
+  },
+  {
+    "position": 209,
+    "guid": "D0H^fxHice",
+    "word": "七",
+    "reading": "なな・しち"
+  },
+  {
+    "position": 210,
+    "guid": "xvZ}U~(n?",
+    "word": "八",
+    "reading": "はち"
+  },
+  {
+    "position": 211,
+    "guid": "G-,7_:.20b",
+    "word": "九",
+    "reading": "きゅう"
+  },
+  {
+    "position": 212,
+    "guid": "=L|)xQ*;S",
+    "word": "十",
+    "reading": "じゅう"
+  },
+  {
+    "position": 213,
+    "guid": "bjh./[|Yv=",
+    "word": "くん",
+    "reading": "くん"
+  },
+  {
+    "position": 214,
+    "guid": "DK<(AaIh;O",
+    "word": "すみません",
+    "reading": "すみません"
+  },
+  {
+    "position": 215,
+    "guid": "yOi.cw1gU(",
+    "word": "やる",
+    "reading": "やる"
+  },
+  {
+    "position": 216,
+    "guid": "hJoJc_7qXE",
+    "word": "顔",
+    "reading": "かお"
+  },
+  {
+    "position": 217,
+    "guid": "w0ZEZ8oV92",
+    "word": "今朝",
+    "reading": "けさ"
+  },
+  {
+    "position": 218,
+    "guid": "MNQQ:T_Uos",
+    "word": "出る",
+    "reading": "でる"
+  },
+  {
+    "position": 219,
+    "guid": "Qh;3;WT_x8",
+    "word": "そして",
+    "reading": "そして"
+  },
+  {
+    "position": 220,
+    "guid": "II8e/^AmM=",
+    "word": "まだ",
+    "reading": "まだ"
+  },
+  {
+    "position": 221,
+    "guid": "jsamH9zPGH",
+    "word": "じゃ",
+    "reading": "じゃ"
+  },
+  {
+    "position": 222,
+    "guid": "f$OVnsLmW*",
+    "word": "ため",
+    "reading": "ため"
+  },
+  {
+    "position": 223,
+    "guid": "eu0Vp8Yu3^",
+    "word": "ご飯",
+    "reading": "ごはん"
+  },
+  {
+    "position": 224,
+    "guid": "wEG2Wux/6m",
+    "word": "ところ",
+    "reading": "ところ"
+  },
+  {
+    "position": 225,
+    "guid": "d0K1xUuWwk",
+    "word": "少し",
+    "reading": "すこし"
+  },
+  {
+    "position": 226,
+    "guid": "Qn6iYFtXk",
+    "word": "見える",
+    "reading": "みえる"
+  },
+  {
+    "position": 227,
+    "guid": "}b-{&dAK*",
+    "word": "違う",
+    "reading": "ちがう"
+  },
+  {
+    "position": 228,
+    "guid": "n48=-0C]&m",
+    "word": "男",
+    "reading": "おとこ"
+  },
+  {
+    "position": 229,
+    "guid": "Q5WL+75t{C",
+    "word": "ただ",
+    "reading": "ただ"
+  },
+  {
+    "position": 230,
+    "guid": "tr)dFtxeeq",
+    "word": "ただ",
+    "reading": "ただ"
+  },
+  {
+    "position": 231,
+    "guid": "t|p#m9&%|$",
+    "word": "人間",
+    "reading": "にんげん"
+  },
+  {
+    "position": 232,
+    "guid": "J=dG|GrXr_",
+    "word": "作る",
+    "reading": "つくる"
+  },
+  {
+    "position": 233,
+    "guid": "Cwy~Hjv@~_",
+    "word": "感じる",
+    "reading": "かんじる"
+  },
+  {
+    "position": 234,
+    "guid": "y.%:z<.Pv:",
+    "word": "上",
+    "reading": "うえ"
+  },
+  {
+    "position": 235,
+    "guid": "C9u(tb>H)K",
+    "word": "強い",
+    "reading": "つよい"
+  },
+  {
+    "position": 236,
+    "guid": "t9&H?$+1yL",
+    "word": "出す",
+    "reading": "だす"
+  },
+  {
+    "position": 237,
+    "guid": "rFSXE].a^Y",
+    "word": "笑う",
+    "reading": "わらう"
+  },
+  {
+    "position": 238,
+    "guid": "KQ6gP5hhw8",
+    "word": "毎月",
+    "reading": "まいつき"
+  },
+  {
+    "position": 239,
+    "guid": "F(RKs(f;R7",
+    "word": "毎年",
+    "reading": "まいとし"
+  },
+  {
+    "position": 240,
+    "guid": "bdZ3p!xoEN",
+    "word": "多く",
+    "reading": "おおく"
+  },
+  {
+    "position": 241,
+    "guid": "x&l3rL<Bm]",
+    "word": "くらい",
+    "reading": "くらい"
+  },
+  {
+    "position": 242,
+    "guid": "ibLs]Vt96R",
+    "word": "姉",
+    "reading": "あね"
+  },
+  {
+    "position": 243,
+    "guid": "J-H~Th(>,H",
+    "word": "弟",
+    "reading": "おとうと"
+  },
+  {
+    "position": 244,
+    "guid": "uAWFkT){V4",
+    "word": "妹",
+    "reading": "いもうと"
+  },
+  {
+    "position": 245,
+    "guid": "s*`?2wowx2",
+    "word": "力",
+    "reading": "ちから"
+  },
+  {
+    "position": 246,
+    "guid": "p1Z`3|jnt~",
+    "word": "世界",
+    "reading": "せかい"
+  },
+  {
+    "position": 247,
+    "guid": "NVY@+}Fx--",
+    "word": "相手",
+    "reading": "あいて"
+  },
+  {
+    "position": 248,
+    "guid": "Q(A.A^3WTo",
+    "word": "姿",
+    "reading": "すがた"
+  },
+  {
+    "position": 249,
+    "guid": "yc3/~Stqgm",
+    "word": "死ぬ",
+    "reading": "しぬ"
+  },
+  {
+    "position": 250,
+    "guid": "cxLc5{*r6X",
+    "word": "早い",
+    "reading": "はやい"
+  },
+  {
+    "position": 251,
+    "guid": "r?:5^smsx.",
+    "word": "早い",
+    "reading": "はやい"
+  },
+  {
+    "position": 252,
+    "guid": "LB5k&!3lz/",
+    "word": "頭",
+    "reading": "あたま"
+  },
+  {
+    "position": 253,
+    "guid": "Fp`p~GZQLe",
+    "word": "戻る",
+    "reading": "もどる"
+  },
+  {
+    "position": 254,
+    "guid": "va|(cqR/GQ",
+    "word": "ずっと",
+    "reading": "ずっと"
+  },
+  {
+    "position": 255,
+    "guid": "Q8%o1|ogvo",
+    "word": "どうして",
+    "reading": "どうして"
+  },
+  {
+    "position": 256,
+    "guid": "q.H1}v.|2v",
+    "word": "やっぱり",
+    "reading": "やっぱり"
+  },
+  {
+    "position": 257,
+    "guid": "Q_ohr/y2!R",
+    "word": "つもり",
+    "reading": "つもり"
+  },
+  {
+    "position": 258,
+    "guid": "s;hqo{<!x*",
+    "word": "必要",
+    "reading": "ひつよう"
+  },
+  {
+    "position": 259,
+    "guid": "t9hg+#x<Kz",
+    "word": "終わる",
+    "reading": "おわる"
+  },
+  {
+    "position": 260,
+    "guid": "EpVJW{&}/j",
+    "word": "者",
+    "reading": "もの"
+  },
+  {
+    "position": 261,
+    "guid": "I;nyBh]fdl",
+    "word": "後",
+    "reading": "あと"
+  },
+  {
+    "position": 262,
+    "guid": "P%m]cp+fVR",
+    "word": "こちら",
+    "reading": "こちら"
+  },
+  {
+    "position": 263,
+    "guid": "zw-{Jioswh",
+    "word": "向かう",
+    "reading": "むかう"
+  },
+  {
+    "position": 264,
+    "guid": "i@X.pKg#_c",
+    "word": "きっと",
+    "reading": "きっと"
+  },
+  {
+    "position": 265,
+    "guid": "Hk8MV<8P+>",
+    "word": "変わる",
+    "reading": "かわる"
+  },
+  {
+    "position": 266,
+    "guid": "f0::crehH@",
+    "word": "凄い",
+    "reading": "すごい"
+  },
+  {
+    "position": 267,
+    "guid": "ya$+Esjg/y",
+    "word": "女",
+    "reading": "おんな"
+  },
+  {
+    "position": 268,
+    "guid": "FnbMROu_5%",
+    "word": "ちゃんと",
+    "reading": "ちゃんと"
+  },
+  {
+    "position": 269,
+    "guid": "hdJS7yWZt7",
+    "word": "音",
+    "reading": "おと"
+  },
+  {
+    "position": 270,
+    "guid": "vk-!0RZ_Xa",
+    "word": "体",
+    "reading": "からだ"
+  },
+  {
+    "position": 271,
+    "guid": "Gx=DuR`jK-",
+    "word": "掛ける",
+    "reading": "かける"
+  },
+  {
+    "position": 272,
+    "guid": "KYKEaHB7^*",
+    "word": "歩く",
+    "reading": "あるく"
+  },
+  {
+    "position": 273,
+    "guid": "zH1!Ow4y%N",
+    "word": "存在",
+    "reading": "そんざい"
+  },
+  {
+    "position": 274,
+    "guid": "kf+yHuhTmb",
+    "word": "過ぎる",
+    "reading": "すぎる"
+  },
+  {
+    "position": 275,
+    "guid": "mSv5l4c6UA",
+    "word": "聞こえる",
+    "reading": "きこえる"
+  },
+  {
+    "position": 276,
+    "guid": "boZjHs;5QJ",
+    "word": "受ける",
+    "reading": "うける"
+  },
+  {
+    "position": 277,
+    "guid": "vz.LhsuW}>",
+    "word": "今年",
+    "reading": "ことし"
+  },
+  {
+    "position": 278,
+    "guid": "sHtf?)<Nul",
+    "word": "去年",
+    "reading": "きょねん"
+  },
+  {
+    "position": 279,
+    "guid": "dE3SjAZ|j9",
+    "word": "来年",
+    "reading": "らいねん"
+  },
+  {
+    "position": 280,
+    "guid": "o,DR<-0j(K",
+    "word": "殺す",
+    "reading": "ころす"
+  },
+  {
+    "position": 281,
+    "guid": "m!P.D:|:lO",
+    "word": "まさか",
+    "reading": "まさか"
+  },
+  {
+    "position": 282,
+    "guid": "PA~Z#}XHG)",
+    "word": "絶対",
+    "reading": "ぜったい"
+  },
+  {
+    "position": 283,
+    "guid": "lfVqI3,7Ar",
+    "word": "理由",
+    "reading": "りゆう"
+  },
+  {
+    "position": 284,
+    "guid": "k}n7@1x?Et",
+    "word": "口",
+    "reading": "くち"
+  },
+  {
+    "position": 285,
+    "guid": "dBx45(Z(ac",
+    "word": "外",
+    "reading": "そと"
+  },
+  {
+    "position": 286,
+    "guid": "EvvPu2GH/Z",
+    "word": "逃げる",
+    "reading": "にげる"
+  },
+  {
+    "position": 287,
+    "guid": "y|^zdvz*dW",
+    "word": "誰か",
+    "reading": "だれか"
+  },
+  {
+    "position": 288,
+    "guid": "yg7ca47S&5",
+    "word": "まるで",
+    "reading": "まるで"
+  },
+  {
+    "position": 289,
+    "guid": "xsO%p/Q$p<",
+    "word": "他",
+    "reading": "ほか"
+  },
+  {
+    "position": 290,
+    "guid": "mfaK!XTO)y",
+    "word": "他",
+    "reading": "た"
+  },
+  {
+    "position": 291,
+    "guid": "tks|8wyY``",
+    "word": "問題",
+    "reading": "もんだい"
+  },
+  {
+    "position": 292,
+    "guid": "Gs/UU`)L.R",
+    "word": "今後",
+    "reading": "こんご"
+  },
+  {
+    "position": 293,
+    "guid": "I/H~c/|]2P",
+    "word": "普通",
+    "reading": "ふつう"
+  },
+  {
+    "position": 294,
+    "guid": "d&&?Qm//82",
+    "word": "心",
+    "reading": "こころ"
+  },
+  {
+    "position": 295,
+    "guid": "JFvqg~Gsf5",
+    "word": "春",
+    "reading": "はる"
+  },
+  {
+    "position": 296,
+    "guid": "p$kex{v,kA",
+    "word": "夏",
+    "reading": "なつ"
+  },
+  {
+    "position": 297,
+    "guid": "Q(@KPpu7If",
+    "word": "秋",
+    "reading": "あき"
+  },
+  {
+    "position": 298,
+    "guid": "MyM?{fnXay",
+    "word": "冬",
+    "reading": "ふゆ"
+  },
+  {
+    "position": 299,
+    "guid": "s#a^;2^[GP",
+    "word": "以上",
+    "reading": "いじょう"
+  },
+  {
+    "position": 300,
+    "guid": "Gh^F)%f?6?",
+    "word": "それで",
+    "reading": "それで"
+  },
+  {
+    "position": 301,
+    "guid": "E-J6?^>@HI",
+    "word": "生きる",
+    "reading": "いきる"
+  },
+  {
+    "position": 302,
+    "guid": "tHhN__[>!O",
+    "word": "最初",
+    "reading": "さいしょ"
+  },
+  {
+    "position": 303,
+    "guid": "yrCbL*l~a@",
+    "word": "最後",
+    "reading": "さいご"
+  },
+  {
+    "position": 304,
+    "guid": "NDbh^E#pU-",
+    "word": "日",
+    "reading": "ひ"
+  },
+  {
+    "position": 305,
+    "guid": "xsfRt!+Z!5",
+    "word": "間",
+    "reading": "あいだ"
+  },
+  {
+    "position": 306,
+    "guid": "tt2bSLSYCk",
+    "word": "間",
+    "reading": "ま"
+  },
+  {
+    "position": 307,
+    "guid": "d5*<q&Jo9{",
+    "word": "について",
+    "reading": "について"
+  },
+  {
+    "position": 308,
+    "guid": "P2W&pM%g1@",
+    "word": "左",
+    "reading": "ひだり"
+  },
+  {
+    "position": 309,
+    "guid": "sx&/3gWqp:",
+    "word": "右",
+    "reading": "みぎ"
+  },
+  {
+    "position": 310,
+    "guid": "q|Xh{J7NGm",
+    "word": "感じ",
+    "reading": "かんじ"
+  },
+  {
+    "position": 311,
+    "guid": "rn:l}6Oi8|",
+    "word": "胸",
+    "reading": "むね"
+  },
+  {
+    "position": 312,
+    "guid": "u1H]~&7]>b",
+    "word": "表情",
+    "reading": "ひょうじょう"
+  },
+  {
+    "position": 313,
+    "guid": "x6>tg#S,|h",
+    "word": "多い",
+    "reading": "おおい"
+  },
+  {
+    "position": 314,
+    "guid": "yBN@Bn^n^=",
+    "word": "初めて",
+    "reading": "はじめて"
+  },
+  {
+    "position": 315,
+    "guid": "fKLUTC}Y|?",
+    "word": "無理",
+    "reading": "むり"
+  },
+  {
+    "position": 316,
+    "guid": "yBY*V].VAe",
+    "word": "欲しい",
+    "reading": "ほしい"
+  },
+  {
+    "position": 317,
+    "guid": "y.Z6<DuXP0",
+    "word": "ごめん",
+    "reading": "ごめん"
+  },
+  {
+    "position": 318,
+    "guid": "uChS2UZ-%Z",
+    "word": "覚える",
+    "reading": "おぼえる"
+  },
+  {
+    "position": 319,
+    "guid": "x.pF0>!~Y(",
+    "word": "別に",
+    "reading": "べつに"
+  },
+  {
+    "position": 320,
+    "guid": "b-@yX_i%^0",
+    "word": "思い出す",
+    "reading": "おもいだす"
+  },
+  {
+    "position": 321,
+    "guid": "G|Z(7i&MYC",
+    "word": "入れる",
+    "reading": "いれる"
+  },
+  {
+    "position": 322,
+    "guid": "QB~@x4NB|i",
+    "word": "開く",
+    "reading": "あく"
+  },
+  {
+    "position": 323,
+    "guid": "Ij&bAn^G;_",
+    "word": "開く",
+    "reading": "ひらく"
+  },
+  {
+    "position": 324,
+    "guid": "pP?SC^Fg&<",
+    "word": "残る",
+    "reading": "のこる"
+  },
+  {
+    "position": 325,
+    "guid": "s9%rrs?i=L",
+    "word": "答える",
+    "reading": "こたえる"
+  },
+  {
+    "position": 326,
+    "guid": "H;qAQgn)Aj",
+    "word": "怖い",
+    "reading": "こわい"
+  },
+  {
+    "position": 327,
+    "guid": "Kr@.]!y;Wb",
+    "word": "年",
+    "reading": "ねん"
+  },
+  {
+    "position": 328,
+    "guid": "x*s8(foH|m",
+    "word": "年",
+    "reading": "とし"
+  },
+  {
+    "position": 329,
+    "guid": "h8,zw[d5_8",
+    "word": "取る",
+    "reading": "とる"
+  },
+  {
+    "position": 330,
+    "guid": "N=xw|O{kST",
+    "word": "全て",
+    "reading": "すべて"
+  },
+  {
+    "position": 331,
+    "guid": "pru^H1]4y)",
+    "word": "助ける",
+    "reading": "たすける"
+  },
+  {
+    "position": 332,
+    "guid": "OWA1%J2eFs",
+    "word": "状況",
+    "reading": "じょうきょう"
+  },
+  {
+    "position": 333,
+    "guid": "e3MCeYB(_s",
+    "word": "確認",
+    "reading": "かくにん"
+  },
+  {
+    "position": 334,
+    "guid": "yy|HwD]c[}",
+    "word": "消える",
+    "reading": "きえる"
+  },
+  {
+    "position": 335,
+    "guid": "g;&944E4<;",
+    "word": "長い",
+    "reading": "ながい"
+  },
+  {
+    "position": 336,
+    "guid": "N)yyp1QYX6",
+    "word": "驚く",
+    "reading": "おどろく"
+  },
+  {
+    "position": 337,
+    "guid": "kgh>|d2;qT",
+    "word": "腕",
+    "reading": "うで"
+  },
+  {
+    "position": 338,
+    "guid": "PVW]F3<5g2",
+    "word": "以外",
+    "reading": "いがい"
+  },
+  {
+    "position": 339,
+    "guid": "VlDET5_$>",
+    "word": "困る",
+    "reading": "こまる"
+  },
+  {
+    "position": 340,
+    "guid": "x+dhndo>M#",
+    "word": "離れる",
+    "reading": "はなれる"
+  },
+  {
+    "position": 341,
+    "guid": "fM2<P$.)Z=",
+    "word": "気",
+    "reading": "き"
+  },
+  {
+    "position": 342,
+    "guid": "c#c%:FKZ(H",
+    "word": "書く",
+    "reading": "かく"
+  },
+  {
+    "position": 343,
+    "guid": "Ox[^~*!d+M",
+    "word": "光",
+    "reading": "ひかり"
+  },
+  {
+    "position": 344,
+    "guid": "i4P!-E9$YE",
+    "word": "走る",
+    "reading": "はしる"
+  },
+  {
+    "position": 345,
+    "guid": "n2D1{`l4Q.",
+    "word": "戦う",
+    "reading": "たたかう"
+  },
+  {
+    "position": 346,
+    "guid": "ki1Au/HHMm",
+    "word": "余り",
+    "reading": "あまり"
+  },
+  {
+    "position": 347,
+    "guid": "G^s)w!J*Om",
+    "word": "全部",
+    "reading": "ぜんぶ"
+  },
+  {
+    "position": 348,
+    "guid": "F647yJ6(Ne",
+    "word": "瞬間",
+    "reading": "しゅんかん"
+  },
+  {
+    "position": 349,
+    "guid": "xJLvtqDP|{",
+    "word": "説明",
+    "reading": "せつめい"
+  },
+  {
+    "position": 350,
+    "guid": "An<%X2Exv;",
+    "word": "決める",
+    "reading": "きめる"
+  },
+  {
+    "position": 351,
+    "guid": "M|_DA]5nZ,",
+    "word": "女性",
+    "reading": "じょせい"
+  },
+  {
+    "position": 352,
+    "guid": "L)2/yui-Z9",
+    "word": "頂く",
+    "reading": "いただく"
+  },
+  {
+    "position": 353,
+    "guid": "A/K-d>@8i?",
+    "word": "敵",
+    "reading": "てき"
+  },
+  {
+    "position": 354,
+    "guid": "E,q2S!c1v6",
+    "word": "起きる",
+    "reading": "おきる"
+  },
+  {
+    "position": 355,
+    "guid": "j-&/.|Uvzm",
+    "word": "起きる",
+    "reading": "おきる"
+  },
+  {
+    "position": 356,
+    "guid": "EEb,DUx?v[",
+    "word": "落ちる",
+    "reading": "おちる"
+  },
+  {
+    "position": 357,
+    "guid": "J|YLM/&/ef",
+    "word": "足",
+    "reading": "あし"
+  },
+  {
+    "position": 358,
+    "guid": "n.1ccu[T::",
+    "word": "それに",
+    "reading": "それに"
+  },
+  {
+    "position": 359,
+    "guid": "qX>Jh1ysj1",
+    "word": "先に",
+    "reading": "さきに"
+  },
+  {
+    "position": 360,
+    "guid": "loR[%TLVmM",
+    "word": "魔法",
+    "reading": "まほう"
+  },
+  {
+    "position": 361,
+    "guid": "N.$<d|Ro0W",
+    "word": "探す",
+    "reading": "さがす"
+  },
+  {
+    "position": 362,
+    "guid": "dqZr9Y&!^^",
+    "word": "子供",
+    "reading": "こども"
+  },
+  {
+    "position": 363,
+    "guid": "w,|9FFzvX6",
+    "word": "怒る",
+    "reading": "おこる"
+  },
+  {
+    "position": 364,
+    "guid": "APnnPd4sis",
+    "word": "笑顔",
+    "reading": "えがお"
+  },
+  {
+    "position": 365,
+    "guid": "yRQ$5rE[LW",
+    "word": "先輩",
+    "reading": "せんぱい"
+  },
+  {
+    "position": 366,
+    "guid": "C$&1{>far6",
+    "word": "続く",
+    "reading": "つづく"
+  },
+  {
+    "position": 367,
+    "guid": "Gu1(?%t=m@",
+    "word": "こんなに",
+    "reading": "こんなに"
+  },
+  {
+    "position": 368,
+    "guid": "xL4L^a|zfT",
+    "word": "変",
+    "reading": "へん"
+  },
+  {
+    "position": 369,
+    "guid": "sM$131Xykm",
+    "word": "読む",
+    "reading": "よむ"
+  },
+  {
+    "position": 370,
+    "guid": "qG@JEw3;`E",
+    "word": "当然",
+    "reading": "とうぜん"
+  },
+  {
+    "position": 371,
+    "guid": "ij#n;B.C|h",
+    "word": "情報",
+    "reading": "じょうほう"
+  },
+  {
+    "position": 372,
+    "guid": "t2^{H?G!#)",
+    "word": "見つける",
+    "reading": "みつける"
+  },
+  {
+    "position": 373,
+    "guid": "A2qC/lyW.W",
+    "word": "少女",
+    "reading": "しょうじょ"
+  },
+  {
+    "position": 374,
+    "guid": "fjkQe}a%<L",
+    "word": "大変",
+    "reading": "たいへん"
+  },
+  {
+    "position": 375,
+    "guid": "v~r0tScTI(",
+    "word": "かなり",
+    "reading": "かなり"
+  },
+  {
+    "position": 376,
+    "guid": "Ki|{~h`5SZ",
+    "word": "下",
+    "reading": "した"
+  },
+  {
+    "position": 377,
+    "guid": "LIDN}HHwNo",
+    "word": "下",
+    "reading": "もと"
+  },
+  {
+    "position": 378,
+    "guid": "O;4|5<B6am",
+    "word": "かかる",
+    "reading": "かかる"
+  },
+  {
+    "position": 379,
+    "guid": "DX37/i@,0",
+    "word": "掛かる",
+    "reading": "かかる"
+  },
+  {
+    "position": 380,
+    "guid": "EC{dW=RY!^",
+    "word": "一度",
+    "reading": "いちど"
+  },
+  {
+    "position": 381,
+    "guid": "eQ_kWkafm(",
+    "word": "完全",
+    "reading": "かんぜん"
+  },
+  {
+    "position": 382,
+    "guid": "w{^h&+XweD",
+    "word": "後ろ",
+    "reading": "うしろ"
+  },
+  {
+    "position": 383,
+    "guid": "BmE|[BB,O{",
+    "word": "泣く",
+    "reading": "なく"
+  },
+  {
+    "position": 384,
+    "guid": "L|-[nhxoN{",
+    "word": "状態",
+    "reading": "じょうたい"
+  },
+  {
+    "position": 385,
+    "guid": "gn}-XY<A6k",
+    "word": "関係",
+    "reading": "かんけい"
+  },
+  {
+    "position": 386,
+    "guid": "H?.[A>5F7R",
+    "word": "向ける",
+    "reading": "むける"
+  },
+  {
+    "position": 387,
+    "guid": "FCRSckB;q0",
+    "word": "奥",
+    "reading": "おく"
+  },
+  {
+    "position": 388,
+    "guid": "o}U~58i+8i",
+    "word": "軽い",
+    "reading": "かるい"
+  },
+  {
+    "position": 389,
+    "guid": "q?%W{,H#sG",
+    "word": "返す",
+    "reading": "かえす"
+  },
+  {
+    "position": 390,
+    "guid": "iduPM|*qh$",
+    "word": "現れる",
+    "reading": "あらわれる"
+  },
+  {
+    "position": 391,
+    "guid": "B{m@Ua:W)",
+    "word": "痛い",
+    "reading": "いたい"
+  },
+  {
+    "position": 392,
+    "guid": "r9A(JBBo;6",
+    "word": "どうやら",
+    "reading": "どうやら"
+  },
+  {
+    "position": 393,
+    "guid": "J$#ER7WZ!*",
+    "word": "点ける",
+    "reading": "つける"
+  },
+  {
+    "position": 394,
+    "guid": "d=LMTbNgA1",
+    "word": "付ける",
+    "reading": "つける"
+  },
+  {
+    "position": 395,
+    "guid": "OB-1<KcVGE",
+    "word": "一瞬",
+    "reading": "いっしゅん"
+  },
+  {
+    "position": 396,
+    "guid": "rWKASZ+~/U",
+    "word": "隠す",
+    "reading": "かくす"
+  },
+  {
+    "position": 397,
+    "guid": "wZ--^l_$J$",
+    "word": "準備",
+    "reading": "じゅんび"
+  },
+  {
+    "position": 398,
+    "guid": "nW[:6HjuvH",
+    "word": "そろそろ",
+    "reading": "そろそろ"
+  },
+  {
+    "position": 399,
+    "guid": "fbv=ni>c2Z",
+    "word": "落ち着く",
+    "reading": "おちつく"
+  },
+  {
+    "position": 400,
+    "guid": "J;$!DDL0SD",
+    "word": "恥ずかしい",
+    "reading": "はずかしい"
+  },
+  {
+    "position": 401,
+    "guid": "oheKX;pk1E",
+    "word": "場合",
+    "reading": "ばあい"
+  },
+  {
+    "position": 402,
+    "guid": "L]u;_?=Hyh",
+    "word": "しっかり",
+    "reading": "しっかり"
+  },
+  {
+    "position": 403,
+    "guid": "LAkrtj0~&V",
+    "word": "しっかり",
+    "reading": "しっかり"
+  },
+  {
+    "position": 404,
+    "guid": "s/*&na|7ic",
+    "word": "髪",
+    "reading": "かみ"
+  },
+  {
+    "position": 405,
+    "guid": "i6L}8f1SS=",
+    "word": "元",
+    "reading": "もと"
+  },
+  {
+    "position": 406,
+    "guid": "IW-o<98/7m",
+    "word": "得る",
+    "reading": "える"
+  },
+  {
+    "position": 407,
+    "guid": "KWn<auc$uA",
+    "word": "すぐ",
+    "reading": "すぐ"
+  },
+  {
+    "position": 408,
+    "guid": "H6bZPzUX0O",
+    "word": "来月",
+    "reading": "らいげつ"
+  },
+  {
+    "position": 409,
+    "guid": "y:H,fVzo^o",
+    "word": "昔",
+    "reading": "むかし"
+  },
+  {
+    "position": 410,
+    "guid": "b)xOzHFTVl",
+    "word": "近い",
+    "reading": "ちかい"
+  },
+  {
+    "position": 411,
+    "guid": "e-!R@RGFc|",
+    "word": "動き",
+    "reading": "うごき"
+  },
+  {
+    "position": 412,
+    "guid": "tQg]GP+=7@",
+    "word": "見つめる",
+    "reading": "みつめる"
+  },
+  {
+    "position": 413,
+    "guid": "P%2xXkKbH",
+    "word": "幸せ",
+    "reading": "しあわせ"
+  },
+  {
+    "position": 414,
+    "guid": "d:/c|%5hT[",
+    "word": "記憶",
+    "reading": "きおく"
+  },
+  {
+    "position": 415,
+    "guid": "qKS1YDxJyM",
+    "word": "反応",
+    "reading": "はんのう"
+  },
+  {
+    "position": 416,
+    "guid": "j]!rG/$J5b",
+    "word": "私たち",
+    "reading": "わたしたち"
+  },
+  {
+    "position": 417,
+    "guid": "C&xdZXKl?_",
+    "word": "とにかく",
+    "reading": "とにかく"
+  },
+  {
+    "position": 418,
+    "guid": "M5Hx,Mfa-O",
+    "word": "勝手",
+    "reading": "かって"
+  },
+  {
+    "position": 419,
+    "guid": "ssA;!u_#S7",
+    "word": "攻撃",
+    "reading": "こうげき"
+  },
+  {
+    "position": 420,
+    "guid": "t6Zn:*/upQ",
+    "word": "開ける",
+    "reading": "あける"
+  },
+  {
+    "position": 421,
+    "guid": "y|ee$xIpZ8",
+    "word": "黙る",
+    "reading": "だまる"
+  },
+  {
+    "position": 422,
+    "guid": "A})jAxc-|p",
+    "word": "最近",
+    "reading": "さいきん"
+  },
+  {
+    "position": 423,
+    "guid": "Q=.yK{Ne:k",
+    "word": "全員",
+    "reading": "ぜんいん"
+  },
+  {
+    "position": 424,
+    "guid": "wxm8l.yXYd",
+    "word": "せい",
+    "reading": "せい"
+  },
+  {
+    "position": 425,
+    "guid": "w-)Cpl=A7H",
+    "word": "深い",
+    "reading": "ふかい"
+  },
+  {
+    "position": 426,
+    "guid": "Hao3M2uzk~",
+    "word": "別",
+    "reading": "べつ"
+  },
+  {
+    "position": 427,
+    "guid": "KK!}qk~oCm",
+    "word": "決まる",
+    "reading": "きまる"
+  },
+  {
+    "position": 428,
+    "guid": "mHVC:^8D(z",
+    "word": "しばらく",
+    "reading": "しばらく"
+  },
+  {
+    "position": 429,
+    "guid": "B7Slmf>(IP",
+    "word": "行う",
+    "reading": "おこなう"
+  },
+  {
+    "position": 430,
+    "guid": "yLKswZv_}/",
+    "word": "上がる",
+    "reading": "あがる"
+  },
+  {
+    "position": 431,
+    "guid": "d]0jPCc%ZH",
+    "word": "隣",
+    "reading": "となり"
+  },
+  {
+    "position": 432,
+    "guid": "Ne$b-xP1+&",
+    "word": "扉",
+    "reading": "とびら"
+  },
+  {
+    "position": 433,
+    "guid": "mY&^kBKJdf",
+    "word": "指",
+    "reading": "ゆび"
+  },
+  {
+    "position": 434,
+    "guid": "sCa6pdJ.mz",
+    "word": "結果",
+    "reading": "けっか"
+  },
+  {
+    "position": 435,
+    "guid": "Q_Mj5Sc=t@",
+    "word": "与える",
+    "reading": "あたえる"
+  },
+  {
+    "position": 436,
+    "guid": "x%I#jL83AN",
+    "word": "道",
+    "reading": "みち"
+  },
+  {
+    "position": 437,
+    "guid": "t6h:NDJ7n#",
+    "word": "乗る",
+    "reading": "のる"
+  },
+  {
+    "position": 438,
+    "guid": "JfO&Pp3R=,",
+    "word": "特に",
+    "reading": "とくに"
+  },
+  {
+    "position": 439,
+    "guid": "wd4}a&@GsV",
+    "word": "形",
+    "reading": "かたち"
+  },
+  {
+    "position": 440,
+    "guid": "FPD7vfqM*#",
+    "word": "さあ",
+    "reading": "さあ"
+  },
+  {
+    "position": 441,
+    "guid": "e[(=J:JXDU",
+    "word": "血",
+    "reading": "ち"
+  },
+  {
+    "position": 442,
+    "guid": "dz!<IUKRta",
+    "word": "更に",
+    "reading": "さらに"
+  },
+  {
+    "position": 443,
+    "guid": "v^6~ZMdA3B",
+    "word": "用意",
+    "reading": "ようい"
+  },
+  {
+    "position": 444,
+    "guid": "fhw9:xMoLV",
+    "word": "負ける",
+    "reading": "まける"
+  },
+  {
+    "position": 445,
+    "guid": "t*)nVjNwt$",
+    "word": "神",
+    "reading": "かみ"
+  },
+  {
+    "position": 446,
+    "guid": "^5(=#e#/=",
+    "word": "実は",
+    "reading": "じつは"
+  },
+  {
+    "position": 447,
+    "guid": "Pr<&q:j&!/",
+    "word": "服",
+    "reading": "ふく"
+  },
+  {
+    "position": 448,
+    "guid": "vpHZ5DmC:|",
+    "word": "不思議",
+    "reading": "ふしぎ"
+  },
+  {
+    "position": 449,
+    "guid": "ur/0m&*ya`",
+    "word": "意識",
+    "reading": "いしき"
+  },
+  {
+    "position": 450,
+    "guid": "k1Q%+k&sv~",
+    "word": "一体",
+    "reading": "いったい"
+  },
+  {
+    "position": 451,
+    "guid": "Ih)PXh^*w{",
+    "word": "とりあえず",
+    "reading": "とりあえず"
+  },
+  {
+    "position": 452,
+    "guid": "E`XIPPd:-_",
+    "word": "送る",
+    "reading": "おくる"
+  },
+  {
+    "position": 453,
+    "guid": "I!BbH9Zh~4",
+    "word": "では",
+    "reading": "では"
+  },
+  {
+    "position": 454,
+    "guid": "Kzjsf{.pP4",
+    "word": "安心",
+    "reading": "あんしん"
+  },
+  {
+    "position": 455,
+    "guid": "i@eo3KD?V{",
+    "word": "失う",
+    "reading": "うしなう"
+  },
+  {
+    "position": 456,
+    "guid": "y!xf}k;{4f",
+    "word": "行動",
+    "reading": "こうどう"
+  },
+  {
+    "position": 457,
+    "guid": "htYi4n%*~r",
+    "word": "触れる",
+    "reading": "ふれる"
+  },
+  {
+    "position": 458,
+    "guid": "c#9xYUSc;",
+    "word": "そもそも",
+    "reading": "そもそも"
+  },
+  {
+    "position": 459,
+    "guid": "Gv`yr}]2yY",
+    "word": "少ない",
+    "reading": "すくない"
+  },
+  {
+    "position": 460,
+    "guid": "H-{SiBP0oF",
+    "word": "結局",
+    "reading": "けっきょく"
+  },
+  {
+    "position": 461,
+    "guid": "uN5WZ7DZRq",
+    "word": "空",
+    "reading": "そら"
+  },
+  {
+    "position": 462,
+    "guid": "F_lld;`x>a",
+    "word": "済む",
+    "reading": "すむ"
+  },
+  {
+    "position": 463,
+    "guid": "hp>7b_et.r",
+    "word": "任せる",
+    "reading": "まかせる"
+  },
+  {
+    "position": 464,
+    "guid": "g]jiOs&ri2",
+    "word": "赤い",
+    "reading": "あかい"
+  },
+  {
+    "position": 465,
+    "guid": "t99|Shex9s",
+    "word": "大事",
+    "reading": "だいじ"
+  },
+  {
+    "position": 466,
+    "guid": "M2K=G-V6}7",
+    "word": "残す",
+    "reading": "のこす"
+  },
+  {
+    "position": 467,
+    "guid": "H;x|AhE-_Y",
+    "word": "止まる",
+    "reading": "とまる"
+  },
+  {
+    "position": 468,
+    "guid": "G-etHFfdu;",
+    "word": "朝",
+    "reading": "あさ"
+  },
+  {
+    "position": 469,
+    "guid": "j0rdWBM96[",
+    "word": "命",
+    "reading": "いのち"
+  },
+  {
+    "position": 470,
+    "guid": "MKNm?dEUkZ",
+    "word": "不安",
+    "reading": "ふあん"
+  },
+  {
+    "position": 471,
+    "guid": "y{=J@FfqG}",
+    "word": "結構",
+    "reading": "けっこう"
+  },
+  {
+    "position": 472,
+    "guid": "zs09as9X+3",
+    "word": "結構",
+    "reading": "けっこう"
+  },
+  {
+    "position": 473,
+    "guid": "G78[M2hnl=",
+    "word": "新しい",
+    "reading": "あたらしい"
+  },
+  {
+    "position": 474,
+    "guid": "lT6NGhi:E^",
+    "word": "程度",
+    "reading": "ていど"
+  },
+  {
+    "position": 475,
+    "guid": "ziZL2Pv#x8",
+    "word": "壁",
+    "reading": "かべ"
+  },
+  {
+    "position": 476,
+    "guid": "uz2~piYon[",
+    "word": "用",
+    "reading": "よう"
+  },
+  {
+    "position": 477,
+    "guid": "m/m=rBJN~B",
+    "word": "背中",
+    "reading": "せなか"
+  },
+  {
+    "position": 478,
+    "guid": "q?,v_Ql$o5",
+    "word": "気付く",
+    "reading": "きづく"
+  },
+  {
+    "position": 479,
+    "guid": "nWq7k_VKEW",
+    "word": "いきなり",
+    "reading": "いきなり"
+  },
+  {
+    "position": 480,
+    "guid": "D2_1g,{+uj",
+    "word": "渡す",
+    "reading": "わたす"
+  },
+  {
+    "position": 481,
+    "guid": "bcj2<OUgG~",
+    "word": "喜ぶ",
+    "reading": "よろこぶ"
+  },
+  {
+    "position": 482,
+    "guid": "j+qRa|>Hnb",
+    "word": "可愛い",
+    "reading": "かわいい"
+  },
+  {
+    "position": 483,
+    "guid": "nw}_0t5+cE",
+    "word": "始まる",
+    "reading": "はじまる"
+  },
+  {
+    "position": 484,
+    "guid": "I*^Fx1u8S{",
+    "word": "色",
+    "reading": "いろ"
+  },
+  {
+    "position": 485,
+    "guid": "ir:D}ixGVW",
+    "word": "認める",
+    "reading": "みとめる"
+  },
+  {
+    "position": 486,
+    "guid": "y?=$WQyBLk",
+    "word": "急",
+    "reading": "きゅう"
+  },
+  {
+    "position": 487,
+    "guid": "Cl<b@o-(0K",
+    "word": "向こう",
+    "reading": "むこう"
+  },
+  {
+    "position": 488,
+    "guid": "j%4Ww1<HC[",
+    "word": "求める",
+    "reading": "もとめる"
+  },
+  {
+    "position": 489,
+    "guid": "mKVA3KsxvR",
+    "word": "肩",
+    "reading": "かた"
+  },
+  {
+    "position": 490,
+    "guid": "xxm=hjb5VT",
+    "word": "仲間",
+    "reading": "なかま"
+  },
+  {
+    "position": 491,
+    "guid": "wAI!so8YH5",
+    "word": "ようやく",
+    "reading": "ようやく"
+  },
+  {
+    "position": 492,
+    "guid": "K[vhO#0a{|",
+    "word": "思わず",
+    "reading": "おもわず"
+  },
+  {
+    "position": 493,
+    "guid": "H)%#l(7IIT",
+    "word": "ほとんど",
+    "reading": "ほとんど"
+  },
+  {
+    "position": 494,
+    "guid": "BsEb*fz0P9",
+    "word": "突然",
+    "reading": "とつぜん"
+  },
+  {
+    "position": 495,
+    "guid": "K8WV_Ax$DA",
+    "word": "自身",
+    "reading": "じしん"
+  },
+  {
+    "position": 496,
+    "guid": "oqBD`,;GNG",
+    "word": "再び",
+    "reading": "ふたたび"
+  },
+  {
+    "position": 497,
+    "guid": "6&KD!R?#!",
+    "word": "静か",
+    "reading": "しずか"
+  },
+  {
+    "position": 498,
+    "guid": "e6C0RSUQ)|",
+    "word": "飛ぶ",
+    "reading": "とぶ"
+  },
+  {
+    "position": 499,
+    "guid": "JWR9;,%=/N",
+    "word": "白い",
+    "reading": "しろい"
+  },
+  {
+    "position": 500,
+    "guid": "fazKBNxE]L",
+    "word": "届く",
+    "reading": "とどく"
+  },
+  {
+    "position": 501,
+    "guid": "w3htF]$Wsd",
+    "word": "生む",
+    "reading": "うむ"
+  },
+  {
+    "position": 502,
+    "guid": "y25MF`&p22",
+    "word": "倒す",
+    "reading": "たおす"
+  },
+  {
+    "position": 503,
+    "guid": "hYY@AT#YVU",
+    "word": "似る",
+    "reading": "にる"
+  },
+  {
+    "position": 504,
+    "guid": "qyj-7Wyh%!",
+    "word": "空気",
+    "reading": "くうき"
+  },
+  {
+    "position": 505,
+    "guid": "iPDgTZ@,Li",
+    "word": "腰",
+    "reading": "こし"
+  },
+  {
+    "position": 506,
+    "guid": "HzX{dg@>hr",
+    "word": "名",
+    "reading": "な"
+  },
+  {
+    "position": 507,
+    "guid": "tvWNXX%Eyu",
+    "word": "危険",
+    "reading": "きけん"
+  },
+  {
+    "position": 508,
+    "guid": "I~4;mxV3BH",
+    "word": "付く",
+    "reading": "つく"
+  },
+  {
+    "position": 509,
+    "guid": "o`~7UKKhQ(",
+    "word": "つく",
+    "reading": "つく"
+  },
+  {
+    "position": 510,
+    "guid": "Q}Qhy@]+#s",
+    "word": "熱い",
+    "reading": "あつい"
+  },
+  {
+    "position": 511,
+    "guid": "xc2(r:f]P|",
+    "word": "ただいま",
+    "reading": "ただいま"
+  },
+  {
+    "position": 512,
+    "guid": "Icg}Y/BM.t",
+    "word": "頂きます",
+    "reading": "いただきます"
+  },
+  {
+    "position": 513,
+    "guid": "m6]BE%q*{p",
+    "word": "慌てる",
+    "reading": "あわてる"
+  },
+  {
+    "position": 514,
+    "guid": "NxJd=_=q5&",
+    "word": "周囲",
+    "reading": "しゅうい"
+  },
+  {
+    "position": 515,
+    "guid": "o]p,l}50*B",
+    "word": "気分",
+    "reading": "きぶん"
+  },
+  {
+    "position": 516,
+    "guid": "yX7fEgs>+u",
+    "word": "事実",
+    "reading": "じじつ"
+  },
+  {
+    "position": 517,
+    "guid": "g>Er|;Uo3Y",
+    "word": "まず",
+    "reading": "まず"
+  },
+  {
+    "position": 518,
+    "guid": "rq5bLA/Mhj",
+    "word": "本気",
+    "reading": "ほんき"
+  },
+  {
+    "position": 519,
+    "guid": "rr/+3:3ovI",
+    "word": "頷く",
+    "reading": "うなずく"
+  },
+  {
+    "position": 520,
+    "guid": "b@<g8K;&2>",
+    "word": "通り",
+    "reading": "とおり"
+  },
+  {
+    "position": 521,
+    "guid": "Je1D,CTnZD",
+    "word": "想像",
+    "reading": "そうぞう"
+  },
+  {
+    "position": 522,
+    "guid": "JRJq_ah$eq",
+    "word": "店",
+    "reading": "みせ"
+  },
+  {
+    "position": 523,
+    "guid": "RdPk$C}:%`",
+    "word": "何だか",
+    "reading": "なんだか"
+  },
+  {
+    "position": 524,
+    "guid": "COVL^M>z&_",
+    "word": "目的",
+    "reading": "もくてき"
+  },
+  {
+    "position": 525,
+    "guid": "B-Li<M$QA:",
+    "word": "眠る",
+    "reading": "ねむる"
+  },
+  {
+    "position": 526,
+    "guid": "o55VuY=TXv",
+    "word": "確か",
+    "reading": "たしか"
+  },
+  {
+    "position": 527,
+    "guid": "Puc]TO88E@",
+    "word": "十分",
+    "reading": "じゅうぶん"
+  },
+  {
+    "position": 528,
+    "guid": "d^`z3>@<h3",
+    "word": "料理",
+    "reading": "りょうり"
+  },
+  {
+    "position": 529,
+    "guid": "cRX([DsVDW",
+    "word": "頃",
+    "reading": "ころ"
+  },
+  {
+    "position": 530,
+    "guid": "c^~R=-W*pB",
+    "word": "なかなか",
+    "reading": "なかなか"
+  },
+  {
+    "position": 531,
+    "guid": "P[SC[XNM;%",
+    "word": "正直",
+    "reading": "しょうじき"
+  },
+  {
+    "position": 532,
+    "guid": "nQwz,B_q]E",
+    "word": "身",
+    "reading": "み"
+  },
+  {
+    "position": 533,
+    "guid": "vLOHRRv.&l",
+    "word": "いっぱい",
+    "reading": "いっぱい"
+  },
+  {
+    "position": 534,
+    "guid": "Io/JD6#@sY",
+    "word": "美しい",
+    "reading": "うつくしい"
+  },
+  {
+    "position": 535,
+    "guid": "cu^m(=[HqA",
+    "word": "甘い",
+    "reading": "あまい"
+  },
+  {
+    "position": 536,
+    "guid": "xZHnk<YdEo",
+    "word": "むしろ",
+    "reading": "むしろ"
+  },
+  {
+    "position": 537,
+    "guid": "s4a>H%zl[q",
+    "word": "首",
+    "reading": "くび"
+  },
+  {
+    "position": 538,
+    "guid": "Csk%dXK%ow",
+    "word": "感情",
+    "reading": "かんじょう"
+  },
+  {
+    "position": 539,
+    "guid": "zx)v)sM$-W",
+    "word": "周り",
+    "reading": "まわり"
+  },
+  {
+    "position": 540,
+    "guid": "f?MGP|VO/$",
+    "word": "方法",
+    "reading": "ほうほう"
+  },
+  {
+    "position": 541,
+    "guid": "unHKa$2=f/",
+    "word": "もう一度",
+    "reading": "もういちど"
+  },
+  {
+    "position": 542,
+    "guid": "elg7Oe]%e0",
+    "word": "遅い",
+    "reading": "おそい"
+  },
+  {
+    "position": 543,
+    "guid": "AtqQ:xJTuW",
+    "word": "会話",
+    "reading": "かいわ"
+  },
+  {
+    "position": 544,
+    "guid": "&BQc6crDO",
+    "word": "合う",
+    "reading": "あう"
+  },
+  {
+    "position": 545,
+    "guid": "L+60$L6B,J",
+    "word": "やって来る",
+    "reading": "やってくる"
+  },
+  {
+    "position": 546,
+    "guid": "szwWtxhL>h",
+    "word": "森",
+    "reading": "もり"
+  },
+  {
+    "position": 547,
+    "guid": "bzDSYX5]+k",
+    "word": "動かす",
+    "reading": "うごかす"
+  },
+  {
+    "position": 548,
+    "guid": "ncO60vZ-QA",
+    "word": "能力",
+    "reading": "のうりょく"
+  },
+  {
+    "position": 549,
+    "guid": "I7hoegsq&n",
+    "word": "震える",
+    "reading": "ふるえる"
+  },
+  {
+    "position": 550,
+    "guid": "AEdKKo|DIQ",
+    "word": "期待",
+    "reading": "きたい"
+  },
+  {
+    "position": 551,
+    "guid": "o4FJGzuFi&",
+    "word": "無事",
+    "reading": "ぶじ"
+  },
+  {
+    "position": 552,
+    "guid": "lkD5t;utpL",
+    "word": "起こす",
+    "reading": "おこす"
+  },
+  {
+    "position": 553,
+    "guid": "Lll0<wk&b>",
+    "word": "起こす",
+    "reading": "おこす"
+  },
+  {
+    "position": 554,
+    "guid": "z!^GQOg_%3",
+    "word": "耳",
+    "reading": "みみ"
+  },
+  {
+    "position": 555,
+    "guid": "wZS:fiixmQ",
+    "word": "生まれる",
+    "reading": "うまれる"
+  },
+  {
+    "position": 556,
+    "guid": "O[AK&0PIA%",
+    "word": "移動",
+    "reading": "いどう"
+  },
+  {
+    "position": 557,
+    "guid": "uY.%fz%/q-",
+    "word": "邪魔",
+    "reading": "じゃま"
+  },
+  {
+    "position": 558,
+    "guid": "o_.mKAn1z^",
+    "word": "遊ぶ",
+    "reading": "あそぶ"
+  },
+  {
+    "position": 559,
+    "guid": "A=|0i67).$",
+    "word": "要る",
+    "reading": "いる"
+  },
+  {
+    "position": 560,
+    "guid": "JJ?@j:DZzd",
+    "word": "無くなる",
+    "reading": "なくなる"
+  },
+  {
+    "position": 561,
+    "guid": "tf:CQRJOo_",
+    "word": "唇",
+    "reading": "くちびる"
+  },
+  {
+    "position": 562,
+    "guid": "b=-Ctl;$E9",
+    "word": "着る",
+    "reading": "きる"
+  },
+  {
+    "position": 563,
+    "guid": "FvSwzL7(_E",
+    "word": "色々",
+    "reading": "いろいろ"
+  },
+  {
+    "position": 564,
+    "guid": "s^J{)(z2/L",
+    "word": "どうぞ",
+    "reading": "どうぞ"
+  },
+  {
+    "position": 565,
+    "guid": "fK~bdNL4u~",
+    "word": "立ち上がる",
+    "reading": "たちあがる"
+  },
+  {
+    "position": 566,
+    "guid": "C?$Y=y6k3r",
+    "word": "思い",
+    "reading": "おもい"
+  },
+  {
+    "position": 567,
+    "guid": "s[Hw1=C0_U",
+    "word": "以前",
+    "reading": "いぜん"
+  },
+  {
+    "position": 568,
+    "guid": "l,qprP*o{Q",
+    "word": "もう少し",
+    "reading": "もうすこし"
+  },
+  {
+    "position": 569,
+    "guid": "PV]N-_ff|~",
+    "word": "襲う",
+    "reading": "おそう"
+  },
+  {
+    "position": 570,
+    "guid": "rU$Om`pf+|",
+    "word": "見つかる",
+    "reading": "みつかる"
+  },
+  {
+    "position": 571,
+    "guid": "xu$U7r7k:d",
+    "word": "急ぐ",
+    "reading": "いそぐ"
+  },
+  {
+    "position": 572,
+    "guid": "t_Qzw}Ib|]",
+    "word": "せっかく",
+    "reading": "せっかく"
+  },
+  {
+    "position": 573,
+    "guid": "fb$y@&ys7o",
+    "word": "降りる",
+    "reading": "おりる"
+  },
+  {
+    "position": 574,
+    "guid": "D1rLxei]9y",
+    "word": "下りる",
+    "reading": "おりる"
+  },
+  {
+    "position": 575,
+    "guid": "c*m5#3{0_R",
+    "word": "切る",
+    "reading": "きる"
+  },
+  {
+    "position": 576,
+    "guid": "g_nd3ar-p_",
+    "word": "事件",
+    "reading": "じけん"
+  },
+  {
+    "position": 577,
+    "guid": "C[<Wy9q!<?",
+    "word": "返事",
+    "reading": "へんじ"
+  },
+  {
+    "position": 578,
+    "guid": "C0?hzk,Cwg",
+    "word": "酷い",
+    "reading": "ひどい"
+  },
+  {
+    "position": 579,
+    "guid": "ObSZ*G2De/",
+    "word": "重い",
+    "reading": "おもい"
+  },
+  {
+    "position": 580,
+    "guid": "g+7c@wS2+e",
+    "word": "起こる",
+    "reading": "おこる"
+  },
+  {
+    "position": 581,
+    "guid": "M!9_WIQ~!N",
+    "word": "逆",
+    "reading": "ぎゃく"
+  },
+  {
+    "position": 582,
+    "guid": "d$iO1y(399",
+    "word": "納得",
+    "reading": "なっとく"
+  },
+  {
+    "position": 583,
+    "guid": "E4Rm)F8sa}",
+    "word": "楽しむ",
+    "reading": "たのしむ"
+  },
+  {
+    "position": 584,
+    "guid": "m%xspx{wJ^",
+    "word": "叫ぶ",
+    "reading": "さけぶ"
+  },
+  {
+    "position": 585,
+    "guid": "EpzJo9Ut*P",
+    "word": "集まる",
+    "reading": "あつまる"
+  },
+  {
+    "position": 586,
+    "guid": "yGjTHPZ;*]",
+    "word": "構う",
+    "reading": "かまう"
+  },
+  {
+    "position": 587,
+    "guid": "kps[H(8nb>",
+    "word": "王",
+    "reading": "おう"
+  },
+  {
+    "position": 588,
+    "guid": "w(H;vOzC|>",
+    "word": "途中",
+    "reading": "とちゅう"
+  },
+  {
+    "position": 589,
+    "guid": "staTw5{}&Z",
+    "word": "慣れる",
+    "reading": "なれる"
+  },
+  {
+    "position": 590,
+    "guid": "uwg0,:%O}N",
+    "word": "終わり",
+    "reading": "おわり"
+  },
+  {
+    "position": 591,
+    "guid": "x]jfZ+{)-Y",
+    "word": "一応",
+    "reading": "いちおう"
+  },
+  {
+    "position": 592,
+    "guid": "DZ&_6670lv",
+    "word": "引く",
+    "reading": "ひく"
+  },
+  {
+    "position": 593,
+    "guid": "BObd44b$_Z",
+    "word": "海",
+    "reading": "うみ"
+  },
+  {
+    "position": 594,
+    "guid": "sb`,%[E8br",
+    "word": "諦める",
+    "reading": "あきらめる"
+  },
+  {
+    "position": 595,
+    "guid": "n=~~RB[Vfu",
+    "word": "必ず",
+    "reading": "かならず"
+  },
+  {
+    "position": 596,
+    "guid": "Pd:bx7myG[",
+    "word": "狙う",
+    "reading": "ねらう"
+  },
+  {
+    "position": 597,
+    "guid": "ASO(Qru+xa",
+    "word": "いくら",
+    "reading": "いくら"
+  },
+  {
+    "position": 598,
+    "guid": "Icw,U8V[ly",
+    "word": "落とす",
+    "reading": "おとす"
+  },
+  {
+    "position": 599,
+    "guid": "k1%2/j$O2S",
+    "word": "部分",
+    "reading": "ぶぶん"
+  },
+  {
+    "position": 600,
+    "guid": "J6Cp(k.yvF",
+    "word": "必死",
+    "reading": "ひっし"
+  },
+  {
+    "position": 601,
+    "guid": "C9.x/|M.Gc",
+    "word": "珍しい",
+    "reading": "めずらしい"
+  },
+  {
+    "position": 602,
+    "guid": "h]pvv4OXW]",
+    "word": "意外",
+    "reading": "いがい"
+  },
+  {
+    "position": 603,
+    "guid": "P7Qe2wlc>H",
+    "word": "報告",
+    "reading": "ほうこく"
+  },
+  {
+    "position": 604,
+    "guid": "g/Sq5[Cy89",
+    "word": "握る",
+    "reading": "にぎる"
+  },
+  {
+    "position": 605,
+    "guid": "b}!m5,HVxN",
+    "word": "結婚",
+    "reading": "けっこん"
+  },
+  {
+    "position": 606,
+    "guid": "B4mbdcb5=-",
+    "word": "戦い",
+    "reading": "たたかい"
+  },
+  {
+    "position": 607,
+    "guid": "M~81hh{]_Y",
+    "word": "感謝",
+    "reading": "かんしゃ"
+  },
+  {
+    "position": 608,
+    "guid": "UD.(1,3J*",
+    "word": "激しい",
+    "reading": "はげしい"
+  },
+  {
+    "position": 609,
+    "guid": "wsZ04sjfF,",
+    "word": "倒れる",
+    "reading": "たおれる"
+  },
+  {
+    "position": 610,
+    "guid": "bKaWa>[ALr",
+    "word": "既に",
+    "reading": "すでに"
+  },
+  {
+    "position": 611,
+    "guid": "sd>V4],OD~",
+    "word": "疲れる",
+    "reading": "つかれる"
+  },
+  {
+    "position": 612,
+    "guid": "Ks@Up}K<f3",
+    "word": "生活",
+    "reading": "せいかつ"
+  },
+  {
+    "position": 613,
+    "guid": "DFk6.D=4!)",
+    "word": "場",
+    "reading": "ば"
+  },
+  {
+    "position": 614,
+    "guid": "I;]$H/&X,%",
+    "word": "愛する",
+    "reading": "あいする"
+  },
+  {
+    "position": 615,
+    "guid": "q<$^C{=w_.",
+    "word": "冷たい",
+    "reading": "つめたい"
+  },
+  {
+    "position": 616,
+    "guid": "u{Wj;aXiYT",
+    "word": "捨てる",
+    "reading": "すてる"
+  },
+  {
+    "position": 617,
+    "guid": "mz9V$,DS.z",
+    "word": "過ごす",
+    "reading": "すごす"
+  },
+  {
+    "position": 618,
+    "guid": "vDG>9HX_l",
+    "word": "食事",
+    "reading": "しょくじ"
+  },
+  {
+    "position": 619,
+    "guid": "p3SA]:02ck",
+    "word": "働く",
+    "reading": "はたらく"
+  },
+  {
+    "position": 620,
+    "guid": "dHdY2UCG5j",
+    "word": "答え",
+    "reading": "こたえ"
+  },
+  {
+    "position": 621,
+    "guid": "JUG#IM4)0*",
+    "word": "風",
+    "reading": "かぜ"
+  },
+  {
+    "position": 622,
+    "guid": "zN=<pZrW{C",
+    "word": "黒い",
+    "reading": "くろい"
+  },
+  {
+    "position": 623,
+    "guid": "z5M]1OV`SP",
+    "word": "助かる",
+    "reading": "たすかる"
+  },
+  {
+    "position": 624,
+    "guid": "eg^PYr^J)&",
+    "word": "受け取る",
+    "reading": "うけとる"
+  },
+  {
+    "position": 625,
+    "guid": "HKNjOG?<wr",
+    "word": "足りる",
+    "reading": "たりる"
+  },
+  {
+    "position": 626,
+    "guid": "em&t/Mx67a",
+    "word": "判断",
+    "reading": "はんだん"
+  },
+  {
+    "position": 627,
+    "guid": "tWoc$4?AgO",
+    "word": "未来",
+    "reading": "みらい"
+  },
+  {
+    "position": 628,
+    "guid": "C!5UsCas9g",
+    "word": "食う",
+    "reading": "くう"
+  },
+  {
+    "position": 629,
+    "guid": "b_>#u}Wp17",
+    "word": "分",
+    "reading": "ぶん"
+  },
+  {
+    "position": 630,
+    "guid": "l|RM|}NTiU",
+    "word": "そっち",
+    "reading": "そっち"
+  },
+  {
+    "position": 631,
+    "guid": "KD9-T]VI4z",
+    "word": "上手い",
+    "reading": "うまい"
+  },
+  {
+    "position": 632,
+    "guid": "pr0$7q-=u-",
+    "word": "合わせる",
+    "reading": "あわせる"
+  },
+  {
+    "position": 633,
+    "guid": "mr3JS^.P*Z",
+    "word": "大切",
+    "reading": "たいせつ"
+  },
+  {
+    "position": 634,
+    "guid": "C3qk!X2J4Z",
+    "word": "花",
+    "reading": "はな"
+  },
+  {
+    "position": 635,
+    "guid": "kCh}SD2[o^",
+    "word": "謝る",
+    "reading": "あやまる"
+  },
+  {
+    "position": 636,
+    "guid": "xzLO&|zfq5",
+    "word": "奪う",
+    "reading": "うばう"
+  },
+  {
+    "position": 637,
+    "guid": "g7nxNE9K-}",
+    "word": "勢い",
+    "reading": "いきおい"
+  },
+  {
+    "position": 638,
+    "guid": "rM8cZ&H~em",
+    "word": "涙",
+    "reading": "なみだ"
+  },
+  {
+    "position": 639,
+    "guid": "qU@e2UuMoI",
+    "word": "雰囲気",
+    "reading": "ふんいき"
+  },
+  {
+    "position": 640,
+    "guid": "Mhd[I(RLMx",
+    "word": "嘘",
+    "reading": "うそ"
+  },
+  {
+    "position": 641,
+    "guid": "A;{?@.-2j/",
+    "word": "望む",
+    "reading": "のぞむ"
+  },
+  {
+    "position": 642,
+    "guid": "KfWxPRg`K&",
+    "word": "緊張",
+    "reading": "きんちょう"
+  },
+  {
+    "position": 643,
+    "guid": "J|B%/w!#&l",
+    "word": "一緒",
+    "reading": "いっしょ"
+  },
+  {
+    "position": 644,
+    "guid": "u9.G1FYrIU",
+    "word": "救う",
+    "reading": "すくう"
+  },
+  {
+    "position": 645,
+    "guid": "l<-Rk$]g|Q",
+    "word": "自ら",
+    "reading": "みずから"
+  },
+  {
+    "position": 646,
+    "guid": "y8>r%:HU74",
+    "word": "地面",
+    "reading": "じめん"
+  },
+  {
+    "position": 647,
+    "guid": "o>RZ^SA=v0",
+    "word": "失敗",
+    "reading": "しっぱい"
+  },
+  {
+    "position": 648,
+    "guid": "Gb9L,]rmE8",
+    "word": "避ける",
+    "reading": "さける"
+  },
+  {
+    "position": 649,
+    "guid": "pdiuB^|Ueq",
+    "word": "窓",
+    "reading": "まど"
+  },
+  {
+    "position": 650,
+    "guid": "M0=OP/iVn]",
+    "word": "素直",
+    "reading": "すなお"
+  },
+  {
+    "position": 651,
+    "guid": "xI4SF1lPa",
+    "word": "肉",
+    "reading": "にく"
+  },
+  {
+    "position": 652,
+    "guid": "hKdl<)+]oR",
+    "word": "冗談",
+    "reading": "じょうだん"
+  },
+  {
+    "position": 653,
+    "guid": "mC<2F:GfB6",
+    "word": "余裕",
+    "reading": "よゆう"
+  },
+  {
+    "position": 654,
+    "guid": "u`l8AW-Z0(",
+    "word": "連絡",
+    "reading": "れんらく"
+  },
+  {
+    "position": 655,
+    "guid": "TRd[pB2,%",
+    "word": "人生",
+    "reading": "じんせい"
+  },
+  {
+    "position": 656,
+    "guid": "A&D+rBi!,&",
+    "word": "放つ",
+    "reading": "はなつ"
+  },
+  {
+    "position": 657,
+    "guid": "k2gZ4jbnC_",
+    "word": "流れる",
+    "reading": "ながれる"
+  },
+  {
+    "position": 658,
+    "guid": "k~8uTOk<e1",
+    "word": "特別",
+    "reading": "とくべつ"
+  },
+  {
+    "position": 659,
+    "guid": "s1/0&m1B,g",
+    "word": "連中",
+    "reading": "れんちゅう"
+  },
+  {
+    "position": 660,
+    "guid": "db|[#s(21#",
+    "word": "両手",
+    "reading": "りょうて"
+  },
+  {
+    "position": 661,
+    "guid": "v9iLbar/ke",
+    "word": "増える",
+    "reading": "ふえる"
+  },
+  {
+    "position": 662,
+    "guid": "N*rT4N;f^6",
+    "word": "出会う",
+    "reading": "であう"
+  },
+  {
+    "position": 663,
+    "guid": "xfdh*^t2Gq",
+    "word": "少年",
+    "reading": "しょうねん"
+  },
+  {
+    "position": 664,
+    "guid": "LZ~JxG|wRJ",
+    "word": "繰り返す",
+    "reading": "くりかえす"
+  },
+  {
+    "position": 665,
+    "guid": "lmF%}pA:`x",
+    "word": "我慢",
+    "reading": "がまん"
+  },
+  {
+    "position": 666,
+    "guid": "Hxo)T6^:aa",
+    "word": "我々",
+    "reading": "われわれ"
+  },
+  {
+    "position": 667,
+    "guid": "J1AM`FoW%B",
+    "word": "感覚",
+    "reading": "かんかく"
+  },
+  {
+    "position": 668,
+    "guid": "MbefQK{Axr",
+    "word": "響く",
+    "reading": "ひびく"
+  },
+  {
+    "position": 669,
+    "guid": "sJxs%DWVEm",
+    "word": "何とか",
+    "reading": "なんとか"
+  },
+  {
+    "position": 670,
+    "guid": "I>f`d0D?O|",
+    "word": "山",
+    "reading": "やま"
+  },
+  {
+    "position": 671,
+    "guid": "cG,,BwDf:y",
+    "word": "当たり前",
+    "reading": "あたりまえ"
+  },
+  {
+    "position": 672,
+    "guid": "Nv{wfsf7?1",
+    "word": "予定",
+    "reading": "よてい"
+  },
+  {
+    "position": 673,
+    "guid": "km^mK|+v9v",
+    "word": "残念",
+    "reading": "ざんねん"
+  },
+  {
+    "position": 674,
+    "guid": "Oue1Qa/cK(",
+    "word": "追う",
+    "reading": "おう"
+  },
+  {
+    "position": 675,
+    "guid": "r}Vwy[KBDu",
+    "word": "綺麗",
+    "reading": "きれい"
+  },
+  {
+    "position": 676,
+    "guid": "jPu{zAXd)}",
+    "word": "いらっしゃる",
+    "reading": "いらっしゃる"
+  },
+  {
+    "position": 677,
+    "guid": "Q>G8Pnv(Lb",
+    "word": "若い",
+    "reading": "わかい"
+  },
+  {
+    "position": 678,
+    "guid": "wTw=yf^HjH",
+    "word": "どうしても",
+    "reading": "どうしても"
+  },
+  {
+    "position": 679,
+    "guid": "f~5(2-Qz0x",
+    "word": "考え",
+    "reading": "かんがえ"
+  },
+  {
+    "position": 680,
+    "guid": "K3)/^Hs7sm",
+    "word": "過去",
+    "reading": "かこ"
+  },
+  {
+    "position": 681,
+    "guid": "rkYKa.*KAK",
+    "word": "気配",
+    "reading": "けはい"
+  },
+  {
+    "position": 682,
+    "guid": "m0X&KZN{Yv",
+    "word": "本人",
+    "reading": "ほんにん"
+  },
+  {
+    "position": 683,
+    "guid": "K?JpJj)&hR",
+    "word": "現実",
+    "reading": "げんじつ"
+  },
+  {
+    "position": 684,
+    "guid": "Li8G#mpS/)",
+    "word": "決して",
+    "reading": "けっして"
+  },
+  {
+    "position": 685,
+    "guid": "mq;+JXa5Kp",
+    "word": "いつか",
+    "reading": "いつか"
+  },
+  {
+    "position": 686,
+    "guid": "C}NTx&z`AM",
+    "word": "床",
+    "reading": "ゆか"
+  },
+  {
+    "position": 687,
+    "guid": "x>sO=82wyA",
+    "word": "横",
+    "reading": "よこ"
+  },
+  {
+    "position": 688,
+    "guid": "it2&6HfJ#$",
+    "word": "休む",
+    "reading": "やすむ"
+  },
+  {
+    "position": 689,
+    "guid": "lk~yf#7,C?",
+    "word": "振り返る",
+    "reading": "ふりかえる"
+  },
+  {
+    "position": 690,
+    "guid": "eDm410/[h5",
+    "word": "わざわざ",
+    "reading": "わざわざ"
+  },
+  {
+    "position": 691,
+    "guid": "Qn7{bQF:(A",
+    "word": "質問",
+    "reading": "しつもん"
+  },
+  {
+    "position": 692,
+    "guid": "EcW}GauTsL",
+    "word": "興味",
+    "reading": "きょうみ"
+  },
+  {
+    "position": 693,
+    "guid": "gUK0~4:_{I",
+    "word": "距離",
+    "reading": "きょり"
+  },
+  {
+    "position": 694,
+    "guid": "Gu`9D,Xt@M",
+    "word": "内容",
+    "reading": "ないよう"
+  },
+  {
+    "position": 695,
+    "guid": "e!eUCR`ow_",
+    "word": "つい",
+    "reading": "つい"
+  },
+  {
+    "position": 696,
+    "guid": "s>jn4C}WSo",
+    "word": "回る",
+    "reading": "まわる"
+  },
+  {
+    "position": 697,
+    "guid": "PmhjS`KZD=",
+    "word": "並ぶ",
+    "reading": "ならぶ"
+  },
+  {
+    "position": 698,
+    "guid": "y00x1QaJtV",
+    "word": "終える",
+    "reading": "おえる"
+  },
+  {
+    "position": 699,
+    "guid": "iO:B5%ukgs",
+    "word": "態度",
+    "reading": "たいど"
+  },
+  {
+    "position": 700,
+    "guid": "j%NIfX|YFU",
+    "word": "金",
+    "reading": "かね"
+  },
+  {
+    "position": 701,
+    "guid": "LU}t:uy6VL",
+    "word": "今夜",
+    "reading": "こんや"
+  },
+  {
+    "position": 702,
+    "guid": "ObJY$n95=l",
+    "word": "昨夜",
+    "reading": "ゆうべ"
+  },
+  {
+    "position": 703,
+    "guid": "LUE25/r-ns",
+    "word": "さすが",
+    "reading": "さすが"
+  },
+  {
+    "position": 704,
+    "guid": "RgsU!Jcq&+",
+    "word": "自然",
+    "reading": "しぜん"
+  },
+  {
+    "position": 705,
+    "guid": "Q;QH{R|&+H",
+    "word": "眺める",
+    "reading": "ながめる"
+  },
+  {
+    "position": 706,
+    "guid": "Mt1ldtF8gA",
+    "word": "向く",
+    "reading": "むく"
+  },
+  {
+    "position": 707,
+    "guid": "b=~U]7:E6l",
+    "word": "相変わらず",
+    "reading": "あいかわらず"
+  },
+  {
+    "position": 708,
+    "guid": "x6$YE/gt?+",
+    "word": "普段",
+    "reading": "ふだん"
+  },
+  {
+    "position": 709,
+    "guid": "kL0$Hu]uVp",
+    "word": "どうも",
+    "reading": "どうも"
+  },
+  {
+    "position": 710,
+    "guid": "o:1FMn`dof",
+    "word": "運ぶ",
+    "reading": "はこぶ"
+  },
+  {
+    "position": 711,
+    "guid": "rc5-Pw*-ox",
+    "word": "やっと",
+    "reading": "やっと"
+  },
+  {
+    "position": 712,
+    "guid": "p$3ewzD1d|",
+    "word": "弱い",
+    "reading": "よわい"
+  },
+  {
+    "position": 713,
+    "guid": "B|>$Muz1_:",
+    "word": "どうせ",
+    "reading": "どうせ"
+  },
+  {
+    "position": 714,
+    "guid": "CGMSnru-C4",
+    "word": "離す",
+    "reading": "はなす"
+  },
+  {
+    "position": 715,
+    "guid": "y)MuhaT1k9",
+    "word": "貴族",
+    "reading": "きぞく"
+  },
+  {
+    "position": 716,
+    "guid": "qg`|y0~vNL",
+    "word": "広がる",
+    "reading": "ひろがる"
+  },
+  {
+    "position": 717,
+    "guid": "B~<QmUV*~W",
+    "word": "頬",
+    "reading": "ほお"
+  },
+  {
+    "position": 718,
+    "guid": "v_=1b2^faF",
+    "word": "寂しい",
+    "reading": "さびしい"
+  },
+  {
+    "position": 719,
+    "guid": "f.7t,+QHCn",
+    "word": "正しい",
+    "reading": "ただしい"
+  },
+  {
+    "position": 720,
+    "guid": "]i}2[r._G",
+    "word": "自由",
+    "reading": "じゆう"
+  },
+  {
+    "position": 721,
+    "guid": "bwvu]H@`y?",
+    "word": "全身",
+    "reading": "ぜんしん"
+  },
+  {
+    "position": 722,
+    "guid": "I$dMi%p&}h",
+    "word": "武器",
+    "reading": "ぶき"
+  },
+  {
+    "position": 723,
+    "guid": "o]Fs^)k1Qi",
+    "word": "それぞれ",
+    "reading": "それぞれ"
+  },
+  {
+    "position": 724,
+    "guid": "wR^9.4lfVC",
+    "word": "語る",
+    "reading": "かたる"
+  },
+  {
+    "position": 725,
+    "guid": "iB~&o,vw0N",
+    "word": "持ってくる",
+    "reading": "もってくる"
+  },
+  {
+    "position": 726,
+    "guid": "L^H`BfAp,T",
+    "word": "息子",
+    "reading": "むすこ"
+  },
+  {
+    "position": 727,
+    "guid": "i(3gT9<,|{",
+    "word": "娘",
+    "reading": "むすめ"
+  },
+  {
+    "position": 728,
+    "guid": "K~5#N6t$Hl",
+    "word": "一気に",
+    "reading": "いっきに"
+  },
+  {
+    "position": 729,
+    "guid": "ObA:1ffp%_",
+    "word": "そっと",
+    "reading": "そっと"
+  },
+  {
+    "position": 730,
+    "guid": "duTcNrf2G`",
+    "word": "伝わる",
+    "reading": "つたわる"
+  },
+  {
+    "position": 731,
+    "guid": "mjFOwakI1D",
+    "word": "当たる",
+    "reading": "あたる"
+  },
+  {
+    "position": 732,
+    "guid": "kbzn<X%?WI",
+    "word": "痛み",
+    "reading": "いたみ"
+  },
+  {
+    "position": 733,
+    "guid": "z6tRO%o]id",
+    "word": "妙",
+    "reading": "みょう"
+  },
+  {
+    "position": 734,
+    "guid": "mycAOzfF.w",
+    "word": "影",
+    "reading": "かげ"
+  },
+  {
+    "position": 735,
+    "guid": "zFTJ|n7Y[R",
+    "word": "死",
+    "reading": "し"
+  },
+  {
+    "position": 736,
+    "guid": "wsdB@,S:7y",
+    "word": "多分",
+    "reading": "たぶん"
+  },
+  {
+    "position": 737,
+    "guid": "E2xk1a0V=:",
+    "word": "協力",
+    "reading": "きょうりょく"
+  },
+  {
+    "position": 738,
+    "guid": "dsDTIR,N4s",
+    "word": "見上げる",
+    "reading": "みあげる"
+  },
+  {
+    "position": 739,
+    "guid": "gW0=Y2U(d$",
+    "word": "覚悟",
+    "reading": "かくご"
+  },
+  {
+    "position": 740,
+    "guid": "l*-sq(b3W#",
+    "word": "連れる",
+    "reading": "つれる"
+  },
+  {
+    "position": 741,
+    "guid": "j#;zU2_S5/",
+    "word": "低い",
+    "reading": "ひくい"
+  },
+  {
+    "position": 742,
+    "guid": "Gb#;faU,gu",
+    "word": "木",
+    "reading": "き"
+  },
+  {
+    "position": 743,
+    "guid": "_#$Az;BeH",
+    "word": "面倒",
+    "reading": "めんどう"
+  },
+  {
+    "position": 744,
+    "guid": "F[A5>*bk@[",
+    "word": "闇",
+    "reading": "やみ"
+  },
+  {
+    "position": 745,
+    "guid": "sI9e$fiDk3",
+    "word": "広い",
+    "reading": "ひろい"
+  },
+  {
+    "position": 746,
+    "guid": "PUhjTXz[-j",
+    "word": "告げる",
+    "reading": "つげる"
+  },
+  {
+    "position": 747,
+    "guid": "DZCKiC5gFI",
+    "word": "叩く",
+    "reading": "たたく"
+  },
+  {
+    "position": 748,
+    "guid": "BuR<.>9}3C",
+    "word": "自信",
+    "reading": "じしん"
+  },
+  {
+    "position": 749,
+    "guid": "sACD6P#$Oy",
+    "word": "集める",
+    "reading": "あつめる"
+  },
+  {
+    "position": 750,
+    "guid": "gx3H3bE>s:",
+    "word": "振る",
+    "reading": "ふる"
+  },
+  {
+    "position": 751,
+    "guid": "N,~`%fcj}b",
+    "word": "余計",
+    "reading": "よけい"
+  },
+  {
+    "position": 752,
+    "guid": "DZ$>a{DGpi",
+    "word": "他に",
+    "reading": "ほかに"
+  },
+  {
+    "position": 753,
+    "guid": "EUS9ZQo7]8",
+    "word": "誘う",
+    "reading": "さそう"
+  },
+  {
+    "position": 754,
+    "guid": "EP(D:)FG[9",
+    "word": "付き合う",
+    "reading": "つきあう"
+  },
+  {
+    "position": 755,
+    "guid": "E!Xgg)FW[t",
+    "word": "村",
+    "reading": "むら"
+  },
+  {
+    "position": 756,
+    "guid": "q=wq3!da:j",
+    "word": "人物",
+    "reading": "じんぶつ"
+  },
+  {
+    "position": 757,
+    "guid": "E<+AN>/02g",
+    "word": "数",
+    "reading": "かず"
+  },
+  {
+    "position": 758,
+    "guid": "QwTTW33bD1",
+    "word": "危ない",
+    "reading": "あぶない"
+  },
+  {
+    "position": 759,
+    "guid": "ziJN{>rI(N",
+    "word": "事情",
+    "reading": "じじょう"
+  },
+  {
+    "position": 760,
+    "guid": "A5%)W)`My0",
+    "word": "本当に",
+    "reading": "ほんとうに"
+  },
+  {
+    "position": 761,
+    "guid": "v5@=uctFv@",
+    "word": "噂",
+    "reading": "うわさ"
+  },
+  {
+    "position": 762,
+    "guid": "c@+g.T:IT0",
+    "word": "断る",
+    "reading": "ことわる"
+  },
+  {
+    "position": 763,
+    "guid": "QzXrqC*FdE",
+    "word": "どうか",
+    "reading": "どうか"
+  },
+  {
+    "position": 764,
+    "guid": "h_6Pf3]g#t",
+    "word": "巨大",
+    "reading": "きょだい"
+  },
+  {
+    "position": 765,
+    "guid": "oo=Q8:t{am",
+    "word": "最高",
+    "reading": "さいこう"
+  },
+  {
+    "position": 766,
+    "guid": "l55Zty9_Cr",
+    "word": "お金",
+    "reading": "おかね"
+  },
+  {
+    "position": 767,
+    "guid": "xEcAq$hlj6",
+    "word": "傷",
+    "reading": "きず"
+  },
+  {
+    "position": 768,
+    "guid": "prb}(rQz5u",
+    "word": "怒り",
+    "reading": "いかり"
+  },
+  {
+    "position": 769,
+    "guid": "J5?u1PP9vV",
+    "word": "どうやって",
+    "reading": "どうやって"
+  },
+  {
+    "position": 770,
+    "guid": "j-AP,?bpGe",
+    "word": "効果",
+    "reading": "こうか"
+  },
+  {
+    "position": 771,
+    "guid": "b+k<;7,cfM",
+    "word": "取り出す",
+    "reading": "とりだす"
+  },
+  {
+    "position": 772,
+    "guid": "g]dS3)6AIq",
+    "word": "黒",
+    "reading": "くろ"
+  },
+  {
+    "position": 773,
+    "guid": "txl:t_l{_/",
+    "word": "愛",
+    "reading": "あい"
+  },
+  {
+    "position": 774,
+    "guid": "cW(oiXR&rw",
+    "word": "直接",
+    "reading": "ちょくせつ"
+  },
+  {
+    "position": 775,
+    "guid": "tp2#zmk%eg",
+    "word": "浮かぶ",
+    "reading": "うかぶ"
+  },
+  {
+    "position": 776,
+    "guid": "rTYbmuyF@P",
+    "word": "抜ける",
+    "reading": "ぬける"
+  },
+  {
+    "position": 777,
+    "guid": "cZe}=6ozJE",
+    "word": "暗い",
+    "reading": "くらい"
+  },
+  {
+    "position": 778,
+    "guid": "up1l$H3;TV",
+    "word": "息",
+    "reading": "いき"
+  },
+  {
+    "position": 779,
+    "guid": "HWNcyJETG}",
+    "word": "駄目",
+    "reading": "だめ"
+  },
+  {
+    "position": 780,
+    "guid": "hxw6=^`4.g",
+    "word": "点",
+    "reading": "てん"
+  },
+  {
+    "position": 781,
+    "guid": "yn30CP$^L.",
+    "word": "参加",
+    "reading": "さんか"
+  },
+  {
+    "position": 782,
+    "guid": "D6fc=_Y^6)",
+    "word": "はっきり",
+    "reading": "はっきり"
+  },
+  {
+    "position": 783,
+    "guid": "w.$Avs(SPm",
+    "word": "描く",
+    "reading": "かく"
+  },
+  {
+    "position": 784,
+    "guid": "b@e}$L#pac",
+    "word": "描く",
+    "reading": "えがく"
+  },
+  {
+    "position": 785,
+    "guid": "y5z}tTi~ix",
+    "word": "無視",
+    "reading": "むし"
+  },
+  {
+    "position": 786,
+    "guid": "u:BRaRt.(#",
+    "word": "生徒",
+    "reading": "せいと"
+  },
+  {
+    "position": 787,
+    "guid": "Py#Ls!(<8F",
+    "word": "詳しい",
+    "reading": "くわしい"
+  },
+  {
+    "position": 788,
+    "guid": "wEK{7H7}?{",
+    "word": "触る",
+    "reading": "さわる"
+  },
+  {
+    "position": 789,
+    "guid": "GYVV9(<Z0E",
+    "word": "これまで",
+    "reading": "これまで"
+  },
+  {
+    "position": 790,
+    "guid": "A`*qBfnx_R",
+    "word": "半分",
+    "reading": "はんぶん"
+  },
+  {
+    "position": 791,
+    "guid": "srmq^bUpll",
+    "word": "耐える",
+    "reading": "たえる"
+  },
+  {
+    "position": 792,
+    "guid": "i$-yv2s{|i",
+    "word": "立場",
+    "reading": "たちば"
+  },
+  {
+    "position": 793,
+    "guid": "cySJw_vl,_",
+    "word": "石",
+    "reading": "いし"
+  },
+  {
+    "position": 794,
+    "guid": "n?Y(:{Vl^i",
+    "word": "挨拶",
+    "reading": "あいさつ"
+  },
+  {
+    "position": 795,
+    "guid": "ePReu3=u^s",
+    "word": "相談",
+    "reading": "そうだん"
+  },
+  {
+    "position": 796,
+    "guid": "v.-[RgR1G%",
+    "word": "受け入れる",
+    "reading": "うけいれる"
+  },
+  {
+    "position": 797,
+    "guid": "P%~f-&ukPC",
+    "word": "練習",
+    "reading": "れんしゅう"
+  },
+  {
+    "position": 798,
+    "guid": "K#lDL[[6g;",
+    "word": "無駄",
+    "reading": "むだ"
+  },
+  {
+    "position": 799,
+    "guid": "tw+Es6I.]o",
+    "word": "抱える",
+    "reading": "かかえる"
+  },
+  {
+    "position": 800,
+    "guid": "FV*7pcjmYw",
+    "word": "示す",
+    "reading": "しめす"
+  },
+  {
+    "position": 801,
+    "guid": "NP<rPkOC9@",
+    "word": "成功",
+    "reading": "せいこう"
+  },
+  {
+    "position": 802,
+    "guid": "MFCQCRulyD",
+    "word": "抱く",
+    "reading": "だく"
+  },
+  {
+    "position": 803,
+    "guid": "Bd=-wH^j@c",
+    "word": "味",
+    "reading": "あじ"
+  },
+  {
+    "position": 804,
+    "guid": "rd(Sd$RZv<",
+    "word": "男性",
+    "reading": "だんせい"
+  },
+  {
+    "position": 805,
+    "guid": "Rf8hYTIr>3",
+    "word": "否定",
+    "reading": "ひてい"
+  },
+  {
+    "position": 806,
+    "guid": "B5@WGMy?QH",
+    "word": "致す",
+    "reading": "いたす"
+  },
+  {
+    "position": 807,
+    "guid": "O=oSfz^Gy~",
+    "word": "現在",
+    "reading": "げんざい"
+  },
+  {
+    "position": 808,
+    "guid": "i{j&E@S&%-",
+    "word": "輝く",
+    "reading": "かがやく"
+  },
+  {
+    "position": 809,
+    "guid": "A1[te7CfR~",
+    "word": "熱",
+    "reading": "ねつ"
+  },
+  {
+    "position": 810,
+    "guid": "s>Q`*C3<~L",
+    "word": "始め",
+    "reading": "はじめ"
+  },
+  {
+    "position": 811,
+    "guid": "fbg<)f7U?m",
+    "word": "厳しい",
+    "reading": "きびしい"
+  },
+  {
+    "position": 812,
+    "guid": "p.V#@o!au=",
+    "word": "匂い",
+    "reading": "におい"
+  },
+  {
+    "position": 813,
+    "guid": "K)L<K`,m}z",
+    "word": "席",
+    "reading": "せき"
+  },
+  {
+    "position": 814,
+    "guid": "sZ;2ACae5F",
+    "word": "売る",
+    "reading": "うる"
+  },
+  {
+    "position": 815,
+    "guid": "P1.j0)?d},",
+    "word": "暮らす",
+    "reading": "くらす"
+  },
+  {
+    "position": 816,
+    "guid": "EF;${Nal{5",
+    "word": "利用",
+    "reading": "りよう"
+  },
+  {
+    "position": 817,
+    "guid": "BXEh/hxPu{",
+    "word": "ふと",
+    "reading": "ふと"
+  },
+  {
+    "position": 818,
+    "guid": "d3:CsWj}29",
+    "word": "経験",
+    "reading": "けいけん"
+  },
+  {
+    "position": 819,
+    "guid": "itUXk{Muyk",
+    "word": "変化",
+    "reading": "へんか"
+  },
+  {
+    "position": 820,
+    "guid": "N<&bpVG}D+",
+    "word": "王子",
+    "reading": "おうじ"
+  },
+  {
+    "position": 821,
+    "guid": "l8(L@GcsjZ",
+    "word": "満足",
+    "reading": "まんぞく"
+  },
+  {
+    "position": 822,
+    "guid": "FT`Pz&2dFr",
+    "word": "どんどん",
+    "reading": "どんどん"
+  },
+  {
+    "position": 823,
+    "guid": "m:PiQ04kxb",
+    "word": "命令",
+    "reading": "めいれい"
+  },
+  {
+    "position": 824,
+    "guid": "A/PcI1MQ1]",
+    "word": "主",
+    "reading": "おも"
+  },
+  {
+    "position": 825,
+    "guid": "qIJv[RsK3c",
+    "word": "美味しい",
+    "reading": "おいしい"
+  },
+  {
+    "position": 826,
+    "guid": "iGuQ=j<s8f",
+    "word": "手紙",
+    "reading": "てがみ"
+  },
+  {
+    "position": 827,
+    "guid": "d(nC,3`GNN",
+    "word": "掴む",
+    "reading": "つかむ"
+  },
+  {
+    "position": 828,
+    "guid": "t?jpsCoZPB",
+    "word": "他人",
+    "reading": "たにん"
+  },
+  {
+    "position": 829,
+    "guid": "c,`Nr]Zs~7",
+    "word": "格好",
+    "reading": "かっこう"
+  },
+  {
+    "position": 830,
+    "guid": "yc-N{Ligt5",
+    "word": "光景",
+    "reading": "こうけい"
+  },
+  {
+    "position": 831,
+    "guid": "d;]Te*RD*Z",
+    "word": "すっかり",
+    "reading": "すっかり"
+  },
+  {
+    "position": 832,
+    "guid": "HR3K=QxE=!",
+    "word": "どちら",
+    "reading": "どちら"
+  },
+  {
+    "position": 833,
+    "guid": "hylJ5M%fw/",
+    "word": "親",
+    "reading": "おや"
+  },
+  {
+    "position": 834,
+    "guid": "erEKak$S07",
+    "word": "時代",
+    "reading": "じだい"
+  },
+  {
+    "position": 835,
+    "guid": "IDJVP#x9=2",
+    "word": "作戦",
+    "reading": "さくせん"
+  },
+  {
+    "position": 836,
+    "guid": "PrXC;z;x!Z",
+    "word": "もしかしたら",
+    "reading": "もしかしたら"
+  },
+  {
+    "position": 837,
+    "guid": "HbaS{27haG",
+    "word": "苦しい",
+    "reading": "くるしい"
+  },
+  {
+    "position": 838,
+    "guid": "IY)=3dn;<a",
+    "word": "明るい",
+    "reading": "あかるい"
+  },
+  {
+    "position": 839,
+    "guid": "G&j:JUl__H",
+    "word": "原因",
+    "reading": "げんいん"
+  },
+  {
+    "position": 840,
+    "guid": "w+*vM|Pl{d",
+    "word": "廊下",
+    "reading": "ろうか"
+  },
+  {
+    "position": 841,
+    "guid": "gA#g^Ru8Oi",
+    "word": "そいつ",
+    "reading": "そいつ"
+  },
+  {
+    "position": 842,
+    "guid": "L+wE9}cyok",
+    "word": "先ほど",
+    "reading": "さきほど"
+  },
+  {
+    "position": 843,
+    "guid": "y()]z3`9(D",
+    "word": "大人",
+    "reading": "おとな"
+  },
+  {
+    "position": 844,
+    "guid": "i`$49|CU0x",
+    "word": "人々",
+    "reading": "ひとびと"
+  },
+  {
+    "position": 845,
+    "guid": "gRb=a6Dv]X",
+    "word": "撫でる",
+    "reading": "なでる"
+  },
+  {
+    "position": 846,
+    "guid": "syw(xu1?-O",
+    "word": "立てる",
+    "reading": "たてる"
+  },
+  {
+    "position": 847,
+    "guid": "eN2,H6#nUZ",
+    "word": "たまに",
+    "reading": "たまに"
+  },
+  {
+    "position": 848,
+    "guid": "kgu&nRfxmR",
+    "word": "押す",
+    "reading": "おす"
+  },
+  {
+    "position": 849,
+    "guid": "PA?,Y+T$ji",
+    "word": "平気",
+    "reading": "へいき"
+  },
+  {
+    "position": 850,
+    "guid": ")n@:y`f.k",
+    "word": "悲しい",
+    "reading": "かなしい"
+  },
+  {
+    "position": 851,
+    "guid": "v^,~u.GgxG",
+    "word": "隠れる",
+    "reading": "かくれる"
+  },
+  {
+    "position": 852,
+    "guid": "d82=85u$(g",
+    "word": "まだまだ",
+    "reading": "まだまだ"
+  },
+  {
+    "position": 853,
+    "guid": "H,*L:X3;a(",
+    "word": "皆さん",
+    "reading": "みなさん"
+  },
+  {
+    "position": 854,
+    "guid": "I^1e>zfyLm",
+    "word": "戻す",
+    "reading": "もどす"
+  },
+  {
+    "position": 855,
+    "guid": "LQnDNMv,ii",
+    "word": "戦闘",
+    "reading": "せんとう"
+  },
+  {
+    "position": 856,
+    "guid": "m8%.sLrZ6>",
+    "word": "火",
+    "reading": "ひ"
+  },
+  {
+    "position": 857,
+    "guid": "s7bbCaL/a+",
+    "word": "炎",
+    "reading": "ほのお"
+  },
+  {
+    "position": 858,
+    "guid": "H%Lp#Ix>Q:",
+    "word": "恐怖",
+    "reading": "きょうふ"
+  },
+  {
+    "position": 859,
+    "guid": "xe5-WUfJ!&",
+    "word": "迷う",
+    "reading": "まよう"
+  },
+  {
+    "position": 860,
+    "guid": "NqLs_juZ9D",
+    "word": "よろしい",
+    "reading": "よろしい"
+  },
+  {
+    "position": 861,
+    "guid": "Db?Eb$nf*,",
+    "word": "機会",
+    "reading": "きかい"
+  },
+  {
+    "position": 862,
+    "guid": "MWa]Ph[(7?",
+    "word": "恐ろしい",
+    "reading": "おそろしい"
+  },
+  {
+    "position": 863,
+    "guid": "P%!;g#(cP#",
+    "word": "借りる",
+    "reading": "かりる"
+  },
+  {
+    "position": 864,
+    "guid": "E<x%4|m+vY",
+    "word": "外す",
+    "reading": "はずす"
+  },
+  {
+    "position": 865,
+    "guid": "tqh8r`b-Zk",
+    "word": "地",
+    "reading": "ち"
+  },
+  {
+    "position": 866,
+    "guid": "kJ{POw4boD",
+    "word": "速い",
+    "reading": "はやい"
+  },
+  {
+    "position": 867,
+    "guid": "uwkwUl*<Ne",
+    "word": "短い",
+    "reading": "みじかい"
+  },
+  {
+    "position": 868,
+    "guid": "n#WRm|F{[0",
+    "word": "気に入る",
+    "reading": "きにいる"
+  },
+  {
+    "position": 869,
+    "guid": "e0o$Ayhxrv",
+    "word": "改めて",
+    "reading": "あらためて"
+  },
+  {
+    "position": 870,
+    "guid": "Al<+sS=vm~",
+    "word": "うるさい",
+    "reading": "うるさい"
+  },
+  {
+    "position": 871,
+    "guid": "Ka}LVdn}&J",
+    "word": "当てる",
+    "reading": "あてる"
+  },
+  {
+    "position": 872,
+    "guid": "zJMMSuJfaE",
+    "word": "包む",
+    "reading": "つつむ"
+  },
+  {
+    "position": 873,
+    "guid": "hJ3=R:csh]",
+    "word": "位置",
+    "reading": "いち"
+  },
+  {
+    "position": 874,
+    "guid": "oa#s$Y*6Av",
+    "word": "打つ",
+    "reading": "うつ"
+  },
+  {
+    "position": 875,
+    "guid": "Ooq66k2)9&",
+    "word": "目指す",
+    "reading": "めざす"
+  },
+  {
+    "position": 876,
+    "guid": "p6k8kf]Bgs",
+    "word": "秘密",
+    "reading": "ひみつ"
+  },
+  {
+    "position": 877,
+    "guid": "rQ}FC?m/w:",
+    "word": "屋敷",
+    "reading": "やしき"
+  },
+  {
+    "position": 878,
+    "guid": "r;}v<I0tQ.",
+    "word": "限界",
+    "reading": "げんかい"
+  },
+  {
+    "position": 879,
+    "guid": "ve97~t`7,$",
+    "word": "勝負",
+    "reading": "しょうぶ"
+  },
+  {
+    "position": 880,
+    "guid": "hQ)QQFS:Bi",
+    "word": "星",
+    "reading": "ほし"
+  },
+  {
+    "position": 881,
+    "guid": "J8f4t>hl3g",
+    "word": "明らか",
+    "reading": "あきらか"
+  },
+  {
+    "position": 882,
+    "guid": "MxDgG6ZGWl",
+    "word": "悩む",
+    "reading": "なやむ"
+  },
+  {
+    "position": 883,
+    "guid": "r<x$J.J}ZR",
+    "word": "集中",
+    "reading": "しゅうちゅう"
+  },
+  {
+    "position": 884,
+    "guid": "CjYXCNJ+J7",
+    "word": "間違う",
+    "reading": "まちがう"
+  },
+  {
+    "position": 885,
+    "guid": "rCkdO!|QHV",
+    "word": "裏",
+    "reading": "うら"
+  },
+  {
+    "position": 886,
+    "guid": "pmBlba*{3S",
+    "word": "薄い",
+    "reading": "うすい"
+  },
+  {
+    "position": 887,
+    "guid": "m+bR#[}6FW",
+    "word": "願う",
+    "reading": "ねがう"
+  },
+  {
+    "position": 888,
+    "guid": "BIU^Ox5$_S",
+    "word": "回復",
+    "reading": "かいふく"
+  },
+  {
+    "position": 889,
+    "guid": "u)3U[1zcvv",
+    "word": "流す",
+    "reading": "ながす"
+  },
+  {
+    "position": 890,
+    "guid": "H5i#s}0>T{",
+    "word": "じっと",
+    "reading": "じっと"
+  },
+  {
+    "position": 891,
+    "guid": "f=%pX1G|)A",
+    "word": "本物",
+    "reading": "ほんもの"
+  },
+  {
+    "position": 892,
+    "guid": "xX9jkA0C$Q",
+    "word": "正に",
+    "reading": "まさに"
+  },
+  {
+    "position": 893,
+    "guid": "J?lplo>xoE",
+    "word": "取り戻す",
+    "reading": "とりもどす"
+  },
+  {
+    "position": 894,
+    "guid": "LeM1j~)pPR",
+    "word": "何より",
+    "reading": "なにより"
+  },
+  {
+    "position": 895,
+    "guid": "u5?;P{0Fab",
+    "word": "身体",
+    "reading": "しんたい"
+  },
+  {
+    "position": 896,
+    "guid": "mBuxP,%*>:",
+    "word": "方向",
+    "reading": "ほうこう"
+  },
+  {
+    "position": 897,
+    "guid": "ARn%1+J`VC",
+    "word": "通る",
+    "reading": "とおる"
+  },
+  {
+    "position": 898,
+    "guid": "HWtfvl7Qmf",
+    "word": "空間",
+    "reading": "くうかん"
+  },
+  {
+    "position": 899,
+    "guid": "rl4+*kBJ)*",
+    "word": "着く",
+    "reading": "つく"
+  },
+  {
+    "position": 900,
+    "guid": "bV{N6w:^1t",
+    "word": "可能",
+    "reading": "かのう"
+  },
+  {
+    "position": 901,
+    "guid": "Di-:}QNN+H",
+    "word": "新た",
+    "reading": "あらた"
+  },
+  {
+    "position": 902,
+    "guid": "gCqR(M>MC7",
+    "word": "随分",
+    "reading": "ずいぶん"
+  },
+  {
+    "position": 903,
+    "guid": "En4;Ttt=_Y",
+    "word": "尋ねる",
+    "reading": "たずねる"
+  },
+  {
+    "position": 904,
+    "guid": "uS2X0,,rpP",
+    "word": "椅子",
+    "reading": "いす"
+  },
+  {
+    "position": 905,
+    "guid": "br$/|gCT8}",
+    "word": "城",
+    "reading": "しろ"
+  },
+  {
+    "position": 906,
+    "guid": "jsrD_0hA5h",
+    "word": "恐らく",
+    "reading": "おそらく"
+  },
+  {
+    "position": 907,
+    "guid": "@w{9]O-e/",
+    "word": "お茶",
+    "reading": "おちゃ"
+  },
+  {
+    "position": 908,
+    "guid": "HC^daWR%v6",
+    "word": "雨",
+    "reading": "あめ"
+  },
+  {
+    "position": 909,
+    "guid": "Be6]duf`={",
+    "word": "いやいや",
+    "reading": "いやいや"
+  },
+  {
+    "position": 910,
+    "guid": "e53=`QV?SH",
+    "word": "そのもの",
+    "reading": "そのもの"
+  },
+  {
+    "position": 911,
+    "guid": "kGl2FF/E9#",
+    "word": "教室",
+    "reading": "きょうしつ"
+  },
+  {
+    "position": 912,
+    "guid": "NmstY%3oTf",
+    "word": "馬鹿",
+    "reading": "ばか"
+  },
+  {
+    "position": 913,
+    "guid": "Gh,!*5?xfj",
+    "word": "遠慮",
+    "reading": "えんりょ"
+  },
+  {
+    "position": 914,
+    "guid": "Gh?!3!@1KG",
+    "word": "まずい",
+    "reading": "まずい"
+  },
+  {
+    "position": 915,
+    "guid": "zGJIL%8k6y",
+    "word": "まずい",
+    "reading": "まずい"
+  },
+  {
+    "position": 916,
+    "guid": "x4=SXRJ0H0",
+    "word": "せめて",
+    "reading": "せめて"
+  },
+  {
+    "position": 917,
+    "guid": "AlgJYcIwte",
+    "word": "迎える",
+    "reading": "むかえる"
+  },
+  {
+    "position": 918,
+    "guid": "r.ep8op(uf",
+    "word": "少なくとも",
+    "reading": "すくなくとも"
+  },
+  {
+    "position": 919,
+    "guid": "LLmv)4)A1(",
+    "word": "魂",
+    "reading": "たましい"
+  },
+  {
+    "position": 920,
+    "guid": "D7&*mqoYT_",
+    "word": "消す",
+    "reading": "けす"
+  },
+  {
+    "position": 921,
+    "guid": "Qzj+N3D;K",
+    "word": "調子",
+    "reading": "ちょうし"
+  },
+  {
+    "position": 922,
+    "guid": "f[Q5k,.MhU",
+    "word": "お互い",
+    "reading": "おたがい"
+  },
+  {
+    "position": 923,
+    "guid": "h[k2p9^~hO",
+    "word": "似合う",
+    "reading": "にあう"
+  },
+  {
+    "position": 924,
+    "guid": "rh^_OX[|7:",
+    "word": "猫",
+    "reading": "ねこ"
+  },
+  {
+    "position": 925,
+    "guid": "bnuriM{O1$",
+    "word": "犬",
+    "reading": "いぬ"
+  },
+  {
+    "position": 926,
+    "guid": "hn|z,RjSbd",
+    "word": "お礼",
+    "reading": "おれい"
+  },
+  {
+    "position": 927,
+    "guid": "H`S~pMT|cH",
+    "word": "後悔",
+    "reading": "こうかい"
+  },
+  {
+    "position": 928,
+    "guid": "g1b{C~,N*e",
+    "word": "希望",
+    "reading": "きぼう"
+  },
+  {
+    "position": 929,
+    "guid": "h;]1YnH6OJ",
+    "word": "下がる",
+    "reading": "さがる"
+  },
+  {
+    "position": 930,
+    "guid": "G%WQKjp@+s",
+    "word": "訪れる",
+    "reading": "おとずれる"
+  },
+  {
+    "position": 931,
+    "guid": "lacuZ)aOc`",
+    "word": "褒める",
+    "reading": "ほめる"
+  },
+  {
+    "position": 932,
+    "guid": "hBiMWUDas|",
+    "word": "性格",
+    "reading": "せいかく"
+  },
+  {
+    "position": 933,
+    "guid": "c1V#87g]>H",
+    "word": "写真",
+    "reading": "しゃしん"
+  },
+  {
+    "position": 934,
+    "guid": "u;SsvS:Sz5",
+    "word": "薬",
+    "reading": "くすり"
+  },
+  {
+    "position": 935,
+    "guid": "u{hu.Wkn{S",
+    "word": "友人",
+    "reading": "ゆうじん"
+  },
+  {
+    "position": 936,
+    "guid": "QVV}$.,Uf!",
+    "word": "かつて",
+    "reading": "かつて"
+  },
+  {
+    "position": 937,
+    "guid": "sb!@}raxHR",
+    "word": "確実",
+    "reading": "かくじつ"
+  },
+  {
+    "position": 938,
+    "guid": "Jf%o_#<^3I",
+    "word": "もはや",
+    "reading": "もはや"
+  },
+  {
+    "position": 939,
+    "guid": "j;3><fSax!",
+    "word": "去る",
+    "reading": "さる"
+  },
+  {
+    "position": 940,
+    "guid": "B8l|%,oS~}",
+    "word": "一部",
+    "reading": "いちぶ"
+  },
+  {
+    "position": 941,
+    "guid": "KjUkyCIz(_",
+    "word": "遠く",
+    "reading": "とおく"
+  },
+  {
+    "position": 942,
+    "guid": "J[~7LBO!dB",
+    "word": "腹",
+    "reading": "はら"
+  },
+  {
+    "position": 943,
+    "guid": "cypGCxby?*",
+    "word": "階段",
+    "reading": "かいだん"
+  },
+  {
+    "position": 944,
+    "guid": "JI%<|8a@6z",
+    "word": "適当",
+    "reading": "てきとう"
+  },
+  {
+    "position": 945,
+    "guid": "mL)pqg9EqD",
+    "word": "舌",
+    "reading": "した"
+  },
+  {
+    "position": 946,
+    "guid": "ktr)q)-<i&",
+    "word": "予想",
+    "reading": "よそう"
+  },
+  {
+    "position": 947,
+    "guid": "yt.y@vh.O}",
+    "word": "興奮",
+    "reading": "こうふん"
+  },
+  {
+    "position": 948,
+    "guid": "vneP_?j+cp",
+    "word": "関わる",
+    "reading": "かかわる"
+  },
+  {
+    "position": 949,
+    "guid": "m!0Gp!PV60",
+    "word": "白",
+    "reading": "しろ"
+  },
+  {
+    "position": 950,
+    "guid": "fAya`um;!C",
+    "word": "進める",
+    "reading": "すすめる"
+  },
+  {
+    "position": 951,
+    "guid": "jU5(S)_CF]",
+    "word": "真剣",
+    "reading": "しんけん"
+  },
+  {
+    "position": 952,
+    "guid": "i&^OLM29R/",
+    "word": "迫る",
+    "reading": "せまる"
+  },
+  {
+    "position": 953,
+    "guid": "I(y3PWiu~.",
+    "word": "ほぼ",
+    "reading": "ほぼ"
+  },
+  {
+    "position": 954,
+    "guid": "j*~gM2JS^A",
+    "word": "ちょうど",
+    "reading": "ちょうど"
+  },
+  {
+    "position": 955,
+    "guid": "v7wlL3/4^h",
+    "word": "疑問",
+    "reading": "ぎもん"
+  },
+  {
+    "position": 956,
+    "guid": "u/~Bz*0V{$",
+    "word": "指示",
+    "reading": "しじ"
+  },
+  {
+    "position": 957,
+    "guid": "nTwV!-moWm",
+    "word": "揺れる",
+    "reading": "ゆれる"
+  },
+  {
+    "position": 958,
+    "guid": "N(^hCUv{1.",
+    "word": "相当",
+    "reading": "そうとう"
+  },
+  {
+    "position": 959,
+    "guid": "E;.OikPk>O",
+    "word": "楽",
+    "reading": "らく"
+  },
+  {
+    "position": 960,
+    "guid": "l-xn0T)e#5",
+    "word": "勘違い",
+    "reading": "かんちがい"
+  },
+  {
+    "position": 961,
+    "guid": "df~cbuvY!}",
+    "word": "警戒",
+    "reading": "けいかい"
+  },
+  {
+    "position": 962,
+    "guid": "eiH!*DNfGp",
+    "word": "確かめる",
+    "reading": "たしかめる"
+  },
+  {
+    "position": 963,
+    "guid": "E9p}V`sMK/",
+    "word": "月",
+    "reading": "つき"
+  },
+  {
+    "position": 964,
+    "guid": "JFc>N9^s_f",
+    "word": "疑う",
+    "reading": "うたがう"
+  },
+  {
+    "position": 965,
+    "guid": "y%-Yi,/%&N",
+    "word": "電話",
+    "reading": "でんわ"
+  },
+  {
+    "position": 966,
+    "guid": "s.y[|qLr[Y",
+    "word": "成長",
+    "reading": "せいちょう"
+  },
+  {
+    "position": 967,
+    "guid": "fMl`Oihnk1",
+    "word": "鋭い",
+    "reading": "するどい"
+  },
+  {
+    "position": 968,
+    "guid": "nI;MYS~U1l",
+    "word": "証拠",
+    "reading": "しょうこ"
+  },
+  {
+    "position": 969,
+    "guid": "u(`r>eJC-{",
+    "word": "紹介",
+    "reading": "しょうかい"
+  },
+  {
+    "position": 970,
+    "guid": "OC]FkRR)_2",
+    "word": "実際",
+    "reading": "じっさい"
+  },
+  {
+    "position": 971,
+    "guid": "r=tCZfY|1a",
+    "word": "何でも",
+    "reading": "なんでも"
+  },
+  {
+    "position": 972,
+    "guid": "ty}Cg[6boL",
+    "word": "作業",
+    "reading": "さぎょう"
+  },
+  {
+    "position": 973,
+    "guid": "E&A9[BA(+5",
+    "word": "重要",
+    "reading": "じゅうよう"
+  },
+  {
+    "position": 974,
+    "guid": "z=/q3G!A[b",
+    "word": "鍵",
+    "reading": "かぎ"
+  },
+  {
+    "position": 975,
+    "guid": "psal8Ej0u=",
+    "word": "衝撃",
+    "reading": "しょうげき"
+  },
+  {
+    "position": 976,
+    "guid": "v4&&[w!.vN",
+    "word": "巻き込む",
+    "reading": "まきこむ"
+  },
+  {
+    "position": 977,
+    "guid": "zjBnZ=uzXm",
+    "word": "差し出す",
+    "reading": "さしだす"
+  },
+  {
+    "position": 978,
+    "guid": "s@MbZ|[Lsr",
+    "word": "軍",
+    "reading": "ぐん"
+  },
+  {
+    "position": 979,
+    "guid": "p:yur&ORn6",
+    "word": "そちら",
+    "reading": "そちら"
+  },
+  {
+    "position": 980,
+    "guid": "yEhv{]mIOU",
+    "word": "悔しい",
+    "reading": "くやしい"
+  },
+  {
+    "position": 981,
+    "guid": "0UvbG45Np",
+    "word": "抜く",
+    "reading": "ぬく"
+  },
+  {
+    "position": 982,
+    "guid": "xE~j&LJ1^m",
+    "word": "破壊",
+    "reading": "はかい"
+  },
+  {
+    "position": 983,
+    "guid": "ycfTqj.j5~",
+    "word": "運命",
+    "reading": "うんめい"
+  },
+  {
+    "position": 984,
+    "guid": "L#Dd6!=gOB",
+    "word": "案内",
+    "reading": "あんない"
+  },
+  {
+    "position": 985,
+    "guid": "Jo)HneK!G~",
+    "word": "努力",
+    "reading": "どりょく"
+  },
+  {
+    "position": 986,
+    "guid": "t5H:*oHVQ!",
+    "word": "いずれ",
+    "reading": "いずれ"
+  },
+  {
+    "position": 987,
+    "guid": "jfLRQMyZs]",
+    "word": "一言",
+    "reading": "ひとこと"
+  },
+  {
+    "position": 988,
+    "guid": "GPbh>jj#+;",
+    "word": "ついに",
+    "reading": "ついに"
+  },
+  {
+    "position": 989,
+    "guid": "j2q+9T&hZ_",
+    "word": "心臓",
+    "reading": "しんぞう"
+  },
+  {
+    "position": 990,
+    "guid": "elRSuz>:pf",
+    "word": "荷物",
+    "reading": "にもつ"
+  },
+  {
+    "position": 991,
+    "guid": "bVuDzwi+Ht",
+    "word": "伸びる",
+    "reading": "のびる"
+  },
+  {
+    "position": 992,
+    "guid": "oi1k)<f@$6",
+    "word": "両親",
+    "reading": "りょうしん"
+  },
+  {
+    "position": 993,
+    "guid": "M$E_Dy43-1",
+    "word": "量",
+    "reading": "りょう"
+  },
+  {
+    "position": 994,
+    "guid": "LR7Y]BP=1n",
+    "word": "払う",
+    "reading": "はらう"
+  },
+  {
+    "position": 995,
+    "guid": "uy.iN?}$H=",
+    "word": "二度と",
+    "reading": "にどと"
+  },
+  {
+    "position": 996,
+    "guid": "i[5`*r656T",
+    "word": "辺り",
+    "reading": "あたり"
+  },
+  {
+    "position": 997,
+    "guid": "gA%@bbiz>w",
+    "word": "開始",
+    "reading": "かいし"
+  },
+  {
+    "position": 998,
+    "guid": "K|8-U&i|jF",
+    "word": "解放",
+    "reading": "かいほう"
+  },
+  {
+    "position": 999,
+    "guid": "kc)P6u~W_$",
+    "word": "仲良く",
+    "reading": "なかよく"
+  },
+  {
+    "position": 1000,
+    "guid": "EEfTl3P)@~",
+    "word": "獣",
+    "reading": "けもの"
+  },
+  {
+    "position": 1001,
+    "guid": "uo#X1pn|xL",
+    "word": "取れる",
+    "reading": "とれる"
+  },
+  {
+    "position": 1002,
+    "guid": "O;yiV/r+I<",
+    "word": "建物",
+    "reading": "たてもの"
+  },
+  {
+    "position": 1003,
+    "guid": "z&gHgsi3h!",
+    "word": "本来",
+    "reading": "ほんらい"
+  },
+  {
+    "position": 1004,
+    "guid": "cS&*O<qjQd",
+    "word": "扱う",
+    "reading": "あつかう"
+  },
+  {
+    "position": 1005,
+    "guid": "bgIkY4>D`d",
+    "word": "真面目",
+    "reading": "まじめ"
+  },
+  {
+    "position": 1006,
+    "guid": "GCQ?t}-w>h",
+    "word": "影響",
+    "reading": "えいきょう"
+  },
+  {
+    "position": 1007,
+    "guid": "E+T%LyaTpZ",
+    "word": "真っ赤",
+    "reading": "まっか"
+  },
+  {
+    "position": 1008,
+    "guid": "ok=iAI!nL>",
+    "word": "発見",
+    "reading": "はっけん"
+  },
+  {
+    "position": 1009,
+    "guid": "LVL;55#3vz",
+    "word": "支える",
+    "reading": "ささえる"
+  },
+  {
+    "position": 1010,
+    "guid": "yPge(DNHHx",
+    "word": "第一",
+    "reading": "だいいち"
+  },
+  {
+    "position": 1011,
+    "guid": "C,>i:|w75e",
+    "word": "お父さん",
+    "reading": "おとうさん"
+  },
+  {
+    "position": 1012,
+    "guid": "CYH$}0$]K,",
+    "word": "お母さん",
+    "reading": "おかあさん"
+  },
+  {
+    "position": 1013,
+    "guid": "n]4mKPPrKr",
+    "word": "お兄さん",
+    "reading": "おにいさん"
+  },
+  {
+    "position": 1014,
+    "guid": "m_@#GW<(c?",
+    "word": "お姉さん",
+    "reading": "おねえさん"
+  },
+  {
+    "position": 1015,
+    "guid": "vRv~7e.tw7",
+    "word": "おじさん",
+    "reading": "おじさん"
+  },
+  {
+    "position": 1016,
+    "guid": "iM!gF5cn$",
+    "word": "おばさん",
+    "reading": "おばさん"
+  },
+  {
+    "position": 1017,
+    "guid": "FtYkVRdB&$",
+    "word": "いとこ",
+    "reading": "いとこ"
+  },
+  {
+    "position": 1018,
+    "guid": "N>%}?P2ef7",
+    "word": "机",
+    "reading": "つくえ"
+  },
+  {
+    "position": 1019,
+    "guid": "Fq#4)g)4C)",
+    "word": "同士",
+    "reading": "どうし"
+  },
+  {
+    "position": 1020,
+    "guid": "k)mpjd~!45",
+    "word": "遅れる",
+    "reading": "おくれる"
+  },
+  {
+    "position": 1021,
+    "guid": "G<Y~qLFCdz",
+    "word": "車",
+    "reading": "くるま"
+  },
+  {
+    "position": 1022,
+    "guid": "cCU12j3nvX",
+    "word": "飛び出す",
+    "reading": "とびだす"
+  },
+  {
+    "position": 1023,
+    "guid": "zlYE!1&Hu1",
+    "word": "事態",
+    "reading": "じたい"
+  },
+  {
+    "position": 1024,
+    "guid": "t&WpTCa%~W",
+    "word": "味方",
+    "reading": "みかた"
+  },
+  {
+    "position": 1025,
+    "guid": "w7m-zfV7Pc",
+    "word": "展開",
+    "reading": "てんかい"
+  },
+  {
+    "position": 1026,
+    "guid": "vdZ&BP~$^7",
+    "word": "学園",
+    "reading": "がくえん"
+  },
+  {
+    "position": 1027,
+    "guid": "sb*hRJPBs/",
+    "word": "怪しい",
+    "reading": "あやしい"
+  },
+  {
+    "position": 1028,
+    "guid": "b69)G.9{A1",
+    "word": "型",
+    "reading": "かた"
+  },
+  {
+    "position": 1029,
+    "guid": "Lzscvr]]`+",
+    "word": "流れ",
+    "reading": "ながれ"
+  },
+  {
+    "position": 1030,
+    "guid": "MoFys5gNM|",
+    "word": "残り",
+    "reading": "のこり"
+  },
+  {
+    "position": 1031,
+    "guid": "Jv+xg37GRb",
+    "word": "偶然",
+    "reading": "ぐうぜん"
+  },
+  {
+    "position": 1032,
+    "guid": "gEQ}S_`sAN",
+    "word": "柔らかい",
+    "reading": "やわらかい"
+  },
+  {
+    "position": 1033,
+    "guid": "rs#KS~(]yS",
+    "word": "感触",
+    "reading": "かんしょく"
+  },
+  {
+    "position": 1034,
+    "guid": "H#&(<*Xy`~",
+    "word": "女子",
+    "reading": "じょし"
+  },
+  {
+    "position": 1035,
+    "guid": "Lgs+FTH-(v",
+    "word": "無し",
+    "reading": "なし"
+  },
+  {
+    "position": 1036,
+    "guid": "I5NyaJ8d.e",
+    "word": "壊れる",
+    "reading": "こわれる"
+  },
+  {
+    "position": 1037,
+    "guid": "u#CO&Th)Mw",
+    "word": "苦手",
+    "reading": "にがて"
+  },
+  {
+    "position": 1038,
+    "guid": "ujpP]M_?qt",
+    "word": "試す",
+    "reading": "ためす"
+  },
+  {
+    "position": 1039,
+    "guid": "y4V%<i?ZG7",
+    "word": "立派",
+    "reading": "りっぱ"
+  },
+  {
+    "position": 1040,
+    "guid": "I=i&tbCw.3",
+    "word": "回す",
+    "reading": "まわす"
+  },
+  {
+    "position": 1041,
+    "guid": "o5SKDnVK,X",
+    "word": "なぜか",
+    "reading": "なぜか"
+  },
+  {
+    "position": 1042,
+    "guid": "ibId<ROlHe",
+    "word": "意見",
+    "reading": "いけん"
+  },
+  {
+    "position": 1043,
+    "guid": "mDbp1A#AE,",
+    "word": "大量",
+    "reading": "たいりょう"
+  },
+  {
+    "position": 1044,
+    "guid": "jjf4g&=?%1",
+    "word": "提案",
+    "reading": "ていあん"
+  },
+  {
+    "position": 1045,
+    "guid": "^?*CNL)>G",
+    "word": "責任",
+    "reading": "せきにん"
+  },
+  {
+    "position": 1046,
+    "guid": "kP.Rhz*[7^",
+    "word": "抑える",
+    "reading": "おさえる"
+  },
+  {
+    "position": 1047,
+    "guid": "winNkZCWY3",
+    "word": "全力",
+    "reading": "ぜんりょく"
+  },
+  {
+    "position": 1048,
+    "guid": "JPM|`n+L<@",
+    "word": "伸ばす",
+    "reading": "のばす"
+  },
+  {
+    "position": 1049,
+    "guid": "hhIAog4gv.",
+    "word": "客",
+    "reading": "きゃく"
+  },
+  {
+    "position": 1050,
+    "guid": "K1?M1}@l/J",
+    "word": "王国",
+    "reading": "おうこく"
+  },
+  {
+    "position": 1051,
+    "guid": "u7F1(w,`[n",
+    "word": "抵抗",
+    "reading": "ていこう"
+  },
+  {
+    "position": 1052,
+    "guid": "Jq0_-VXl|G",
+    "word": "混乱",
+    "reading": "こんらん"
+  },
+  {
+    "position": 1053,
+    "guid": "66hZzVaR:",
+    "word": "条件",
+    "reading": "じょうけん"
+  },
+  {
+    "position": 1054,
+    "guid": "y!mM$L}%3S",
+    "word": "迷惑",
+    "reading": "めいわく"
+  },
+  {
+    "position": 1055,
+    "guid": "qG*Mb>*fys",
+    "word": "例",
+    "reading": "れい"
+  },
+  {
+    "position": 1056,
+    "guid": "cj3:U8cV&Z",
+    "word": "頼る",
+    "reading": "たよる"
+  },
+  {
+    "position": 1057,
+    "guid": "F-zqBBBqP!",
+    "word": "完璧",
+    "reading": "かんぺき"
+  },
+  {
+    "position": 1058,
+    "guid": "xo_RnWQ`qe",
+    "word": "日々",
+    "reading": "ひび"
+  },
+  {
+    "position": 1059,
+    "guid": "tx(O_tTMu]",
+    "word": "行為",
+    "reading": "こうい"
+  },
+  {
+    "position": 1060,
+    "guid": "DG70/!aT+$",
+    "word": "ともかく",
+    "reading": "ともかく"
+  },
+  {
+    "position": 1061,
+    "guid": "n^IRw/:/wl",
+    "word": "減る",
+    "reading": "へる"
+  },
+  {
+    "position": 1062,
+    "guid": "PLV>=WR5%6",
+    "word": "嫌う",
+    "reading": "きらう"
+  },
+  {
+    "position": 1063,
+    "guid": "z0#OHYgHh2",
+    "word": "知り合い",
+    "reading": "しりあい"
+  },
+  {
+    "position": 1064,
+    "guid": "ud-BktPer)",
+    "word": "思考",
+    "reading": "しこう"
+  },
+  {
+    "position": 1065,
+    "guid": "sO0nmtF)F6",
+    "word": "解決",
+    "reading": "かいけつ"
+  },
+  {
+    "position": 1066,
+    "guid": "yIr<^B>)8~",
+    "word": "冷静",
+    "reading": "れいせい"
+  },
+  {
+    "position": 1067,
+    "guid": "c,6.!SuDdp",
+    "word": "天",
+    "reading": "てん"
+  },
+  {
+    "position": 1068,
+    "guid": "j5_gxtw?cf",
+    "word": "いつの間にか",
+    "reading": "いつのまにか"
+  },
+  {
+    "position": 1069,
+    "guid": "c>?F<bW_@6",
+    "word": "直す",
+    "reading": "なおす"
+  },
+  {
+    "position": 1070,
+    "guid": "zL~z@LVIi-",
+    "word": "常に",
+    "reading": "つねに"
+  },
+  {
+    "position": 1071,
+    "guid": "IkM.EhunVU",
+    "word": "犯人",
+    "reading": "はんにん"
+  },
+  {
+    "position": 1072,
+    "guid": "I_#-.r_52/",
+    "word": "許可",
+    "reading": "きょか"
+  },
+  {
+    "position": 1073,
+    "guid": "Ie:Jz_;WcN",
+    "word": "閉じる",
+    "reading": "とじる"
+  },
+  {
+    "position": 1074,
+    "guid": "LzJj%0LVk!",
+    "word": "重ねる",
+    "reading": "かさねる"
+  },
+  {
+    "position": 1075,
+    "guid": "g)No4?{aY{",
+    "word": "細い",
+    "reading": "ほそい"
+  },
+  {
+    "position": 1076,
+    "guid": "kFHJ;Ur8^O",
+    "word": "久しぶり",
+    "reading": "ひさしぶり"
+  },
+  {
+    "position": 1077,
+    "guid": "Ei;^J_H]8j",
+    "word": "目立つ",
+    "reading": "めだつ"
+  },
+  {
+    "position": 1078,
+    "guid": "o0`JB{pC$7",
+    "word": "到着",
+    "reading": "とうちゃく"
+  },
+  {
+    "position": 1079,
+    "guid": "z*Y[)htyIX",
+    "word": "押さえる",
+    "reading": "おさえる"
+  },
+  {
+    "position": 1080,
+    "guid": "C!B/b%<C$^",
+    "word": "通う",
+    "reading": "かよう"
+  },
+  {
+    "position": 1081,
+    "guid": "gTBtxy%2ZK",
+    "word": "殴る",
+    "reading": "なぐる"
+  },
+  {
+    "position": 1082,
+    "guid": "nSKefj?[)Q",
+    "word": "広げる",
+    "reading": "ひろげる"
+  },
+  {
+    "position": 1083,
+    "guid": "m:+mw.*v9K",
+    "word": "引っ張る",
+    "reading": "ひっぱる"
+  },
+  {
+    "position": 1084,
+    "guid": "OuI%]JTL>1",
+    "word": "いつまでも",
+    "reading": "いつまでも"
+  },
+  {
+    "position": 1085,
+    "guid": "qV8y;My0s[",
+    "word": "間に合う",
+    "reading": "まにあう"
+  },
+  {
+    "position": 1086,
+    "guid": "qt5ISG]Y5T",
+    "word": "了解",
+    "reading": "りょうかい"
+  },
+  {
+    "position": 1087,
+    "guid": "v:?6Bj2BVE",
+    "word": "番",
+    "reading": "ばん"
+  },
+  {
+    "position": 1088,
+    "guid": "qT4z0}|NF`",
+    "word": "戦争",
+    "reading": "せんそう"
+  },
+  {
+    "position": 1089,
+    "guid": "kPmrEHaM22",
+    "word": "寒い",
+    "reading": "さむい"
+  },
+  {
+    "position": 1090,
+    "guid": "FUNX|OuBpq",
+    "word": "見事",
+    "reading": "みごと"
+  },
+  {
+    "position": 1091,
+    "guid": "sh5j)A]]qB",
+    "word": "酒",
+    "reading": "さけ"
+  },
+  {
+    "position": 1092,
+    "guid": "C1p.|Aq>w3",
+    "word": "恋人",
+    "reading": "こいびと"
+  },
+  {
+    "position": 1093,
+    "guid": "kPjV%^;?Np",
+    "word": "一切",
+    "reading": "いっさい"
+  },
+  {
+    "position": 1094,
+    "guid": "w_-waUqvOf",
+    "word": "穴",
+    "reading": "あな"
+  },
+  {
+    "position": 1095,
+    "guid": "b7r2K2j0#^",
+    "word": "依頼",
+    "reading": "いらい"
+  },
+  {
+    "position": 1096,
+    "guid": "E*Sw,UC5O`",
+    "word": "中身",
+    "reading": "なかみ"
+  },
+  {
+    "position": 1097,
+    "guid": "QBYFDyp~~|",
+    "word": "多少",
+    "reading": "たしょう"
+  },
+  {
+    "position": 1098,
+    "guid": "w[+vP8rk1i",
+    "word": "真実",
+    "reading": "しんじつ"
+  },
+  {
+    "position": 1099,
+    "guid": "t@@x8Uuh#@",
+    "word": "見た目",
+    "reading": "みため"
+  },
+  {
+    "position": 1100,
+    "guid": "hRUkI:%>y(",
+    "word": "間違い",
+    "reading": "まちがい"
+  },
+  {
+    "position": 1101,
+    "guid": "mc:/ol8nT:",
+    "word": "青い",
+    "reading": "あおい"
+  },
+  {
+    "position": 1102,
+    "guid": "y0IJwc/K2q",
+    "word": "辛い",
+    "reading": "からい"
+  },
+  {
+    "position": 1103,
+    "guid": "FSk0+h0N8_",
+    "word": "辛い",
+    "reading": "つらい"
+  },
+  {
+    "position": 1104,
+    "guid": "M|0K4U$Pf]",
+    "word": "対応",
+    "reading": "たいおう"
+  },
+  {
+    "position": 1105,
+    "guid": "GT90XYOK-p",
+    "word": "光る",
+    "reading": "ひかる"
+  },
+  {
+    "position": 1106,
+    "guid": "qM]*0{P*+_",
+    "word": "苦労",
+    "reading": "くろう"
+  },
+  {
+    "position": 1107,
+    "guid": "bp{Vrc,?_~",
+    "word": "通じる",
+    "reading": "つうじる"
+  },
+  {
+    "position": 1108,
+    "guid": "jC>#sA/L7w",
+    "word": "罪",
+    "reading": "つみ"
+  },
+  {
+    "position": 1109,
+    "guid": "J.09tkv=jx",
+    "word": "授業",
+    "reading": "じゅぎょう"
+  },
+  {
+    "position": 1110,
+    "guid": "cUvEP9+c2d",
+    "word": "最悪",
+    "reading": "さいあく"
+  },
+  {
+    "position": 1111,
+    "guid": "ffe[yXFf&X",
+    "word": "差",
+    "reading": "さ"
+  },
+  {
+    "position": 1112,
+    "guid": "rakQr_+5t>",
+    "word": "信用",
+    "reading": "しんよう"
+  },
+  {
+    "position": 1113,
+    "guid": "F;;`H`o_zk",
+    "word": "壊す",
+    "reading": "こわす"
+  },
+  {
+    "position": 1114,
+    "guid": "CnCfnjsO<k",
+    "word": "式",
+    "reading": "しき"
+  },
+  {
+    "position": 1115,
+    "guid": "EJ.m(8;V3}",
+    "word": "人形",
+    "reading": "にんぎょう"
+  },
+  {
+    "position": 1116,
+    "guid": "m8O_Vz<[~X",
+    "word": "結ぶ",
+    "reading": "むすぶ"
+  },
+  {
+    "position": 1117,
+    "guid": "KugfNgscnl",
+    "word": "あんなに",
+    "reading": "あんなに"
+  },
+  {
+    "position": 1118,
+    "guid": "fH07pnk-:(",
+    "word": "計画",
+    "reading": "けいかく"
+  },
+  {
+    "position": 1119,
+    "guid": "jgIAG`|I=g",
+    "word": "囲む",
+    "reading": "かこむ"
+  },
+  {
+    "position": 1120,
+    "guid": "Ax}XE%C%US",
+    "word": "知識",
+    "reading": "ちしき"
+  },
+  {
+    "position": 1121,
+    "guid": "ineM/_;er9",
+    "word": "切り",
+    "reading": "きり"
+  },
+  {
+    "position": 1122,
+    "guid": "i,eZ,?}Hh|",
+    "word": "注意",
+    "reading": "ちゅうい"
+  },
+  {
+    "position": 1123,
+    "guid": "cVG85nXG}w",
+    "word": "言い方",
+    "reading": "いいかた"
+  },
+  {
+    "position": 1124,
+    "guid": "Dp5$kRIC0%",
+    "word": "経つ",
+    "reading": "たつ"
+  },
+  {
+    "position": 1125,
+    "guid": "QS/Hx;+2}=",
+    "word": "背",
+    "reading": "せ"
+  },
+  {
+    "position": 1126,
+    "guid": "A8-t?R;~.=",
+    "word": "問う",
+    "reading": "とう"
+  },
+  {
+    "position": 1127,
+    "guid": "kGa|]UsH#p",
+    "word": "恋",
+    "reading": "こい"
+  },
+  {
+    "position": 1128,
+    "guid": "q/cD`YMbXe",
+    "word": "とんでもない",
+    "reading": "とんでもない"
+  },
+  {
+    "position": 1129,
+    "guid": "E.Zad)qNxn",
+    "word": "中心",
+    "reading": "ちゅうしん"
+  },
+  {
+    "position": 1130,
+    "guid": "N_6>@~Y0pu",
+    "word": "汗",
+    "reading": "あせ"
+  },
+  {
+    "position": 1131,
+    "guid": "b%*&dS.U_M",
+    "word": "異常",
+    "reading": "いじょう"
+  },
+  {
+    "position": 1132,
+    "guid": "Fun^W!i!2~",
+    "word": "非常",
+    "reading": "ひじょう"
+  },
+  {
+    "position": 1133,
+    "guid": "si1~G&mz(d",
+    "word": "膝",
+    "reading": "ひざ"
+  },
+  {
+    "position": 1134,
+    "guid": "HYnGYC&q#g",
+    "word": "わずか",
+    "reading": "わずか"
+  },
+  {
+    "position": 1135,
+    "guid": "hm;([8~yf*",
+    "word": "役",
+    "reading": "やく"
+  },
+  {
+    "position": 1136,
+    "guid": "G&0{s$[~a/",
+    "word": "焦る",
+    "reading": "あせる"
+  },
+  {
+    "position": 1137,
+    "guid": "O<[&1B;CTM",
+    "word": "川",
+    "reading": "かわ"
+  },
+  {
+    "position": 1138,
+    "guid": "e<laf@v~j)",
+    "word": "悪魔",
+    "reading": "あくま"
+  },
+  {
+    "position": 1139,
+    "guid": "MUm7{rkyO9",
+    "word": "唯一",
+    "reading": "ゆいいつ"
+  },
+  {
+    "position": 1140,
+    "guid": "QftTV[~{E_",
+    "word": "もうすぐ",
+    "reading": "もうすぐ"
+  },
+  {
+    "position": 1141,
+    "guid": "qwj8jLE[9B",
+    "word": "中央",
+    "reading": "ちゅうおう"
+  },
+  {
+    "position": 1142,
+    "guid": ":c0AGNk@N",
+    "word": "突っ込む",
+    "reading": "つっこむ"
+  },
+  {
+    "position": 1143,
+    "guid": "LV/L*?stVJ",
+    "word": "技術",
+    "reading": "ぎじゅつ"
+  },
+  {
+    "position": 1144,
+    "guid": "o<TO*s,j6|",
+    "word": "素晴らしい",
+    "reading": "すばらしい"
+  },
+  {
+    "position": 1145,
+    "guid": "c[h50XbDc|",
+    "word": "単純",
+    "reading": "たんじゅん"
+  },
+  {
+    "position": 1146,
+    "guid": "yn4vEDubck",
+    "word": "穏やか",
+    "reading": "おだやか"
+  },
+  {
+    "position": 1147,
+    "guid": "r):A;HPeM,",
+    "word": "撃つ",
+    "reading": "うつ"
+  },
+  {
+    "position": 1148,
+    "guid": "e3n48TAup(",
+    "word": "拾う",
+    "reading": "ひろう"
+  },
+  {
+    "position": 1149,
+    "guid": "Fc<u@U]A~y",
+    "word": "完成",
+    "reading": "かんせい"
+  },
+  {
+    "position": 1150,
+    "guid": "jm8AW@FH()",
+    "word": "毒",
+    "reading": "どく"
+  },
+  {
+    "position": 1151,
+    "guid": "ksS{S/u$:Z",
+    "word": "馬",
+    "reading": "うま"
+  },
+  {
+    "position": 1152,
+    "guid": "BE#7n6q~qw",
+    "word": "覆う",
+    "reading": "おおう"
+  },
+  {
+    "position": 1153,
+    "guid": "Qx@p-vkP.m",
+    "word": "趣味",
+    "reading": "しゅみ"
+  },
+  {
+    "position": 1154,
+    "guid": "Ku3Zo3oU++",
+    "word": "どうにか",
+    "reading": "どうにか"
+  },
+  {
+    "position": 1155,
+    "guid": "Hu>>W<SVc8",
+    "word": "何となく",
+    "reading": "なんとなく"
+  },
+  {
+    "position": 1156,
+    "guid": "IV|7dB^ZVy",
+    "word": "価値",
+    "reading": "かち"
+  },
+  {
+    "position": 1157,
+    "guid": ",Pg4d84l4",
+    "word": "見守る",
+    "reading": "みまもる"
+  },
+  {
+    "position": 1158,
+    "guid": "qbsv0V[#d(",
+    "word": "安全",
+    "reading": "あんぜん"
+  },
+  {
+    "position": 1159,
+    "guid": "BK`~nOG:i<",
+    "word": "連れて来る",
+    "reading": "つれてくる"
+  },
+  {
+    "position": 1160,
+    "guid": "gdW*?t3NXz",
+    "word": "そば",
+    "reading": "そば"
+  },
+  {
+    "position": 1161,
+    "guid": "varcU^Q!//",
+    "word": "万",
+    "reading": "まん"
+  },
+  {
+    "position": 1162,
+    "guid": "j#^3,=t9^5",
+    "word": "額",
+    "reading": "がく"
+  },
+  {
+    "position": 1163,
+    "guid": "is5;>)TjSH",
+    "word": "受け止める",
+    "reading": "うけとめる"
+  },
+  {
+    "position": 1164,
+    "guid": "xEVXm5fv&}",
+    "word": "素敵",
+    "reading": "すてき"
+  },
+  {
+    "position": 1165,
+    "guid": "oPi7It>mDc",
+    "word": "正体",
+    "reading": "しょうたい"
+  },
+  {
+    "position": 1166,
+    "guid": "H{ZxNgf&Xu",
+    "word": "あっさり",
+    "reading": "あっさり"
+  },
+  {
+    "position": 1167,
+    "guid": "z~Qiz/-x6/",
+    "word": "吸う",
+    "reading": "すう"
+  },
+  {
+    "position": 1168,
+    "guid": "D4mls|>AbL",
+    "word": "鳴る",
+    "reading": "なる"
+  },
+  {
+    "position": 1169,
+    "guid": "dPGx%*.i9U",
+    "word": "研究",
+    "reading": "けんきゅう"
+  },
+  {
+    "position": 1170,
+    "guid": "rf(3/*nbr]",
+    "word": "まとめる",
+    "reading": "まとめる"
+  },
+  {
+    "position": 1171,
+    "guid": "j)NAt0*J`",
+    "word": "別れる",
+    "reading": "わかれる"
+  },
+  {
+    "position": 1172,
+    "guid": "pV{p2}R#,M",
+    "word": "ふざける",
+    "reading": "ふざける"
+  },
+  {
+    "position": 1173,
+    "guid": "t}?d7T}YEp",
+    "word": "着替える",
+    "reading": "きがえる"
+  },
+  {
+    "position": 1174,
+    "guid": "M:,D!FauD:",
+    "word": "箱",
+    "reading": "はこ"
+  },
+  {
+    "position": 1175,
+    "guid": "uEdHO}{aF2",
+    "word": "無言",
+    "reading": "むごん"
+  },
+  {
+    "position": 1176,
+    "guid": "Oq)n*}Rf&C",
+    "word": "何で",
+    "reading": "なんで"
+  },
+  {
+    "position": 1177,
+    "guid": "p2uux_)<Vi",
+    "word": "裏切る",
+    "reading": "うらぎる"
+  },
+  {
+    "position": 1178,
+    "guid": "tLG./gCugy",
+    "word": "焼く",
+    "reading": "やく"
+  },
+  {
+    "position": 1179,
+    "guid": "B68^y6s*$s",
+    "word": "怪我",
+    "reading": "けが"
+  },
+  {
+    "position": 1180,
+    "guid": "M^=SU^>=m&",
+    "word": "門",
+    "reading": "もん"
+  },
+  {
+    "position": 1181,
+    "guid": "fiAFP:e/,9",
+    "word": "不可能",
+    "reading": "ふかのう"
+  },
+  {
+    "position": 1182,
+    "guid": "d1Df</Gu3:",
+    "word": "妻",
+    "reading": "つま"
+  },
+  {
+    "position": 1183,
+    "guid": "w9#3Ok-+!w",
+    "word": "時には",
+    "reading": "ときには"
+  },
+  {
+    "position": 1184,
+    "guid": "C*Zd*$Hkg>",
+    "word": "発言",
+    "reading": "はつげん"
+  },
+  {
+    "position": 1185,
+    "guid": "l_?;(ASeZy",
+    "word": "正確",
+    "reading": "せいかく"
+  },
+  {
+    "position": 1186,
+    "guid": "gT4KP{zV@A",
+    "word": "認識",
+    "reading": "にんしき"
+  },
+  {
+    "position": 1187,
+    "guid": "xlTN%COhi=",
+    "word": "速度",
+    "reading": "そくど"
+  },
+  {
+    "position": 1188,
+    "guid": "w}2gB5`cKd",
+    "word": "謎",
+    "reading": "なぞ"
+  },
+  {
+    "position": 1189,
+    "guid": "gM,laU(S#A",
+    "word": "文字",
+    "reading": "もじ"
+  },
+  {
+    "position": 1190,
+    "guid": "kkdWwq+VwJ",
+    "word": "吐く",
+    "reading": "はく"
+  },
+  {
+    "position": 1191,
+    "guid": "habi}M_a<.",
+    "word": "鬼",
+    "reading": "おに"
+  },
+  {
+    "position": 1192,
+    "guid": "MwqBqDE.Al",
+    "word": "刺激",
+    "reading": "しげき"
+  },
+  {
+    "position": 1193,
+    "guid": "mPcQ>uB3<l",
+    "word": "最も",
+    "reading": "もっとも"
+  },
+  {
+    "position": 1194,
+    "guid": "AoNT*:(dPH",
+    "word": "制服",
+    "reading": "せいふく"
+  },
+  {
+    "position": 1195,
+    "guid": "F[Iv%<k)}&",
+    "word": "爆発",
+    "reading": "ばくはつ"
+  },
+  {
+    "position": 1196,
+    "guid": "FijUe^(Qeo",
+    "word": "訓練",
+    "reading": "くんれん"
+  },
+  {
+    "position": 1197,
+    "guid": "PML,HAI,fU",
+    "word": "振り向く",
+    "reading": "ふりむく"
+  },
+  {
+    "position": 1198,
+    "guid": "o>{0?X3F^{",
+    "word": "脱ぐ",
+    "reading": "ぬぐ"
+  },
+  {
+    "position": 1199,
+    "guid": "K+*:p`Y0W<",
+    "word": "信頼",
+    "reading": "しんらい"
+  },
+  {
+    "position": 1200,
+    "guid": "fM)jZ*Qs,>",
+    "word": "寄る",
+    "reading": "よる"
+  },
+  {
+    "position": 1201,
+    "guid": "vZ8[3V?]sV",
+    "word": "飛ばす",
+    "reading": "とばす"
+  },
+  {
+    "position": 1202,
+    "guid": "sX5cB#g_%%",
+    "word": "貸す",
+    "reading": "かす"
+  },
+  {
+    "position": 1203,
+    "guid": "g5Ri1`BVc>",
+    "word": "パン",
+    "reading": "ぱん"
+  },
+  {
+    "position": 1204,
+    "guid": "J?.xytsp=)",
+    "word": "ありがたい",
+    "reading": "ありがたい"
+  },
+  {
+    "position": 1205,
+    "guid": "q[Q<BE#?TA",
+    "word": "赤",
+    "reading": "あか"
+  },
+  {
+    "position": 1206,
+    "guid": "Q(4+RTR[B*",
+    "word": "大体",
+    "reading": "だいたい"
+  },
+  {
+    "position": 1207,
+    "guid": "zm|M:S.4k",
+    "word": "きちんと",
+    "reading": "きちんと"
+  },
+  {
+    "position": 1208,
+    "guid": "yzLQKj9r-Y",
+    "word": "喉",
+    "reading": "のど"
+  },
+  {
+    "position": 1209,
+    "guid": "lc=UjoN%}n",
+    "word": "少々",
+    "reading": "しょうしょう"
+  },
+  {
+    "position": 1210,
+    "guid": "iW_,nMs<(;",
+    "word": "有名",
+    "reading": "ゆうめい"
+  },
+  {
+    "position": 1211,
+    "guid": "I{gRB5mhMw",
+    "word": "船",
+    "reading": "ふね"
+  },
+  {
+    "position": 1212,
+    "guid": "jbEx50)O4f",
+    "word": "転がる",
+    "reading": "ころがる"
+  },
+  {
+    "position": 1213,
+    "guid": "c.|/c&j+^a",
+    "word": "切れる",
+    "reading": "きれる"
+  },
+  {
+    "position": 1214,
+    "guid": "hv<~!Cozy@",
+    "word": "たった",
+    "reading": "たった"
+  },
+  {
+    "position": 1215,
+    "guid": "I%)bSb{XwK",
+    "word": "話題",
+    "reading": "わだい"
+  },
+  {
+    "position": 1216,
+    "guid": "p-FNDB/T1A",
+    "word": "濡れる",
+    "reading": "ぬれる"
+  },
+  {
+    "position": 1217,
+    "guid": "N?3CbtZ6wV",
+    "word": "ついでに",
+    "reading": "ついでに"
+  },
+  {
+    "position": 1218,
+    "guid": "LD#-}dX8(O",
+    "word": "呼び出す",
+    "reading": "よびだす"
+  },
+  {
+    "position": 1219,
+    "guid": "oAtRk#$xEu",
+    "word": "確信",
+    "reading": "かくしん"
+  },
+  {
+    "position": 1220,
+    "guid": "mLEM@@!?c[",
+    "word": "込める",
+    "reading": "こめる"
+  },
+  {
+    "position": 1221,
+    "guid": "wB*Q)4J2`-",
+    "word": "自覚",
+    "reading": "じかく"
+  },
+  {
+    "position": 1222,
+    "guid": "b}jyR-.58}",
+    "word": "空く",
+    "reading": "あく"
+  },
+  {
+    "position": 1223,
+    "guid": "G)W}|Oe9<u",
+    "word": "空く",
+    "reading": "すく"
+  },
+  {
+    "position": 1224,
+    "guid": "fsQ,G{^)7g",
+    "word": "警察",
+    "reading": "けいさつ"
+  },
+  {
+    "position": 1225,
+    "guid": "O*EolsgFj-",
+    "word": "悲鳴",
+    "reading": "ひめい"
+  },
+  {
+    "position": 1226,
+    "guid": "lCIGS;@E{.",
+    "word": "捕まえる",
+    "reading": "つかまえる"
+  },
+  {
+    "position": 1227,
+    "guid": "l~=ESv[!4n",
+    "word": "早速",
+    "reading": "さっそく"
+  },
+  {
+    "position": 1228,
+    "guid": "eSX*5?z{uM",
+    "word": "お腹",
+    "reading": "おなか"
+  },
+  {
+    "position": 1229,
+    "guid": "EH0y<Po/-P",
+    "word": "掃除",
+    "reading": "そうじ"
+  },
+  {
+    "position": 1230,
+    "guid": "sL!8?5j@7Z",
+    "word": "硬い",
+    "reading": "かたい"
+  },
+  {
+    "position": 1231,
+    "guid": "OImIz{~}VK",
+    "word": "際",
+    "reading": "さい"
+  },
+  {
+    "position": 1232,
+    "guid": "Mj~63O3pPu",
+    "word": "漏らす",
+    "reading": "もらす"
+  },
+  {
+    "position": 1233,
+    "guid": "Cf?|.!EE&Z",
+    "word": "面",
+    "reading": "めん"
+  },
+  {
+    "position": 1234,
+    "guid": "ii*R2Qxbdd",
+    "word": "不満",
+    "reading": "ふまん"
+  },
+  {
+    "position": 1235,
+    "guid": "mB|niqqU2y",
+    "word": "驚き",
+    "reading": "おどろき"
+  },
+  {
+    "position": 1236,
+    "guid": "i37}SqCK]h",
+    "word": "旅",
+    "reading": "たび"
+  },
+  {
+    "position": 1237,
+    "guid": "dJaxgj~Ogm",
+    "word": "絵",
+    "reading": "え"
+  },
+  {
+    "position": 1238,
+    "guid": "Nt.Ktw<oP`",
+    "word": "組む",
+    "reading": "くむ"
+  },
+  {
+    "position": 1239,
+    "guid": "C</QrK`s=1",
+    "word": "沈黙",
+    "reading": "ちんもく"
+  },
+  {
+    "position": 1240,
+    "guid": "DdS:<d(]$B",
+    "word": "張る",
+    "reading": "はる"
+  },
+  {
+    "position": 1241,
+    "guid": "u9v?+[WzW5",
+    "word": "告白",
+    "reading": "こくはく"
+  },
+  {
+    "position": 1242,
+    "guid": "h?t.R9,z1M",
+    "word": "舐める",
+    "reading": "なめる"
+  },
+  {
+    "position": 1243,
+    "guid": "g_BhWc0q(K",
+    "word": "潰す",
+    "reading": "つぶす"
+  },
+  {
+    "position": 1244,
+    "guid": "lyI1=P.1-M",
+    "word": "含める",
+    "reading": "ふくめる"
+  },
+  {
+    "position": 1245,
+    "guid": "ti)|_S4Z,n",
+    "word": "時期",
+    "reading": "じき"
+  },
+  {
+    "position": 1246,
+    "guid": "v4q?]{eq!a",
+    "word": "活動",
+    "reading": "かつどう"
+  },
+  {
+    "position": 1247,
+    "guid": "L{E_MvY&B;",
+    "word": "育てる",
+    "reading": "そだてる"
+  },
+  {
+    "position": 1248,
+    "guid": "n[McyIOq}g",
+    "word": "優秀",
+    "reading": "ゆうしゅう"
+  },
+  {
+    "position": 1249,
+    "guid": "h<1?Yg%SKg",
+    "word": "予感",
+    "reading": "よかん"
+  },
+  {
+    "position": 1250,
+    "guid": "rYvnCb4KUe",
+    "word": "解く",
+    "reading": "とく"
+  },
+  {
+    "position": 1251,
+    "guid": "gJ#mcrx7gI",
+    "word": "元々",
+    "reading": "もともと"
+  },
+  {
+    "position": 1252,
+    "guid": "x7_.<<:{!}",
+    "word": "溢れる",
+    "reading": "あふれる"
+  },
+  {
+    "position": 1253,
+    "guid": "Mv{AYn$ETe",
+    "word": "発生",
+    "reading": "はっせい"
+  },
+  {
+    "position": 1254,
+    "guid": "e}t<,36s/G",
+    "word": "微妙",
+    "reading": "びみょう"
+  },
+  {
+    "position": 1255,
+    "guid": "uS`Ey4|Tl:",
+    "word": "違い",
+    "reading": "ちがい"
+  },
+  {
+    "position": 1256,
+    "guid": "GN7&Ry+FBJ",
+    "word": "直後",
+    "reading": "ちょくご"
+  },
+  {
+    "position": 1257,
+    "guid": "lXBX:a=)Oo",
+    "word": "地下",
+    "reading": "ちか"
+  },
+  {
+    "position": 1258,
+    "guid": "I.$]:?y3J|",
+    "word": "香り",
+    "reading": "かおり"
+  },
+  {
+    "position": 1259,
+    "guid": "ezImg9BF[r",
+    "word": "効く",
+    "reading": "きく"
+  },
+  {
+    "position": 1260,
+    "guid": "hehOotn0{h",
+    "word": "使用",
+    "reading": "しよう"
+  },
+  {
+    "position": 1261,
+    "guid": "pzR)<#.EEU",
+    "word": "道具",
+    "reading": "どうぐ"
+  },
+  {
+    "position": 1262,
+    "guid": "oSQe[l@jua",
+    "word": "願い",
+    "reading": "ねがい"
+  },
+  {
+    "position": 1263,
+    "guid": "qB;rsl1rh#",
+    "word": "洗う",
+    "reading": "あらう"
+  },
+  {
+    "position": 1264,
+    "guid": "e5ZJ6)ImH2",
+    "word": "手段",
+    "reading": "しゅだん"
+  },
+  {
+    "position": 1265,
+    "guid": "puN8-,@;#c",
+    "word": "誤解",
+    "reading": "ごかい"
+  },
+  {
+    "position": 1266,
+    "guid": "e-+2xy=J/@",
+    "word": "応援",
+    "reading": "おうえん"
+  },
+  {
+    "position": 1267,
+    "guid": "EP7K9$<9Y^",
+    "word": "含む",
+    "reading": "ふくむ"
+  },
+  {
+    "position": 1268,
+    "guid": "r.n2x:oF4Z",
+    "word": "当時",
+    "reading": "とうじ"
+  },
+  {
+    "position": 1269,
+    "guid": "o>&6k_eXv+",
+    "word": "勝利",
+    "reading": "しょうり"
+  },
+  {
+    "position": 1270,
+    "guid": "dSt%onWY{3",
+    "word": "降る",
+    "reading": "ふる"
+  },
+  {
+    "position": 1271,
+    "guid": "G$@7Hk$L8y",
+    "word": "雪",
+    "reading": "ゆき"
+  },
+  {
+    "position": 1272,
+    "guid": "Hlg>n)Hyc$",
+    "word": "入り口",
+    "reading": "いりぐち"
+  },
+  {
+    "position": 1273,
+    "guid": "EB+|&R;mhx",
+    "word": "一方",
+    "reading": "いっぽう"
+  },
+  {
+    "position": 1274,
+    "guid": "qVYrltZz7e",
+    "word": "古い",
+    "reading": "ふるい"
+  },
+  {
+    "position": 1275,
+    "guid": "GWz^Y999da",
+    "word": "役に立つ",
+    "reading": "やくにたつ"
+  },
+  {
+    "position": 1276,
+    "guid": "h&b2hEm`Pr",
+    "word": "懐かしい",
+    "reading": "なつかしい"
+  },
+  {
+    "position": 1277,
+    "guid": "pwflRKFJQ",
+    "word": "もしも",
+    "reading": "もしも"
+  },
+  {
+    "position": 1278,
+    "guid": "s|P;q<*biQ",
+    "word": "才能",
+    "reading": "さいのう"
+  },
+  {
+    "position": 1279,
+    "guid": "mX/TtTu?K[",
+    "word": "逃げ出す",
+    "reading": "にげだす"
+  },
+  {
+    "position": 1280,
+    "guid": "KW:|9tG.Y%",
+    "word": "様々",
+    "reading": "さまざま"
+  },
+  {
+    "position": 1281,
+    "guid": "NJZ/lJ(AgG",
+    "word": "病院",
+    "reading": "びょういん"
+  },
+  {
+    "position": 1282,
+    "guid": "hDU%%p8A>3",
+    "word": "比べる",
+    "reading": "くらべる"
+  },
+  {
+    "position": 1283,
+    "guid": "oh#2>x;oBi",
+    "word": "氷",
+    "reading": "こおり"
+  },
+  {
+    "position": 1284,
+    "guid": "g#/waE(Uq/",
+    "word": "狭い",
+    "reading": "せまい"
+  },
+  {
+    "position": 1285,
+    "guid": "O#$P]3Hevr",
+    "word": "神様",
+    "reading": "かみさま"
+  },
+  {
+    "position": 1286,
+    "guid": "B:xs{zc,R?",
+    "word": "動揺",
+    "reading": "どうよう"
+  },
+  {
+    "position": 1287,
+    "guid": "Cw[zymh9vW",
+    "word": "長",
+    "reading": "ちょう"
+  },
+  {
+    "position": 1288,
+    "guid": "Hb(?UwrU0)",
+    "word": "なお",
+    "reading": "なお"
+  },
+  {
+    "position": 1289,
+    "guid": "KCw_1K]S6>",
+    "word": "物語",
+    "reading": "ものがたり"
+  },
+  {
+    "position": 1290,
+    "guid": "uBv/qm,.up",
+    "word": "文句",
+    "reading": "もんく"
+  },
+  {
+    "position": 1291,
+    "guid": "Em)s|ZTwn,",
+    "word": "至る",
+    "reading": "いたる"
+  },
+  {
+    "position": 1292,
+    "guid": "b4^&x@@&YN",
+    "word": "魚",
+    "reading": "さかな"
+  },
+  {
+    "position": 1293,
+    "guid": "wZR!`i`u(l",
+    "word": "鳥",
+    "reading": "とり"
+  },
+  {
+    "position": 1294,
+    "guid": "omGr^aG!V-",
+    "word": "映る",
+    "reading": "うつる"
+  },
+  {
+    "position": 1295,
+    "guid": "h>?!8OaIN5",
+    "word": "一生",
+    "reading": "いっしょう"
+  },
+  {
+    "position": 1296,
+    "guid": "DDh2xt|[9@",
+    "word": "紙",
+    "reading": "かみ"
+  },
+  {
+    "position": 1297,
+    "guid": "dk-^G~lQ<F",
+    "word": "申す",
+    "reading": "もうす"
+  },
+  {
+    "position": 1298,
+    "guid": "Db7%nN|k,h",
+    "word": "複雑",
+    "reading": "ふくざつ"
+  },
+  {
+    "position": 1299,
+    "guid": "r53-qQ^i0D",
+    "word": "投げる",
+    "reading": "なげる"
+  },
+  {
+    "position": 1300,
+    "guid": "oKSNFA*U-;",
+    "word": "出来事",
+    "reading": "できごと"
+  },
+  {
+    "position": 1301,
+    "guid": "e30}!7:iK7",
+    "word": "部下",
+    "reading": "ぶか"
+  },
+  {
+    "position": 1302,
+    "guid": "cs,=u6sQ?9",
+    "word": "たっぷり",
+    "reading": "たっぷり"
+  },
+  {
+    "position": 1303,
+    "guid": "N|a%tOnqHo",
+    "word": "実力",
+    "reading": "じつりょく"
+  },
+  {
+    "position": 1304,
+    "guid": "r+fYKMMLh%",
+    "word": "左右",
+    "reading": "さゆう"
+  },
+  {
+    "position": 1305,
+    "guid": "f^xw^)(`HY",
+    "word": "選択",
+    "reading": "せんたく"
+  },
+  {
+    "position": 1306,
+    "guid": "oi#H4o`pgi",
+    "word": "調査",
+    "reading": "ちょうさ"
+  },
+  {
+    "position": 1307,
+    "guid": "n_:[`3*n`R",
+    "word": "例えば",
+    "reading": "たとえば"
+  },
+  {
+    "position": 1308,
+    "guid": "Oc.rm>76^~",
+    "word": "見送る",
+    "reading": "みおくる"
+  },
+  {
+    "position": 1309,
+    "guid": "pyID3pki`>",
+    "word": "もっとも",
+    "reading": "もっとも"
+  },
+  {
+    "position": 1310,
+    "guid": "Jf/.la|Nk4",
+    "word": "従う",
+    "reading": "したがう"
+  },
+  {
+    "position": 1311,
+    "guid": "h|*6K0Qhoa",
+    "word": "通す",
+    "reading": "とおす"
+  },
+  {
+    "position": 1312,
+    "guid": "lmPM.v,VNC",
+    "word": "間違える",
+    "reading": "まちがえる"
+  },
+  {
+    "position": 1313,
+    "guid": "b0<?d(iVUY",
+    "word": "体力",
+    "reading": "たいりょく"
+  },
+  {
+    "position": 1314,
+    "guid": "k{!It?8?qo",
+    "word": "果たす",
+    "reading": "はたす"
+  },
+  {
+    "position": 1315,
+    "guid": "g>oN29@JLk",
+    "word": "騒ぐ",
+    "reading": "さわぐ"
+  },
+  {
+    "position": 1316,
+    "guid": "PmL4RnU*Us",
+    "word": "飛び込む",
+    "reading": "とびこむ"
+  },
+  {
+    "position": 1317,
+    "guid": "Q6X/wnN1,|",
+    "word": "増す",
+    "reading": "ます"
+  },
+  {
+    "position": 1318,
+    "guid": "bc#n#v@NKr",
+    "word": "ぶつかる",
+    "reading": "ぶつかる"
+  },
+  {
+    "position": 1319,
+    "guid": "!KQ~rBj{@",
+    "word": "思い出",
+    "reading": "おもいで"
+  },
+  {
+    "position": 1320,
+    "guid": "JrZ#x8$I5E",
+    "word": "天井",
+    "reading": "てんじょう"
+  },
+  {
+    "position": 1321,
+    "guid": "Ak$*^D1(BI",
+    "word": "兵士",
+    "reading": "へいし"
+  },
+  {
+    "position": 1322,
+    "guid": "K*<QO==qq*",
+    "word": "満ちる",
+    "reading": "みちる"
+  },
+  {
+    "position": 1323,
+    "guid": "ALrVMq>p=s",
+    "word": "たまらない",
+    "reading": "たまらない"
+  },
+  {
+    "position": 1324,
+    "guid": "xbh3w73hiN",
+    "word": "味わう",
+    "reading": "あじわう"
+  },
+  {
+    "position": 1325,
+    "guid": "$,@8_/%5m",
+    "word": "出かける",
+    "reading": "でかける"
+  },
+  {
+    "position": 1326,
+    "guid": "K[!7wYclzW",
+    "word": "背負う",
+    "reading": "せおう"
+  },
+  {
+    "position": 1327,
+    "guid": "nl7j2jIO?N",
+    "word": "揃う",
+    "reading": "そろう"
+  },
+  {
+    "position": 1328,
+    "guid": "Bjp3kkRLig",
+    "word": "呼吸",
+    "reading": "こきゅう"
+  },
+  {
+    "position": 1329,
+    "guid": "p(9duX.{xg",
+    "word": "真似",
+    "reading": "まね"
+  },
+  {
+    "position": 1330,
+    "guid": "C?Rd5oqQW3",
+    "word": "人気",
+    "reading": "にんき"
+  },
+  {
+    "position": 1331,
+    "guid": "Cnp4@1ZLzW",
+    "word": "偉い",
+    "reading": "えらい"
+  },
+  {
+    "position": 1332,
+    "guid": "sZqKQMVD,?",
+    "word": "いよいよ",
+    "reading": "いよいよ"
+  },
+  {
+    "position": 1333,
+    "guid": "BgVRVA=)iD",
+    "word": "対象",
+    "reading": "たいしょう"
+  },
+  {
+    "position": 1334,
+    "guid": "K(d5T!xsRd",
+    "word": "整える",
+    "reading": "ととのえる"
+  },
+  {
+    "position": 1335,
+    "guid": "H9sB&%IsP8",
+    "word": "沈む",
+    "reading": "しずむ"
+  },
+  {
+    "position": 1336,
+    "guid": "iOzkA8cd,V",
+    "word": "地上",
+    "reading": "ちじょう"
+  },
+  {
+    "position": 1337,
+    "guid": "Q6WV]&,yd(",
+    "word": "用事",
+    "reading": "ようじ"
+  },
+  {
+    "position": 1338,
+    "guid": "hK[`51Ql_=",
+    "word": "よる",
+    "reading": "よる"
+  },
+  {
+    "position": 1339,
+    "guid": "EOdQ.Erdt+",
+    "word": "反対",
+    "reading": "はんたい"
+  },
+  {
+    "position": 1340,
+    "guid": "ez~9X48Z$j",
+    "word": "保つ",
+    "reading": "たもつ"
+  },
+  {
+    "position": 1341,
+    "guid": "IM/vvOHvIx",
+    "word": "歴史",
+    "reading": "れきし"
+  },
+  {
+    "position": 1342,
+    "guid": "GoR(mP0][O",
+    "word": "島",
+    "reading": "しま"
+  },
+  {
+    "position": 1343,
+    "guid": "NYNxCF<yXd",
+    "word": "それほど",
+    "reading": "それほど"
+  },
+  {
+    "position": 1344,
+    "guid": "kmgMdEsQh*",
+    "word": "実に",
+    "reading": "じつに"
+  },
+  {
+    "position": 1345,
+    "guid": "fodc(E$T;f",
+    "word": "恐れる",
+    "reading": "おそれる"
+  },
+  {
+    "position": 1346,
+    "guid": "LD,L|1v9k$",
+    "word": "あくまで",
+    "reading": "あくまで"
+  },
+  {
+    "position": 1347,
+    "guid": "GbC-jiXy2i",
+    "word": "鼻",
+    "reading": "はな"
+  },
+  {
+    "position": 1348,
+    "guid": "IBU%Prf0I",
+    "word": "担当",
+    "reading": "たんとう"
+  },
+  {
+    "position": 1349,
+    "guid": "cgg}iaLw[4",
+    "word": "片手",
+    "reading": "かたて"
+  },
+  {
+    "position": 1350,
+    "guid": "zWXvZV5hI)",
+    "word": "幼い",
+    "reading": "おさない"
+  },
+  {
+    "position": 1351,
+    "guid": "Pt@@h_oi%#",
+    "word": "学ぶ",
+    "reading": "まなぶ"
+  },
+  {
+    "position": 1352,
+    "guid": "OG.V6sp7tA",
+    "word": "強引",
+    "reading": "ごういん"
+  },
+  {
+    "position": 1353,
+    "guid": "iNL3(dnZVc",
+    "word": "捲る",
+    "reading": "まくる"
+  },
+  {
+    "position": 1354,
+    "guid": "Q&QYql2#=^",
+    "word": "漏れる",
+    "reading": "もれる"
+  },
+  {
+    "position": 1355,
+    "guid": "z3rJsNnLyW",
+    "word": "全体",
+    "reading": "ぜんたい"
+  },
+  {
+    "position": 1356,
+    "guid": "xq[huP,fX$",
+    "word": "度",
+    "reading": "ど"
+  },
+  {
+    "position": 1357,
+    "guid": "l3Q=JJi|KY",
+    "word": "情けない",
+    "reading": "なさけない"
+  },
+  {
+    "position": 1358,
+    "guid": "tH4J$qISc!",
+    "word": "太陽",
+    "reading": "たいよう"
+  },
+  {
+    "position": 1359,
+    "guid": "qvUg%1]O>)",
+    "word": "甘える",
+    "reading": "あまえる"
+  },
+  {
+    "position": 1360,
+    "guid": "b%bgHWj%sK",
+    "word": "踏む",
+    "reading": "ふむ"
+  },
+  {
+    "position": 1361,
+    "guid": "z7J@=[KAHO",
+    "word": "印象",
+    "reading": "いんしょう"
+  },
+  {
+    "position": 1362,
+    "guid": "qAD/k_f}D>",
+    "word": "死体",
+    "reading": "したい"
+  },
+  {
+    "position": 1363,
+    "guid": "Q8S9$R8#B:",
+    "word": "支配",
+    "reading": "しはい"
+  },
+  {
+    "position": 1364,
+    "guid": "wu0gQg%MBw",
+    "word": "現場",
+    "reading": "げんば"
+  },
+  {
+    "position": 1365,
+    "guid": "E|>ZEoe~u{",
+    "word": "絶望",
+    "reading": "ぜつぼう"
+  },
+  {
+    "position": 1366,
+    "guid": "M;AzB;RhxW",
+    "word": "察する",
+    "reading": "さっする"
+  },
+  {
+    "position": 1367,
+    "guid": "LwD/kn|M5j",
+    "word": "以来",
+    "reading": "いらい"
+  },
+  {
+    "position": 1368,
+    "guid": "jPuRP8ck4.",
+    "word": "漂う",
+    "reading": "ただよう"
+  },
+  {
+    "position": 1369,
+    "guid": "c$<&F>DIOf",
+    "word": "探る",
+    "reading": "さぐる"
+  },
+  {
+    "position": 1370,
+    "guid": "wl2FBKY?7`",
+    "word": "最大",
+    "reading": "さいだい"
+  },
+  {
+    "position": 1371,
+    "guid": "jt3i,O!APn",
+    "word": "下げる",
+    "reading": "さげる"
+  },
+  {
+    "position": 1372,
+    "guid": "sIUs)@Uje?",
+    "word": "捕まる",
+    "reading": "つかまる"
+  },
+  {
+    "position": 1373,
+    "guid": "o]>%Orz%z)",
+    "word": "戸惑う",
+    "reading": "とまどう"
+  },
+  {
+    "position": 1374,
+    "guid": "Cxr?Zu;f24",
+    "word": "言い訳",
+    "reading": "いいわけ"
+  },
+  {
+    "position": 1375,
+    "guid": "lg{a(]d)6^",
+    "word": "証明",
+    "reading": "しょうめい"
+  },
+  {
+    "position": 1376,
+    "guid": "H}8o$)hK7J",
+    "word": "参る",
+    "reading": "まいる"
+  },
+  {
+    "position": 1377,
+    "guid": "crN,x5<6SU",
+    "word": "見下ろす",
+    "reading": "みおろす"
+  },
+  {
+    "position": 1378,
+    "guid": "q}eMce5i:z",
+    "word": "燃える",
+    "reading": "もえる"
+  },
+  {
+    "position": 1379,
+    "guid": "D~cV<?%rb]",
+    "word": "たまる",
+    "reading": "たまる"
+  },
+  {
+    "position": 1380,
+    "guid": "BRglSVsKi6",
+    "word": "暴れる",
+    "reading": "あばれる"
+  },
+  {
+    "position": 1381,
+    "guid": "w}hIXr68Z$",
+    "word": "越える",
+    "reading": "こえる"
+  },
+  {
+    "position": 1382,
+    "guid": "I-Zs,_+Tk8",
+    "word": "精神",
+    "reading": "せいしん"
+  },
+  {
+    "position": 1383,
+    "guid": "F;NlnUL[{h",
+    "word": "男子",
+    "reading": "だんし"
+  },
+  {
+    "position": 1384,
+    "guid": "t!YE;`}ga7",
+    "word": "宣言",
+    "reading": "せんげん"
+  },
+  {
+    "position": 1385,
+    "guid": "b{43J>w1vY",
+    "word": "挟む",
+    "reading": "はさむ"
+  },
+  {
+    "position": 1386,
+    "guid": "I9WQe8lEdt",
+    "word": "防ぐ",
+    "reading": "ふせぐ"
+  },
+  {
+    "position": 1387,
+    "guid": "u/qN.Y(Sf~",
+    "word": "預ける",
+    "reading": "あずける"
+  },
+  {
+    "position": 1388,
+    "guid": "Km1E<_?AlW",
+    "word": "限る",
+    "reading": "かぎる"
+  },
+  {
+    "position": 1389,
+    "guid": "N2RySLtp?U",
+    "word": "責める",
+    "reading": "せめる"
+  },
+  {
+    "position": 1390,
+    "guid": "D,8CE(+pd=",
+    "word": "崩れる",
+    "reading": "くずれる"
+  },
+  {
+    "position": 1391,
+    "guid": "bq7@2*?S;8",
+    "word": "一度も",
+    "reading": "いちども"
+  },
+  {
+    "position": 1392,
+    "guid": "A{<{gl`_U5",
+    "word": "ぼんやり",
+    "reading": "ぼんやり"
+  },
+  {
+    "position": 1393,
+    "guid": "Lu{xk{}AJ>",
+    "word": "その内",
+    "reading": "そのうち"
+  },
+  {
+    "position": 1394,
+    "guid": "c2FpS}}YVI",
+    "word": "鏡",
+    "reading": "かがみ"
+  },
+  {
+    "position": 1395,
+    "guid": "$`=@Fg+[",
+    "word": "貫く",
+    "reading": "つらぬく"
+  },
+  {
+    "position": 1396,
+    "guid": "x}z6f^RtV/",
+    "word": "固まる",
+    "reading": "かたまる"
+  },
+  {
+    "position": 1397,
+    "guid": "wn(S=^3x+K",
+    "word": "平和",
+    "reading": "へいわ"
+  },
+  {
+    "position": 1398,
+    "guid": "c~w9U6]@?C",
+    "word": "意志",
+    "reading": "いし"
+  },
+  {
+    "position": 1399,
+    "guid": "B/j:V/E1x^",
+    "word": "下手",
+    "reading": "へた"
+  },
+  {
+    "position": 1400,
+    "guid": "Lpb[F[([FG",
+    "word": "続き",
+    "reading": "つづき"
+  },
+  {
+    "position": 1401,
+    "guid": "J+<1u):3Lk",
+    "word": "祈る",
+    "reading": "いのる"
+  },
+  {
+    "position": 1402,
+    "guid": "lC>nHK!,sQ",
+    "word": "午後",
+    "reading": "ごご"
+  },
+  {
+    "position": 1403,
+    "guid": "nnJL@BWX;w",
+    "word": "同様",
+    "reading": "どうよう"
+  },
+  {
+    "position": 1404,
+    "guid": "mdSUiN(bkB",
+    "word": "外れる",
+    "reading": "はずれる"
+  },
+  {
+    "position": 1405,
+    "guid": "tx{N;gOJ43",
+    "word": "歌う",
+    "reading": "うたう"
+  },
+  {
+    "position": 1406,
+    "guid": "u!X2I0JV;#",
+    "word": "回",
+    "reading": "かい"
+  },
+  {
+    "position": 1407,
+    "guid": "mx&:](7jLP",
+    "word": "固い",
+    "reading": "かたい"
+  },
+  {
+    "position": 1408,
+    "guid": "q1U$u{&?rM",
+    "word": "最強",
+    "reading": "さいきょう"
+  },
+  {
+    "position": 1409,
+    "guid": "PakJPoK8uE",
+    "word": "弾く",
+    "reading": "ひく"
+  },
+  {
+    "position": 1410,
+    "guid": "fJtdGym}r5",
+    "word": "正解",
+    "reading": "せいかい"
+  },
+  {
+    "position": 1411,
+    "guid": "tY8gfPf9o6",
+    "word": "きつい",
+    "reading": "きつい"
+  },
+  {
+    "position": 1412,
+    "guid": "lnj8T9VFYP",
+    "word": "お陰",
+    "reading": "おかげ"
+  },
+  {
+    "position": 1413,
+    "guid": "r#to4!RkHL",
+    "word": "地獄",
+    "reading": "じごく"
+  },
+  {
+    "position": 1414,
+    "guid": "NBg40@.QYs",
+    "word": "年齢",
+    "reading": "ねんれい"
+  },
+  {
+    "position": 1415,
+    "guid": "f$5lFB^]%3",
+    "word": "病気",
+    "reading": "びょうき"
+  },
+  {
+    "position": 1416,
+    "guid": "H(>15,1/t^",
+    "word": "携帯",
+    "reading": "けいたい"
+  },
+  {
+    "position": 1417,
+    "guid": "dU`B0(`Z?|",
+    "word": "ますます",
+    "reading": "ますます"
+  },
+  {
+    "position": 1418,
+    "guid": "NpcjGI,_W/",
+    "word": "並べる",
+    "reading": "ならべる"
+  },
+  {
+    "position": 1419,
+    "guid": "lQteptWH}q",
+    "word": "契約",
+    "reading": "けいやく"
+  },
+  {
+    "position": 1420,
+    "guid": "CGA2j9S)g.",
+    "word": "永遠",
+    "reading": "えいえん"
+  },
+  {
+    "position": 1421,
+    "guid": "Cxa8sf-nmv",
+    "word": "不意に",
+    "reading": "ふいに"
+  },
+  {
+    "position": 1422,
+    "guid": "bpy,}e,)k`",
+    "word": "呪い",
+    "reading": "のろい"
+  },
+  {
+    "position": 1423,
+    "guid": "w1H2]7`Ar`",
+    "word": "組",
+    "reading": "くみ"
+  },
+  {
+    "position": 1424,
+    "guid": "Ou|b>j8VAM",
+    "word": "踊る",
+    "reading": "おどる"
+  },
+  {
+    "position": 1425,
+    "guid": "f/!jA!Gp.X",
+    "word": "目覚める",
+    "reading": "めざめる"
+  },
+  {
+    "position": 1426,
+    "guid": "z.xyB<tLsG",
+    "word": "事故",
+    "reading": "じこ"
+  },
+  {
+    "position": 1427,
+    "guid": "o;5R+sMIh/",
+    "word": "袋",
+    "reading": "ふくろ"
+  },
+  {
+    "position": 1428,
+    "guid": "LEA@c0=-:V",
+    "word": "派手",
+    "reading": "はで"
+  },
+  {
+    "position": 1429,
+    "guid": "zFFsA/`[$F",
+    "word": "今更",
+    "reading": "いまさら"
+  },
+  {
+    "position": 1430,
+    "guid": "CZXZjV-=(q",
+    "word": "真っ直ぐ",
+    "reading": "まっすぐ"
+  },
+  {
+    "position": 1431,
+    "guid": "pwgMcp#wa0",
+    "word": "油断",
+    "reading": "ゆだん"
+  },
+  {
+    "position": 1432,
+    "guid": "JzqBA_|9:$",
+    "word": "ぶつける",
+    "reading": "ぶつける"
+  },
+  {
+    "position": 1433,
+    "guid": "A@xJ@TBSnX",
+    "word": "育つ",
+    "reading": "そだつ"
+  },
+  {
+    "position": 1434,
+    "guid": "la[ZLJDUK<",
+    "word": "傷つく",
+    "reading": "きずつく"
+  },
+  {
+    "position": 1435,
+    "guid": "EhLg57|tbp",
+    "word": "発する",
+    "reading": "はっする"
+  },
+  {
+    "position": 1436,
+    "guid": "O{TD4mv+R,",
+    "word": "終了",
+    "reading": "しゅうりょう"
+  },
+  {
+    "position": 1437,
+    "guid": "je!397ur<W",
+    "word": "足音",
+    "reading": "あしおと"
+  },
+  {
+    "position": 1438,
+    "guid": "xo{d>Rv7OV",
+    "word": "決意",
+    "reading": "けつい"
+  },
+  {
+    "position": 1439,
+    "guid": "n]00}Y|CV7",
+    "word": "感心",
+    "reading": "かんしん"
+  },
+  {
+    "position": 1440,
+    "guid": "b|pF1gMWo6",
+    "word": "飲み込む",
+    "reading": "のみこむ"
+  },
+  {
+    "position": 1441,
+    "guid": "I++9FMDZyp",
+    "word": "仮に",
+    "reading": "かりに"
+  },
+  {
+    "position": 1442,
+    "guid": "u8ve+jQ6]n",
+    "word": "お菓子",
+    "reading": "おかし"
+  },
+  {
+    "position": 1443,
+    "guid": "Eq8u2qV#!L",
+    "word": "染まる",
+    "reading": "そまる"
+  },
+  {
+    "position": 1444,
+    "guid": "jf>hK/Tz1}",
+    "word": "笑い",
+    "reading": "わらい"
+  },
+  {
+    "position": 1445,
+    "guid": "E6Cn|G_P;-",
+    "word": "買い物",
+    "reading": "かいもの"
+  },
+  {
+    "position": 1446,
+    "guid": "s<|QKpvZf",
+    "word": "歌",
+    "reading": "うた"
+  },
+  {
+    "position": 1447,
+    "guid": "o1.l|:S=hu",
+    "word": "庭",
+    "reading": "にわ"
+  },
+  {
+    "position": 1448,
+    "guid": "gZbSj|*H9;",
+    "word": "生き物",
+    "reading": "いきもの"
+  },
+  {
+    "position": 1449,
+    "guid": "eBr/(I.0am",
+    "word": "特殊",
+    "reading": "とくしゅ"
+  },
+  {
+    "position": 1450,
+    "guid": "IsTKR>}.~]",
+    "word": "連れて行く",
+    "reading": "つれていく"
+  },
+  {
+    "position": 1451,
+    "guid": "HP`pvSizx@",
+    "word": "現状",
+    "reading": "げんじょう"
+  },
+  {
+    "position": 1452,
+    "guid": "f4C(3hQ+l6",
+    "word": "大分",
+    "reading": "だいぶ"
+  },
+  {
+    "position": 1453,
+    "guid": "rbGP)G+f%v",
+    "word": "底",
+    "reading": "そこ"
+  },
+  {
+    "position": 1454,
+    "guid": "HTmr6$Qgqc",
+    "word": "学生",
+    "reading": "がくせい"
+  },
+  {
+    "position": 1455,
+    "guid": "z!OD4xdt+F",
+    "word": "丁寧",
+    "reading": "ていねい"
+  },
+  {
+    "position": 1456,
+    "guid": "sTo<n>w:d7",
+    "word": "範囲",
+    "reading": "はんい"
+  },
+  {
+    "position": 1457,
+    "guid": "L^tJ{jm=b)",
+    "word": "テレビ",
+    "reading": "テレビ"
+  },
+  {
+    "position": 1458,
+    "guid": "BJuS/RX1cn",
+    "word": "美人",
+    "reading": "びじん"
+  },
+  {
+    "position": 1459,
+    "guid": "xP&G<Id;kK",
+    "word": "技",
+    "reading": "わざ"
+  },
+  {
+    "position": 1460,
+    "guid": "KCDC3R@2nJ",
+    "word": "将来",
+    "reading": "しょうらい"
+  },
+  {
+    "position": 1461,
+    "guid": "Cg0/>c<cWV",
+    "word": "記録",
+    "reading": "きろく"
+  },
+  {
+    "position": 1462,
+    "guid": "z!nO=9Tftg",
+    "word": "大人しい",
+    "reading": "おとなしい"
+  },
+  {
+    "position": 1463,
+    "guid": "OF&vOTw9Hd",
+    "word": "骨",
+    "reading": "ほね"
+  },
+  {
+    "position": 1464,
+    "guid": "LZru;30;#Z",
+    "word": "目標",
+    "reading": "もくひょう"
+  },
+  {
+    "position": 1465,
+    "guid": "dU>T6.q9`[",
+    "word": "肉体",
+    "reading": "にくたい"
+  },
+  {
+    "position": 1466,
+    "guid": "HXQGv?1ldt",
+    "word": "届ける",
+    "reading": "とどける"
+  },
+  {
+    "position": 1467,
+    "guid": "w*do*<Ep,,",
+    "word": "足元",
+    "reading": "あしもと"
+  },
+  {
+    "position": 1468,
+    "guid": "wGb+-{i0>F",
+    "word": "捜す",
+    "reading": "さがす"
+  },
+  {
+    "position": 1469,
+    "guid": "NqE.LGw0;/",
+    "word": "わざと",
+    "reading": "わざと"
+  },
+  {
+    "position": 1470,
+    "guid": "Nc@o=y:&QP",
+    "word": "いかが",
+    "reading": "いかが"
+  },
+  {
+    "position": 1471,
+    "guid": "JF.Lplr3IY",
+    "word": "布",
+    "reading": "ぬの"
+  },
+  {
+    "position": 1472,
+    "guid": "z`1{!SZ%zW",
+    "word": "種類",
+    "reading": "しゅるい"
+  },
+  {
+    "position": 1473,
+    "guid": "s2#7KKTguK",
+    "word": "満たす",
+    "reading": "みたす"
+  },
+  {
+    "position": 1474,
+    "guid": "Lr`R&.v:e%",
+    "word": "評価",
+    "reading": "ひょうか"
+  },
+  {
+    "position": 1475,
+    "guid": "b7s0e_}}YK",
+    "word": "景色",
+    "reading": "けしき"
+  },
+  {
+    "position": 1476,
+    "guid": "JJ-6cUUglh",
+    "word": "勇気",
+    "reading": "ゆうき"
+  },
+  {
+    "position": 1477,
+    "guid": "sw7Dlcuv+u",
+    "word": "強化",
+    "reading": "きょうか"
+  },
+  {
+    "position": 1478,
+    "guid": "e}<~KG`1S)",
+    "word": "加える",
+    "reading": "くわえる"
+  },
+  {
+    "position": 1479,
+    "guid": "h2Za|:xT?>",
+    "word": "言い出す",
+    "reading": "いいだす"
+  },
+  {
+    "position": 1480,
+    "guid": "P5)K;~[r3n",
+    "word": "収まる",
+    "reading": "おさまる"
+  },
+  {
+    "position": 1481,
+    "guid": "lPqz?@e0$",
+    "word": "組織",
+    "reading": "そしき"
+  },
+  {
+    "position": 1482,
+    "guid": "Mj[FX$G|^d",
+    "word": "隙間",
+    "reading": "すきま"
+  },
+  {
+    "position": 1483,
+    "guid": "zcSs=AOg&8",
+    "word": "本日",
+    "reading": "ほんじつ"
+  },
+  {
+    "position": 1484,
+    "guid": "zOmynZsSbc",
+    "word": "先日",
+    "reading": "せんじつ"
+  },
+  {
+    "position": 1485,
+    "guid": "i3_)PsW@NC",
+    "word": "月曜日",
+    "reading": "げつようび"
+  },
+  {
+    "position": 1486,
+    "guid": "nkb=r%joa1",
+    "word": "火曜日",
+    "reading": "かようび"
+  },
+  {
+    "position": 1487,
+    "guid": "Erm^6o1}Zw",
+    "word": "水曜日",
+    "reading": "すいようび"
+  },
+  {
+    "position": 1488,
+    "guid": "zN;pnh!X33",
+    "word": "木曜日",
+    "reading": "もくようび"
+  },
+  {
+    "position": 1489,
+    "guid": "s[c%><-HDH",
+    "word": "金曜日",
+    "reading": "きんようび"
+  },
+  {
+    "position": 1490,
+    "guid": "mzWk`BNw-w",
+    "word": "土曜日",
+    "reading": "どようび"
+  },
+  {
+    "position": 1491,
+    "guid": "By%7vu/h-*",
+    "word": "日曜日",
+    "reading": "にちようび"
+  },
+  {
+    "position": 1492,
+    "guid": "ncV)fX9zhB",
+    "word": "一つ",
+    "reading": "ひとつ"
+  },
+  {
+    "position": 1493,
+    "guid": "iU#r@z7cja",
+    "word": "二つ",
+    "reading": "ふたつ"
+  },
+  {
+    "position": 1494,
+    "guid": "Av)IE/6)%4",
+    "word": "三つ",
+    "reading": "みっつ"
+  },
+  {
+    "position": 1495,
+    "guid": "FQ.JP6BDjP",
+    "word": "四つ",
+    "reading": "よっつ"
+  },
+  {
+    "position": 1496,
+    "guid": "t`bom7VDtY",
+    "word": "五つ",
+    "reading": "いつつ"
+  },
+  {
+    "position": 1497,
+    "guid": "lh.Jp)Y^5a",
+    "word": "六つ",
+    "reading": "むっつ"
+  },
+  {
+    "position": 1498,
+    "guid": "d?{_m|GP*E",
+    "word": "七つ",
+    "reading": "ななつ"
+  },
+  {
+    "position": 1499,
+    "guid": "N7}L`*}O|V",
+    "word": "八つ",
+    "reading": "やっつ"
+  },
+  {
+    "position": 1500,
+    "guid": "mg^ux2+W*5",
+    "word": "九つ",
+    "reading": "ここのつ"
+  }
+]

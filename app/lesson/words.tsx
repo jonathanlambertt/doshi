@@ -113,15 +113,8 @@ export default function LessonWordsScreen() {
       >
         <Text style={[styles.label, { color: theme.textMuted }]}>Meaning</Text>
         <Text style={[styles.meaning, { color: theme.text }]}>
-          {word.meaning ?? "No meaning available"}
+          {word.meaning}
         </Text>
-        {word.partOfSpeech ? (
-          <View style={[styles.pill, { borderColor: theme.borderStrong }]}>
-            <Text style={[styles.pillLabel, { color: theme.textMuted }]}>
-              {word.partOfSpeech}
-            </Text>
-          </View>
-        ) : null}
       </View>
 
     </LessonScreen>
@@ -168,17 +161,6 @@ const styles = StyleSheet.create({
   meaning: {
     fontSize: fontSize.lg,
     fontFamily: fontFamily.semibold,
-  },
-  pill: {
-    alignSelf: "flex-start",
-    paddingHorizontal: spacing.sm,
-    paddingVertical: spacing.xs,
-    borderRadius: radius.full,
-    borderWidth: StyleSheet.hairlineWidth * 2,
-  },
-  pillLabel: {
-    fontSize: fontSize.xs,
-    fontFamily: fontFamily.medium,
   },
   notFound: {
     fontSize: fontSize.md,

@@ -58,7 +58,7 @@ const handleDeleteAccount = () => {};
  * Settings tab: a link to Study pace (the scheduling settings, which most
  * people never need to change), how well the user reads kana, whether romaji
  * is shown (independent of reading level), light or dark mode, the Account
- * section, and the app version.
+ * section, a link to Credits, and the app version.
  */
 export default function SettingsScreen() {
   const { theme } = useTheme();
@@ -133,6 +133,18 @@ export default function SettingsScreen() {
               icon={Trash}
               label="Delete account"
               onPress={handleDeleteAccount}
+              last
+            />
+          </ListSection>
+
+          <ListSection>
+            <ListRow
+              label="Credits"
+              onPress={() => router.push("/credits")}
+              trailing={
+                <ChevronRight color={theme.textSubtle} size={iconSize.md} />
+              }
+              first
               last
             />
           </ListSection>

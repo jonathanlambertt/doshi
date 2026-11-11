@@ -50,13 +50,8 @@ export function RecallCard({ word, revealed, showRomaji }: RecallCardProps) {
           ]}
         >
           <Text style={[styles.meaning, { color: theme.text }]}>
-            {word.meaning ?? "No meaning available"}
+            {word.meaning}
           </Text>
-          {word.partOfSpeech ? (
-            <Text style={[styles.partOfSpeech, { color: theme.textMuted }]}>
-              {word.partOfSpeech}
-            </Text>
-          ) : null}
         </View>
       ) : (
         <Text style={[styles.prompt, { color: theme.textMuted }]}>
@@ -104,9 +99,5 @@ const styles = StyleSheet.create({
     fontSize: fontSize.lg,
     fontFamily: fontFamily.semibold,
     textAlign: "center",
-  },
-  partOfSpeech: {
-    fontSize: fontSize.sm,
-    fontFamily: fontFamily.regular,
   },
 });

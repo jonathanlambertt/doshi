@@ -111,6 +111,14 @@ export const fontFamily = {
 
 export type FontFamily = keyof typeof fontFamily;
 
+/**
+ * Weights for Japanese text only. It sets no fontFamily (Figtree has no
+ * Japanese glyphs), so it uses the system font, where fontWeight is safe.
+ */
+export const japaneseFontWeight = {
+  bold: '700',
+} as const satisfies Record<string, TextStyle['fontWeight']>;
+
 /** Tracking values that pair with the sizes above. */
 export const letterSpacing = {
   tight: -1.5,

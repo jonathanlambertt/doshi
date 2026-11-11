@@ -2,6 +2,8 @@ import { Stack, useLocalSearchParams } from "expo-router";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
+import { ExampleSentence } from "@/components/example-sentence";
+
 import {
   fontFamily,
   fontSize,
@@ -21,8 +23,9 @@ import { formatTimeUntil } from "@/utils/format";
 
 /**
  * Word detail, opened from a Dictionary row: the word large with its reading
- * (and romaji for learners still on kana), its meaning, and where it stands in
- * the user's reviews.
+ * (and romaji for learners still on kana), its meaning, an example sentence,
+ * and where it stands in the user's reviews. This is the only screen that
+ * shows example sentences: lessons and reviews leave them out.
  */
 export default function WordDetailScreen() {
   const { theme } = useTheme();
@@ -80,18 +83,23 @@ export default function WordDetailScreen() {
                 Meaning
               </Text>
               <Text style={[styles.meaning, { color: theme.text }]}>
-                {word.meaning ?? "No meaning available"}
+                {word.meaning}
               </Text>
-              {word.partOfSpeech ? (
-                <View
-                  style={[styles.pill, { borderColor: theme.borderStrong }]}
-                >
-                  <Text style={[styles.pillLabel, { color: theme.textMuted }]}>
-                    {word.partOfSpeech}
-                  </Text>
-                </View>
-              ) : null}
             </View>
+
+            {word.sentence ? (
+              <View
+                style={[
+                  styles.card,
+                  { backgroundColor: theme.surface, borderColor: theme.border },
+                ]}
+              >
+                <Text style={[styles.label, { color: theme.textMuted }]}>
+                  Example
+                </Text>
+                <ExampleSentence sentence={word.sentence} />
+              </View>
+            ) : null}
 
             <Text style={[styles.status, { color: theme.textSubtle }]}>
               {reviewStatus(stored)}
@@ -163,17 +171,6 @@ const styles = StyleSheet.create({
   meaning: {
     fontSize: fontSize.lg,
     fontFamily: fontFamily.semibold,
-  },
-  pill: {
-    alignSelf: "flex-start",
-    paddingVertical: spacing.xs,
-    paddingHorizontal: spacing.md,
-    borderRadius: radius.full,
-    borderWidth: StyleSheet.hairlineWidth * 2,
-  },
-  pillLabel: {
-    fontSize: fontSize.xs,
-    fontFamily: fontFamily.medium,
   },
   status: {
     fontSize: fontSize.sm,
