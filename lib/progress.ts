@@ -6,6 +6,7 @@
  * then are written to the database in order through a single queue.
  */
 import { randomUUID } from "expo-crypto";
+import { Appearance } from "react-native";
 
 import {
   DAILY_REVIEW_LIMIT,
@@ -40,6 +41,9 @@ import {
  */
 export type ReadingLevel = "fluent" | "some" | "none";
 
+/** Light or dark mode: "system" follows the OS appearance setting. */
+export type AppearancePreference = "system" | "light" | "dark";
+
 export type NewWordsPerDay = (typeof NEW_WORDS_PER_DAY_OPTIONS)[number];
 /** The most reviews per day; null for no limit. */
 export type DailyReviewLimit = (typeof DAILY_REVIEW_LIMIT_OPTIONS)[number];
@@ -55,6 +59,7 @@ export type ProgressState = {
    * reading level (see `showsRomaji`).
    */
   romaji: boolean | null;
+  appearance: AppearancePreference;
   newWordsPerDay: NewWordsPerDay;
   dailyReviewLimit: DailyReviewLimit;
   /** FSRS target recall, applied from each word's next grade. */
@@ -65,11 +70,13 @@ export type ProgressState = {
 
 const SETTING_READING_LEVEL = "reading_level";
 const SETTING_ROMAJI = "show_romaji";
+const SETTING_APPEARANCE = "appearance";
 const SETTING_NEW_WORDS_PER_DAY = "new_words_per_day";
 const SETTING_DAILY_REVIEW_LIMIT = "daily_review_limit";
 const SETTING_DESIRED_RETENTION = "desired_retention";
 const SETTING_TIME_OFFSET = "dev_time_offset_ms";
 const READING_LEVELS: readonly ReadingLevel[] = ["fluent", "some", "none"];
+const APPEARANCES: readonly AppearancePreference[] = ["system", "light", "dark"];
 /** How "no daily review limit" is stored. */
 const NO_LIMIT = "none";
 
@@ -77,6 +84,7 @@ const INITIAL_STATE: ProgressState = {
   cards: new Map(),
   readingLevel: null,
   romaji: null,
+  appearance: "system",
   newWordsPerDay: NEW_WORDS_PER_DAY,
   dailyReviewLimit: DAILY_REVIEW_LIMIT,
   desiredRetention: DESIRED_RETENTION,
@@ -128,12 +136,16 @@ export async function initProgress() {
 
   const readingLevel = settings[SETTING_READING_LEVEL];
   const romaji = settings[SETTING_ROMAJI];
+  const appearance = settings[SETTING_APPEARANCE];
   state = {
     cards: new Map(cards.map((stored) => [stored.wordId, stored])),
     readingLevel: READING_LEVELS.includes(readingLevel as ReadingLevel)
       ? (readingLevel as ReadingLevel)
       : null,
     romaji: romaji === "1" ? true : romaji === "0" ? false : null,
+    appearance: APPEARANCES.includes(appearance as AppearancePreference)
+      ? (appearance as AppearancePreference)
+      : "system",
     newWordsPerDay: parseChoice(
       settings[SETTING_NEW_WORDS_PER_DAY],
       NEW_WORDS_PER_DAY_OPTIONS,
@@ -151,6 +163,15 @@ export async function initProgress() {
     ),
     timeOffsetMs: __DEV__ ? Number(settings[SETTING_TIME_OFFSET] ?? 0) : 0,
   };
+  applyAppearance(state.appearance);
+}
+
+/**
+ * Overrides the app's color scheme natively, so `useColorScheme` (and with it
+ * `useTheme`), the status bar, switches and system alerts all follow it.
+ */
+function applyAppearance(appearance: AppearancePreference) {
+  Appearance.setColorScheme(appearance === "system" ? "auto" : appearance);
 }
 
 export function getProgress(): ProgressState {
@@ -255,6 +276,12 @@ export function setRomaji(show: boolean) {
   write((database) => saveSetting(database, SETTING_ROMAJI, show ? "1" : "0"));
 }
 
+export function setAppearance(appearance: AppearancePreference) {
+  applyAppearance(appearance);
+  update({ appearance });
+  write((database) => saveSetting(database, SETTING_APPEARANCE, appearance));
+}
+
 export function setNewWordsPerDay(count: NewWordsPerDay) {
   update({ newWordsPerDay: count });
   write((database) =>
@@ -312,5 +339,6 @@ export function advanceTime(ms: number) {
 export function resetProgress() {
   if (!__DEV__) return;
   update(INITIAL_STATE);
+  applyAppearance(INITIAL_STATE.appearance);
   write(deleteAllProgress);
 }

@@ -21,6 +21,7 @@ import {
   useShowsRomaji,
 } from "@/hooks/use-reading-level";
 import { useTheme } from "@/hooks/use-theme";
+import { type AppearancePreference, setAppearance } from "@/lib/progress";
 import { plural } from "@/utils/format";
 
 // Same answers as the kana question in the first lesson.
@@ -28,6 +29,12 @@ const READING_CHOICES: readonly Choice<ReadingLevel>[] = [
   { value: "fluent", label: "I can read hiragana" },
   { value: "some", label: "I can read a little" },
   { value: "none", label: "I can't read it yet" },
+];
+
+const APPEARANCE_CHOICES: readonly Choice<AppearancePreference>[] = [
+  { value: "system", label: "Match device" },
+  { value: "light", label: "Light" },
+  { value: "dark", label: "Dark" },
 ];
 
 // Placeholder — there is no auth yet, so no real signed-in user.
@@ -50,12 +57,12 @@ const handleDeleteAccount = () => {};
 /**
  * Settings tab: a link to Study pace (the scheduling settings, which most
  * people never need to change), how well the user reads kana, whether romaji
- * is shown (independent of reading level), the Account section, and the app
- * version.
+ * is shown (independent of reading level), light or dark mode, the Account
+ * section, and the app version.
  */
 export default function SettingsScreen() {
   const { theme } = useTheme();
-  const { readingLevel, newWordsPerDay } = useProgress();
+  const { readingLevel, newWordsPerDay, appearance } = useProgress();
   const romaji = useShowsRomaji();
   const version = Constants.expoConfig?.version;
 
@@ -109,6 +116,13 @@ export default function SettingsScreen() {
               last
             />
           </ListSection>
+
+          <ChoiceSection
+            title="Appearance"
+            choices={APPEARANCE_CHOICES}
+            selected={appearance}
+            onSelect={setAppearance}
+          />
 
           <ListSection title="Account">
             <ListRow icon={Mail} label="Email" value={PLACEHOLDER_EMAIL} first />
