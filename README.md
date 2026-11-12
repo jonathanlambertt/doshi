@@ -148,9 +148,8 @@ doshi/
 ├── app.json                # Expo app config (icons, splash, plugins, experiments)
 ├── eslint.config.js        # eslint-config-expo (flat config)
 ├── tsconfig.json           # Strict TypeScript, `@/*` path alias
-├── .npmrc                  # node-linker=hoisted (required for pnpm + React Native)
 ├── .nvmrc                  # Node 22
-└── pnpm-workspace.yaml     # pnpm build-script approvals
+└── pnpm-workspace.yaml     # pnpm settings: hoisted layout, build-script approvals
 ```
 
 ## Getting started
@@ -160,24 +159,24 @@ doshi/
 - **Node.js 22.13.0 or newer** — the minimum for Expo SDK 58. The repo pins a major
   version in [`.nvmrc`](.nvmrc), so `nvm use` picks it up, and `package.json` declares
   it under `engines`.
-- **pnpm** (v10+).
+- **pnpm** (v11+).
 - **Xcode 26.4 or newer** for iOS builds, with at least one iOS simulator installed.
 - Android Studio if you want to build for Android.
 
-### A note on `.npmrc`
+### A note on `pnpm-workspace.yaml`
 
 pnpm's default symlinked `node_modules` layout breaks React Native's Metro bundler and
-native module resolution, which both expect a flat tree. The repo therefore ships an
-[`.npmrc`](.npmrc) containing:
+native module resolution, which both expect a flat tree. The repo therefore sets this in
+[`pnpm-workspace.yaml`](pnpm-workspace.yaml):
 
+```yaml
+nodeLinker: hoisted
 ```
-node-linker=hoisted
-```
 
-This must be in place **before** you install dependencies. If you ever wipe
-`node_modules`, keep this file.
+pnpm 11 reads its settings only from that file; a `node-linker` line in `.npmrc` is
+silently ignored.
 
-`pnpm-workspace.yaml` separately allow-lists the one transitive dependency
+The same file allow-lists the one transitive dependency
 (`unrs-resolver`, via `eslint-config-expo`) that needs to run a postinstall script;
 pnpm blocks build scripts by default.
 
@@ -208,11 +207,6 @@ npx expo install --fix  # realign package versions with the SDK
 Everything currently runs in **Expo Go**, including local storage: `expo-sqlite` and
 `expo-crypto` are both bundled in Expo Go. A development build is only needed once a
 native module that Expo Go doesn't include is added.
-
-> Running Expo's CLI through `npx` prints
-> `npm warn Unknown project config "node-linker"`. It is harmless — npm doesn't
-> recognise the pnpm-specific setting in `.npmrc`. Use `pnpm exec` instead of `npx` to
-> avoid it.
 
 ## Roadmap
 

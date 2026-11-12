@@ -18,7 +18,7 @@ Architecture of the loop:
 
 ## Commands
 
-The package manager is **pnpm** (Node >= 22.13, see `.nvmrc`). Prefer `pnpm exec` over `npx` — npx prints a harmless `Unknown project config "node-linker"` warning.
+The package manager is **pnpm** (Node >= 22.13, see `.nvmrc`). Prefer `pnpm exec` over `npx`.
 
 ```bash
 pnpm install
@@ -41,7 +41,7 @@ The app targets **iOS and Android only**. Web is not a target: don't use web bui
 ## Repo-specific notes
 
 - Routes live in `app/` at the repo root; non-route code goes in top-level `constants/`, `hooks/`, etc. The `@/*` alias maps to the repo root (e.g. `@/constants/theme`).
-- `.npmrc` must keep `node-linker=hoisted` — pnpm's symlinked layout breaks Metro and native module resolution. `pnpm-workspace.yaml` allow-lists build scripts (pnpm blocks them by default); add new entries there if a dependency needs a postinstall.
+- `pnpm-workspace.yaml` must keep `nodeLinker: hoisted` — pnpm's symlinked layout breaks Metro and native module resolution. pnpm 11 reads settings only from that file, so don't put pnpm settings in `.npmrc` (it would be silently ignored). The same file allow-lists build scripts (pnpm blocks them by default); add new entries there if a dependency needs a postinstall.
 - `app.json` enables `typedRoutes` and `reactCompiler` experiments.
 - Everything runs in Expo Go today, including `expo-sqlite` and `expo-crypto` (both bundled in Expo Go). Only a native module that Expo Go doesn't include would require a development build.
 

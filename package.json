@@ -8,8 +8,8 @@
   },
   "scripts": {
     "start": "expo start",
-    "ios": "expo start --ios",
-    "android": "expo start --android",
+    "ios": "expo run:ios",
+    "android": "expo run:android",
     "lint": "expo lint",
     "test": "jest",
     "typecheck": "tsc --noEmit"

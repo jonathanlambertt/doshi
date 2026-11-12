@@ -1,4 +1,9 @@
-# pnpm 11 reads settings from this file rather than from package.json.
+# pnpm 11 reads settings from this file, not from package.json or .npmrc.
+
+# pnpm's default symlinked layout breaks Metro and native module resolution
+# (Expo autolinking, CocoaPods), which expect a flat node_modules.
+nodeLinker: hoisted
+
 # unrs-resolver (pulled in by eslint-config-expo) needs its postinstall script to
 # fetch the platform-native resolver binary.
 allowBuilds:
