@@ -1,19 +1,12 @@
 import { router } from "expo-router";
 import { BookBookmark, ChevronRight, Search, X } from "lucide-react-native";
 import { useState } from "react";
-import {
-  FlatList,
-  Platform,
-  Pressable,
-  StyleSheet,
-  Text,
-  TextInput,
-  View,
-} from "react-native";
+import { FlatList, Pressable, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { toHiragana } from "wanakana";
 
 import { EmptyState } from "@/components/empty-state";
+import { ThemedTextInput } from "@/components/themed-text-input";
 import {
   fontFamily,
   fontSize,
@@ -51,7 +44,7 @@ function matches(word: DictionaryWord, query: string, kanaQuery: string) {
  * search that filters as you type. Each row opens the word's page.
  */
 export default function DictionaryScreen() {
-  const { scheme, theme } = useTheme();
+  const { theme } = useTheme();
   const progress = useProgress();
   const [query, setQuery] = useState("");
 
@@ -92,20 +85,12 @@ export default function DictionaryScreen() {
           ]}
         >
           <Search color={theme.textSubtle} size={iconSize.md} />
-          <TextInput
+          <ThemedTextInput
             accessibilityLabel="Search words"
             autoCapitalize="none"
             autoCorrect={false}
-            // Match the app's light/dark mode: the iOS keyboard and the
-            // cursor otherwise keep the system defaults. iOS tints the cursor
-            // with selectionColor; Android uses cursorColor and would paint
-            // selectionColor solid over selected text, so it's iOS-only.
-            keyboardAppearance={scheme}
-            cursorColor={theme.text}
-            selectionColor={Platform.OS === "ios" ? theme.text : undefined}
             onChangeText={setQuery}
             placeholder="Search in Japanese or English"
-            placeholderTextColor={theme.textSubtle}
             returnKeyType="search"
             value={query}
             style={[styles.searchInput, { color: theme.text }]}

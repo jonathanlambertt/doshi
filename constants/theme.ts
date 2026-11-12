@@ -59,6 +59,26 @@ const dark = {
 
 export const colors = { light, dark } as const;
 
+/**
+ * Sign-in provider buttons. Apple's and Google's branding rules set these
+ * colors, not the Doshi palette, so they live apart from it and are used for
+ * nothing else.
+ */
+export const signInProvider = {
+  /** Apple's black button on light backgrounds, its white button on dark. */
+  apple: {
+    light: { background: '#000000', backgroundPressed: zinc[800], label: '#ffffff' },
+    dark: { background: '#ffffff', backgroundPressed: zinc[200], label: '#000000' },
+  },
+  /** The four colors of Google's "G" mark. */
+  google: {
+    blue: '#4285f4',
+    green: '#34a853',
+    yellow: '#fbbc05',
+    red: '#ea4335',
+  },
+} as const;
+
 export type ColorSchemeName = keyof typeof colors;
 export type ThemeColors = (typeof colors)[ColorSchemeName];
 

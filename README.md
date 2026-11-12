@@ -138,7 +138,7 @@ rebranding means editing three hex values.
 doshi/
 ├── app/                    # Expo Router routes — every file here is a screen
 │   ├── _layout.tsx         # Root layout: Stack, safe-area + gesture providers, status bar
-│   └── index.tsx           # Landing screen (the only screen so far)
+│   └── index.tsx           # Landing screen
 ├── assets/
 │   └── images/             # App icon, splash icon, Android adaptive icon
 ├── constants/
@@ -252,6 +252,8 @@ native module that Expo Go doesn't include is added.
 with a quick check, FSRS-scheduled reviews, and progress saved on the device. A Settings
 tab covers study pace (new words, review limit, recall target), hiragana reading level,
 romaji, light or dark mode, and credits. The Dictionary lists learned words; each word's
-page shows its meaning and an example sentence. Development builds have tools on Home to
-move time forward and reset progress. Not built yet: accounts and sync, audio, and a
-pitch accent display.
+page shows its meaning and an example sentence. The landing screen leads to sign-in and
+account-creation screens (Apple, Google or an emailed code; UI only, not wired up yet),
+with "Try without an account" into the app, and to a short swipeable tour. Development
+builds have tools on Home to move time forward and reset progress. Not built yet:
+accounts and sync, audio, and a pitch accent display.

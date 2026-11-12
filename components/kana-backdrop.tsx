@@ -11,14 +11,14 @@ type Glyph = {
   rotate: `${number}deg`;
 };
 
-// Kept to the edges and corners so nothing sits behind the wordmark or buttons.
-// Several glyphs hang off-screen on purpose; the container clips them.
+// Laid out for the landing screen: kept to the edges, above and beside the
+// wordmark in the middle and clear of the buttons along the bottom. Several
+// glyphs hang off-screen on purpose; the container clips them.
 const GLYPHS: readonly Glyph[] = [
   { char: 'あ', size: 'watermarkLg', top: '-6%', left: '-14%', rotate: '-12deg' },
   { char: 'カ', size: 'watermark', top: '8%', left: '72%', rotate: '10deg' },
-  { char: 'の', size: 'watermark', top: '42%', left: '-10%', rotate: '6deg' },
-  { char: 'ゆ', size: 'watermarkLg', top: '62%', left: '64%', rotate: '-8deg' },
-  { char: 'ン', size: 'watermark', top: '86%', left: '8%', rotate: '14deg' },
+  { char: 'の', size: 'watermark', top: '48%', left: '-10%', rotate: '6deg' },
+  { char: 'ゆ', size: 'watermark', top: '50%', left: '74%', rotate: '-8deg' },
 ];
 
 /**

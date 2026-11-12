@@ -1,32 +1,36 @@
 import { router } from "expo-router";
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import { KanaBackdrop } from "@/components/kana-backdrop";
+import {
+  PrimaryButton,
+  SecondaryButton,
+  TextButton,
+} from "@/components/primary-button";
 import {
   fontFamily,
   fontSize,
   letterSpacing,
   maxContentWidth,
-  radius,
   spacing,
 } from "@/constants/theme";
 import { useTheme } from "@/hooks/use-theme";
 
+/**
+ * The first screen: the wordmark over faint kana, with the buttons along the
+ * bottom within reach of a thumb. Get started opens account creation, Sign in
+ * opens sign-in, and "What is Doshi?" opens the tour.
+ */
 export default function LandingScreen() {
   const { theme } = useTheme();
-
-  // Goes straight to the test home tabs; there is no onboarding or auth yet.
-  const handleGetStarted = () => router.push("/home");
-  // Intentionally empty — sign-in flow is undecided.
-  const handleSignIn = () => {};
 
   return (
     <View style={[styles.screen, { backgroundColor: theme.background }]}>
       <KanaBackdrop />
       <SafeAreaView style={styles.screen}>
         <View style={styles.content}>
-          <View style={styles.header}>
+          <View style={styles.hero}>
             <Text style={[styles.wordmark, { color: theme.text }]}>Doshi</Text>
             <Text style={[styles.tagline, { color: theme.textMuted }]}>
               Simple Japanese vocabulary learning.
@@ -34,37 +38,18 @@ export default function LandingScreen() {
           </View>
 
           <View style={styles.actions}>
-            <Pressable
-              accessibilityRole="button"
-              onPress={handleGetStarted}
-              style={({ pressed }) => [
-                styles.button,
-                {
-                  backgroundColor: pressed ? theme.accentPressed : theme.accent,
-                },
-              ]}
-            >
-              <Text style={[styles.buttonLabel, { color: theme.onAccent }]}>
-                Get started
-              </Text>
-            </Pressable>
-
-            <Pressable
-              accessibilityRole="button"
-              onPress={handleSignIn}
-              style={({ pressed }) => [
-                styles.button,
-                styles.buttonSecondary,
-                {
-                  borderColor: theme.borderStrong,
-                  backgroundColor: pressed ? theme.surface : "transparent",
-                },
-              ]}
-            >
-              <Text style={[styles.buttonLabel, { color: theme.text }]}>
-                Sign in
-              </Text>
-            </Pressable>
+            <PrimaryButton
+              label="Get started"
+              onPress={() => router.push("/onboarding")}
+            />
+            <SecondaryButton
+              label="Sign in"
+              onPress={() => router.push("/sign-in")}
+            />
+            <TextButton
+              label="What is Doshi?"
+              onPress={() => router.push("/tour")}
+            />
           </View>
         </View>
       </SafeAreaView>
@@ -79,14 +64,16 @@ const styles = StyleSheet.create({
   content: {
     flex: 1,
     alignSelf: "center",
-    justifyContent: "center",
     width: "100%",
     maxWidth: maxContentWidth,
     paddingHorizontal: spacing.xl,
-    gap: spacing["3xl"],
+    paddingBottom: spacing.lg,
   },
-  header: {
+  // Takes the space above the buttons and centers the wordmark in it.
+  hero: {
+    flex: 1,
     alignItems: "center",
+    justifyContent: "center",
     gap: spacing.md,
   },
   wordmark: {
@@ -101,20 +88,5 @@ const styles = StyleSheet.create({
   },
   actions: {
     gap: spacing.md,
-  },
-  button: {
-    alignItems: "center",
-    justifyContent: "center",
-    paddingVertical: spacing.lg,
-    paddingHorizontal: spacing.xl,
-    borderRadius: radius.lg,
-  },
-  buttonSecondary: {
-    borderWidth: StyleSheet.hairlineWidth * 2,
-  },
-  buttonLabel: {
-    fontSize: fontSize.md,
-    fontFamily: fontFamily.semibold,
-    letterSpacing: letterSpacing.wide,
   },
 });
