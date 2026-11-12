@@ -8,9 +8,11 @@
     "scheme": "doshi",
     "userInterfaceStyle": "automatic",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.doshiapp"
     },
     "android": {
+      "package": "com.doshiapp",
       "adaptiveIcon": {
         "backgroundColor": "#fafafa",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
@@ -25,7 +27,7 @@
         "expo-splash-screen",
         {
           "image": "./assets/images/splash-icon.png",
-          "imageWidth": 76,
+          "imageWidth": 100,
           "backgroundColor": "#fafafa",
           "dark": {
             "backgroundColor": "#09090b"

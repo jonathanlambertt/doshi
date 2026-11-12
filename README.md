@@ -240,6 +240,20 @@ native module that Expo Go doesn't include is added.
   the record of truth, so a future sync can merge devices by combining logs and
   replaying them.
 - **Auth provider** — TBD, and only relevant from phase 5.
+- **Android app icon** — *to do.* `assets/images/icon.png` is the Doshi icon (used as
+  is on iOS), but `android.adaptiveIcon` in `app.json` still points at the Expo
+  template's placeholder layers (`android-icon-foreground.png`, `-background.png`,
+  `-monochrome.png`). Android 8+ uses those instead of `icon`, so Android builds show
+  the Expo logo. To fix:
+  - **Foreground:** just the cards on a transparent background, at least 512×512,
+    with the artwork inside the central safe zone (66 of 108 dp, about 61% of the
+    canvas). Launchers crop the edges and mask the rest to a circle or squircle.
+  - **Background:** set `backgroundColor` to the icon's red, `#e11d48`, and drop
+    `backgroundImage` (or make it a flat `#e11d48` image).
+  - **Monochrome:** the cards as a single-color silhouette on transparent, for
+    Android 13+ themed icons.
+  - Export the layers from the icon's design source if possible. Cutting them out of
+    the flattened `icon.png` leaves red fringes on the card edges.
 - **Feedback colors** — the Rose brand accent is close to a conventional "error" red.
   Review grades (especially *Again*) and destructive actions need their own semantic
   color, distinct from the brand accent, so that a failed recall doesn't read as the
