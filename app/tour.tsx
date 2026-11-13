@@ -37,9 +37,8 @@ import {
   radius,
   spacing,
 } from "@/constants/theme";
-import { DICTIONARY_WORDS } from "@/data/dictionary-words";
 import { useTheme } from "@/hooks/use-theme";
-import { formatCount, plural } from "@/utils/format";
+import { plural } from "@/utils/format";
 
 type Slide = {
   title: string;
@@ -50,7 +49,8 @@ type Slide = {
 
 const SLIDES: readonly Slide[] = [
   {
-    title: `${formatCount(DICTIONARY_WORDS.length)} words to start with`,
+    // title: `${formatCount(DICTIONARY_WORDS.length)} words to start with`,
+    title: "Learn over 1,000 Japanese words and phrases",
     body: "A word list made for beginners. Each word comes with its reading and meaning.",
     Art: WordArt,
   },
@@ -225,7 +225,10 @@ function WordArt() {
         <Text lang="ja" style={[styles.wordExpression, { color: theme.text }]}>
           新しい
         </Text>
-        <Text lang="ja" style={[styles.wordReading, { color: theme.textMuted }]}>
+        <Text
+          lang="ja"
+          style={[styles.wordReading, { color: theme.textMuted }]}
+        >
           あたらしい
         </Text>
         <View style={[styles.wordRule, { backgroundColor: theme.border }]} />

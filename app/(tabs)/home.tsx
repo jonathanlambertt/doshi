@@ -106,7 +106,7 @@ export default function HomeScreen() {
                   lang="ja"
                   style={[styles.subtitle, { color: theme.textMuted }]}
                 >
-                  ようこそ。
+                  ようこそ
                 </Text>
               ) : (
                 <Text
@@ -171,9 +171,7 @@ export default function HomeScreen() {
                   icon={CalendarCheck}
                   eyebrow="All done for today"
                   title={
-                    learnedEverything
-                      ? "You've met every word"
-                      : learnedToday
+                    learnedEverything ? "You've met every word" : learnedToday
                   }
                   detail={nextReviewNote}
                 />
@@ -248,7 +246,13 @@ type ActionCardProps = {
   };
 };
 
-function ActionCard({ eyebrow, title, detail, icon: Icon, action }: ActionCardProps) {
+function ActionCard({
+  eyebrow,
+  title,
+  detail,
+  icon: Icon,
+  action,
+}: ActionCardProps) {
   const { theme } = useTheme();
   const ActionIcon = action?.icon;
   const actionColor = action?.secondary ? theme.text : theme.onAccent;
