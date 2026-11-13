@@ -78,12 +78,23 @@ export function SecondaryButton({ label, onPress }: ButtonProps) {
   );
 }
 
+type TextButtonProps = ButtonProps & {
+  /** Full-contrast text instead of grey, for a link that should stand out. */
+  emphasized?: boolean;
+};
+
 /**
  * A borderless text button for a minor action, such as a link under a
  * screen's main buttons. Centered, and tall enough to tap comfortably.
  */
-export function TextButton({ label, onPress }: ButtonProps) {
+export function TextButton({
+  label,
+  onPress,
+  emphasized = false,
+}: TextButtonProps) {
   const { theme } = useTheme();
+  const color = emphasized ? theme.text : theme.textMuted;
+  const pressedColor = emphasized ? theme.textMuted : theme.textSubtle;
 
   return (
     <Pressable
@@ -96,7 +107,7 @@ export function TextButton({ label, onPress }: ButtonProps) {
           style={[
             styles.label,
             styles.textLabel,
-            { color: pressed ? theme.textSubtle : theme.textMuted },
+            { color: pressed ? pressedColor : color },
           ]}
         >
           {label}

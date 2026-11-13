@@ -8,8 +8,9 @@ import { fontFamily, fontSize } from "@/constants/theme";
 import { useTheme } from "@/hooks/use-theme";
 
 /**
- * The first onboarding step, opened by Get started on the landing screen and
- * at the end of the tour: create an account, or try Doshi without one.
+ * The first onboarding step, opened by Get started on the landing screen, by
+ * "Get started with Doshi" on sign-in and at the end of the tour: create an
+ * account, or try Doshi without one.
  *
  * Mock UI: auth isn't built yet (see README, Accounts + sync). Only "Continue
  * with email" and "Try without an account" go anywhere.
@@ -37,6 +38,7 @@ export default function CreateAccountScreen() {
           <TextButton
             label="Try without an account"
             onPress={handleTryWithoutAccount}
+            emphasized
           />
           <Text style={[styles.note, { color: theme.textMuted }]}>
             Your progress stays on this device.
