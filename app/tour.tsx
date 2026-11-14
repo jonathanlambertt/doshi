@@ -38,7 +38,9 @@ import {
   spacing,
 } from "@/constants/theme";
 import { useTheme } from "@/hooks/use-theme";
+import { setGuest } from "@/lib/progress";
 import { plural } from "@/utils/format";
+import { resetTo } from "@/utils/navigation";
 
 type Slide = {
   title: string;
@@ -51,12 +53,12 @@ const SLIDES: readonly Slide[] = [
   {
     // title: `${formatCount(DICTIONARY_WORDS.length)} words to start with`,
     title: "Learn over 1,000 Japanese words and phrases",
-    body: "A word list made for beginners. Each word comes with its reading and meaning.",
+    body: "From a word list made for beginners.",
     Art: WordArt,
   },
   {
     title: "A few minutes a day",
-    body: `Each lesson brings ${LESSON_WORD_COUNT} new words, then a quick check helps them stick.`,
+    body: `Each lesson brings new words, then a quick check helps them stick.`,
     Art: LessonArt,
   },
   {
@@ -66,7 +68,7 @@ const SLIDES: readonly Slide[] = [
   },
   {
     title: "Learn at your pace",
-    body: "Choose how many new words to learn each day. You can change it any time in Settings.",
+    body: "Simple settings to control how you learn.",
     Art: PaceArt,
   },
 ];
@@ -116,8 +118,12 @@ export default function TourScreen() {
     pagerRef.current?.scrollTo({ x: target * pageWidth, animated: true });
 
   const handleCreateAccount = () => router.push("/onboarding");
-  // Replaces the tour rather than pushing, so Home doesn't sit on top of it.
-  const handleTryWithoutAccount = () => router.replace("/home");
+  // Clears the history, so Back from Home can't return to the tour or the
+  // landing screen.
+  const handleTryWithoutAccount = () => {
+    setGuest(true);
+    resetTo("/home");
+  };
 
   return (
     <View

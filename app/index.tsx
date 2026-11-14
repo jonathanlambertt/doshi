@@ -1,4 +1,4 @@
-import { router } from "expo-router";
+import { Redirect, router } from "expo-router";
 import { StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -15,15 +15,23 @@ import {
   maxContentWidth,
   spacing,
 } from "@/constants/theme";
+import { useProgress } from "@/hooks/use-progress";
 import { useTheme } from "@/hooks/use-theme";
 
 /**
  * The first screen: the wordmark over faint kana, with the buttons along the
  * bottom within reach of a thumb. Get started opens account creation, Sign in
  * opens sign-in, and "What is Doshi?" opens the tour.
+ *
+ * Someone who already chose "Try without an account" goes straight to Home.
  */
 export default function LandingScreen() {
   const { theme } = useTheme();
+  const { guest } = useProgress();
+
+  if (guest) {
+    return <Redirect href="/home" />;
+  }
 
   return (
     <View style={[styles.screen, { backgroundColor: theme.background }]}>
@@ -49,6 +57,7 @@ export default function LandingScreen() {
             <TextButton
               label="What is Doshi?"
               onPress={() => router.push("/tour")}
+              emphasized
             />
           </View>
         </View>
@@ -82,7 +91,7 @@ const styles = StyleSheet.create({
     letterSpacing: letterSpacing.tight,
   },
   tagline: {
-    fontSize: fontSize.md,
+    fontSize: fontSize.lg,
     fontFamily: fontFamily.regular,
     textAlign: "center",
   },

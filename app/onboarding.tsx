@@ -5,12 +5,16 @@ import { AuthOptions } from "@/components/auth-options";
 import { AuthScreen } from "@/components/auth-screen";
 import { TextButton } from "@/components/primary-button";
 import { fontFamily, fontSize } from "@/constants/theme";
+import { useProgress } from "@/hooks/use-progress";
 import { useTheme } from "@/hooks/use-theme";
+import { setGuest } from "@/lib/progress";
+import { resetTo } from "@/utils/navigation";
 
 /**
  * The first onboarding step, opened by Get started on the landing screen, by
  * "Get started with Doshi" on sign-in and at the end of the tour: create an
- * account, or try Doshi without one.
+ * account, or try Doshi without one. A guest gets here from "Create an
+ * account" in Settings, so for them the way to skip is hidden.
  *
  * Mock UI: auth isn't built yet (see README, Accounts + sync). Only "Continue
  * with email" and "Try without an account" go anywhere.
@@ -22,28 +26,33 @@ import { useTheme } from "@/hooks/use-theme";
  */
 export default function CreateAccountScreen() {
   const { theme } = useTheme();
+  const { guest } = useProgress();
 
   const handleContinueWithEmail = (email: string) =>
     router.push({ pathname: "/verify-email", params: { email } });
-  // Replaces this screen rather than pushing, so Home doesn't sit on top of
-  // the sign-up screen.
-  const handleTryWithoutAccount = () => router.replace("/home");
+  // Clears the history, so Back from Home can't return to these screens.
+  const handleTryWithoutAccount = () => {
+    setGuest(true);
+    resetTo("/home");
+  };
 
   return (
     <AuthScreen
       title="Create your account"
       subtitle="Save your progress and pick up where you left off on any device."
       footer={
-        <>
-          <TextButton
-            label="Try without an account"
-            onPress={handleTryWithoutAccount}
-            emphasized
-          />
-          <Text style={[styles.note, { color: theme.textMuted }]}>
-            Your progress stays on this device.
-          </Text>
-        </>
+        guest ? undefined : (
+          <>
+            <TextButton
+              label="Try without an account"
+              onPress={handleTryWithoutAccount}
+              emphasized
+            />
+            <Text style={[styles.note, { color: theme.textMuted }]}>
+              Your progress stays on this device.
+            </Text>
+          </>
+        )
       }
     >
       <AuthOptions onContinueWithEmail={handleContinueWithEmail} />

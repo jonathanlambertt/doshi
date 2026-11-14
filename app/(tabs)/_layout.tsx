@@ -4,9 +4,10 @@ import { BookBookmark, House, Settings } from "lucide-react-native";
 import { fontFamily, fontSize, iconSize } from "@/constants/theme";
 import { useTheme } from "@/hooks/use-theme";
 
-// Test layout for a signed-in home. Reached from "Try without an account" on
-// account creation or at the end of the tour; there is no auth yet, so
-// nothing gates it.
+// The app itself, reached from "Try without an account" on account creation
+// or at the end of the tour, which clears the history so Back can't return to
+// the landing screens. Once that choice is saved, the app opens here (see
+// app/index.tsx).
 export default function TabLayout() {
   const { theme } = useTheme();
 

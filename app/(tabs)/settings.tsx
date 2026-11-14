@@ -8,12 +8,11 @@ import {
   Gauge,
   Info,
   Languages,
-  LogOut,
-  Mail,
+  LogIn,
   Moon,
   Smartphone,
   Sun,
-  Trash,
+  UserPlus,
 } from "lucide-react-native";
 import { ScrollView, StyleSheet, Switch, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -51,28 +50,16 @@ const APPEARANCE_CHOICES: readonly Choice<AppearancePreference>[] = [
   { value: "dark", label: "Dark", icon: Moon },
 ];
 
-// Placeholder — there is no auth yet, so no real signed-in user.
-const PLACEHOLDER_EMAIL = "you@example.com";
-
-// Test-only sign out: return to the landing screen. Falls back to replace when
-// there is nothing to dismiss (e.g. the app was deep-linked straight to this tab).
-const handleSignOut = () => {
-  if (router.canDismiss()) {
-    router.dismissAll();
-  } else {
-    router.replace("/");
-  }
-};
-
-// Intentionally empty — needs a confirmation step and a backend. Apple requires
-// in-app account deletion for any app that lets users create an account.
-const handleDeleteAccount = () => {};
-
 /**
  * Settings tab: a link to Study pace (the scheduling settings, which most
  * people never need to change), how well the user reads kana, whether romaji
  * is shown (independent of reading level), light or dark mode, the Account
  * section, a link to Credits, and the app version.
+ *
+ * Until accounts exist, everyone here is a guest, so the Account section
+ * offers Create an account and Sign in (both mock screens, see README,
+ * Accounts + sync). Signed in, it will show the email and which provider was
+ * used, Sign out, and Delete account (Apple requires in-app deletion).
  */
 export default function SettingsScreen() {
   const { theme } = useTheme();
@@ -140,15 +127,26 @@ export default function SettingsScreen() {
             onSelect={setAppearance}
           />
 
-          <ListSection title="Account">
-            <ListRow icon={Mail} label="Email" value={PLACEHOLDER_EMAIL} first />
-            <ListRow icon={LogOut} label="Sign out" onPress={handleSignOut} />
-            {/* Neutral on purpose: destructive colors are undecided, and the
-                Rose accent must not stand in for them. */}
+          <ListSection
+            title="Account"
+            footnote="Your progress is saved only on this device. Create an account to back it up and use it on your other devices."
+          >
             <ListRow
-              icon={Trash}
-              label="Delete account"
-              onPress={handleDeleteAccount}
+              icon={UserPlus}
+              label="Create an account"
+              onPress={() => router.push("/onboarding")}
+              trailing={
+                <ChevronRight color={theme.textSubtle} size={iconSize.md} />
+              }
+              first
+            />
+            <ListRow
+              icon={LogIn}
+              label="Sign in"
+              onPress={() => router.push("/sign-in")}
+              trailing={
+                <ChevronRight color={theme.textSubtle} size={iconSize.md} />
+              }
               last
             />
           </ListSection>

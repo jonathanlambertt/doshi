@@ -259,9 +259,11 @@ native module that Expo Go doesn't include is added.
 **Early — first working loop.** On iOS: lessons of 5 new words (10 a day by default)
 with a quick check, FSRS-scheduled reviews, and progress saved on the device. A Settings
 tab covers study pace (new words, review limit, recall target), hiragana reading level,
-romaji, light or dark mode, and credits. The Dictionary lists learned words; each word's
-page shows its meaning and an example sentence. The landing screen leads to sign-in and
-account-creation screens (Apple, Google or an emailed code; UI only, not wired up yet),
-with "Try without an account" into the app, and to a short swipeable tour. Development
-builds have tools on Home to move time forward and reset progress. Not built yet:
-accounts and sync, audio, and a pitch accent display.
+romaji, light or dark mode, credits, and ways to create an account or sign in. The
+Dictionary lists learned words; each word's page shows its meaning and an example
+sentence. The landing screen leads to sign-in and account-creation screens (Apple, Google
+or an emailed code; UI only, not wired up yet), with "Try without an account" into the
+app, and to a short swipeable tour. "Try without an account" is remembered, so the app
+then opens on Home. Development builds have tools on Home to move time forward, go back
+to the landing screen, and reset progress. Not built yet: accounts and sync, audio, and
+a pitch accent display.

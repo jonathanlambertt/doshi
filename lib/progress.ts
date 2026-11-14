@@ -50,6 +50,11 @@ export type DailyReviewLimit = (typeof DAILY_REVIEW_LIMIT_OPTIONS)[number];
 export type DesiredRetention = (typeof DESIRED_RETENTION_OPTIONS)[number];
 
 export type ProgressState = {
+  /**
+   * Whether the user chose "Try without an account". Until accounts exist,
+   * that's everyone past the landing screen: the app opens on Home for them.
+   */
+  guest: boolean;
   /** Started words, keyed by word id. */
   cards: ReadonlyMap<string, StoredCard>;
   /** Null until the user has answered the kana question. */
@@ -68,6 +73,7 @@ export type ProgressState = {
   timeOffsetMs: number;
 };
 
+const SETTING_GUEST = "guest";
 const SETTING_READING_LEVEL = "reading_level";
 const SETTING_ROMAJI = "show_romaji";
 const SETTING_APPEARANCE = "appearance";
@@ -81,6 +87,7 @@ const APPEARANCES: readonly AppearancePreference[] = ["system", "light", "dark"]
 const NO_LIMIT = "none";
 
 const INITIAL_STATE: ProgressState = {
+  guest: false,
   cards: new Map(),
   readingLevel: null,
   romaji: null,
@@ -138,6 +145,7 @@ export async function initProgress() {
   const romaji = settings[SETTING_ROMAJI];
   const appearance = settings[SETTING_APPEARANCE];
   state = {
+    guest: settings[SETTING_GUEST] === "1",
     cards: new Map(cards.map((stored) => [stored.wordId, stored])),
     readingLevel: READING_LEVELS.includes(readingLevel as ReadingLevel)
       ? (readingLevel as ReadingLevel)
@@ -265,6 +273,15 @@ export function undoGrade(record: GradeRecord) {
   write((database) => deleteGrade(database, record));
 }
 
+/**
+ * Records "Try without an account", or forgets it (dev only, for "Back to
+ * landing"). Navigating is up to the caller.
+ */
+export function setGuest(guest: boolean) {
+  update({ guest });
+  write((database) => saveSetting(database, SETTING_GUEST, guest ? "1" : null));
+}
+
 export function setReadingLevel(level: ReadingLevel) {
   update({ readingLevel: level });
   write((database) => saveSetting(database, SETTING_READING_LEVEL, level));
@@ -335,7 +352,10 @@ export function advanceTime(ms: number) {
   );
 }
 
-/** Dev only: deletes all progress and settings, and resets the clock. */
+/**
+ * Dev only: deletes all progress and settings (the guest choice too, like a
+ * fresh install), and resets the clock.
+ */
 export function resetProgress() {
   if (!__DEV__) return;
   update(INITIAL_STATE);

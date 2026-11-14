@@ -32,8 +32,9 @@ import {
 import { useProgress } from "@/hooks/use-progress";
 import { useTheme } from "@/hooks/use-theme";
 import { hasLearnedEverything, useToday } from "@/hooks/use-today";
-import { advanceTime, now, resetProgress } from "@/lib/progress";
+import { advanceTime, now, resetProgress, setGuest } from "@/lib/progress";
 import { formatTimeUntil, plural } from "@/utils/format";
+import { resetTo } from "@/utils/navigation";
 
 type Step = {
   title: string;
@@ -305,7 +306,8 @@ function ActionCard({
 
 /**
  * Dev only: move the app's clock forward so reviews come due without waiting,
- * or wipe all progress to start again as a new user.
+ * go back to the landing screen (keeping progress) to try the screens before
+ * the app, or wipe everything to start again as a new user.
  */
 function DevTools() {
   const { theme } = useTheme();
@@ -314,13 +316,25 @@ function DevTools() {
   const offsetDays = Math.round(timeOffsetMs / DAY_MS);
   const time = `${current.toDateString()} ${String(current.getHours()).padStart(2, "0")}:${String(current.getMinutes()).padStart(2, "0")}`;
 
+  // Forgets "Try without an account" first, or the landing screen would
+  // send us straight back here.
+  const handleBackToLanding = () => {
+    setGuest(false);
+    resetTo("/");
+  };
+
+  const handleReset = () => {
+    resetProgress();
+    resetTo("/");
+  };
+
   const confirmReset = () =>
     Alert.alert(
       "Reset progress?",
-      "Deletes every learned word, all review history and the kana answer, and resets the clock.",
+      "Deletes every learned word, all review history and every setting, resets the clock, and returns to the landing screen, like a fresh install.",
       [
         { text: "Cancel", style: "cancel" },
-        { text: "Reset", style: "destructive", onPress: resetProgress },
+        { text: "Reset", style: "destructive", onPress: handleReset },
       ],
     );
 
@@ -336,6 +350,7 @@ function DevTools() {
       <View style={styles.devButtons}>
         <DevButton label="+1 day" onPress={() => advanceTime(DAY_MS)} />
         <DevButton label="+1 week" onPress={() => advanceTime(7 * DAY_MS)} />
+        <DevButton label="Back to landing" onPress={handleBackToLanding} />
         <DevButton label="Reset progress" onPress={confirmReset} />
       </View>
     </View>
