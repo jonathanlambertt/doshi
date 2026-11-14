@@ -21,7 +21,7 @@ type AuthScreenProps = {
   title: string;
   subtitle: string;
   children: ReactNode;
-  /** Pinned to the bottom of the screen, e.g. a way to skip signing up. */
+  /** Pinned to the bottom of the screen, e.g. sign-in's link to sign up. */
   footer?: ReactNode;
 };
 

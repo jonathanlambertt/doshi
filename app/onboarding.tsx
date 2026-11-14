@@ -1,10 +1,11 @@
 import { router } from "expo-router";
-import { StyleSheet, Text } from "react-native";
+import { ArrowRight } from "lucide-react-native";
+import { StyleSheet, Text, View } from "react-native";
 
 import { AuthOptions } from "@/components/auth-options";
 import { AuthScreen } from "@/components/auth-screen";
 import { TextButton } from "@/components/primary-button";
-import { fontFamily, fontSize } from "@/constants/theme";
+import { fontFamily, fontSize, spacing } from "@/constants/theme";
 import { useProgress } from "@/hooks/use-progress";
 import { useTheme } from "@/hooks/use-theme";
 import { setGuest } from "@/lib/progress";
@@ -16,7 +17,7 @@ import { resetTo } from "@/utils/navigation";
  * account, or try Doshi without one. A guest gets here from "Create an
  * account" in Settings, so for them the way to skip is hidden.
  *
- * Mock UI: auth isn't built yet (see README, Accounts + sync). Only "Continue
+ * Mock UI: auth isn't built yet (see README, Accounts + sync). Only "Sign up
  * with email" and "Try without an account" go anywhere.
  *
  * A single file for now. When onboarding gets more steps, move them into an
@@ -40,27 +41,39 @@ export default function CreateAccountScreen() {
     <AuthScreen
       title="Create your account"
       subtitle="Save your progress and pick up where you left off on any device."
-      footer={
-        guest ? undefined : (
-          <>
+    >
+      <View style={styles.options}>
+        <AuthOptions
+          mode="sign-up"
+          onContinueWithEmail={handleContinueWithEmail}
+        />
+        {/* Right under the sign-up buttons, so skipping is easy to find. */}
+        {guest ? null : (
+          <View style={styles.skip}>
             <TextButton
               label="Try without an account"
               onPress={handleTryWithoutAccount}
               emphasized
+              icon={ArrowRight}
             />
             <Text style={[styles.note, { color: theme.textMuted }]}>
               Your progress stays on this device.
             </Text>
-          </>
-        )
-      }
-    >
-      <AuthOptions onContinueWithEmail={handleContinueWithEmail} />
+          </View>
+        )}
+      </View>
     </AuthScreen>
   );
 }
 
 const styles = StyleSheet.create({
+  options: {
+    gap: spacing.sm,
+  },
+  skip: {
+    alignItems: "center",
+    gap: spacing.xs,
+  },
   note: {
     fontSize: fontSize.sm,
     fontFamily: fontFamily.regular,

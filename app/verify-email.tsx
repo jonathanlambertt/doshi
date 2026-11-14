@@ -18,8 +18,7 @@ import { useTheme } from "@/hooks/use-theme";
 const CODE_LENGTH = 6;
 
 /**
- * Enter the code emailed by "Continue with email", on sign-in or account
- * creation. Mock UI: auth isn't built yet (see README, Accounts + sync), so
+ * Enter the code emailed by "Sign in with email" or "Sign up with email". Mock UI: auth isn't built yet (see README, Accounts + sync), so
  * no email is sent and no code is checked.
  */
 export default function VerifyEmailScreen() {

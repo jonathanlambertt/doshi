@@ -1,8 +1,10 @@
+import type { LucideIcon } from "lucide-react-native";
 import { Pressable, StyleSheet, Text } from "react-native";
 
 import {
   fontFamily,
   fontSize,
+  iconSize,
   letterSpacing,
   radius,
   spacing,
@@ -81,6 +83,8 @@ export function SecondaryButton({ label, onPress }: ButtonProps) {
 type TextButtonProps = ButtonProps & {
   /** Full-contrast text instead of grey, for a link that should stand out. */
   emphasized?: boolean;
+  /** Shown after the label, e.g. an arrow for a link that moves on. */
+  icon?: LucideIcon;
 };
 
 /**
@@ -91,6 +95,7 @@ export function TextButton({
   label,
   onPress,
   emphasized = false,
+  icon: Icon,
 }: TextButtonProps) {
   const { theme } = useTheme();
   const color = emphasized ? theme.text : theme.textMuted;
@@ -103,15 +108,20 @@ export function TextButton({
       style={styles.textButton}
     >
       {({ pressed }) => (
-        <Text
-          style={[
-            styles.label,
-            styles.textLabel,
-            { color: pressed ? pressedColor : color },
-          ]}
-        >
-          {label}
-        </Text>
+        <>
+          <Text
+            style={[
+              styles.label,
+              styles.textLabel,
+              { color: pressed ? pressedColor : color },
+            ]}
+          >
+            {label}
+          </Text>
+          {Icon ? (
+            <Icon color={pressed ? pressedColor : color} size={iconSize.md} />
+          ) : null}
+        </>
       )}
     </Pressable>
   );
@@ -134,11 +144,15 @@ const styles = StyleSheet.create({
     letterSpacing: letterSpacing.wide,
   },
   textButton: {
+    flexDirection: "row",
+    alignItems: "center",
     alignSelf: "center",
+    gap: spacing.xs,
     paddingVertical: spacing.md,
     paddingHorizontal: spacing.lg,
   },
   textLabel: {
+    flexShrink: 1,
     textAlign: "center",
   },
 });

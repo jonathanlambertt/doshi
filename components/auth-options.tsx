@@ -16,7 +16,18 @@ import {
 import { useTheme } from "@/hooks/use-theme";
 import { isPlausibleEmail } from "@/utils/email";
 
+/** Which screen the options are on: sign-in, or account creation. */
+export type AuthMode = "sign-in" | "sign-up";
+
+// The button labels start with this: "Sign in with Apple", "Sign up with
+// email"... Apple's and Google's branding rules allow both wordings.
+const VERBS: Record<AuthMode, string> = {
+  "sign-in": "Sign in",
+  "sign-up": "Sign up",
+};
+
 type AuthOptionsProps = {
+  mode: AuthMode;
   /** Called with the trimmed address once it looks like an email. */
   onContinueWithEmail: (email: string) => void;
 };
@@ -29,7 +40,7 @@ type AuthOptionsProps = {
  * Mock UI: auth isn't built yet (see README, Accounts + sync), so the Apple
  * and Google buttons do nothing.
  */
-export function AuthOptions({ onContinueWithEmail }: AuthOptionsProps) {
+export function AuthOptions({ mode, onContinueWithEmail }: AuthOptionsProps) {
   const { scheme, theme } = useTheme();
   const [email, setEmail] = useState("");
   const [emailFocused, setEmailFocused] = useState(false);
@@ -50,7 +61,7 @@ export function AuthOptions({ onContinueWithEmail }: AuthOptionsProps) {
     <View style={styles.container}>
       <View style={styles.group}>
         <ProviderButton
-          label="Continue with Apple"
+          label={`${VERBS[mode]} with Apple`}
           logo={<AppleLogo size={iconSize.md} color={apple.label} />}
           onPress={handleApple}
           background={apple.background}
@@ -58,7 +69,7 @@ export function AuthOptions({ onContinueWithEmail }: AuthOptionsProps) {
           labelColor={apple.label}
         />
         <ProviderButton
-          label="Continue with Google"
+          label={`${VERBS[mode]} with Google`}
           logo={<GoogleLogo size={iconSize.md} />}
           onPress={handleGoogle}
           background={theme.surface}
@@ -101,7 +112,7 @@ export function AuthOptions({ onContinueWithEmail }: AuthOptionsProps) {
           value={email}
         />
         <PrimaryButton
-          label="Continue with email"
+          label={`${VERBS[mode]} with email`}
           disabled={!canContinue}
           onPress={handleContinue}
         />
@@ -121,7 +132,7 @@ type ProviderButtonProps = {
   borderColor?: string;
 };
 
-/** A full-width "Continue with …" button with the provider's logo. */
+/** A full-width "Sign in with …" button with the provider's logo. */
 function ProviderButton({
   label,
   logo,
