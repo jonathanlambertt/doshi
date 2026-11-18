@@ -2,6 +2,7 @@ import { router } from "expo-router";
 import { useState } from "react";
 import { Pressable, StyleSheet, Switch, Text, View } from "react-native";
 
+import { EnglishLettersPreview } from "@/components/english-letters-preview";
 import { LessonScreen } from "@/components/lesson-screen";
 import {
   fontFamily,
@@ -17,6 +18,7 @@ import {
   setRomaji,
 } from "@/hooks/use-reading-level";
 import { useTheme } from "@/hooks/use-theme";
+import { isFirstLesson } from "@/lib/lesson-session";
 
 type Option = {
   level: ReadingLevel;
@@ -29,14 +31,14 @@ const OPTIONS: readonly Option[] = [
   { level: "none", label: "Not yet" },
 ];
 
-// Readings of words from the first lesson: cat, water, book.
+// Simple hiragana words to test with: cat, water, book.
 const SAMPLE_KANA = ["ねこ", "みず", "ほん"] as const;
 
 /**
  * Asked once, in the first lesson: can the user read hiragana? The answer
- * sets whether cards show romaji alongside the Japanese, and the user can
- * keep (or drop) romaji regardless before continuing. Both can be changed
- * later in Settings.
+ * sets whether cards show English letters (romaji) under the Japanese, and
+ * the user can keep (or drop) them regardless before continuing, with a
+ * sample card showing the effect. Both can be changed later in Settings.
  */
 export default function KanaQuestionScreen() {
   const { theme } = useTheme();
@@ -49,11 +51,12 @@ export default function KanaQuestionScreen() {
     setRomajiChoice(defaultRomaji(choice));
   };
 
+  // In the first lesson, how to read a card comes before the words.
   const handleContinue = () => {
     if (!level) return;
     setReadingLevel(level);
     setRomaji(romaji);
-    router.push("/lesson/words");
+    router.push(isFirstLesson() ? "/lesson/card-guide" : "/lesson/words");
   };
 
   return (
@@ -68,8 +71,8 @@ export default function KanaQuestionScreen() {
           Can you read hiragana?
         </Text>
         <Text style={[styles.subtitle, { color: theme.textMuted }]}>
-          Romaji (Latin letters) can be shown alongside the Japanese. You can
-          keep it on whatever your answer.
+          Each word&apos;s sound can also be spelled in English letters, under
+          the Japanese. You can keep them on whatever your answer.
         </Text>
       </View>
 
@@ -115,26 +118,30 @@ export default function KanaQuestionScreen() {
       </View>
 
       {level ? (
-        <View
-          style={[
-            styles.romajiRow,
-            { backgroundColor: theme.surface, borderColor: theme.border },
-          ]}
-        >
-          <View style={styles.romajiText}>
-            <Text style={[styles.optionLabel, { color: theme.text }]}>
-              Show romaji
+        <View>
+          <EnglishLettersPreview show={romaji} />
+          <View
+            style={[
+              styles.romajiRow,
+              { backgroundColor: theme.surface, borderColor: theme.border },
+            ]}
+          >
+            <Text
+              style={[
+                styles.optionLabel,
+                styles.romajiLabel,
+                { color: theme.text },
+              ]}
+            >
+              Show English letters
             </Text>
-            <Text style={[styles.romajiHint, { color: theme.textMuted }]}>
-              neko · mizu · hon
-            </Text>
+            <Switch
+              accessibilityLabel="Show English letters"
+              value={romaji}
+              onValueChange={setRomajiChoice}
+              trackColor={{ true: theme.accent, false: theme.borderStrong }}
+            />
           </View>
-          <Switch
-            accessibilityLabel="Show romaji"
-            value={romaji}
-            onValueChange={setRomajiChoice}
-            trackColor={{ true: theme.accent, false: theme.borderStrong }}
-          />
         </View>
       ) : null}
     </LessonScreen>
@@ -173,22 +180,20 @@ const styles = StyleSheet.create({
     borderRadius: radius.lg,
     borderWidth: StyleSheet.hairlineWidth * 2,
   },
+  // The bottom of a grouped card under the sample card: its top border is
+  // the divider between them.
   romajiRow: {
     flexDirection: "row",
     alignItems: "center",
     gap: spacing.md,
     paddingVertical: spacing.md,
     paddingHorizontal: spacing.xl,
-    borderRadius: radius.lg,
+    borderBottomLeftRadius: radius.lg,
+    borderBottomRightRadius: radius.lg,
     borderWidth: StyleSheet.hairlineWidth * 2,
   },
-  romajiText: {
+  romajiLabel: {
     flex: 1,
-    gap: spacing.xs,
-  },
-  romajiHint: {
-    fontSize: fontSize.sm,
-    fontFamily: fontFamily.regular,
   },
   optionLabel: {
     fontSize: fontSize.md,

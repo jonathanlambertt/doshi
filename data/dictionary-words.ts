@@ -1,5 +1,6 @@
 import { toHiragana, toRomaji } from "wanakana";
 
+import { DOSHI_NOTES } from "@/data/doshi-notes";
 import WORDS from "@/data/words.json";
 
 /**
@@ -54,7 +55,16 @@ export type DictionaryWord = WordEntry & {
   romaji: string;
   /** The reading in hiragana, so katakana readings match hiragana searches. */
   readingHiragana: string;
+  /**
+   * Doshi's own note, shown as "Note", for the few words that have one
+   * (see data/doshi-notes.ts); null for the rest. Kaishi's `notes` are separate.
+   */
+  doshiNote: string | null;
 };
+
+const DOSHI_NOTES_BY_ID = new Map(
+  DOSHI_NOTES.map((note) => [note.id, note.text]),
+);
 
 /** The Kaishi 1.5k word list, in learning order (see data/words.json). */
 export const DICTIONARY_WORDS: readonly DictionaryWord[] = (
@@ -63,6 +73,7 @@ export const DICTIONARY_WORDS: readonly DictionaryWord[] = (
   ...entry,
   romaji: toRomaji(entry.reading),
   readingHiragana: toHiragana(entry.reading),
+  doshiNote: DOSHI_NOTES_BY_ID.get(entry.id) ?? null,
 }));
 
 const WORDS_BY_ID = new Map(DICTIONARY_WORDS.map((word) => [word.id, word]));

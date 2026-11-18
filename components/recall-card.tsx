@@ -20,6 +20,7 @@ type RecallCardProps = {
 /**
  * One word in a quick check or review. The front shows the word and its
  * reading; the user recalls the meaning, then reveals it to check themselves.
+ * The answer includes the word's Doshi note, if it has one (さん).
  */
 export function RecallCard({ word, revealed, showRomaji }: RecallCardProps) {
   const { theme } = useTheme();
@@ -52,6 +53,11 @@ export function RecallCard({ word, revealed, showRomaji }: RecallCardProps) {
           <Text style={[styles.meaning, { color: theme.text }]}>
             {word.meaning}
           </Text>
+          {word.doshiNote ? (
+            <Text style={[styles.note, { color: theme.textMuted }]}>
+              {word.doshiNote}
+            </Text>
+          ) : null}
         </View>
       ) : (
         <Text style={[styles.prompt, { color: theme.textMuted }]}>
@@ -98,6 +104,11 @@ const styles = StyleSheet.create({
   meaning: {
     fontSize: fontSize.lg,
     fontFamily: fontFamily.semibold,
+    textAlign: "center",
+  },
+  note: {
+    fontSize: fontSize.md,
+    fontFamily: fontFamily.regular,
     textAlign: "center",
   },
 });

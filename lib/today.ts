@@ -2,7 +2,12 @@ import { DICTIONARY_WORDS, type DictionaryWord } from "@/data/dictionary-words";
 import type { StoredCard } from "@/lib/db";
 import { now, type ProgressState } from "@/lib/progress";
 import { isDue } from "@/lib/srs/day";
-import { summarizeToday, type TodaySummary } from "@/lib/srs/summary";
+import {
+  type CardTiming,
+  hasReviewed,
+  summarizeToday,
+  type TodaySummary,
+} from "@/lib/srs/summary";
 
 export type { TodaySummary } from "@/lib/srs/summary";
 
@@ -18,13 +23,22 @@ function cardsInList(progress: ProgressState): StoredCard[] {
   );
 }
 
+function timing(stored: StoredCard): CardTiming {
+  return {
+    dueAt: stored.card.dueAt,
+    introducedAt: stored.introducedAt,
+    lastReviewAt: stored.card.lastReviewAt,
+  };
+}
+
+/** Whether the user has reviewed any word since its lesson. */
+export function hasReviewedAnyWord(progress: ProgressState): boolean {
+  return hasReviewed(cardsInList(progress).map(timing));
+}
+
 export function computeToday(progress: ProgressState): TodaySummary {
   return summarizeToday({
-    cards: cardsInList(progress).map((stored) => ({
-      dueAt: stored.card.dueAt,
-      introducedAt: stored.introducedAt,
-      lastReviewAt: stored.card.lastReviewAt,
-    })),
+    cards: cardsInList(progress).map(timing),
     totalWords: DICTIONARY_WORDS.length,
     newWordsPerDay: progress.newWordsPerDay,
     dailyReviewLimit: progress.dailyReviewLimit,

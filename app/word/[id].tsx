@@ -23,8 +23,9 @@ import { formatTimeUntil } from "@/utils/format";
 
 /**
  * Word detail, opened from a Dictionary row: the word large with its reading
- * (and romaji for learners still on kana), its meaning, an example sentence,
- * and where it stands in the user's reviews. This is the only screen that
+ * (and romaji for learners still on kana), its meaning, its Doshi note if
+ * it has one, an example sentence, and where it stands in the user's
+ * reviews. This is the only screen that
  * shows example sentences: lessons and reviews leave them out.
  */
 export default function WordDetailScreen() {
@@ -86,6 +87,22 @@ export default function WordDetailScreen() {
                 {word.meaning}
               </Text>
             </View>
+
+            {word.doshiNote ? (
+              <View
+                style={[
+                  styles.card,
+                  { backgroundColor: theme.surface, borderColor: theme.border },
+                ]}
+              >
+                <Text style={[styles.label, { color: theme.textMuted }]}>
+                  Note
+                </Text>
+                <Text style={[styles.note, { color: theme.text }]}>
+                  {word.doshiNote}
+                </Text>
+              </View>
+            ) : null}
 
             {word.sentence ? (
               <View
@@ -171,6 +188,10 @@ const styles = StyleSheet.create({
   meaning: {
     fontSize: fontSize.lg,
     fontFamily: fontFamily.semibold,
+  },
+  note: {
+    fontSize: fontSize.md,
+    fontFamily: fontFamily.regular,
   },
   status: {
     fontSize: fontSize.sm,

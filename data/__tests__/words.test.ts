@@ -2,7 +2,8 @@
 // Jest's globals (describe, it, expect) to this file instead of all app code.
 /// <reference types="jest" />
 
-import { DICTIONARY_WORDS } from "@/data/dictionary-words";
+import { DICTIONARY_WORDS, getDictionaryWord } from "@/data/dictionary-words";
+import { DOSHI_NOTES } from "@/data/doshi-notes";
 
 // HTML, entities, [sound:] tags and Anki furigana (漢字[かんじ]).
 const MARKUP = /<|>|&[#\w]+;|\[sound:|\[[^\]]*\]/;
@@ -66,6 +67,47 @@ describe("data/words.json", () => {
         expect(pattern.pitch).toMatch(/^[HL]+$/);
         expect(pattern.pitch).toHaveLength(moras + 1);
       }
+    }
+  });
+});
+
+describe("data/doshi-notes.ts", () => {
+  it("attaches each note to the word it names", () => {
+    for (const note of DOSHI_NOTES) {
+      expect({ id: note.id, word: getDictionaryWord(note.id)?.word }).toEqual({
+        id: note.id,
+        word: note.word,
+      });
+    }
+  });
+
+  it("has at most one note per word", () => {
+    const ids = new Set(DOSHI_NOTES.map((note) => note.id));
+    expect(ids.size).toBe(DOSHI_NOTES.length);
+  });
+
+  it("gives every note some text", () => {
+    for (const note of DOSHI_NOTES) {
+      expect(note.text.trim()).not.toBe("");
+    }
+  });
+
+  it("shows さん as Mr., Mrs. or Ms.", () => {
+    const san = getDictionaryWord("l^^i5RVwq@");
+    expect(san?.word).toBe("さん");
+    expect(san?.doshiNote).toContain("Mr., Mrs. or Ms.");
+  });
+
+  it("shows ちゃん as an affectionate nickname", () => {
+    const chan = getDictionaryWord("co94A,*H>6");
+    expect(chan?.word).toBe("ちゃん");
+    expect(chan?.doshiNote).toContain("affectionate nickname");
+  });
+
+  it("leaves every other word without a note", () => {
+    const noted = new Set(DOSHI_NOTES.map((note) => note.id));
+    for (const word of DICTIONARY_WORDS) {
+      if (!noted.has(word.id)) expect(word.doshiNote).toBeNull();
     }
   });
 });

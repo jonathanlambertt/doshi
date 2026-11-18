@@ -51,6 +51,11 @@ deck for Japanese learners: 1,500 words, learned in deck order. Each word ships 
 
 There is no part of speech: the deck doesn't have one.
 
+A few words also get a **Note** written for Doshi (not from the deck), e.g. where the
+meaning alone says little — さん's meaning is just "san", so its note reads "Like Mr.,
+Mrs. or Ms., but it goes after the name: Tom-san." Notes live in `data/doshi-notes.ts`
+and show with the meaning in lessons, reviews and the Dictionary.
+
 > **Licensing — decided (November 2026).** Kaishi 1.5k has no license: there is no
 > LICENSE file on the repository, and its README says its sentences and translations
 > come from the Core and Tango decks, which aren't openly licensed either. Knowing that,
@@ -257,9 +262,13 @@ native module that Expo Go doesn't include is added.
 ## Status
 
 **Early — first working loop.** On iOS: lessons of 5 new words (10 a day by default)
-with a quick check, FSRS-scheduled reviews, and progress saved on the device. A Settings
+with a quick check, FSRS-scheduled reviews, and progress saved on the device. The first
+lesson shows how to read a card, every quick check opens with a screen that says the
+buttons now grade (explained in full the first time), and the first reviews open with an
+intro to Again and Good. A Settings
 tab covers study pace (new words, review limit, recall target), hiragana reading level,
-romaji, light or dark mode, credits, and ways to create an account or sign in. The
+English letters (romaji) under each word, with a sample card that shows the effect, light
+or dark mode, credits, and ways to create an account or sign in. The
 Dictionary lists learned words; each word's page shows its meaning and an example
 sentence. The landing screen leads to sign-in and account-creation screens (Apple, Google
 or an emailed code; UI only, not wired up yet), with "Try without an account" into the

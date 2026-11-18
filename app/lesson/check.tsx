@@ -1,7 +1,7 @@
-import { router, useNavigation } from "expo-router";
+import { router, Stack, useFocusEffect, useNavigation } from "expo-router";
 import { Undo2 } from "lucide-react-native";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { StyleSheet, Text } from "react-native";
+import { BackHandler, StyleSheet, Text } from "react-native";
 
 import { GradeButtons } from "@/components/grade-buttons";
 import { LessonScreen } from "@/components/lesson-screen";
@@ -42,10 +42,12 @@ function shuffle<T>(items: readonly T[]): T[] {
  * The lesson's quick check: recall each new word, then grade it. That first
  * grade starts the word in FSRS and is saved immediately. A word graded Again
  * comes back once more at the end as practice — not graded, since FSRS has
- * already scheduled it for tomorrow.
+ * already scheduled it for tomorrow. Opened from its intro (check-intro.tsx).
  *
  * Undo steps back one word at a time, taking its grade back, so a mis-tap can
  * be fixed. Going back from Lesson complete undoes the last step the same way.
+ * Once a word is graded, leaving backwards to the intro is off: starting the
+ * check again from there would grade the same words twice.
  */
 export default function QuickCheckScreen() {
   const { theme } = useTheme();
@@ -116,6 +118,25 @@ export default function QuickCheckScreen() {
     [navigation, handleUndo],
   );
 
+  // After the first step, Android's back button undoes the last one, like
+  // stepping back through the words; before it, back returns to the intro.
+  // Only while this screen is showing, so it never takes back presses from
+  // Lesson complete on top.
+  const hasSteps = steps.length > 0;
+  useFocusEffect(
+    useCallback(() => {
+      if (!hasSteps) return;
+      const subscription = BackHandler.addEventListener(
+        "hardwareBackPress",
+        () => {
+          handleUndo();
+          return true;
+        },
+      );
+      return () => subscription.remove();
+    }, [hasSteps, handleUndo]),
+  );
+
   if (!item) {
     return (
       <LessonScreen leading="close">
@@ -145,6 +166,9 @@ export default function QuickCheckScreen() {
       }
       footer={footer}
     >
+      {/* No iOS swipe back to the intro once a word is graded; Undo steps
+          back instead. */}
+      <Stack.Screen options={{ gestureEnabled: !hasSteps }} />
       <Text style={[styles.eyebrow, { color: theme.textMuted }]}>
         {item.practice ? "One more time" : "Quick check"}
       </Text>

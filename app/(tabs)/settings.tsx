@@ -4,10 +4,10 @@ import {
   Book,
   BookCheck,
   BookOpen,
+  CaseSensitive,
   ChevronRight,
   Gauge,
   Info,
-  Languages,
   LogIn,
   Moon,
   Smartphone,
@@ -18,6 +18,7 @@ import { ScrollView, StyleSheet, Switch, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import { type Choice, ChoiceSection } from "@/components/choice-section";
+import { EnglishLettersPreview } from "@/components/english-letters-preview";
 import { ListRow, ListSection } from "@/components/list-row";
 import {
   fontFamily,
@@ -52,9 +53,11 @@ const APPEARANCE_CHOICES: readonly Choice<AppearancePreference>[] = [
 
 /**
  * Settings tab: a link to Study pace (the scheduling settings, which most
- * people never need to change), how well the user reads kana, whether romaji
- * is shown (independent of reading level), light or dark mode, the Account
- * section, a link to Credits, and the app version.
+ * people never need to change), how well the user reads kana, whether
+ * English letters (romaji) are shown, independent of reading level, with a
+ * sample card that shows the setting's effect, light or dark mode, the
+ * Account section, a link to Credits, and the app version. Users never see
+ * the word "romaji"; the code keeps it.
  *
  * Until accounts exist, everyone here is a guest, so the Account section
  * offers Create an account and Sign in (both mock screens, see README,
@@ -98,24 +101,24 @@ export default function SettingsScreen() {
           />
 
           <ListSection
-            title="Romaji"
-            footnote="Latin letters under each word (neko for ねこ). Keep them on as long as they help, whatever your reading level."
+            title="English letters"
+            footnote="Each word's sound, spelled in the English alphabet. Keep it on as long as it helps, whatever your reading level."
           >
+            <EnglishLettersPreview show={romaji} />
             <ListRow
-              icon={Languages}
-              label="Show romaji"
+              icon={CaseSensitive}
+              label="Show English letters"
               accessibilityRole="switch"
               selected={romaji}
               onPress={() => setRomaji(!romaji)}
               trailing={
                 <Switch
-                  accessibilityLabel="Show romaji"
+                  accessibilityLabel="Show English letters"
                   value={romaji}
                   onValueChange={setRomaji}
                   trackColor={{ true: theme.accent, false: theme.borderStrong }}
                 />
               }
-              first
               last
             />
           </ListSection>

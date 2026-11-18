@@ -11,16 +11,33 @@ import { computeToday, nextNewWords } from "@/lib/today";
  */
 let lessonWords: readonly DictionaryWord[] = [];
 
+/**
+ * Whether the open lesson is the user's first: no words were learned when it
+ * started. Fixed for the same reason as the words — the quick check's grades
+ * mustn't change it partway through.
+ */
+let firstLesson = false;
+
 /** How many words the next lesson would teach right now (0 if none allowed). */
 export function nextLessonSize() {
   return Math.min(LESSON_WORD_COUNT, computeToday(getProgress()).newWordsLeftToday);
 }
 
 export function startLesson(): readonly DictionaryWord[] {
-  lessonWords = nextNewWords(getProgress(), nextLessonSize());
+  const progress = getProgress();
+  firstLesson = computeToday(progress).wordsLearned === 0;
+  lessonWords = nextNewWords(progress, nextLessonSize());
   return lessonWords;
 }
 
 export function getLessonWords(): readonly DictionaryWord[] {
   return lessonWords;
+}
+
+/**
+ * True during the user's first lesson, which shows how to read a card and
+ * explains the quick check in full.
+ */
+export function isFirstLesson(): boolean {
+  return firstLesson;
 }

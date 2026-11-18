@@ -4,6 +4,7 @@ import { useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
 
 import { GradeButtons } from "@/components/grade-buttons";
+import { GradeGuide } from "@/components/grade-guide";
 import { LessonScreen } from "@/components/lesson-screen";
 import { PrimaryButton } from "@/components/primary-button";
 import { RecallCard } from "@/components/recall-card";
@@ -23,7 +24,7 @@ import {
   undoGrade,
 } from "@/lib/progress";
 import type { Grade } from "@/lib/srs/scheduler";
-import { dueWords } from "@/lib/today";
+import { dueWords, hasReviewedAnyWord } from "@/lib/today";
 import { plural } from "@/utils/format";
 
 type Graded = { grade: Grade; record: GradeRecord };
@@ -33,6 +34,13 @@ type Graded = { grade: Grade; record: GradeRecord };
  * review limit. Each grade is sent to FSRS and saved immediately, so closing
  * midway keeps what was done. Undo steps back one word at a time, taking its
  * grade back, so a mis-tap can be fixed.
+ *
+ * Until the user has reviewed a word, the session opens with an intro to
+ * reviews. What it says Again and Good do holds for every word and recall
+ * target: a forgotten word comes back much sooner than its last gap, and each
+ * Good lengthens the gap (see the scheduler tests in
+ * `lib/srs/__tests__/srs.test.ts`). "Tomorrow" would be wrong: a word missed
+ * after a few good reviews can come back in two to four days.
  */
 export default function ReviewScreen() {
   const { theme } = useTheme();
@@ -48,6 +56,11 @@ export default function ReviewScreen() {
   // is the one after the last graded.
   const [graded, setGraded] = useState<readonly Graded[]>([]);
   const [revealed, setRevealed] = useState(false);
+  // Decided when the session opens, so grading (or undoing) the first
+  // review doesn't bring the intro back mid-session.
+  const [showIntro, setShowIntro] = useState(
+    () => !hasReviewedAnyWord(getProgress()),
+  );
 
   const index = graded.length;
   const word = queue[index];
@@ -97,6 +110,37 @@ export default function ReviewScreen() {
     );
   }
 
+  if (showIntro) {
+    return (
+      <LessonScreen
+        leading="close"
+        closeLabel="Close reviews"
+        action={{ label: "Start reviews", onPress: () => setShowIntro(false) }}
+      >
+        <View style={styles.header}>
+          <Text style={[styles.title, { color: theme.text }]}>
+            Your first reviews
+          </Text>
+          <Text style={[styles.body, { color: theme.textMuted }]}>
+            These words are from your lessons. Doshi brings each one back just
+            before you&apos;d forget it.
+          </Text>
+        </View>
+        <Text style={[styles.body, { color: theme.textMuted }]}>
+          It works like the quick check: recall the meaning, tap Show answer,
+          then say how it went.
+        </Text>
+        <GradeGuide
+          again="You didn't remember it. It comes back soon."
+          good="You remembered it. It comes back later, and the gap grows each time."
+        />
+        <Text style={[styles.note, { color: theme.textMuted }]}>
+          Be honest: your answers decide when each word comes back.
+        </Text>
+      </LessonScreen>
+    );
+  }
+
   if (finished) {
     return (
       <LessonScreen
@@ -116,7 +160,7 @@ export default function ReviewScreen() {
         </View>
         {remembered < queue.length ? (
           <Text style={[styles.body, { color: theme.textMuted }]}>
-            The ones you missed come back tomorrow.
+            The ones you missed come back soon.
           </Text>
         ) : null}
         {limitNote ? (
@@ -165,6 +209,10 @@ const styles = StyleSheet.create({
   },
   body: {
     fontSize: fontSize.md,
+    fontFamily: fontFamily.regular,
+  },
+  note: {
+    fontSize: fontSize.sm,
     fontFamily: fontFamily.regular,
   },
 });

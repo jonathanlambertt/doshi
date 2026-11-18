@@ -1,5 +1,5 @@
-import { router, Stack } from "expo-router";
-import { useEffect, useState } from "react";
+import { router, Stack, useFocusEffect } from "expo-router";
+import { useCallback, useState } from "react";
 import { BackHandler, StyleSheet, Text, View } from "react-native";
 
 import { LessonScreen } from "@/components/lesson-screen";
@@ -20,7 +20,8 @@ import { getLessonWords } from "@/lib/lesson-session";
  * check and reviews, Next swaps the word in place rather than pushing a new
  * screen. Each word is shown all at once: this is the user's first sight of
  * it, not a test. Romaji appears under the word unless the user said they
- * read hiragana. Back returns to the previous word.
+ * read hiragana. A word with a Doshi note (さん) shows it as "Note" under
+ * the meaning. Back returns to the previous word.
  */
 export default function LessonWordsScreen() {
   const { theme } = useTheme();
@@ -37,20 +38,27 @@ export default function LessonWordsScreen() {
   const handleBack = () => setIndex((current) => Math.max(0, current - 1));
 
   // Android's back button steps back through the words too, and only leaves
-  // this screen from the first one.
-  useEffect(() => {
-    if (!canGoBack) return;
-    const subscription = BackHandler.addEventListener("hardwareBackPress", () => {
-      handleBack();
-      return true;
-    });
-    return () => subscription.remove();
-  }, [canGoBack]);
+  // this screen from the first one. Only while this screen is showing: back
+  // handlers run newest first, so one left on underneath the quick check
+  // would take that screen's back presses.
+  useFocusEffect(
+    useCallback(() => {
+      if (!canGoBack) return;
+      const subscription = BackHandler.addEventListener(
+        "hardwareBackPress",
+        () => {
+          handleBack();
+          return true;
+        },
+      );
+      return () => subscription.remove();
+    }, [canGoBack]),
+  );
 
-  // After the last word, the quick check tests each one.
+  // After the last word, the quick check's intro explains what comes next.
   const handleNext = () => {
     if (isLast) {
-      router.push("/lesson/check");
+      router.push("/lesson/check-intro");
     } else {
       setIndex(index + 1);
     }
@@ -117,6 +125,21 @@ export default function LessonWordsScreen() {
         </Text>
       </View>
 
+      {word.doshiNote ? (
+        <View
+          style={[
+            styles.card,
+            { backgroundColor: theme.surface, borderColor: theme.border },
+          ]}
+        >
+          <Text style={[styles.label, { color: theme.textMuted }]}>
+            Note
+          </Text>
+          <Text style={[styles.note, { color: theme.text }]}>
+            {word.doshiNote}
+          </Text>
+        </View>
+      ) : null}
     </LessonScreen>
   );
 }
@@ -161,6 +184,10 @@ const styles = StyleSheet.create({
   meaning: {
     fontSize: fontSize.lg,
     fontFamily: fontFamily.semibold,
+  },
+  note: {
+    fontSize: fontSize.md,
+    fontFamily: fontFamily.regular,
   },
   notFound: {
     fontSize: fontSize.md,

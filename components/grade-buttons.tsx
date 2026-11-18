@@ -15,46 +15,60 @@ type GradeButtonsProps = {
 };
 
 /**
- * Again / Good. Deliberately neutral (Zinc, no red/green): semantic feedback
- * colors aren't defined yet, and the Rose accent reads as "error" — see the
- * styling notes in CLAUDE.md.
+ * Again / Good, under the question they answer: the answer is showing, so
+ * the card no longer asks one. Deliberately neutral (Zinc, no red/green):
+ * semantic feedback colors aren't defined yet, and the Rose accent reads as
+ * "error" — see the styling notes in CLAUDE.md.
  */
 export function GradeButtons({ onGrade }: GradeButtonsProps) {
   const { theme } = useTheme();
 
   return (
-    <View style={styles.row}>
-      <Pressable
-        accessibilityRole="button"
-        accessibilityHint="You didn't remember it. It comes back sooner."
-        onPress={() => onGrade("again")}
-        style={({ pressed }) => [
-          styles.button,
-          styles.again,
-          {
-            borderColor: theme.borderStrong,
-            backgroundColor: pressed ? theme.surface : theme.background,
-          },
-        ]}
-      >
-        <Text style={[styles.label, { color: theme.text }]}>Again</Text>
-      </Pressable>
-      <Pressable
-        accessibilityRole="button"
-        accessibilityHint="You remembered it."
-        onPress={() => onGrade("good")}
-        style={({ pressed }) => [
-          styles.button,
-          { backgroundColor: pressed ? theme.textMuted : theme.text },
-        ]}
-      >
-        <Text style={[styles.label, { color: theme.background }]}>Good</Text>
-      </Pressable>
+    <View style={styles.container}>
+      <Text style={[styles.question, { color: theme.textMuted }]}>
+        Did you remember it?
+      </Text>
+      <View style={styles.row}>
+        <Pressable
+          accessibilityRole="button"
+          accessibilityHint="You didn't remember it. It comes back sooner."
+          onPress={() => onGrade("again")}
+          style={({ pressed }) => [
+            styles.button,
+            styles.again,
+            {
+              borderColor: theme.borderStrong,
+              backgroundColor: pressed ? theme.surface : theme.background,
+            },
+          ]}
+        >
+          <Text style={[styles.label, { color: theme.text }]}>Again</Text>
+        </Pressable>
+        <Pressable
+          accessibilityRole="button"
+          accessibilityHint="You remembered it."
+          onPress={() => onGrade("good")}
+          style={({ pressed }) => [
+            styles.button,
+            { backgroundColor: pressed ? theme.textMuted : theme.text },
+          ]}
+        >
+          <Text style={[styles.label, { color: theme.background }]}>Good</Text>
+        </Pressable>
+      </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+  container: {
+    gap: spacing.md,
+  },
+  question: {
+    fontSize: fontSize.md,
+    fontFamily: fontFamily.regular,
+    textAlign: "center",
+  },
   row: {
     flexDirection: "row",
     gap: spacing.md,

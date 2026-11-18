@@ -27,6 +27,23 @@ export type CardTiming = {
   lastReviewAt: Date | null;
 };
 
+/**
+ * Whether any word has been reviewed since its lesson. A word's lesson grade
+ * sets its introducedAt and its lastReviewAt to the same moment, so a later
+ * lastReviewAt means a review.
+ */
+export function hasReviewed(cards: Iterable<CardTiming>): boolean {
+  for (const card of cards) {
+    if (
+      card.lastReviewAt &&
+      card.lastReviewAt.getTime() > card.introducedAt.getTime()
+    ) {
+      return true;
+    }
+  }
+  return false;
+}
+
 export function summarizeToday({
   cards,
   totalWords,

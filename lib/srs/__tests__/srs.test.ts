@@ -10,7 +10,11 @@ import {
   gradeWord,
   type Scheduler,
 } from "@/lib/srs/scheduler";
-import { type CardTiming, summarizeToday } from "@/lib/srs/summary";
+import {
+  type CardTiming,
+  hasReviewed,
+  summarizeToday,
+} from "@/lib/srs/summary";
 
 // Dates are local time, matching how the app decides what "today" is.
 const at = (day: number, hour: number, minute = 0) =>
@@ -260,5 +264,40 @@ describe("summarizeToday", () => {
       expect(summary.reviewsDue).toBe(300);
       expect(summary.reviewsHeldBack).toBe(0);
     });
+  });
+});
+
+describe("hasReviewed", () => {
+  /** A started word, last graded at `lastReviewAt`. */
+  const card = (introducedAt: Date, lastReviewAt: Date | null) => ({
+    introducedAt,
+    dueAt: at(20, 10),
+    lastReviewAt,
+  });
+
+  it("is false with no words", () => {
+    expect(hasReviewed([])).toBe(false);
+  });
+
+  it("is false while every word has only its lesson grade", () => {
+    expect(
+      hasReviewed([card(at(3, 10), at(3, 10)), card(at(4, 9), at(4, 9))]),
+    ).toBe(false);
+  });
+
+  it("is true once any word has been graded since its lesson", () => {
+    expect(
+      hasReviewed([card(at(3, 10), at(3, 10)), card(at(3, 10), at(6, 9))]),
+    ).toBe(true);
+  });
+
+  it("tells a lesson grade from a review on real scheduler cards", async () => {
+    const scheduler = await createScheduler({ fuzz: false });
+    const learnedAt = at(3, 10);
+    const learned = gradeWord(scheduler, "w1", null, "good", learnedAt);
+    const reviewed = gradeWord(scheduler, "w1", learned, "good", learned.dueAt);
+
+    expect(hasReviewed([card(learnedAt, learned.lastReviewAt)])).toBe(false);
+    expect(hasReviewed([card(learnedAt, reviewed.lastReviewAt)])).toBe(true);
   });
 });
